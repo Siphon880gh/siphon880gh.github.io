@@ -4,7 +4,7 @@ Do you want to implement your idea into a reality on the world wide web? Or do y
 
 View Portfolio
 ---
-[Check out my portfolio](//siphon880gh.github.io/weng-web-industry-portfolio/).
+[Check out my portfolio](//siphon880gh.github.io/).
 
 Technology used on this portfolio
 ---
