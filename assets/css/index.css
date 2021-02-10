@@ -468,22 +468,26 @@ header nav ul li a:hover {
   }
 }
 /* Work section other css */
-/* line 339, ../scss/index.scss */
-.work .section-title {
+/* line 340, ../scss/index.scss */
+.work .section-title,
+.collab .section-title {
   color: var(--med);
 }
-/* line 342, ../scss/index.scss */
-.work figure {
+/* line 343, ../scss/index.scss */
+.work figure,
+.collab figure {
   border: 4px solid var(--med);
   position: relative;
 }
-/* line 345, ../scss/index.scss */
-.work figure img {
+/* line 346, ../scss/index.scss */
+.work figure img,
+.collab figure img {
   width: 100%;
   height: 100%;
 }
-/* line 349, ../scss/index.scss */
-.work figure figcaption {
+/* line 350, ../scss/index.scss */
+.work figure figcaption,
+.collab figure figcaption {
   background-color: var(--med);
   color: var(--shade);
   padding: 10px;
@@ -496,8 +500,9 @@ header nav ul li a:hover {
   /* Todo: Review; Smooth out specific corner */
   border-bottom-right-radius: 5px;
 }
-/* line 362, ../scss/index.scss */
-.work figure .overlay {
+/* line 363, ../scss/index.scss */
+.work figure .overlay,
+.collab figure .overlay {
   /* Todo: Review: Overlay color when hovering */
   width: 100%;
   height: 100%;
@@ -508,41 +513,47 @@ header nav ul li a:hover {
   opacity: 0;
   transition: opacity 500ms;
 }
-/* line 372, ../scss/index.scss */
-.work figure .overlay:hover {
+/* line 373, ../scss/index.scss */
+.work figure .overlay:hover,
+.collab figure .overlay:hover {
   opacity: .15;
 }
-/* line 376, ../scss/index.scss */
-.work figure .overlay-color-1 {
+/* line 377, ../scss/index.scss */
+.work figure .overlay-color-1,
+.collab figure .overlay-color-1 {
   background-color: blue;
 }
-/* line 379, ../scss/index.scss */
-.work figure .overlay-color-2 {
+/* line 380, ../scss/index.scss */
+.work figure .overlay-color-2,
+.collab figure .overlay-color-2 {
   background-color: purple;
 }
-/* line 382, ../scss/index.scss */
-.work figure .overlay-color-3 {
+/* line 383, ../scss/index.scss */
+.work figure .overlay-color-3,
+.collab figure .overlay-color-3 {
   background-color: red;
 }
-/* line 385, ../scss/index.scss */
-.work figure .overlay-color-4 {
+/* line 386, ../scss/index.scss */
+.work figure .overlay-color-4,
+.collab figure .overlay-color-4 {
   background-color: blue;
 }
-/* line 388, ../scss/index.scss */
-.work figure .overlay-color-5 {
+/* line 389, ../scss/index.scss */
+.work figure .overlay-color-5,
+.collab figure .overlay-color-5 {
   background-color: purple;
 }
 
 /* Work section on mobile */
 @media screen and (max-width: 957px) {
-  /* line 398, ../scss/index.scss */
+  /* line 399, ../scss/index.scss */
   .work figure figcaption {
     font-size: 1.25rem;
     line-height: 2;
   }
 }
 /* Credited section that's a nested section of Work */
-/* line 407, ../scss/index.scss */
+/* line 408, ../scss/index.scss */
 .credited {
   grid-column-end: span 8;
   margin-top: 20px;
@@ -551,140 +562,147 @@ header nav ul li a:hover {
   color: var(--light);
   padding: 10px;
 }
-/* line 414, ../scss/index.scss */
+/* line 415, ../scss/index.scss */
 .credited li {
   display: block;
   /* Spacing and colors in the credited items */
 }
-/* line 416, ../scss/index.scss */
+/* line 417, ../scss/index.scss */
 .credited li::marker, .credited li::before {
   content: "";
 }
-/* line 421, ../scss/index.scss */
+/* line 422, ../scss/index.scss */
 .credited li details {
   /* Remove collapse/expand icon for <details> */
 }
-/* line 423, ../scss/index.scss */
+/* line 424, ../scss/index.scss */
 .credited li details summary::-webkit-details-marker {
   display: none;
 }
-/* line 426, ../scss/index.scss */
+/* line 427, ../scss/index.scss */
 .credited li details summary {
   margin: 5px 0;
 }
-/* line 429, ../scss/index.scss */
+/* line 430, ../scss/index.scss */
 .credited li details > div {
   margin: 5px 18px;
 }
-/* line 432, ../scss/index.scss */
+/* line 433, ../scss/index.scss */
 .credited li details .fa-info {
   margin-right: 1ch;
   cursor: pointer;
 }
-/* line 436, ../scss/index.scss */
+/* line 437, ../scss/index.scss */
 .credited li details a {
   color: var(--shade);
 }
-/* line 439, ../scss/index.scss */
+/* line 440, ../scss/index.scss */
 .credited li details a:hover {
   color: var(--white);
 }
 
-/* line 446, ../scss/index.scss */
+/* line 447, ../scss/index.scss */
 .credited:hover {
   background-color: var(--med);
 }
-/* line 448, ../scss/index.scss */
+/* line 449, ../scss/index.scss */
 .credited:hover .text-med {
   color: var(--white);
   transition: color 400ms;
 }
 
-/* line 454, ../scss/index.scss */
+/* line 455, ../scss/index.scss */
 .credited.flushed-to-grid {
   width: 100% !important;
 }
 
 /* Contact section flexing */
-/* line 462, ../scss/index.scss */
+/* line 463, ../scss/index.scss */
 .contact > .flex > *:nth-child(1) {
   /* Todo: Review; nth-child starts with index 1; It is the nth child of the parent regardless of sibling having the same tag or not */
   flex: 1;
 }
-/* line 466, ../scss/index.scss */
+/* line 467, ../scss/index.scss */
 .contact > .flex > *:nth-child(2) {
   flex: 2;
 }
-/* line 470, ../scss/index.scss */
+/* line 471, ../scss/index.scss */
 .contact > .flex ul li {
   margin-bottom: 10px;
   margin-right: 10px;
 }
-/* line 474, ../scss/index.scss */
+/* line 475, ../scss/index.scss */
 .contact > .flex ul li::marker {
   content: "";
 }
 
 /* Contact section other css */
-/* line 484, ../scss/index.scss */
+/* line 485, ../scss/index.scss */
 .contact .section-title {
   color: var(--med);
 }
-/* line 487, ../scss/index.scss */
+/* line 488, ../scss/index.scss */
 .contact .flex {
   padding-top: 10px;
   background-color: var(--med);
   padding-bottom: 0;
 }
-/* line 492, ../scss/index.scss */
+/* line 493, ../scss/index.scss */
 .contact li {
   display: inline-block;
   border-bottom: 2px solid var(--light);
   transition: border 500ms;
 }
-/* line 496, ../scss/index.scss */
+/* line 497, ../scss/index.scss */
 .contact li:hover {
   border-bottom: 2px solid var(--white);
 }
-/* line 499, ../scss/index.scss */
+/* line 500, ../scss/index.scss */
 .contact li a {
   color: var(--light);
   transition: color 500ms;
   text-decoration: none;
 }
-/* line 503, ../scss/index.scss */
+/* line 504, ../scss/index.scss */
 .contact li a:hover {
   color: var(--white);
 }
 
+/* Workaround: Collab area shifted to the left */
 /* Toggle description */
-/* line 513, ../scss/index.scss */
+/* line 517, ../scss/index.scss */
 .display-none {
   display: none;
 }
 
-/* line 517, ../scss/index.scss */
+/* line 521, ../scss/index.scss */
 .overlay-toggle-description {
   position: absolute;
   bottom: 0;
   right: 0;
   z-index: 3;
 }
-/* line 522, ../scss/index.scss */
+/* line 526, ../scss/index.scss */
 .overlay-toggle-description a {
   color: purple;
 }
-/* line 524, ../scss/index.scss */
+/* line 528, ../scss/index.scss */
 .overlay-toggle-description a i {
   cursor: pointer;
 }
-/* line 528, ../scss/index.scss */
+/* line 532, ../scss/index.scss */
 .overlay-toggle-description a:hover {
   color: red;
 }
 
 /* Last section is completely flushed to the side and bottom edges */
-/* line 536, ../scss/index.scss */
+/* line 540, ../scss/index.scss */
+#collab {
+  margin-top: 40px;
+  padding: 20px 0 !important;
+}
+
+/* line 545, ../scss/index.scss */
 footer {
   margin: 0 !important;
   /* Override previous margin rules that were more specific because of selectors */

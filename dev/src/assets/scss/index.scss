@@ -335,7 +335,8 @@ header {
 
 /* Work section other css */
 
-.work {
+.work,
+.collab {
     .section-title {
         color: var(--med);
     }
@@ -508,6 +509,9 @@ header {
 }
 
 
+/* Workaround: Collab area shifted to the left */
+
+
 /* Toggle description */
 
 .display-none {
@@ -532,6 +536,11 @@ header {
 
 
 /* Last section is completely flushed to the side and bottom edges */
+
+#collab {
+    margin-top: 40px;
+    padding: 20px 0 !important;
+}
 
 footer {
     margin: 0 !important;
