@@ -535,6 +535,24 @@ header {
 }
 
 
+/* Github link */
+
+.add-github-link {
+    z-index: 1;
+    background-color: var(--med);
+    color: var(--shade);
+    padding: 10px;
+    position: absolute;
+    bottom: -47.5px;
+    right: -5px;
+    font-size: .8rem;
+    line-height: 1.5;
+    border-top-right-radius: 5px;
+    /* Todo: Review; Smooth out specific corner */
+    border-bottom-right-radius: 5px;
+}
+
+
 /* Last section is completely flushed to the side and bottom edges */
 
 #collab {

@@ -695,14 +695,31 @@ header nav ul li a:hover {
   color: red;
 }
 
-/* Last section is completely flushed to the side and bottom edges */
+/* Github link */
 /* line 540, ../scss/index.scss */
+.add-github-link {
+  z-index: 1;
+  background-color: var(--med);
+  color: var(--shade);
+  padding: 10px;
+  position: absolute;
+  bottom: -47.5px;
+  right: -5px;
+  font-size: .8rem;
+  line-height: 1.5;
+  border-top-right-radius: 5px;
+  /* Todo: Review; Smooth out specific corner */
+  border-bottom-right-radius: 5px;
+}
+
+/* Last section is completely flushed to the side and bottom edges */
+/* line 558, ../scss/index.scss */
 #collab {
   margin-top: 40px;
   padding: 20px 0 !important;
 }
 
-/* line 545, ../scss/index.scss */
+/* line 563, ../scss/index.scss */
 footer {
   margin: 0 !important;
   /* Override previous margin rules that were more specific because of selectors */
