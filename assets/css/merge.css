@@ -1,0 +1,971 @@
+@charset "UTF-8";
+
+/* line 1, ../scss/_reset-css.scss */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Img acting as background-images that can do contain, cover, and positioning */
+
+
+/* line 3, ../scss/_image-clipping.scss */
+
+.img-contain {
+    object-fit: contain;
+    object-position: 50% 50%;
+    /* default value: image is centered */
+    opacity: .75;
+}
+
+
+/* line 10, ../scss/_image-clipping.scss */
+
+.img-clip-0-0 {
+    object-fit: cover;
+    object-position: 0 0;
+    /* positioned top left of the content box */
+}
+
+
+/* line 16, ../scss/_image-clipping.scss */
+
+.img-clip-50-50 {
+    object-fit: cover;
+    object-position: 50% 50%;
+    /* default value: image is centered */
+}
+
+
+/* Utility classes: Flex */
+
+
+/* line 2, ../scss/_utility-classes.scss */
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/* line 6, ../scss/_utility-classes.scss */
+
+.flex-row {
+    flex-direction: row;
+}
+
+
+/* line 9, ../scss/_utility-classes.scss */
+
+.flex-col {
+    flex-direction: column;
+}
+
+
+/* line 12, ../scss/_utility-classes.scss */
+
+.flex-space-around {
+    justify-content: space-around;
+}
+
+
+/* line 15, ../scss/_utility-classes.scss */
+
+.flex-space-between {
+    justify-content: space-between;
+}
+
+
+/* line 18, ../scss/_utility-classes.scss */
+
+.flex-justify-middle {
+    justify-content: middle;
+}
+
+
+/* Utility classes: Spacing */
+
+
+/* line 23, ../scss/_utility-classes.scss */
+
+.padding-left-15px {
+    padding-left: 15px;
+}
+
+
+/* line 26, ../scss/_utility-classes.scss */
+
+.clearfix {
+    clear: both;
+}
+
+
+/* Utility class: Center horizontally and vertically */
+
+
+/* line 31, ../scss/_utility-classes.scss */
+
+.center-x-y {
+    display: block;
+    margin: 0 auto;
+    margin-top: 50%;
+    transform: translateY(-100%);
+}
+
+
+/* Utility class: Center horizontally */
+
+
+/* line 38, ../scss/_utility-classes.scss */
+
+.center-x {
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* Utility text classes */
+
+
+/* line 44, ../scss/_utility-classes.scss */
+
+.text-light {}
+
+
+/* line 47, ../scss/_utility-classes.scss */
+
+.text-med {}
+
+
+/* line 50, ../scss/_utility-classes.scss */
+
+.text-shade {}
+
+
+/* line 53, ../scss/_utility-classes.scss */
+
+.text-dark {}
+
+
+/* line 56, ../scss/_utility-classes.scss */
+
+.text-bold {
+    font-weight: bold;
+}
+
+
+/* Utility classes: Different Devices */
+
+
+/* line 61, ../scss/_utility-classes.scss */
+
+.spacer-vertical-small {
+    height: 10px;
+}
+
+@media (max-width: 568px) {
+    /* line 68, ../scss/_utility-classes.scss */
+    .hidden-xs-down {
+        display: none !important;
+    }
+}
+
+@media (min-width: 568px) {
+    /* line 73, ../scss/_utility-classes.scss */
+    .hidden-xs-up {
+        display: none !important;
+    }
+}
+
+
+/* Color Theme */
+
+
+/* line 7, ../scss/index.scss */
+
+
+/* Responsive Images that will shrink */
+
+
+/* line 24, ../scss/index.scss */
+
+.grid-wrapper img {
+    width: 100%;
+}
+
+
+/* Section spacing */
+
+@media screen and (max-width: 768px) {
+    /* line 48, ../scss/index.scss */
+    .section,
+    main,
+    footer {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    /* line 56, ../scss/index.scss */
+    .section,
+    main,
+    footer {
+        padding: 20px 40px;
+        /*Todo: Review; Two value padding/margin means upper/lower and left/right */
+        margin-bottom: 20px;
+    }
+    /* line 62, ../scss/index.scss */
+    .section .flex,
+    main .flex,
+    footer .flex {
+        padding: 20px 10px;
+    }
+}
+
+
+/* Section title rotated 90 degrees on Desktop */
+
+
+/* line 71, ../scss/index.scss */
+
+.section-title {
+    display: block;
+    width: 190px;
+    /* Rotate needs same width for all section titles or will be placed on x axis inconsistently */
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    margin-top: 30px;
+    text-align: left;
+}
+
+@media screen and (min-width: 1034px) {
+    /* line 83, ../scss/index.scss */
+    .section-title {
+        font-family: "PlayfairDisplay-Regular";
+        float: left;
+        font-size: 2rem;
+        margin-top: 70px;
+        margin-bottom: 30px;
+        text-align: center;
+        vertical-align: bottom;
+    }
+    /* line 93, ../scss/index.scss */
+    .work .section-title {
+        margin-top: 90px;
+    }
+}
+
+
+/* About section other css */
+
+
+/* line 157, ../scss/index.scss */
+
+.focus {
+    background-image: url("../../assets/img/coding-stock.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-bottom: 30px;
+}
+
+
+/* line 163, ../scss/index.scss */
+
+.focus img {
+    display: block;
+    border-radius: 5px;
+}
+
+@media screen and (min-width: 768px) {
+    /* line 171, ../scss/index.scss */
+    .focus img {
+        width: 30vw;
+        /* width to height ratio: 1.07142857 */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* line 178, ../scss/index.scss */
+    .focus img {
+        width: 90vw;
+        /* width to height ratio: 1.07142857 */
+        margin-top: 4ch;
+    }
+}
+
+
+/* line 186, ../scss/index.scss */
+
+.focus .focus__your-needs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+/* line 191, ../scss/index.scss */
+
+.focus .focus__your-needs--inner:hover {}
+
+
+/* line 194, ../scss/index.scss */
+
+.focus .focus__your-needs--inner {
+    transition: background-color 400ms;
+    width: 33vw;
+    /* Centering x y axis */
+    display: block;
+    padding: 15px;
+    border-radius: 5px;
+    /* ul */
+}
+
+@media screen and (max-width: 768px) {
+    /* line 199, ../scss/index.scss */
+    .focus .focus__your-needs--inner {
+        width: 90vw;
+    }
+}
+
+
+/* line 211, ../scss/index.scss */
+
+.focus .focus__your-needs--inner ul {
+    margin-top: 10px;
+}
+
+
+/* line 213, ../scss/index.scss */
+
+.focus .focus__your-needs--inner ul li {
+    display: block;
+    margin-left: 4ch;
+}
+
+
+/* line 215, ../scss/index.scss */
+
+.focus .focus__your-needs--inner ul li::before {
+    content: "★\00a0";
+    /* Todo: Review; Unicode for space on list item marker */
+}
+
+@media screen and (max-width: 768px) {
+    /* line 224, ../scss/index.scss */
+    .focus .focus__your-needs--inner {
+        margin-top: 2ch;
+    }
+}
+
+
+/* About section flexing */
+
+
+/* line 235, ../scss/index.scss */
+
+.focus .flex>* {
+    flex-basis: 50%;
+}
+
+@media screen and (max-width: 768px) {
+    /* line 241, ../scss/index.scss */
+    .focus .flex>* {
+        flex-basis: 100%;
+    }
+}
+
+
+/* Tech section flexing css */
+
+
+/* line 249, ../scss/index.scss */
+
+.tech .flex>div {
+    flex-basis: 33%;
+    padding: 10px;
+}
+
+
+/* line 252, ../scss/index.scss */
+
+.tech .flex>div li {
+    margin-left: 4ch;
+}
+
+@media screen and (max-width: 768px) {
+    /* line 258, ../scss/index.scss */
+    .tech .flex>div {
+        flex-basis: 100%;
+        padding-bottom: 20px;
+    }
+}
+
+
+/* Tech section other css */
+
+
+/* line 268, ../scss/index.scss */
+
+.tech .section-title {}
+
+
+/* line 271, ../scss/index.scss */
+
+.tech .flex {
+    border-radius: 5px;
+    transition: background-color 400ms;
+}
+
+
+/* line 276, ../scss/index.scss */
+
+.tech .flex:hover {}
+
+
+/* line 278, ../scss/index.scss */
+
+.tech .flex:hover li {}
+
+
+/* line 282, ../scss/index.scss */
+
+.tech .flex li {}
+
+
+/* Grid on desktop */
+
+
+/* line 291, ../scss/index.scss */
+
+.grid {
+    display: grid;
+    margin: 0 auto;
+    width: 80%;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: space-between;
+    grid-gap: 5px;
+    grid-auto-flow: dense;
+    /* Grid items that are not given coordinates, automatically fill in as much blank spaces from top left origin as possible */
+}
+
+
+/* line 302, ../scss/index.scss */
+
+.grid figure {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* line 306, ../scss/index.scss */
+
+.grid figure:first-child {
+    grid-column: 1 / span 4;
+    grid-row: 1 / span 2;
+}
+
+
+/* line 310, ../scss/index.scss */
+
+.grid figure:not(:first-child) {
+    grid-column-end: span 2;
+    grid-row-end: span 1;
+}
+
+
+/* Grid on mobile */
+
+@media screen and (max-width: 957px) {
+    /* line 320, ../scss/index.scss */
+    .grid {
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+    }
+    /* line 324, ../scss/index.scss */
+    .grid figure {
+        grid-column-end: span 1 !important;
+        grid-row-end: span 1 !important;
+    }
+    /* line 328, ../scss/index.scss */
+    .grid .flushed-to-grid {
+        grid-column-end: span 1 !important;
+        grid-row-end: fit-content;
+    }
+}
+
+
+/* Work section other css */
+
+
+/* line 340, ../scss/index.scss */
+
+.work .section-title,
+.collab .section-title {}
+
+
+/* line 343, ../scss/index.scss */
+
+.work figure,
+.collab figure {
+    border: 2px solid rgba(41, 38, 35, .5);
+    position: relative;
+    font-size: 70%;
+}
+
+
+/* line 346, ../scss/index.scss */
+
+.work figure img,
+.collab figure img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* line 350, ../scss/index.scss */
+
+.work figure figcaption,
+.collab figure figcaption {
+    background-color: #4a4a4a;
+    color: white;
+    font-family: "Montserrat";
+    padding: 10px;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    font-size: 75%;
+    line-height: 1.5;
+    border-top-right-radius: 5px;
+    /* Todo: Review; Smooth out specific corner */
+    border-bottom-right-radius: 5px;
+}
+
+.grid-wrapper .grid figcaption h3 {
+    font-size: 100% !important;
+}
+
+
+/* line 363, ../scss/index.scss */
+
+.work figure .overlay,
+.collab figure .overlay {
+    /* Todo: Review: Overlay color when hovering */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 500ms;
+}
+
+
+/* line 373, ../scss/index.scss */
+
+.work figure .overlay:hover,
+.collab figure .overlay:hover {
+    opacity: .15;
+}
+
+
+/* line 377, ../scss/index.scss */
+
+.work figure .overlay-color-1,
+.collab figure .overlay-color-1 {
+    background-color: blue;
+}
+
+
+/* line 380, ../scss/index.scss */
+
+.work figure .overlay-color-2,
+.collab figure .overlay-color-2 {
+    background-color: purple;
+}
+
+
+/* line 383, ../scss/index.scss */
+
+.work figure .overlay-color-3,
+.collab figure .overlay-color-3 {
+    background-color: red;
+}
+
+
+/* line 386, ../scss/index.scss */
+
+.work figure .overlay-color-4,
+.collab figure .overlay-color-4 {
+    background-color: blue;
+}
+
+
+/* line 389, ../scss/index.scss */
+
+.work figure .overlay-color-5,
+.collab figure .overlay-color-5 {
+    background-color: purple;
+}
+
+
+/* Work section on mobile */
+
+@media screen and (max-width: 957px) {
+    /* line 399, ../scss/index.scss */
+    .work figure figcaption {
+        font-size: 1.25rem;
+        line-height: 2;
+    }
+}
+
+
+/* Credited section that's a nested section of Work */
+
+
+/* line 408, ../scss/index.scss */
+
+.credited {
+    grid-column-end: span 8;
+    margin-top: 20px;
+    transition: background-color 400ms;
+    padding: 10px;
+}
+
+
+/* line 415, ../scss/index.scss */
+
+.credited li {
+    display: block;
+    /* Spacing and colors in the credited items */
+}
+
+
+/* line 417, ../scss/index.scss */
+
+.credited li::marker,
+.credited li::before {
+    content: "";
+}
+
+
+/* line 422, ../scss/index.scss */
+
+.credited li details {
+    /* Remove collapse/expand icon for <details> */
+}
+
+
+/* line 424, ../scss/index.scss */
+
+.credited li details summary::-webkit-details-marker {
+    display: none;
+}
+
+
+/* line 427, ../scss/index.scss */
+
+.credited li details summary {
+    margin: 5px 0;
+}
+
+
+/* line 430, ../scss/index.scss */
+
+.credited li details>div {
+    margin: 5px 18px;
+}
+
+
+/* line 433, ../scss/index.scss */
+
+.credited li details .fa-info {
+    margin-right: 1ch;
+    cursor: pointer;
+}
+
+
+/* line 437, ../scss/index.scss */
+
+.credited li details a {}
+
+
+/* line 440, ../scss/index.scss */
+
+.credited li details a:hover {}
+
+
+/* line 447, ../scss/index.scss */
+
+.credited:hover {}
+
+
+/* line 449, ../scss/index.scss */
+
+.credited:hover .text-med {
+    transition: color 400ms;
+}
+
+
+/* line 455, ../scss/index.scss */
+
+.credited.flushed-to-grid {
+    width: 100% !important;
+}
+
+
+/* Contact section flexing */
+
+
+/* line 463, ../scss/index.scss */
+
+.contact>.flex>*:nth-child(1) {
+    /* Todo: Review; nth-child starts with index 1; It is the nth child of the parent regardless of sibling having the same tag or not */
+    flex: 1;
+}
+
+
+/* line 467, ../scss/index.scss */
+
+.contact>.flex>*:nth-child(2) {
+    flex: 2;
+}
+
+
+/* line 471, ../scss/index.scss */
+
+.contact>.flex ul li {
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+
+/* line 475, ../scss/index.scss */
+
+.contact>.flex ul li::marker {
+    content: "";
+}
+
+
+/* Contact section other css */
+
+
+/* line 485, ../scss/index.scss */
+
+.contact .section-title {}
+
+
+/* line 488, ../scss/index.scss */
+
+.contact .flex {
+    padding-top: 10px;
+    padding-bottom: 0;
+}
+
+
+/* line 493, ../scss/index.scss */
+
+.contact li {
+    display: inline-block;
+    transition: border 500ms;
+}
+
+
+/* line 497, ../scss/index.scss */
+
+.contact li:hover {}
+
+
+/* line 500, ../scss/index.scss */
+
+.contact li a {
+    transition: color 500ms;
+    text-decoration: none;
+}
+
+
+/* line 504, ../scss/index.scss */
+
+.contact li a:hover {}
+
+
+/* Workaround: Collab area shifted to the left */
+
+
+/* Toggle description */
+
+
+/* line 517, ../scss/index.scss */
+
+.display-none {
+    display: none;
+}
+
+
+/* line 521, ../scss/index.scss */
+
+.overlay-toggle-description {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 3;
+}
+
+
+/* line 526, ../scss/index.scss */
+
+.overlay-toggle-description a {
+    color: purple;
+}
+
+
+/* line 528, ../scss/index.scss */
+
+.overlay-toggle-description a i {
+    cursor: pointer;
+}
+
+
+/* line 532, ../scss/index.scss */
+
+.overlay-toggle-description a:hover {
+    color: red;
+}
+
+
+/* Github link */
+
+
+/* line 540, ../scss/index.scss */
+
+.add-github-link a {
+    color: gray;
+    text-decoration: none;
+}
+
+.add-github-link a:hover {
+    color: lightgray;
+}
+
+.add-github-link {
+    background-color: rgb(41, 38, 35);
+    z-index: 1;
+    padding: 10px;
+    position: absolute;
+    bottom: -47.5px;
+    right: -5px;
+    font-size: .8rem;
+    line-height: 1.5;
+    border-top-right-radius: 5px;
+    /* Todo: Review; Smooth out specific corner */
+    border-bottom-right-radius: 5px;
+}
+
+
+/* Last section is completely flushed to the side and bottom edges */
+
+
+/* line 558, ../scss/index.scss */
+
+#collab {
+    margin-top: 40px;
+    padding: 20px 0 !important;
+}
+
+
+/* line 563, ../scss/index.scss */
+
+footer {
+    margin: 0 !important;
+    /* Override previous margin rules that were more specific because of selectors */
+    padding: 0 !important;
+}
+
+.work figure .overlay:hover,
+.collab figure .overlay:hover {
+    opacity: .15;
+}
+
+
+/* line 377, ../scss/index.scss */
+
+.work figure .overlay-color-1,
+.collab figure .overlay-color-1 {
+    background-color: blue;
+}
+
+
+/* line 380, ../scss/index.scss */
+
+.work figure .overlay-color-2,
+.collab figure .overlay-color-2 {
+    background-color: purple;
+}
+
+
+/* line 383, ../scss/index.scss */
+
+.work figure .overlay-color-3,
+.collab figure .overlay-color-3 {
+    background-color: red;
+}
+
+
+/* line 386, ../scss/index.scss */
+
+.work figure .overlay-color-4,
+.collab figure .overlay-color-4 {
+    background-color: blue;
+}
+
+
+/* line 389, ../scss/index.scss */
+
+.work figure .overlay-color-5,
+.collab figure .overlay-color-5 {
+    background-color: purple;
+}
+
+#credited {
+    background: rgba(41, 38, 35, 1);
+    background: linear-gradient(90deg, rgba(94, 88, 83, 1) 0%, rgba(121, 121, 121, 1) 25%, rgba(41, 38, 35, 1) 98%);
+    color: white;
+}
+
+#credited a {
+    color: white;
+}
+
+#credited a:hover {
+    color: darkgray !important;
+}
+
+footer {
+    color: white;
+}
+
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    color: darkgray;
+}
+
+details div {
+    padding-left: 10px;
+}
+
+footer {
+    background-color: rgba(41, 38, 35, 1);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 20px !important;
+}

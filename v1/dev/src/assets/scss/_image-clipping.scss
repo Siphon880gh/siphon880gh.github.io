@@ -1,0 +1,20 @@
+/* Img acting as background-images that can do contain, cover, and positioning */
+
+.img-contain {
+    object-fit: contain;
+    object-position: 50% 50%;
+    /* default value: image is centered */
+    opacity: .75;
+}
+
+.img-clip-0-0 {
+    object-fit: cover;
+    object-position: 0 0;
+    /* positioned top left of the content box */
+}
+
+.img-clip-50-50 {
+    object-fit: cover;
+    object-position: 50% 50%;
+    /* default value: image is centered */
+}

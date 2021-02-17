@@ -2,97 +2,139 @@
 <html lang="en">
 
 <head>
-    <title>Weng's Web Portfolio</title>
+    <title>WengIndustry - Weng's Web Development Portfolio</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <link rel="icon" href="assets/img/favicon.ico">
 
-    <!-- Internal Assets -->
+    <!-- Turn off caching when changing code so you can see changes on web browser -->
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+
+    <!-- CSS vendors: Bootstrap, Font-Awesome Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+
+    <!-- CSS from my app -->
     <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/other-slides.css">
+    <link rel="stylesheet" href="assets/css/merge.css">
 
-    <!-- Fonts, Icons -->
-    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300|Open+Sans+Condensed:300" rel="stylesheet">
-    <link href="//fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.css">
+    <!-- JS Vendors: jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 
 </head>
 
 <body>
-    <header class="flex flex-row flex-space-between">
-        <span class="site-title">
-                <h1>
-                    <span class="hidden-xs-down padding-left-15px"></span> Weng's Web Porfolio
-        </h1>
-        </span>
-        <nav class="site-menu" role="navigation" aria-label="Menu">
-            <ul class="flex flex-row flex-space-between">
-                <li><a href="#focus">About</a></li>
-                <li><a href="#tech">Tech</a></li>
-                <li><a href="#work">Work</a></li>
-                <li><a href="#collab">Collab</a></li>
-                <li><a href="#credited">Credited</a></li>
-                <li><a href="#contact">Contact</a></li>
+
+
+    <header class="site-header">
+
+        <div class="page-title-wrapper">
+            <a href="/">
+                <h1 class="page-title">Weng Industry</h1>
+            </a>
+        </div>
+
+        <nav class="site-nav">
+            <span class="fa fa-grip-lines site-nav-mobile-btn" onclick="this.classList.toggle('active');"></span>
+            <ul>
+                <li>
+                    <a href="#slide-a">Tech</a>
+                </li>
+                <li>
+                    <a href="#about-anchor">WhoAmI</a>
+                </li>
+                <li>
+                    <a href="#work">Work</a>
+                </li>
+                <li>
+                    <a href="#collab">Collab</a>
+                </li>
+                <li>
+                    <a href="#credited">Credited</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
             </ul>
         </nav>
-    </header>
 
-    <section id="focus" class="focus section">
-        <!-- <h2>About</h2> -->
-        <div class="flex flex-row">
-            <div class="img-wrapper">
-                <img class="center-x" src="assets/img/me.png" alt="Picture of Weng">
-            </div>
-            <div class="focus__your-needs">
-                <div class="focus__your-needs--inner center-x">
-                    <p>Have a great idea? <a href="#contact" style="color:white;">Contact me</a> to get your idea launched!</p>
-                    <ul>
-                        <li>Idea to technical todo list</li>
-                        <li>Wireframe to mockup</li>
-                        <li>Testing</li>
-                        <li>Finished Product, SEO</li>
-                    </ul>
+        <span class="clear-fix"></span>
+
+    </header>
+    <div class="my-container">
+        <div id="slide-a" class="slide slide-a">
+            <div class="wrapper">
+                <div class="background-overlay"></div>
+                <div class="slide slide-hero clear-fix">
+                    <div class="line">Hi, I'm Weng</div>
+                    <div class="line">Coding Expert</div>
+                    <div class="line">Available <a class="for-hire-hero" target="_blank" href="https://www.linkedin.com/in/weng-fung/" style="color:white; text-decoration:auto;">for Hire</a></div>
+                </div>
+                <div class="tech-overlay f1a relaxed">
+                    <b class="f1b relaxed-more">FRONTEND:</b> JS | CSS3 | HTML5 | React JS<br/>
+                    <b class="f1b relaxed-more">BACKEND:</b> Node | MySQL | Sequelize | MongoDB | Moongoose<br/>
+                    <b class="f1b relaxed-more">FULL STACK:</b> MERN<br/>
+                    <b class="f1b relaxed-more">LEGACY:</b> jQuery | PHP<br/>
+                    <b class="f1b relaxed-more">AGILE:</b> Handlebars | Crossroads | Asana/Trello/Basecamp
                 </div>
             </div>
         </div>
-    </section>
 
-    <section id="tech" class="tech section">
-        <h2 class="section-title">Technology</h2>
-        <div class="flex flex-row">
-            <div>
-                <span class="text-med">
-                        Or just need an in house developer, who can implement features, or fix bugs?
-                    </span>
-                <br/><br/>
-                <span class="text-bold text-shade">
-                    Weng can do:
-                    </span>
-            </div>
-            <div>
-                <span class="text-bold text-shade">Web</span>
-                <ul>
-                    <li>Wireframing</li>
-                    <li>UX/UI</li>
-                    <li>Interactive</li>
-                    <li>Great look on mobile / tablet!</li>
+        <!-- Horizontal inline blocks -->
+        <div id="slide-b" class="slide slide-b">
 
-                </ul>
-            </div>
-            <div>
-                <span class="text-bold text-shade">Servers</span>
-                <ul>
-                    <li>Database</li>
-                    <li>API</li>
-                </ul>
-                <br/>
-                <span class="text-bold text-shade">Latest cutting edge</span>
-                <ul>
-                    <li>React JS</li>
-                    <li>DevOps</li>
-                </ul>
+            <div class="wrapper">
+                <div class="a"></div>
+                <div class="b">
+                    <span class="bb1"></span>
+                    <span class="bb2">
+                        <div class="va">
+                            <div class="flexie">
+
+                                <h2 id="about-anchor" class="f1a">About Me</h2>
+                                <div class="f1b">Passionate about all things coding 💻 especially web development 🌎, Weng has made this a hobby and side job for countless years. Have worked with startups including Mixotype, companies like ExRx, and small gigs by word of mouth. He's currently in the <span class="ucla">UCLA</span>                    Coding Bootcamp.</p>
+                    <p>He is looking forward to making this a full time job and is working on credentials to do so. However, he is available for hire right away. Look below for his previous work and testimonials.</p>
+                    <p>You can see his passion on other links:</p>
+                    <div class="badges">
+
+
+
+                        <a target="_blank" href="https://github.com/Siphon880gh" rel="nofollow"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="Github" data-canonical-src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"
+                                style="max-width:100%; height: 20px; border-radius:2.5px"></a>
+
+                        <a target="_blank" href="https://www.youtube.com/user/Siphon880yt/" rel="nofollow"><img src="https://camo.githubusercontent.com/0bf5ba8ac9f286f95b2a2e86aee46371e0ac03d38b64ee2b78b9b1490df38458/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f596f75747562652d7265643f7374796c653d666c6174266c6f676f3d796f7574756265266c6162656c436f6c6f723d726564"
+                                alt="Youtube" data-canonical-src="https://img.shields.io/badge/Youtube-red?style=flat&amp;logo=youtube&amp;labelColor=red" style="max-width:100%;"></a>
+                        <a target="_blank" href="https://www.linkedin.com/in/weng-fung/" rel="nofollow"><img src="https://camo.githubusercontent.com/0f56393c2fe76a2cd803ead7e5508f916eb5f1e62358226112e98f7e933301d7/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c696e6b6564496e2d626c75653f7374796c653d666c6174266c6f676f3d6c696e6b6564696e266c6162656c436f6c6f723d626c7565"
+                                alt="Linked-In" data-canonical-src="https://img.shields.io/badge/LinkedIn-blue?style=flat&amp;logo=linkedin&amp;labelColor=blue" style="max-width:100%;"></a>
+                    </div>
+
+                </div>
+
+
             </div>
         </div>
-    </section>
+
+        </span>
+    </div>
+    </div>
+
+    </div>
+
+
+    <!-- Flex growing -->
+    <!-- Div must have content or will not render -->
+    <!-- Flex item's flex rule is grow shrink basis -->
+    <!-- Theory: https://medium.com/@tiffnogueira/understanding-flex-shrink-flex-grow-and-flex-basis-and-using-these-properties-to-their-full-e4b4afd2c930 -->
+    <!-- <div class="slide-b " style="display:flex; flex-direction: row; width: 100%; align-items: flex-end; justify-content: space-evenly; align-items: center; ">
+        <div style="flex: 1 4 auto; background-color:tomato; ">&nbsp;</div>
+        <div style="flex: 1 0 auto; background-color:skyblue; ">&nbsp;</div>
+        <div style="flex: 1 0 auto; background-color:tomato; ">&nbsp;</div>
+        <div style="flex: 2 0 auto; background-color:skyblue; ">&nbsp;</div>
+    </div> -->
+
+
 
     <main id="work" class="work section">
         <h2 class="section-title">Work</h2>
@@ -250,7 +292,8 @@
                 <div class="grid">
 
                     <!-- Card etc -->
-                    <figure style="height:75%">
+                    <figure style="height:75%; position:relative;">
+                        <img src="./assets/img/point-up.png" alt="Arrow points up" style="position:absolute; left:-100%; bottom:0">
                         <aside class="add-github-link">
                             <a target="_blank" href="https://github.com/Siphon880gh/goals-social">Checkout Github repository</a>
                         </aside>
@@ -299,29 +342,29 @@
                     <ul>
 
                         <li>
-                            <details>
+                            <details open>
                                 <summary>
                                     <i class="fa fa-info"></i>
                                     <a href="https://exrx.net/People/Staff/" target="_blank">ExRx.net - Exercise Rx</a>
                                 </summary>
                                 <div>Exercise information and news. Also now provides exercise information API to workout apps. Weng created an admin panel to manage exercise information and also created an API that other companies can subscribe to. Weng orientated
                                     many new interns to the code at ExRx.</div>
-                            </details>
+                            </details open>
                         </li>
 
                         <li>
-                            <details>
+                            <details open>
                                 <summary>
                                     <i class="fa fa-info"></i>
                                     <a href="https://web.archive.org/web/20181120025439/http://www.mixotype.com/#about" target="_blank">Mixotype.com
                                     </a>
                                 </summary>
                                 <div>Social network that matches you by the Mixotype patented personality trait test. Weng worked on their Android beta app and social network web app.</div>
-                            </details>
+                            </details open>
                         </li>
 
                         <li>
-                            <details>
+                            <details open>
                                 <summary>
                                     <i class="fa fa-info"></i>
                                     <a href="https://www.vibee.tv/vibeetv-team/" target="_blank">Vibee TV</a>
@@ -331,7 +374,7 @@
                         </li>
 
                         <li>
-                            <details>
+                            <details open>
                                 <summary>
                                     <i class="fa fa-info"></i>
                                     <a href="assets/img/testimonials.png" target="_blank">LinkedIn Testimonies</a>
@@ -353,7 +396,7 @@
             <h2 class="section-title hidden-xs-up">Contact</h2>
             <div class="spacer-vertical-small hidden-xs-up"></div>
             <div class="flex flex-row flex-space-between">
-                <h3 class="text-light hidden-xs-down">Contact me! Or see my CV:</h3>
+                <h3 class="text-light hidden-xs-down">Contact:</h3>
                 <ul class="flex flex-row flex-space-around">
                     <li><a href="tel:3238427514" target="_blank">323-842-7514</a></li>
                     <li><a href="mailto:weffung@ucdavis.edu" target="_blank">weffung@ucdavis.edu</a></li>
@@ -364,7 +407,15 @@
             </div>
         </footer>
 
+        </div>
+        <!-- container -->
+
+        <!-- JS Vendors: Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js " integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW " crossorigin="anonymous "></script>
+
+        <!-- JS from my app -->
         <script src="assets/js/app.js"></script>
+
 </body>
 
 </html>
