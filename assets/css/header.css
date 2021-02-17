@@ -115,7 +115,7 @@
     display: block;
 }
 
-@media (min-width: 922px) {
+@media (min-width: 1060px) {
     .site-nav-mobile-btn {
         display: none;
     }
