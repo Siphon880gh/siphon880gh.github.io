@@ -454,6 +454,29 @@
     /* Grid items that are not given coordinates, automatically fill in as much blank spaces from top left origin as possible */
 }
 
+@media screen and (max-width: 957px) {
+    .section-title {
+        padding-left: 25px;
+        padding-top: 25px;
+    }
+    #work .section-title {
+        transform: translateY(15px);
+        /* margin-top: 180vh; */
+        /* Quick workaround: The second slide is overlapping the Work section title top padding */
+    }
+    .grid,
+    .grid2 {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    /* line 320, ../scss/index.scss */
+    .grid2 {
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr) !important;
+        grid-template-rows: repeat(2, 1fr) !important;
+    }
+}
+
 
 /* line 302, ../scss/index.scss */
 
@@ -503,24 +526,12 @@
 
 /* Work section other css */
 
-
-/* line 340, ../scss/index.scss */
-
-.work .section-title,
-.collab .section-title {}
-
-
-/* line 343, ../scss/index.scss */
-
 .work figure,
 .collab figure {
     border: 2px solid rgba(41, 38, 35, .5);
     position: relative;
     font-size: 70%;
 }
-
-
-/* line 346, ../scss/index.scss */
 
 .work figure img,
 .collab figure img {
