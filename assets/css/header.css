@@ -24,10 +24,10 @@
     color: white;
     background-color: rgb(69, 54, 71);
     font-weight: 800;
-    box-shadow: 5px 5px var(--soften);
+    box-shadow: 5px 5px rgb(77, 72, 68);
     border-radius: 15px;
     padding: 10px;
-    background: #D0E4F5 url("../../assets/img/coding-stock.jpg") repeat scroll 50% 50%;
+    background: rgb(77, 72, 68) url("../../assets/img/coding-stock.jpg") repeat scroll 50% 50%;
     background-size: cover;
 }
 
