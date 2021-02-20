@@ -81,7 +81,12 @@ https://via.placeholder.com/468x60?text=Visit+Blogging.com+Now
 
 .slide-a .slide-hero {
     background-color: black;
-    background: black url("../../assets/img/hero-slide.png") no-repeat fixed 50% 50%;
+    /* background: url("../img/hero-slide-min.png") no-repeat fixed 50% 50%; */
+    background-image: url("../img/hero-slide-min.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #cccccc;
+    background-size: cover;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
@@ -101,6 +106,7 @@ https://via.placeholder.com/468x60?text=Visit+Blogging.com+Now
     -ms-flex-align: center;
     align-items: center;
     height: 100vh;
+    z-index: 3;
 }
 
 .slide-hero .line {
