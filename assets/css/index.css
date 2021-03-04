@@ -203,7 +203,7 @@ body {
 @media (max-height: 750px) {
     .slide-a .slide-hero {
         justify-content: flex-start;
-        margin-top: 20px;
+        padding-top: 20px;
     }
 }
 
