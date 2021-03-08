@@ -1,3 +1,148 @@
+/** Header **/
+
+.site-header {
+    margin: -15px 0 0 0;
+    padding: 0 10px;
+    background-color: #36322f;
+    /* Sticky bar */
+    position: sticky;
+    top: 0;
+    /* Sticky bar scroll threshold for element to stick in place */
+    min-height: 100px;
+    z-index: 10;
+}
+
+.site-header .page-title {
+    padding: 5px;
+    margin: 20px 0 20px 0;
+    border-radius: 5px;
+    color: white;
+    background-color: #453647;
+    font-weight: 800;
+    box-shadow: 5px 5px #4d4844;
+    border-radius: 15px;
+    padding: 10px;
+    background: #4d4844 url("../../assets/img/coding-stock.jpg") repeat scroll 50% 50%;
+    background-size: cover;
+    float: left;
+}
+
+
+/** Header title **/
+
+
+/** Header title shows before menu item **/
+
+
+/* General menu styling */
+
+.site-nav li a {
+    color: white;
+    text-decoration: none;
+    transition: color 500ms;
+    letter-spacing: 1px;
+}
+
+.site-nav li a:visited {
+    color: white;
+    text-decoration: none;
+    transition: color 500ms;
+    letter-spacing: 1px;
+}
+
+.site-nav li a:active,
+.site-nav li a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.site-nav ul {
+    padding: 100px 0 0 0;
+    /* Menu needs to be lower than hamburger icon */
+}
+
+.site-nav ul li {
+    padding: 10px 0;
+    width: 100%;
+    list-style-type: none;
+    display: block;
+    border-top: 1px solid gray;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18px;
+}
+
+.site-nav ul li:hover {
+    background-color: var(--crunchier);
+}
+
+
+/** Mobile First Menu **/
+
+.site-nav-mobile-btn {
+    float: right;
+    margin-top: 15px;
+    cursor: pointer;
+    border: 2px solid black;
+    color: black;
+    padding: 5px;
+}
+
+.site-nav-mobile-btn:hover {
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+.site-nav-mobile-btn.active {
+    color: rgba(255, 255, 255, 0.8);
+    border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+.site-nav-mobile-btn.active:hover {
+    color: rgba(255, 255, 255, 0.8);
+    border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+.site-nav-mobile-btn:not(.active)+ul {
+    display: none;
+}
+
+.site-nav-mobile-btn.active+ul {
+    display: block;
+}
+
+@media (min-width: 1060px) {
+    .site-nav-mobile-btn {
+        display: none;
+    }
+    .site-nav-mobile-btn.active+ul,
+    .site-nav-mobile-btn:not(.active)+ul {
+        display: block;
+    }
+    .site-nav ul {
+        float: right;
+        padding: 20px 0 0 0;
+        font-size: 18px;
+    }
+    .site-nav ul li {
+        display: inline-block;
+        text-align: center;
+        list-style-type: none;
+        width: auto;
+        border-top: none;
+        margin-left: 60px;
+    }
+    .site-nav ul li:hover {
+        background-color: transparent;
+    }
+}
+
+.text-bold-colored {
+    font-weight: bold;
+    color: #000 !important;
+}
+
+
 /* Reset CSS */
 
  :root {
@@ -31,17 +176,18 @@
     left: 0;
     position: absolute;
     background-color: #4a4a4a;
-    opacity: .67;
-    transition: background .3s, border-radius .3s, opacity .3s;
+    opacity: 0.67;
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
 }
 
 .slide-a .slide-hero {
     background-color: black;
-    /* background: url("../img/hero-slide-min.png") no-repeat fixed 50% 50%; */
+    /* background: url("../img/hero-slide-min.png") no-repeat fixed 50% 50%;
+	 */
     background-image: url("../img/hero-slide-min.png");
     background-position: center;
     background-repeat: no-repeat;
-    background-color: #cccccc;
+    background-color: #ccc;
     background-size: cover;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -72,9 +218,6 @@
     -webkit-align-self: auto !important;
     -ms-flex-item-align: auto !important;
     align-self: auto !important;
-}
-
-.slide-hero .line {
     z-index: 3;
     color: #fff;
     text-align: center;
@@ -94,7 +237,11 @@
     line-height: 1.2em;
 }
 
-.text-white,
+.text-white {
+    color: white !important;
+    text-decoration: auto;
+}
+
 .text-white * {
     color: white !important;
     text-decoration: auto;
@@ -118,7 +265,7 @@
 
 .ucla {
     color: white;
-    background-color: rgb(33, 95, 158);
+    background-color: #215f9e;
     text-transform: captialize;
     padding-left: 5px;
     padding-right: 5px;
@@ -139,26 +286,26 @@
     padding: 5px;
 }
 
-.for-hire-hero:hover {
-    text-decoration: underline !important;
-}
-
 .for-hire-hero {
     transition: text-decoration 600ms;
+}
+
+.for-hire-hero:hover {
+    text-decoration: underline !important;
 }
 
 .relaxed-more {
     letter-spacing: 2px;
 }
 
-@media (max-width:600px) {
+@media (max-width: 600px) {
     .slide-hero {
         height: 110vh;
     }
 }
 
 body {
-    background: rgb(94, 88, 83);
+    background: #5e5853;
     background: linear-gradient(90deg, rgba(94, 88, 83, 1) 0%, rgba(121, 121, 121, 1) 25%, rgba(41, 38, 35, 1) 98%);
 }
 
@@ -177,7 +324,7 @@ body {
 
 .github-style {
     height: 20px;
-    border-radius: 2.5px
+    border-radius: 2.5px;
 }
 
 .badge-style {
@@ -190,4 +337,604 @@ body {
 
 address {
     display: inline;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Img acting as background-images that can do contain, cover, and positioning */
+
+.img-contain {
+    object-fit: contain;
+    object-position: 50% 50%;
+    /* object-position: 25% 25%;
+	 */
+    /* default value: image is centered */
+    opacity: 0.75;
+}
+
+.img-clip-0-0 {
+    object-fit: cover;
+    object-position: 0 0;
+    /* positioned top left of the content box */
+}
+
+.img-clip-50-50 {
+    object-fit: cover;
+    object-position: 50% 50%;
+    /* default value: image is centered */
+}
+
+
+/* Utility classes: Flex */
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-space-around {
+    justify-content: space-around;
+}
+
+.flex-space-between {
+    justify-content: space-between;
+}
+
+.flex-justify-middle {
+    justify-content: middle;
+}
+
+
+/* Utility classes: Spacing */
+
+.padding-left-15px {
+    padding-left: 15px;
+}
+
+.clearfix {
+    clear: both;
+}
+
+
+/* Utility class: Center horizontally and vertically */
+
+.center-x-y {
+    display: block;
+    margin: 0 auto;
+    margin-top: 50%;
+    transform: translateY(-100%);
+}
+
+
+/* Utility class: Center horizontally */
+
+.center-x {
+    display: block;
+    margin: 0 auto;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+
+/* Utility classes: Different Devices */
+
+.spacer-vertical-small {
+    height: 10px;
+}
+
+@media (max-width: 568px) {
+    .hidden-xs-down {
+        display: none !important;
+    }
+}
+
+@media (min-width: 568px) {
+    .hidden-xs-up {
+        display: none !important;
+    }
+}
+
+
+/* Color Theme */
+
+
+/* Responsive Images that will shrink */
+
+.grid-wrapper img {
+    width: 100%;
+}
+
+
+/* Section spacing */
+
+@media screen and (max-width: 768px) {
+    .section,
+    main,
+    footer {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    /*Todo: Review;
+	 Two value padding/margin means upper/lower and left/right */
+    .section,
+    main,
+    footer {
+        margin-bottom: 20px;
+    }
+    .section .flex,
+    main .flex,
+    footer .flex {
+        padding: 20px 10px;
+    }
+}
+
+
+/* Tech section flexing css */
+
+.tech .flex {
+    border-radius: 5px;
+    transition: background-color 400ms;
+}
+
+.tech .flex>div {
+    flex-basis: 33%;
+    padding: 10px;
+}
+
+.tech .flex>div li {
+    margin-left: 4ch;
+}
+
+@media screen and (max-width: 768px) {
+    .tech .flex>div {
+        flex-basis: 100%;
+        padding-bottom: 20px;
+    }
+}
+
+
+/* Tech section other css */
+
+
+/* Grid on desktop */
+
+.grid {
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: space-between;
+    grid-gap: 5px;
+    grid-auto-flow: dense;
+    /* Grid items that are not given coordinates, automatically fill in as much blank spaces from top left origin as possible */
+}
+
+.grid figure {
+    width: 100%;
+    height: 100%;
+}
+
+.grid figure:first-child {
+    grid-column: 1 / span 4;
+    grid-row: 1 / span 2;
+}
+
+.grid figure:not(:first-child) {
+    grid-column-end: span 2;
+    grid-row-end: span 1;
+}
+
+@media screen and (max-width: 957px) {
+    .grid {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .grid2 {
+        padding-left: 25px;
+        padding-right: 25px;
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr) !important;
+        grid-template-rows: repeat(2, 1fr) !important;
+    }
+}
+
+
+/* Grid on mobile */
+
+@media screen and (max-width: 957px) {
+    .grid {
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+    }
+    .grid figure {
+        grid-column-end: span 1 !important;
+        grid-row-end: span 1 !important;
+    }
+    .grid .flushed-to-grid {
+        grid-column-end: span 1 !important;
+        grid-row-end: fit-content;
+    }
+}
+
+
+/* Work section other css */
+
+.work figure,
+.collab figure {
+    border: 2px solid rgba(41, 38, 35, 0.5);
+    position: relative;
+    font-size: 70%;
+}
+
+.work figure img,
+.collab figure img {
+    width: 100%;
+    height: 100%;
+}
+
+.work figure figcaption,
+.collab figure figcaption {
+    background-color: #4a4a4a;
+    color: white;
+    font-family: "Montserrat";
+    padding: 10px;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    font-size: 75%;
+    line-height: 1.5;
+    border-top-right-radius: 5px;
+    /* Todo: Review;
+	 Smooth out specific corner */
+    border-bottom-right-radius: 5px;
+}
+
+.grid-wrapper .grid figcaption h3 {
+    font-size: 100% !important;
+}
+
+.work figure .overlay,
+.collab figure .overlay {
+    /* Todo: Review: Overlay color when hovering */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 500ms;
+}
+
+.work figure .overlay:hover,
+.collab figure .overlay:hover {
+    opacity: 0.15;
+}
+
+
+/* Work section on mobile */
+
+@media screen and (max-width: 957px) {
+    .work figure figcaption {
+        font-size: 1.25rem;
+        line-height: 2;
+    }
+}
+
+
+/* Credited section that's a nested section of Work */
+
+.credited {
+    grid-column-end: span 8;
+    margin-top: 20px;
+    transition: background-color 400ms;
+    padding: 10px;
+}
+
+.credited li {
+    display: block;
+    /* Spacing and colors in the credited items */
+}
+
+.credited li::marker,
+.credited li::before {
+    content: "";
+}
+
+.credited li details summary {
+    margin: 5px 0;
+}
+
+.credited li details summary::-webkit-details-marker {
+    display: none;
+}
+
+.credited li details>div {
+    margin: 5px 18px;
+}
+
+.credited li details .fa-info {
+    margin-right: 1ch;
+    cursor: pointer;
+}
+
+.credited:hover .text-med {
+    transition: color 400ms;
+}
+
+.credited.flushed-to-grid {
+    width: 100% !important;
+}
+
+
+/* Contact section flexing */
+
+.contact>.flex>*:nth-child(1) {
+    flex: 1;
+}
+
+.contact>.flex>*:nth-child(2) {
+    flex: 2;
+}
+
+.contact>.flex ul li {
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.contact>.flex ul li::marker {
+    content: "";
+}
+
+.contact .flex {
+    padding-top: 10px;
+    padding-bottom: 0;
+}
+
+.contact li {
+    display: inline-block;
+    transition: border 500ms;
+}
+
+.contact li a {
+    transition: color 500ms;
+    text-decoration: none;
+}
+
+
+/* Contact section other css */
+
+
+/* Workaround: Collab area shifted to the left */
+
+
+/* Toggle description */
+
+.display-none {
+    display: none;
+}
+
+.overlay-toggle-description {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 3;
+}
+
+.overlay-toggle-description a {
+    color: purple !important;
+}
+
+.overlay-toggle-description a i {
+    cursor: pointer;
+}
+
+.overlay-toggle-description a:hover {
+    color: red !important;
+}
+
+
+/* Github link */
+
+.add-github-link {
+    background-color: #292623;
+    /* z-index: 1;
+	 */
+    z-index: 5;
+    padding: 10px;
+    position: absolute;
+    /* bottom: -47.5px;
+	 right: -5px;
+	 */
+    top: 5px;
+    right: 5px;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    border-top-left-radius: 5px;
+    /* Todo: Review;
+	 Smooth out specific corner */
+    border-bottom-left-radius: 5px;
+}
+
+.add-github-link a {
+    color: gray;
+    text-decoration: none;
+}
+
+.add-github-link a:hover {
+    color: lightgray;
+}
+
+
+/* Last section is completely flushed to the side and bottom edges */
+
+#collab {
+    margin-top: 40px;
+    padding: 20px 0 !important;
+}
+
+footer {
+    margin: 0 !important;
+    /* Override previous margin rules that were more specific because of selectors */
+    padding: 0 !important;
+}
+
+.work figure .overlay:hover,
+.collab figure .overlay:hover {
+    opacity: 0.15;
+}
+
+#credited {
+    background: rgba(41, 38, 35, 1);
+    background: linear-gradient(90deg, rgba(94, 88, 83, 1) 0%, rgba(121, 121, 121, 1) 25%, rgba(41, 38, 35, 1) 98%);
+    color: white;
+}
+
+#credited a {
+    color: white;
+}
+
+#credited a:hover {
+    color: darkgray !important;
+}
+
+footer {
+    color: white;
+}
+
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    color: darkgray;
+}
+
+details div {
+    padding-left: 10px;
+}
+
+footer {
+    background-color: rgba(41, 38, 35, 1);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 20px !important;
+}
+
+.slide-b .wrapper {
+    display: flex;
+    height: 80vh;
+}
+
+.slide-b .a {
+    width: 40vw;
+    height: 100%;
+    display: inline-block;
+    background: #d0e4f5 url("../../assets/img/coding-stock.jpg") repeat scroll 50% 50%;
+    background-size: cover;
+}
+
+.slide-b .b {
+    width: 100%;
+    height: 100%;
+    background-color: #e5e4e2;
+    /* platinum */
+}
+
+.slide-b .bb1 {
+    width: 300px;
+    height: 100%;
+    float: left;
+    background: rgba(255, 255, 255, 1) url("../../assets/img/me.png") repeat scroll 50% 50%;
+    background-size: cover;
+    margin-right: 20px;
+}
+
+.slide-b .bb2 .va {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    height: 100%;
+    overflow: scroll;
+}
+
+.slide-b .bb2 .va .flexie {
+    line-height: 150%;
+    letter-spacing: 1px;
+    /* height: 80vh;
+	 */
+}
+
+@media (max-height: 736px) {
+    .slide-b .bb1 {
+        width: 45vw !important;
+    }
+}
+
+@media (max-height: 530px) {
+    .slide-b {
+        display: block;
+    }
+    .slide-b .wrapper .a {
+        width: 100vw !important;
+    }
+    .slide-b .bb1 {
+        width: 40vw !important;
+    }
+    .slide-b .bb2 .va {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 825px) {
+    .slide-b .wrapper {
+        display: block;
+    }
+    .slide-b .wrapper .a {
+        display: none;
+    }
+}
+
+@media (max-width: 770px) {
+    .slide-b .bb2 {
+        line-height: 100%;
+        font-size: 90%;
+    }
+    .slide-b .b {
+        height: 850px !important;
+    }
+}
+
+@media (max-width: 450px) {
+    .slide-b .bb1 {
+        width: 40vw !important;
+    }
+}
+
+.project {
+    cursor: pointer;
 }
