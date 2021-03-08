@@ -213,7 +213,6 @@
     .section,
     main,
     footer {
-        padding: 20px 40px;
         /*Todo: Review; Two value padding/margin means upper/lower and left/right */
         margin-bottom: 20px;
     }

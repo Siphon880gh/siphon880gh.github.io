@@ -6,6 +6,7 @@ class App extends React.Component {
             <div data-component="App" className="container-fluid p-0">
                 <Header></Header>
                 <WhoAmI></WhoAmI>
+                <Footer></Footer>
             </div>
         )
     }
