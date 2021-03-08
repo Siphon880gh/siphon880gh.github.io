@@ -411,28 +411,23 @@
     opacity: .15;
 }
 
-.work figure .overlay-color-1,
-.collab figure .overlay-color-1 {
+overlay-color-1 {
     background-color: blue;
 }
 
-.work figure .overlay-color-2,
-.collab figure .overlay-color-2 {
+overlay-color-2 {
     background-color: purple;
 }
 
-.work figure .overlay-color-3,
-.collab figure .overlay-color-3 {
+overlay-color-3 {
     background-color: red;
 }
 
-.work figure .overlay-color-4,
-.collab figure .overlay-color-4 {
+overlay-color-4 {
     background-color: blue;
 }
 
-.work figure .overlay-color-5,
-.collab figure .overlay-color-5 {
+overlay-color-5 {
     background-color: purple;
 }
 
@@ -573,16 +568,19 @@
 
 .add-github-link {
     background-color: rgb(41, 38, 35);
-    z-index: 1;
+    /* z-index: 1; */
+    z-index: 5;
     padding: 10px;
     position: absolute;
-    bottom: -47.5px;
-    right: -5px;
+    /* bottom: -47.5px;
+    right: -5px; */
+    top: 5px;
+    right: 5px;
     font-size: .8rem;
     line-height: 1.5;
-    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
     /* Todo: Review; Smooth out specific corner */
-    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
 
@@ -604,28 +602,23 @@ footer {
     opacity: .15;
 }
 
-.work figure .overlay-color-1,
-.collab figure .overlay-color-1 {
+overlay-color-1 {
     background-color: blue;
 }
 
-.work figure .overlay-color-2,
-.collab figure .overlay-color-2 {
+overlay-color-2 {
     background-color: purple;
 }
 
-.work figure .overlay-color-3,
-.collab figure .overlay-color-3 {
+overlay-color-3 {
     background-color: red;
 }
 
-.work figure .overlay-color-4,
-.collab figure .overlay-color-4 {
+overlay-color-4 {
     background-color: blue;
 }
 
-.work figure .overlay-color-5,
-.collab figure .overlay-color-5 {
+overlay-color-5 {
     background-color: purple;
 }
 
