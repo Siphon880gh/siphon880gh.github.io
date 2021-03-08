@@ -227,3 +227,11 @@ body {
 .badge-style {
     max-width: 100%;
 }
+
+.badges a:not(:last-child) {
+    margin-right: 10px;
+}
+
+address {
+    display: inline;
+}

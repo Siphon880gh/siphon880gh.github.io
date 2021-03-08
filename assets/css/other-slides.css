@@ -47,7 +47,6 @@
     .slide-b .bb1 {
         width: 45vw !important;
     }
-    .slide-b .bb2 {}
 }
 
 @media (max-height: 530px) {
@@ -92,4 +91,8 @@
     .slide-b .bb1 {
         width: 40vw !important;
     }
+}
+
+.project {
+    cursor: pointer;
 }

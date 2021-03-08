@@ -1,3 +1,4 @@
+/* eslint-disable */
 // import all components below
 
 class App extends React.Component {
@@ -6,6 +7,8 @@ class App extends React.Component {
             <div data-component="App" className="container-fluid p-0">
                 <Header></Header>
                 <WhoAmI></WhoAmI>
+                <Work></Work>
+                <Collab></Collab>
                 <Credit></Credit>
                 <Footer></Footer>
             </div>
