@@ -207,7 +207,7 @@
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    height: 100vh;
+    height: 90vh;
     z-index: 3;
 }
 
@@ -300,7 +300,7 @@
 
 @media (max-width: 600px) {
     .slide-hero {
-        height: 110vh;
+        height: 90vh;
     }
 }
 
@@ -318,7 +318,7 @@ body {
 
 @media (max-height: 380px) {
     .slide-a .slide-hero {
-        height: 120vh;
+        height: 90vh;
     }
 }
 

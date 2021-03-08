@@ -13,6 +13,7 @@ class App extends React.Component {
                         <Route path="*/work" component={Work}/>
                         <Route path="*/collab" component={Collab}/>
                         <Route path="*/credited" component={Credit}/>
+                        <Route path="*" component={WhoAmI}/>
                     </Switch>
 
                     <Footer/>
