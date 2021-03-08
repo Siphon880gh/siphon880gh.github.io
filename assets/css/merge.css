@@ -1,7 +1,4 @@
 @charset "UTF-8";
-
-/* line 1, ../scss/_reset-css.scss */
-
 * {
     margin: 0;
     padding: 0;
@@ -11,27 +8,19 @@
 
 /* Img acting as background-images that can do contain, cover, and positioning */
 
-
-/* line 3, ../scss/_image-clipping.scss */
-
 .img-contain {
     object-fit: contain;
-    object-position: 50% 50%;
+    /* object-position: 50% 50%; */
+    object-position: 25% 25%;
     /* default value: image is centered */
     opacity: .75;
 }
-
-
-/* line 10, ../scss/_image-clipping.scss */
 
 .img-clip-0-0 {
     object-fit: cover;
     object-position: 0 0;
     /* positioned top left of the content box */
 }
-
-
-/* line 16, ../scss/_image-clipping.scss */
 
 .img-clip-50-50 {
     object-fit: cover;
@@ -42,44 +31,26 @@
 
 /* Utility classes: Flex */
 
-
-/* line 2, ../scss/_utility-classes.scss */
-
 .flex {
     display: flex;
     flex-wrap: wrap;
 }
 
-
-/* line 6, ../scss/_utility-classes.scss */
-
 .flex-row {
     flex-direction: row;
 }
-
-
-/* line 9, ../scss/_utility-classes.scss */
 
 .flex-col {
     flex-direction: column;
 }
 
-
-/* line 12, ../scss/_utility-classes.scss */
-
 .flex-space-around {
     justify-content: space-around;
 }
 
-
-/* line 15, ../scss/_utility-classes.scss */
-
 .flex-space-between {
     justify-content: space-between;
 }
-
-
-/* line 18, ../scss/_utility-classes.scss */
 
 .flex-justify-middle {
     justify-content: middle;
@@ -88,15 +59,9 @@
 
 /* Utility classes: Spacing */
 
-
-/* line 23, ../scss/_utility-classes.scss */
-
 .padding-left-15px {
     padding-left: 15px;
 }
-
-
-/* line 26, ../scss/_utility-classes.scss */
 
 .clearfix {
     clear: both;
@@ -104,9 +69,6 @@
 
 
 /* Utility class: Center horizontally and vertically */
-
-
-/* line 31, ../scss/_utility-classes.scss */
 
 .center-x-y {
     display: block;
@@ -117,9 +79,6 @@
 
 
 /* Utility class: Center horizontally */
-
-
-/* line 38, ../scss/_utility-classes.scss */
 
 .center-x {
     display: block;
@@ -138,7 +97,6 @@
 }
 
 @media (max-width: 568px) {
-    /* line 68, ../scss/_utility-classes.scss */
     .hidden-xs-down {
         display: none !important;
     }
@@ -549,9 +507,6 @@
     margin-bottom: 10px;
     margin-right: 10px;
 }
-
-
-/* line 475, ../scss/index.scss */
 
 .contact>.flex ul li::marker {
     content: "";
