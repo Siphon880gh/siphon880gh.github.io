@@ -5,8 +5,7 @@ class App extends React.Component {
         return (
             <div data-component="App" className="container-fluid p-0">
                 <Header></Header>
-                
-                    <WhoAmI></WhoAmI>
+                <WhoAmI></WhoAmI>
             </div>
         )
     }

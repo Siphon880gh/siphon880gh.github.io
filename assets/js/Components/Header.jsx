@@ -6,7 +6,7 @@ class Header extends React.Component {
                 <header data-component="Header" className="site-header">
 
                     <div className="page-title-wrapper">
-                        <a href="/">
+                        <a href="./">
                             <h1 className="page-title">Weng Industry</h1>
                         </a>
                     </div>
