@@ -6,8 +6,6 @@
     background-color: rgb(54, 50, 47);
     ;
     /* Sticky bar */
-    position: -webkit-sticky;
-    /* Safari support */
     position: sticky;
     top: 0;
     /* Sticky bar scroll threshold for element to stick in place */
