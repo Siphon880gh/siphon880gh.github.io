@@ -23,19 +23,19 @@ class Navigation extends React.Component {
             <span className="fa fa-grip-lines site-nav-mobile-btn" onClick={this.onClickMobileHamburgerIcon}></span>
             <ul>
                 <li>
-                    <NavLink to="./tech" className={this.isActivePageClass.call(this, "Tech")} onClick={this.updateActivePage.bind(this)}>Tech</NavLink>
+                    <NavLink to="./tech" activeClassName="text-bold-colored">Tech</NavLink>
                 </li>
                 <li>
-                    <NavLink to="./whoami" className={this.isActivePageClass.call(this, "WhoAmI")} onClick={this.updateActivePage.bind(this)}>WhoAmI</NavLink>
+                    <NavLink to="./whoami" activeClassName="text-bold-colored">WhoAmI</NavLink>
                 </li>
                 <li>
-                    <NavLink to="./work" className={this.isActivePageClass.call(this, "Work")} onClick={this.updateActivePage.bind(this)}>Work</NavLink>
+                    <NavLink to="./work" activeClassName="text-bold-colored">Work</NavLink>
                 </li>
                 <li>
-                    <NavLink to="./collab"className={this.isActivePageClass.call(this, "Collab")} onClick={this.updateActivePage.bind(this)}>Collab</NavLink>
+                    <NavLink to="./collab" activeClassName="text-bold-colored">Collab</NavLink>
                 </li>
                 <li>
-                    <NavLink to="./credited" className={this.isActivePageClass.call(this, "Credited")} onClick={this.updateActivePage.bind(this)}>Credited</NavLink>
+                    <NavLink to="./credited" activeClassName="text-bold-colored">Credited</NavLink>
                 </li>
             </ul>
         </nav>
