@@ -1,0 +1,12 @@
+/*
+ * If a section has very few projects, then the template rows will need to be adjusted so there won't be large spaces
+ *
+ */
+
+.collab .project {
+    grid-row: auto !important;
+}
+
+.collab .grid {
+    grid-template-rows: auto !important;
+}

@@ -10,8 +10,8 @@
 
 .img-contain {
     object-fit: contain;
-    /* object-position: 50% 50%; */
-    object-position: 25% 25%;
+    object-position: 50% 50%;
+    /* object-position: 25% 25%; */
     /* default value: image is centered */
     opacity: .75;
 }
@@ -548,7 +548,7 @@
 }
 
 .overlay-toggle-description a {
-    color: purple;
+    color: purple !important;
 }
 
 .overlay-toggle-description a i {
@@ -556,7 +556,7 @@
 }
 
 .overlay-toggle-description a:hover {
-    color: red;
+    color: red !important;
 }
 
 
