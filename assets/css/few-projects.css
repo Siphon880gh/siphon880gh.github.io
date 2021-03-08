@@ -3,10 +3,20 @@
  *
  */
 
+
+/* Vertical spaces */
+
 .collab .project {
     grid-row: auto !important;
 }
 
 .collab .grid {
     grid-template-rows: auto !important;
+}
+
+
+/* Remove when you have more collab projects */
+
+.collab .grid {
+    grid-template-columns: repeat(6, 1fr);
 }
