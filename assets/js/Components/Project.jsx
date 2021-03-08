@@ -5,7 +5,7 @@ class Project extends React.Component {
     toggleDescription(event) {
         event.preventDefault();
         let project = event.target.closest("figure");
-        let descs = context.querySelector("figcaption");
+        let descs = project.querySelector("figcaption");
         descs.classList.toggle("display-none");
         event.preventDefault();
         event.stopPropagation();
