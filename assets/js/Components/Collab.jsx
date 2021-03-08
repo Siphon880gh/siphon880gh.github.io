@@ -18,7 +18,9 @@ class Collab extends React.Component {
                                 screenshot="assets/img/websites/goals-social.gif"
                                 title="Goals Social"
                                 desc="2/10/21 By Weng Fei Fung, Aidan Meyer, and Angela Kao. A social network based around people’s goals. Look into their milestones, leave helpful comments, and chat with like-minded driven users"
-                                repos="https://github.com/Siphon880gh/goals-social">
+                                repos="https://github.com/Siphon880gh/goals-social"
+                                bgColor="blue"
+                                >
                         </Project>
 
                         <Project    

@@ -15,6 +15,15 @@ class Project extends React.Component {
             github.classList.toggle("display-none");
     }
     render() {
+        // If provided color code, add color overlay. Otherwise, add a default color overlay
+        let {bgColor} = this.props;
+        console.log(bgColor);
+        if(!bgColor) bgColor = "purple";
+        function getColorOverlay(bgColor) {
+            return {backgroundColor: bgColor};
+        }
+
+        // If provided github link, add github link
         let repos = "";
         if(this.props.repos) {
             repos = (<aside className="add-github-link">
@@ -31,7 +40,7 @@ class Project extends React.Component {
                         {this.props.desc}  
                     </p>
                 </figcaption>
-                <div className="overlay overlay-color-1" onClick={this.openWindow.bind(this)}></div>
+                <div className="overlay" style={getColorOverlay.call(null, bgColor)} onClick={this.openWindow.bind(this)}></div>
                 <div className="overlay-toggle-description">
                     <a onClick={this.toggleDescription}><i className='fa fa-eye'></i></a>
                 </div>

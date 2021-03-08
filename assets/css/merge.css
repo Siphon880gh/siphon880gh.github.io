@@ -411,26 +411,6 @@
     opacity: .15;
 }
 
-overlay-color-1 {
-    background-color: blue;
-}
-
-overlay-color-2 {
-    background-color: purple;
-}
-
-overlay-color-3 {
-    background-color: red;
-}
-
-overlay-color-4 {
-    background-color: blue;
-}
-
-overlay-color-5 {
-    background-color: purple;
-}
-
 
 /* Work section on mobile */
 
@@ -600,26 +580,6 @@ footer {
 .work figure .overlay:hover,
 .collab figure .overlay:hover {
     opacity: .15;
-}
-
-overlay-color-1 {
-    background-color: blue;
-}
-
-overlay-color-2 {
-    background-color: purple;
-}
-
-overlay-color-3 {
-    background-color: red;
-}
-
-overlay-color-4 {
-    background-color: blue;
-}
-
-overlay-color-5 {
-    background-color: purple;
 }
 
 #credited {
