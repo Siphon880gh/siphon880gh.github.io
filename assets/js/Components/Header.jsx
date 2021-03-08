@@ -9,29 +9,7 @@ class Header extends React.Component {
                         </a>
                     </div>
 
-                    <nav class="site-nav">
-                        <span class="fa fa-grip-lines site-nav-mobile-btn" onclick="this.classList.toggle('active');"></span>
-                        <ul>
-                            <li>
-                                <a href="#slide-a">Tech</a>
-                            </li>
-                            <li>
-                                <a href="#about-anchor">WhoAmI</a>
-                            </li>
-                            <li>
-                                <a href="#work">Work</a>
-                            </li>
-                            <li>
-                                <a href="#collab">Collab</a>
-                            </li>
-                            <li>
-                                <a href="#credited">Credited</a>
-                            </li>
-                            <li>
-                                <a href="#contact">Contact</a>
-                            </li>
-                        </ul>
-                    </nav>
+                    <Navigation></Navigation>
 
                     <span className="clear-fix"></span>
 
