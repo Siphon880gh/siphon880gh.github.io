@@ -110,12 +110,12 @@ https://via.placeholder.com/468x60?text=Visit+Blogging.com+Now
 }
 
 .slide-hero .line {
-    -webkit-flex: 0 0 20px;
-    -ms-flex: 0 0 20px;
-    flex: 0 0 20px;
-    -webkit-align-self: auto;
-    -ms-flex-item-align: auto;
-    align-self: auto;
+    -webkit-flex: 0 0 20px !important;
+    -ms-flex: 0 0 20px !important;
+    flex: 0 0 20px !important;
+    -webkit-align-self: auto !important;
+    -ms-flex-item-align: auto !important;
+    align-self: auto !important;
 }
 
 .slide-hero .line {
@@ -136,6 +136,12 @@ https://via.placeholder.com/468x60?text=Visit+Blogging.com+Now
     font-weight: 800;
     text-transform: capitalize;
     line-height: 1.2em;
+}
+
+.text-white,
+.text-white * {
+    color: white !important;
+    text-decoration: auto;
 }
 
 .f1a {
@@ -211,4 +217,13 @@ body {
     .slide-a .slide-hero {
         height: 120vh;
     }
+}
+
+.github-style {
+    height: 20px;
+    border-radius: 2.5px
+}
+
+.badge-style {
+    max-width: 100%;
 }
