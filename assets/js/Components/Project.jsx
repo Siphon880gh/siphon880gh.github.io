@@ -17,7 +17,6 @@ class Project extends React.Component {
     render() {
         // If provided color code, add color overlay. Otherwise, add a default color overlay
         let {bgColor} = this.props;
-        console.log(bgColor);
         if(!bgColor) bgColor = "purple";
         function getColorOverlay(bgColor) {
             return {backgroundColor: bgColor};

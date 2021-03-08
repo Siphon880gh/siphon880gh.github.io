@@ -23,22 +23,19 @@ class Navigation extends React.Component {
             <span className="fa fa-grip-lines site-nav-mobile-btn" onClick={this.onClickMobileHamburgerIcon}></span>
             <ul>
                 <li>
-                    <a href="#slide-a" className={this.isActivePageClass.call(this, "Tech")} onClick={this.updateActivePage.bind(this)}>Tech</a>
+                    <NavLink to="./tech" className={this.isActivePageClass.call(this, "Tech")} onClick={this.updateActivePage.bind(this)}>Tech</NavLink>
                 </li>
                 <li>
-                    <a href="#about-anchor" className={this.isActivePageClass.call(this, "WhoAmI")} onClick={this.updateActivePage.bind(this)}>WhoAmI</a>
+                    <NavLink to="./whoami" className={this.isActivePageClass.call(this, "WhoAmI")} onClick={this.updateActivePage.bind(this)}>WhoAmI</NavLink>
                 </li>
                 <li>
-                    <a href="#work" className={this.isActivePageClass.call(this, "Work")} onClick={this.updateActivePage.bind(this)}>Work</a>
+                    <NavLink to="./work" className={this.isActivePageClass.call(this, "Work")} onClick={this.updateActivePage.bind(this)}>Work</NavLink>
                 </li>
                 <li>
-                    <a href="#collab" className={this.isActivePageClass.call(this, "Collab")} onClick={this.updateActivePage.bind(this)}>Collab</a>
+                    <NavLink to="./collab"className={this.isActivePageClass.call(this, "Collab")} onClick={this.updateActivePage.bind(this)}>Collab</NavLink>
                 </li>
                 <li>
-                    <a href="#credited" className={this.isActivePageClass.call(this, "Credited")} onClick={this.updateActivePage.bind(this)}>Credited</a>
-                </li>
-                <li>
-                    <a href="#contact" className={this.isActivePageClass.call(this, "Contact")} onClick={this.updateActivePage.bind(this)}>Contact</a>
+                    <NavLink to="./credited" className={this.isActivePageClass.call(this, "Credited")} onClick={this.updateActivePage.bind(this)}>Credited</NavLink>
                 </li>
             </ul>
         </nav>

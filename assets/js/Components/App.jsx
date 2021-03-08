@@ -1,20 +1,27 @@
-/* eslint-disable */
 // import all components below
 
 class App extends React.Component {
     render() {
         return (
-            <div data-component="App" className="container-fluid p-0">
-                <Header></Header>
-                <WhoAmI></WhoAmI>
-                <Work></Work>
-                <Collab></Collab>
-                <Credit></Credit>
-                <Footer></Footer>
-            </div>
+            <Router>
+                <div data-component="App" className="container-fluid p-0">
+                    <Header></Header>
+
+                    <Switch>
+                        <Route path="*/tech" component={Tech}/>
+                        <Route path="*/whoami" component={WhoAmI}/>
+                        <Route path="*/work" component={Work}/>
+                        <Route path="*/collab" component={Collab}/>
+                        <Route path="*/credited" component={Credit}/>
+                    </Switch>
+
+                    <Footer/>
+
+                </div>
+            </Router>
         )
     }
 }
 
 const reactRoot = document.querySelector('.react-root');
-ReactDOM.render( <App/> , reactRoot);
+ReactDOM.render(<App/>, reactRoot);

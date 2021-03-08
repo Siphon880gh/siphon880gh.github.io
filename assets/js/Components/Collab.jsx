@@ -6,10 +6,6 @@ class Collab extends React.Component {
 
             <React.Fragment>
                 <div data-component="collab" id="collab" className="collab section">
-                    <div className="collab-title-wrapper">
-                        <h2 className="section-title">Collab </h2>
-                        <img className="arrow-points" src="./assets/img/point-up.png" alt="Arrow points"/>
-                    </div>
                     <div className="grid-wrapper">
                         <div className="grid">
 

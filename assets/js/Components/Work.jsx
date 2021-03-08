@@ -5,7 +5,6 @@ class Work extends React.Component {
         return (
             <React.Fragment>
                 <main data-component="work" id="work" className="work section">
-                    <h2 className="section-title">Work</h2>
                     <div className="grid-wrapper">
                         <div className="grid">
 

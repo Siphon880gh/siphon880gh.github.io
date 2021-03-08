@@ -292,7 +292,6 @@
 .grid {
     display: grid;
     margin: 0 auto;
-    width: 80%;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(2, 1fr);
     justify-content: space-between;

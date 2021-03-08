@@ -96,20 +96,3 @@
 .project {
     cursor: pointer;
 }
-
-.collab-title-wrapper {
-    width: 190px;
-    float: left;
-}
-
-.arrow-points {
-    /*
-    position: relative;
-    left: -100%;
-    bottom: 0;
-    z-index: 9999;
-    */
-    width: 100px;
-    float: right;
-    opacity: .5;
-}
