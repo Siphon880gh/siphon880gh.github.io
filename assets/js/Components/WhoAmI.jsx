@@ -3,7 +3,7 @@ class WhoAmI extends React.Component {
         return (
                 <div data-component="WhoAmI" id="slide-b" className="slide slide-b">
 
-                    <div className="wrapper">
+                    <div className="wrapper max-width">
 
                     <div className="a"></div>
                             <div className="b">

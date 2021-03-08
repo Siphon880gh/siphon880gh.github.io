@@ -6,7 +6,7 @@ class Work extends React.Component {
             <React.Fragment>
                 <main data-component="work" id="work" className="work section">
                     <div className="grid-wrapper">
-                        <div className="grid">
+                        <div className="grid max-width">
 
                             <Project    
                                 link="https://wengindustry.com/tools/covid19/"

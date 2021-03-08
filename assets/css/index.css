@@ -938,3 +938,7 @@ footer {
 .project {
     cursor: pointer;
 }
+
+.max-width {
+    width: 100%;
+}

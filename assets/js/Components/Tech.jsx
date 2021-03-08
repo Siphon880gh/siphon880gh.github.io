@@ -1,7 +1,7 @@
 class Tech extends React.Component {
     render() {
         return (
-                <div data-component-fragment="WhoAmI" id="slide-a" className="slide slide-a">
+                <div data-component="Tech" id="slide-a" className="slide slide-a">
                     <div className="wrapper">
                         <div className="background-overlay"></div>
                         <div className="slide slide-hero clear-fix">
