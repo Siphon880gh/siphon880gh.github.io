@@ -144,36 +144,6 @@
 }
 
 
-/* Section title rotated 90 degrees on Desktop */
-
-.section-title {
-    display: block;
-    width: 190px;
-    /* Rotate needs same width for all section titles or will be placed on x axis inconsistently */
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
-    margin-top: 30px;
-    text-align: left;
-    transform: rotate(270deg);
-}
-
-@media screen and (min-width: 1034px) {
-    .section-title {
-        font-family: "PlayfairDisplay-Regular";
-        float: left;
-        font-size: 2rem;
-        margin-top: 70px;
-        margin-bottom: 30px;
-        text-align: center;
-        vertical-align: bottom;
-    }
-    .work .section-title {
-        margin-top: 90px;
-    }
-}
-
-
 /* About section other css */
 
 .focus {
@@ -301,15 +271,6 @@
 }
 
 @media screen and (max-width: 957px) {
-    .section-title {
-        padding-left: 25px;
-        padding-top: 25px;
-    }
-    #work .section-title {
-        transform: translateY(15px);
-        /* margin-top: 180vh; */
-        /* Quick workaround: The second slide is overlapping the Work section title top padding */
-    }
     .grid,
     .grid2 {
         padding-left: 25px;
