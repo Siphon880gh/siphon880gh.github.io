@@ -947,3 +947,16 @@ footer {
 .max-width {
     width: 100%;
 }
+
+.resume iframe {
+    width: 100%;
+    min-height: calc(100vh - 225px);
+    z-index: 1;
+}
+
+.download-resume {
+    position: fixed;
+    bottom: 160px;
+    right: 25px;
+    z-index: 2;
+}
