@@ -962,10 +962,6 @@ footer {
     opacity: .75;
 }
 
-.contact * {
-    text-align: -webkit-center;
-}
-
 .contact form {
     width: 100%;
     margin: 0 auto;

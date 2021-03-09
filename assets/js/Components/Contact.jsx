@@ -26,7 +26,7 @@ class Contact extends React.Component {
             });
         })
 
-        // Display on keyup for email textfield: "Correct format is user@domain.ext, eg. user@some-domain.com"
+        // Display for email textfield on keyup: "Correct format is user@domain.ext, eg. user@some-domain.com"
         let email = document.querySelector(".contact .email");
         email.addEventListener("keyup", event=>{
             if(event.target.value.length) {
@@ -36,7 +36,7 @@ class Contact extends React.Component {
                     document.querySelector(".email-error span").innerText = "Correct format is user@domain.ext, eg. user@some-domain.com";
                 }
             }
-        })
+        });
     }
     render() {
         function validateFormOnSubmit(event) {
@@ -113,6 +113,23 @@ class Contact extends React.Component {
 
                     <div className="clear-fix"></div>
                 </form>
+
+
+                <div className="modal modal-contact-submitted fade" role="dialog">
+                    <div className="modal-dialog">
+                        <div className="modal-content">
+                            <div className="modal-header">
+                                <h3>Submitted</h3>
+                            </div>
+                            <div className="modal-body">
+                                <p>Thanks for sending the message! I'll contact you asap. Have a good day!</p>
+                                <div className="modal-footer">
+                                    <button type="button" className="btn btn-default" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         )
     }
