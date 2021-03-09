@@ -15,7 +15,6 @@
 .site-header .page-title {
     padding: 5px;
     margin: 15px 0 20px 10px;
-    border-radius: 5px;
     color: white;
     background-color: #453647;
     font-weight: 800;
@@ -207,7 +206,7 @@
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    height: 90vh;
+    height: calc(100vh - 200px);
     z-index: 3;
 }
 
@@ -788,18 +787,9 @@ address {
     color: lightgray;
 }
 
-
-/* Last section is completely flushed to the side and bottom edges */
-
 #collab {
     margin-top: 40px;
     padding: 20px 0 !important;
-}
-
-footer {
-    margin: 0 !important;
-    /* Override previous margin rules that were more specific because of selectors */
-    padding: 0 !important;
 }
 
 .work figure .overlay:hover,
@@ -838,10 +828,12 @@ details div {
 }
 
 footer {
+    margin: 0 !important;
     background-color: rgba(41, 38, 35, 1);
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
     padding: 20px !important;
+    border-radius: 0;
+    position: fixed;
+    bottom: 0;
 }
 
 .slide-b .wrapper {
@@ -1047,4 +1039,17 @@ footer {
 .modal-header,
 .modal-footer {
     border: 0;
+}
+
+.spacer {
+    width: 1px;
+    height: 100px;
+}
+
+.footer-spacer {
+    z-index: 1;
+}
+
+footer {
+    z-index: 2;
 }

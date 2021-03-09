@@ -18,7 +18,8 @@ class App extends React.Component {
                         <Route path="*" component={WhoAmI}/>
                     </Switch>
 
-                    <Footer/>
+                    <FooterSpace></FooterSpace>
+                    <Footer></Footer>
 
                 </div>
             </Router>
