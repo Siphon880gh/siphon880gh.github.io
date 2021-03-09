@@ -557,18 +557,13 @@ address {
     grid-row-end: span 1;
 }
 
-@media screen and (max-width: 957px) {
-    .grid {
-        padding-left: 25px;
-        padding-right: 25px;
-    }
-}
-
 
 /* Grid on mobile */
 
 @media screen and (max-width: 957px) {
     .grid {
+        padding-left: 25px;
+        padding-right: 25px;
         width: 100%;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(4, 1fr);
@@ -591,7 +586,7 @@ address {
         grid-template-columns: repeat(1, 1fr);
     }
     .grid figcaption {
-        font-size: 1rem;
+        font-size: 50%;
     }
 }
 
@@ -655,7 +650,7 @@ address {
 
 @media screen and (max-width: 957px) {
     .work figure figcaption {
-        font-size: 1.25rem;
+        font-size: 60%;
         line-height: 2;
     }
 }
@@ -1079,12 +1074,9 @@ footer {
     border: 0;
 }
 
-.spacer {
-    width: 1px;
-    height: 100px;
-}
-
 .footer-spacer {
+    width: 1px;
+    height: 95px;
     z-index: 1;
 }
 
