@@ -1,8 +1,8 @@
 /** Header **/
 
 .site-header {
-    margin: -15px 0 0 0;
-    padding: 0 10px;
+    margin: -7.5px 0 0 0;
+    padding: 0;
     background-color: #36322f;
     /* Sticky bar */
     position: sticky;
@@ -14,7 +14,7 @@
 
 .site-header .page-title {
     padding: 5px;
-    margin: 20px 0 20px 0;
+    margin: 15px 0 20px 10px;
     border-radius: 5px;
     color: white;
     background-color: #453647;
@@ -73,7 +73,7 @@
 }
 
 .site-nav ul li:hover {
-    background-color: var(--crunchier);
+    background-color: rgba(calc(185*1), calc(58*.6), calc(63*.6), .5);
 }
 
 
@@ -81,7 +81,7 @@
 
 .site-nav-mobile-btn {
     float: right;
-    margin-top: 15px;
+    margin: 15px 20px 0 0;
     cursor: pointer;
     border: 2px solid black;
     color: black;
@@ -111,7 +111,7 @@
     display: block;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1210px) {
     .site-nav-mobile-btn {
         display: none;
     }
@@ -121,7 +121,7 @@
     }
     .site-nav ul {
         float: right;
-        padding: 20px 0 0 0;
+        padding: 20px 5px 0 0;
         font-size: 18px;
     }
     .site-nav ul li {
@@ -950,7 +950,7 @@ footer {
 
 .resume iframe {
     width: 100%;
-    min-height: calc(100vh - 225px);
+    min-height: calc(100vh - 215px);
     z-index: 1;
 }
 
