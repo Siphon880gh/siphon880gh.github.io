@@ -586,7 +586,7 @@ address {
         grid-template-columns: repeat(1, 1fr);
     }
     .grid figcaption {
-        font-size: 50%;
+        font-size: 60%;
     }
 }
 
