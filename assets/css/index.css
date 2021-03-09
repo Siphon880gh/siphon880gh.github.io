@@ -972,14 +972,12 @@ footer {
 }
 
 .resume {
-    display: flex;
     position: relative;
 }
 
 .resume iframe {
-    width: 1px;
-    min-width: 100%;
-    min-height: calc(100vh - 215px);
+    width: 100vw;
+    min-height: calc(100vh - 200px);
     z-index: 1;
 }
 
