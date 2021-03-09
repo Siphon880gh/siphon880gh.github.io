@@ -959,21 +959,27 @@ footer {
     width: 100%;
 }
 
+.resume {
+    display: flex;
+    position: relative;
+}
+
 .resume iframe {
-    width: 100%;
+    width: 1px;
+    min-width: 100%;
     min-height: calc(100vh - 215px);
     z-index: 1;
 }
 
 .download-resume {
-    position: fixed;
-    bottom: 160px;
-    right: 25px;
+    position: absolute;
+    top: 0;
+    right: 0;
     z-index: 2;
-    background-color: lightblue;
+    background-color: rgba(41, 38, 35, 1);
+    color: rgba(calc(185*1), calc(58*.6), calc(63*.6), .5);
     padding: 10px;
-    border-radius: 10px;
-    opacity: .75;
+    border-bottom-left-radius: 10px;
 }
 
 .contact form {
