@@ -546,13 +546,6 @@ address {
         padding-left: 25px;
         padding-right: 25px;
     }
-    .grid2 {
-        padding-left: 25px;
-        padding-right: 25px;
-        width: 100%;
-        grid-template-columns: repeat(1, 1fr) !important;
-        grid-template-rows: repeat(2, 1fr) !important;
-    }
 }
 
 
@@ -561,8 +554,8 @@ address {
 @media screen and (max-width: 957px) {
     .grid {
         width: 100%;
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(5, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
     }
     .grid figure {
         grid-column-end: span 1 !important;
@@ -574,6 +567,15 @@ address {
     }
     .collab .grid {
         grid-template-columns: repeat(4, 1fr) !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .grid figcaption {
+        font-size: 1rem;
     }
 }
 
