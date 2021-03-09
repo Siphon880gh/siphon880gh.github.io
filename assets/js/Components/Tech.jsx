@@ -11,7 +11,7 @@ class Tech extends React.Component {
                         </div>
                         <div className="tech-overlay f1a relaxed">
                             <b className="f1b relaxed-more">FRONTEND:</b> JS | CSS3 | HTML5 | React JS<br/>
-                            <b className="f1b relaxed-more">BACKEND:</b> Node | MySQL | Sequelize | MongoDB | Moongoose<br/>
+                            <b className="f1b relaxed-more">BACKEND:</b> Node | MySQL | Sequelize | MongoDB | Mongoose<br/>
                             <b className="f1b relaxed-more">FULL STACK:</b> MERN<br/>
                             <b className="f1b relaxed-more">LEGACY:</b> jQuery | PHP<br/>
                             <b className="f1b relaxed-more">AGILE:</b> Handlebars | Crossroads | Asana/Trello/Basecamp
