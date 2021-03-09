@@ -252,6 +252,7 @@
 
 .f1b {
     font-family: "Montserrat", Sans-serif;
+    line-height: 2;
 }
 
 .text-cap {
@@ -880,6 +881,10 @@ footer {
     letter-spacing: 1px;
     /* height: 80vh;
 	 */
+}
+
+#about-anchor {
+    margin-top: 30px;
 }
 
 @media (max-height: 736px) {
