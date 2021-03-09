@@ -572,6 +572,9 @@ address {
         grid-column-end: span 1 !important;
         grid-row-end: fit-content;
     }
+    .collab .grid {
+        grid-template-columns: repeat(4, 1fr) !important;
+    }
 }
 
 

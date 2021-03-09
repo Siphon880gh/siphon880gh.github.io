@@ -4,7 +4,7 @@
  */
 
 
-/* Vertical spaces */
+/* Vertical spaces (next two rulesets) */
 
 .collab .project {
     grid-row: auto !important;
@@ -15,8 +15,12 @@
 }
 
 
-/* Remove when you have more collab projects */
+/* Remove when you have more collab projects (next two rulesets) */
 
 .collab .grid {
     grid-template-columns: repeat(6, 1fr);
+}
+
+.collab .grid {
+    grid-template-columns: repeat(2, 1fr) !important;
 }
