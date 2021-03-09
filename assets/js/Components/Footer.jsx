@@ -1,7 +1,7 @@
 class Footer extends React.Component {
     render() {
         return (
-            <footer data-component="Footer" id="contact" className="contact section container-fluid">
+            <footer data-component="Footer" id="footer" className="footer section container-fluid">
                 <div className="flex flex-row flex-space-between">
                     <ul className="flex flex-row flex-space-around">
                         <li><a className="text-bold" href="//linkedin.com/in/weng-fung/" target="_blank">Hire Me!</a></li>

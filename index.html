@@ -45,12 +45,31 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.14.0/babel.min.js"></script>
     <script type="text/babel" data-presets="es2017, stage-3" data-plugins="syntax-async-functions,transform-class-properties"></script>
 
+    <!-- Styled components -->
+    <script src="//unpkg.com/styled-components@4.0.1/dist/styled-components.min.js"></script>
 
 </head>
 
 <body>
 
     <div class="react-root"></div>
+
+    <!-- Modal -->
+    <div class="modal modal-contact-submitted fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Submitted</h3>
+                </div>
+                <div class="modal-body">
+                    <p>Thanks for sending the message! I'll contact you asap to your email. Have a good day!</p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Components -->
     <script type="text/babel" src="assets/js/Components/Header.jsx"></script>

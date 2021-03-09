@@ -692,34 +692,34 @@ address {
 
 /* Contact section flexing */
 
-.contact>.flex>*:nth-child(1) {
+.footer>.flex>*:nth-child(1) {
     flex: 1;
 }
 
-.contact>.flex>*:nth-child(2) {
+.footer>.flex>*:nth-child(2) {
     flex: 2;
 }
 
-.contact>.flex ul li {
+.footer>.flex ul li {
     margin-bottom: 10px;
     margin-right: 10px;
 }
 
-.contact>.flex ul li::marker {
+.footer>.flex ul li::marker {
     content: "";
 }
 
-.contact .flex {
+.footer .flex {
     padding-top: 10px;
     padding-bottom: 0;
 }
 
-.contact li {
+.footer li {
     display: inline-block;
     transition: border 500ms;
 }
 
-.contact li a {
+.footer li a {
     transition: color 500ms;
     text-decoration: none;
 }
@@ -959,4 +959,92 @@ footer {
     bottom: 160px;
     right: 25px;
     z-index: 2;
+    background-color: lightblue;
+    padding: 10px;
+    border-radius: 10px;
+    opacity: .75;
+}
+
+.contact * {
+    text-align: -webkit-center;
+}
+
+.contact form {
+    width: 100%;
+    margin: 0 auto;
+    border: 2px solid rgba(41, 38, 35, .9);
+    border-radius: 10px;
+}
+
+@media (min-width:650px) {
+    .contact form {
+        width: 80%;
+    }
+}
+
+@media (min-width:900px) {
+    .contact form {
+        width: 50%;
+    }
+}
+
+.contact label {
+    width: 100px;
+    font-weight: bold;
+    font-size: 1.25rem;
+    text-align: right;
+    padding-right: 1ch;
+}
+
+.contact input {
+    border: 1px solid rgba(41, 38, 35, .75);
+    border-radius: 5px;
+    color: rgba(41, 38, 35, 1);
+}
+
+.contact button {
+    width: 200px;
+    float: right;
+    color: gray !important;
+    background-color: rgba(41, 38, 35, 1) !important;
+    border-color: rgba(60, 50, 45, .5) !important;
+    transition: background-color .2s, color .2s, border-color .2s;
+}
+
+.contact button:hover {
+    color: white !important;
+    border-color: rgba(41, 38, 35, 1) !important;
+    background-color: rgba(60, 50, 45, .5) !important;
+}
+
+.contact .error {
+    display: block;
+}
+
+.contact .error span:empty {
+    display: none;
+    height: 0;
+}
+
+.contact .error span {
+    text-align: right;
+    padding: 10px;
+    color: black;
+    background-color: rgba(41, 38, 35, .5);
+    margin-bottom: 10px;
+    float: right;
+    transition: height .2s, display .2s;
+}
+
+.contact .message {
+    height: 150px;
+}
+
+.contact .message::placeholder {
+    vertical-align: text-top;
+}
+
+.modal-header,
+.modal-footer {
+    border: 0;
 }

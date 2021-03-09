@@ -15,7 +15,7 @@
 }
 
 
-/* Remove when you have more collab projects (next two rulesets) */
+/* Remove when you have more collab projects (next four rulesets) */
 
 .collab .grid {
     grid-template-columns: repeat(6, 1fr);
@@ -23,4 +23,12 @@
 
 .collab .grid {
     grid-template-columns: repeat(2, 1fr) !important;
+}
+
+.collab .grid figure:first-child {
+    grid-column-end: auto !important;
+}
+
+.collab .grid figure:not(:first-child) {
+    grid-column-end: auto !important;
 }
