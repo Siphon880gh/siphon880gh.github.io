@@ -1,15 +1,6 @@
 class Navigation extends React.Component {
     constructor(props) {
       super(props);
-      
-      // default page
-      this.state = {page: "Work"};
-    }
-    isActivePageClass(linkPage) {
-        return linkPage===this.state.page?"text-bold-colored":""
-    }
-    updateActivePage(event) {
-        this.setState({page:event.target.innerText});
     }
 
     onClickMobileHamburgerIcon(event){
@@ -22,6 +13,11 @@ class Navigation extends React.Component {
         hamburgerIcon.classList.remove("active");
     }
 
+    componentDidMount() {
+        // console.log("Component did mount");
+        document.querySelector("a.whoami").click();
+    }
+
     render(props) {
         return (
             <nav data-component="Navigation" className="site-nav">
@@ -31,7 +27,10 @@ class Navigation extends React.Component {
                     <NavLink to="./tech" activeClassName="text-bold-colored" onClick={this.collapseMobileMenu}>Tech</NavLink>
                 </li>
                 <li>
-                    <NavLink to="./whoami" activeClassName="text-bold-colored" onClick={this.collapseMobileMenu}>About Me</NavLink>
+                    <NavLink to="./whoami" activeClassName="text-bold-colored" onClick={this.collapseMobileMenu} className="whoami">About Me</NavLink>
+                </li>
+                <li>
+                    <NavLink to="./resume" activeClassName="text-bold-colored" onClick={this.collapseMobileMenu}>Resume</NavLink>
                 </li>
                 <li>
                     <NavLink to="./work" activeClassName="text-bold-colored" onClick={this.collapseMobileMenu}>Work</NavLink>
@@ -41,6 +40,9 @@ class Navigation extends React.Component {
                 </li>
                 <li>
                     <NavLink to="./credited" activeClassName="text-bold-colored" onClick={this.collapseMobileMenu}>Credited</NavLink>
+                </li>
+                <li>
+                    <NavLink to="./contact" activeClassName="text-bold-colored" onClick={this.collapseMobileMenu}>Contact</NavLink>
                 </li>
             </ul>
         </nav>
