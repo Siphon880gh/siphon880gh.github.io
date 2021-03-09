@@ -24,7 +24,7 @@ class Collab extends React.Component {
                                 screenshot="assets/img/websites/your-daily-portal.gif"
                                 title="Your Daily Portal"
                                 desc="11/24/20 By Weng Fei Fung, Stephanie Freyler, and Robert Campagna. Homepage customized by you, for you."
-                                repos="https://github.com/Siphon880gh/goals-social">
+                                repos="https://github.com/Siphon880gh/your-daily-portal-adaigo-element">
                         </Project>
 
                         </div>

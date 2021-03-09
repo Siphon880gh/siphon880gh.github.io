@@ -26,7 +26,7 @@ class Project extends React.Component {
         let repos = "";
         if(this.props.repos) {
             repos = (<aside className="add-github-link">
-                <a target="_blank" href="https://github.com/Siphon880gh/goals-social">Checkout Github repository</a>
+                <a target="_blank" href={this.props.repos}>Checkout Github repository</a>
             </aside>);
         }
         return (
