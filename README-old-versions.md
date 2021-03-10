@@ -4,7 +4,7 @@ Old Versions
 
 Version 2 Screenshot
 ---
-Recreated with React to render sections dynamically using React Router. Next version will optimize React by putting the components into ES modules and bundling the JS files.
+Recreated with React to render sections dynamically using React Router. However, this version does not have webpack bundling the components as ES modules yet.
 
 ![Version 2 Screenshot](README/v2-screenshot-react.png)
 
