@@ -1,3 +1,125 @@
+/* Reset CSS */
+
+:root {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Playfair Display";
+    src: url(../../assets/fonts/playfair-display/PlayfairDisplay-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(../../assets/fonts/montserrat/Montserrat-Regular.ttf);
+}
+
+
+/* General */
+
+body {
+    background: #5e5853;
+    background: linear-gradient(90deg, rgba(94, 88, 83, 1) 0%, rgba(121, 121, 121, 1) 25%, rgba(41, 38, 35, 1) 98%);
+}
+
+
+/* Utility classes: Flex */
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-space-around {
+    justify-content: space-around;
+}
+
+.flex-space-between {
+    justify-content: space-between;
+}
+
+.flex-justify-middle {
+    justify-content: middle;
+}
+
+.display-none {
+    display: none;
+}
+
+.max-width {
+    width: 100%;
+}
+
+
+/* Utility classes: Spacing */
+
+.padding-left-15px {
+    padding-left: 15px;
+}
+
+.clearfix {
+    clear: both;
+}
+
+
+/* Utility class: Center horizontally and vertically */
+
+.center-x-y {
+    display: block;
+    margin: 0 auto;
+    margin-top: 50%;
+    transform: translateY(-100%);
+}
+
+
+/* Utility class: Center horizontally */
+
+.center-x {
+    display: block;
+    margin: 0 auto;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+
+/* Utility classes: Different Devices */
+
+.spacer-vertical-small {
+    height: 10px;
+}
+
+@media (max-width: 568px) {
+    .hidden-xs-down {
+        display: none !important;
+    }
+}
+
+@media (min-width: 568px) {
+    .hidden-xs-up {
+        display: none !important;
+    }
+}
+
+
+/* Responsive Images that will shrink */
+
+.grid-wrapper img {
+    width: 100%;
+}
+
+
 /** Header **/
 
 .site-header {
@@ -25,15 +147,6 @@
     background-size: cover;
     float: left;
 }
-
-
-/** Header title **/
-
-
-/** Header title shows before menu item **/
-
-
-/* General menu styling */
 
 .site-nav li a {
     color: white;
@@ -142,23 +255,7 @@
 }
 
 
-/* Reset CSS */
-
- :root {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-@font-face {
-    font-family: "Playfair Display";
-    src: url(../../assets/fonts/playfair-display/PlayfairDisplay-Regular.ttf);
-}
-
-@font-face {
-    font-family: "Montserrat";
-    src: url(../../assets/fonts/montserrat/Montserrat-Regular.ttf);
-}
+/* About Me Slide */
 
 
 /* Necessary for wrapper to be positioned relatively so the darker background child can be positioned absolutely to it */
@@ -181,8 +278,6 @@
 
 .slide-a .slide-hero {
     background-color: black;
-    /* background: url("../img/hero-slide-min.png") no-repeat fixed 50% 50%;
-	 */
     background-image: url("../img/hero-slide-min.png");
     background-position: center;
     background-repeat: no-repeat;
@@ -320,11 +415,6 @@
     }
 }
 
-body {
-    background: #5e5853;
-    background: linear-gradient(90deg, rgba(94, 88, 83, 1) 0%, rgba(121, 121, 121, 1) 25%, rgba(41, 38, 35, 1) 98%);
-}
-
 @media (max-height: 750px) {
     .slide-a .slide-hero {
         justify-content: flex-start;
@@ -386,96 +476,6 @@ address {
 }
 
 
-/* Utility classes: Flex */
-
-.flex {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.flex-row {
-    flex-direction: row;
-}
-
-.flex-col {
-    flex-direction: column;
-}
-
-.flex-space-around {
-    justify-content: space-around;
-}
-
-.flex-space-between {
-    justify-content: space-between;
-}
-
-.flex-justify-middle {
-    justify-content: middle;
-}
-
-
-/* Utility classes: Spacing */
-
-.padding-left-15px {
-    padding-left: 15px;
-}
-
-.clearfix {
-    clear: both;
-}
-
-
-/* Utility class: Center horizontally and vertically */
-
-.center-x-y {
-    display: block;
-    margin: 0 auto;
-    margin-top: 50%;
-    transform: translateY(-100%);
-}
-
-
-/* Utility class: Center horizontally */
-
-.center-x {
-    display: block;
-    margin: 0 auto;
-}
-
-.text-bold {
-    font-weight: bold;
-}
-
-
-/* Utility classes: Different Devices */
-
-.spacer-vertical-small {
-    height: 10px;
-}
-
-@media (max-width: 568px) {
-    .hidden-xs-down {
-        display: none !important;
-    }
-}
-
-@media (min-width: 568px) {
-    .hidden-xs-up {
-        display: none !important;
-    }
-}
-
-
-/* Color Theme */
-
-
-/* Responsive Images that will shrink */
-
-.grid-wrapper img {
-    width: 100%;
-}
-
-
 /* Section spacing */
 
 @media screen and (max-width: 768px) {
@@ -526,10 +526,11 @@ address {
 }
 
 
-/* Tech section other css */
+/* Project Grid */
 
-
-/* Grid on desktop */
+.project {
+    cursor: pointer;
+}
 
 .grid {
     display: grid;
@@ -558,7 +559,7 @@ address {
 }
 
 
-/* Grid on mobile */
+/* Project Grid on mobile */
 
 @media screen and (max-width: 957px) {
     .grid {
@@ -645,123 +646,6 @@ address {
     opacity: 0.15;
 }
 
-
-/* Work section on mobile */
-
-@media screen and (max-width: 957px) {
-    .work figure figcaption {
-        font-size: 60%;
-        line-height: 2;
-    }
-}
-
-
-/* Credited section that's a nested section of Work */
-
-.credited {
-    grid-column-end: span 8;
-    margin-top: 20px;
-    transition: background-color 400ms;
-    padding: 10px;
-}
-
-.credited li {
-    display: block;
-    /* Spacing and colors in the credited items */
-}
-
-.credited li::marker,
-.credited li::before {
-    content: "";
-}
-
-.credited li details summary {
-    margin: 5px 0;
-}
-
-.credited li details summary::-webkit-details-marker {
-    display: none;
-}
-
-.credited li details>div {
-    margin: 5px 18px;
-}
-
-.credited li details .fa-info {
-    margin-right: 1ch;
-    cursor: pointer;
-}
-
-.credited:hover .text-med {
-    transition: color 400ms;
-}
-
-.credited.flushed-to-grid {
-    width: 100% !important;
-}
-
-
-/* Footer style */
-
-.footer {
-    width: 100vw;
-}
-
-.footer ul {
-    padding: 0;
-    margin-top: 0;
-    margin-bottom: 1rem;
-    overflow: scroll;
-    height: 2.5rem;
-    width: 100vw;
-    overflow-y: hidden;
-    white-space: nowrap;
-    text-align: center;
-    /* display: flex;
-    justify-content: space-evenly;
-    flex-wrap: nowrap; */
-}
-
-.footer li {
-    text-align: center;
-    display: inline;
-    transition: border 500ms;
-}
-
-.footer li:not(:last-child) {
-    margin-right: 10vw;
-}
-
-@media (max-width:1380px) {
-    .footer li:not(:last-child) {
-        margin-right: 5vw;
-    }
-}
-
-@media (max-width:850px) {
-    .footer li:not(:last-child) {
-        margin-right: 20px;
-    }
-}
-
-.footer li a {
-    transition: color 500ms;
-    text-decoration: none;
-}
-
-
-/* Contact section other css */
-
-
-/* Workaround: Collab area shifted to the left */
-
-
-/* Toggle description */
-
-.display-none {
-    display: none;
-}
-
 .overlay-toggle-description {
     position: absolute;
     bottom: 0;
@@ -769,97 +653,11 @@ address {
     z-index: 3;
 }
 
-.overlay-toggle-description a {
-    color: purple !important;
-}
-
-.overlay-toggle-description a i {
-    cursor: pointer;
-}
-
-.overlay-toggle-description a:hover {
-    color: red !important;
-}
-
-
-/* Github link */
-
-.add-github-link {
-    background-color: #292623;
-    /* z-index: 1;
-	 */
-    z-index: 5;
-    padding: 10px;
-    position: absolute;
-    /* bottom: -47.5px;
-	 right: -5px;
-	 */
-    top: 5px;
-    right: 5px;
-    font-size: 0.8rem;
-    line-height: 1.5;
-    border-top-left-radius: 5px;
-    /* Todo: Review;
-	 Smooth out specific corner */
-    border-bottom-left-radius: 5px;
-}
-
-.add-github-link a {
-    color: gray;
-    text-decoration: none;
-}
-
-.add-github-link a:hover {
-    color: lightgray;
-}
-
-#collab {
-    margin-top: 40px;
-    padding: 20px 0 !important;
-}
-
-.work figure .overlay:hover,
-.collab figure .overlay:hover {
-    opacity: 0.15;
-}
-
-#credited {
-    background: rgba(41, 38, 35, 1);
-    background: linear-gradient(90deg, rgba(94, 88, 83, 1) 0%, rgba(121, 121, 121, 1) 25%, rgba(41, 38, 35, 1) 98%);
-    color: white;
-}
-
-#credited a {
-    color: white;
-}
-
-#credited a:hover {
-    color: darkgray !important;
-}
-
-footer {
-    color: white;
-}
-
-footer a {
-    color: white;
-}
-
-footer a:hover {
-    color: darkgray;
-}
-
-details div {
-    padding-left: 10px;
-}
-
-footer {
-    margin: 0 !important;
-    background-color: rgba(41, 38, 35, 1);
-    padding: 20px !important;
-    border-radius: 0;
-    position: fixed;
-    bottom: 0;
+@media screen and (max-width: 957px) {
+    .work figure figcaption {
+        font-size: 60%;
+        line-height: 2;
+    }
 }
 
 .slide-b .wrapper {
@@ -906,10 +704,6 @@ footer {
     letter-spacing: 1px;
     /* height: 80vh;
 	 */
-}
-
-#about-anchor {
-    margin-top: 30px;
 }
 
 @media (max-height: 736px) {
@@ -963,13 +757,197 @@ footer {
     }
 }
 
-.project {
+#about-anchor {
+    margin-top: 30px;
+}
+
+
+/* Project Grid: Github link */
+
+.add-github-link {
+    background-color: #292623;
+    z-index: 5;
+    padding: 10px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    border-top-left-radius: 5px;
+    /* Todo: Review;
+	 Smooth out specific corner */
+    border-bottom-left-radius: 5px;
+}
+
+.add-github-link a {
+    color: gray;
+    text-decoration: none;
+}
+
+.add-github-link a:hover {
+    color: lightgray;
+}
+
+#collab {
+    margin-top: 40px;
+    padding: 20px 0 !important;
+}
+
+.work figure .overlay:hover,
+.collab figure .overlay:hover {
+    opacity: 0.15;
+}
+
+
+/** Overlay eye toggle icon on project grids **/
+
+.overlay-toggle-description a {
+    color: purple !important;
+}
+
+.overlay-toggle-description a i {
     cursor: pointer;
 }
 
-.max-width {
-    width: 100%;
+.overlay-toggle-description a:hover {
+    color: red !important;
 }
+
+
+/* Credited section that's a nested section of Work */
+
+.credited {
+    grid-column-end: span 8;
+    margin-top: 20px;
+    transition: background-color 400ms;
+    padding: 10px;
+}
+
+.credited li {
+    display: block;
+}
+
+.credited li::marker,
+.credited li::before {
+    content: "";
+}
+
+.credited li details summary {
+    margin: 5px 0;
+}
+
+.credited li details summary::-webkit-details-marker {
+    display: none;
+}
+
+.credited li details>div {
+    margin: 5px 18px;
+}
+
+.credited li details .fa-info {
+    margin-right: 1ch;
+    cursor: pointer;
+}
+
+.credited:hover .text-med {
+    transition: color 400ms;
+}
+
+.credited.flushed-to-grid {
+    width: 100% !important;
+}
+
+#credited {
+    background: rgba(41, 38, 35, 1);
+    background: linear-gradient(90deg, rgba(94, 88, 83, 1) 0%, rgba(121, 121, 121, 1) 25%, rgba(41, 38, 35, 1) 98%);
+    color: white;
+}
+
+#credited a {
+    color: white;
+}
+
+#credited a:hover {
+    color: darkgray !important;
+}
+
+details div {
+    padding-left: 10px;
+}
+
+
+/* Footer section */
+
+.footer-spacer {
+    width: 1px;
+    height: 95px;
+    z-index: 1;
+}
+
+.footer {
+    width: 100vw;
+    color: white;
+    z-index: 2;
+}
+
+.footer ul {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    overflow: scroll;
+    height: 2.5rem;
+    width: 100vw;
+    overflow-y: hidden;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.footer li {
+    text-align: center;
+    display: inline;
+    transition: border 500ms;
+}
+
+.footer li:not(:last-child) {
+    margin-right: 10vw;
+}
+
+@media (max-width:1380px) {
+    .footer li:not(:last-child) {
+        margin-right: 5vw;
+    }
+}
+
+@media (max-width:850px) {
+    .footer li:not(:last-child) {
+        margin-right: 20px;
+    }
+}
+
+.footer li a {
+    transition: color 500ms;
+    text-decoration: none;
+}
+
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    color: darkgray;
+}
+
+footer {
+    margin: 0 !important;
+    background-color: rgba(41, 38, 35, 1);
+    padding: 20px !important;
+    border-radius: 0;
+    position: fixed;
+    bottom: 0;
+}
+
+
+/** Resume section */
 
 .resume {
     position: relative;
@@ -991,6 +969,9 @@ footer {
     padding: 10px;
     border-bottom-left-radius: 10px;
 }
+
+
+/** Contact section **/
 
 .contact form {
     width: 100%;
@@ -1067,17 +1048,10 @@ footer {
     vertical-align: text-top;
 }
 
+
+/* Contact form: Message that you submitted */
+
 .modal-header,
 .modal-footer {
     border: 0;
-}
-
-.footer-spacer {
-    width: 1px;
-    height: 95px;
-    z-index: 1;
-}
-
-footer {
-    z-index: 2;
 }
