@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Weng's Web Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="icon" href="assets/img/favicon.ico">
+
+    <!-- Internal Assets -->
+    <link rel="stylesheet" href="assets/css/index.css">
+
+    <!-- Fonts, Icons -->
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300|Open+Sans+Condensed:300" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.css">
+
+</head>
+
+<body>
+    <header class="flex flex-row flex-space-between">
+        <span class="site-title">
+                <h1>
+                    <span class="hidden-xs-down padding-left-15px"></span> Weng's Web Porfolio
+        </h1>
+        </span>
+        <nav class="site-menu" role="navigation" aria-label="Menu">
+            <ul class="flex flex-row flex-space-between">
+                <li><a href="#focus">About</a></li>
+                <li><a href="#tech">Tech</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#collab">Collab</a></li>
+                <li><a href="#credited">Credited</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="focus" class="focus section">
+        <!-- <h2>About</h2> -->
+        <div class="flex flex-row">
+            <div class="img-wrapper">
+                <img class="center-x" src="assets/img/me.png" alt="Picture of Weng">
+            </div>
+            <div class="focus__your-needs">
+                <div class="focus__your-needs--inner center-x">
+                    <p>Have a great idea? <a href="#contact" style="color:white;">Contact me</a> to get your idea launched!</p>
+                    <ul>
+                        <li>Idea to technical todo list</li>
+                        <li>Wireframe to mockup</li>
+                        <li>Testing</li>
+                        <li>Finished Product, SEO</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tech" class="tech section">
+        <h2 class="section-title">Technology</h2>
+        <div class="flex flex-row">
+            <div>
+                <span class="text-med">
+                        Or just need an in house developer, who can implement features, or fix bugs?
+                    </span>
+                <br/><br/>
+                <span class="text-bold text-shade">
+                    Weng can do:
+                    </span>
+            </div>
+            <div>
+                <span class="text-bold text-shade">Web</span>
+                <ul>
+                    <li>Wireframing</li>
+                    <li>UX/UI</li>
+                    <li>Interactive</li>
+                    <li>Great look on mobile / tablet!</li>
+
+                </ul>
+            </div>
+            <div>
+                <span class="text-bold text-shade">Servers</span>
+                <ul>
+                    <li>Database</li>
+                    <li>API</li>
+                </ul>
+                <br/>
+                <span class="text-bold text-shade">Latest cutting edge</span>
+                <ul>
+                    <li>React JS</li>
+                    <li>DevOps</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <main id="work" class="work section">
+        <h2 class="section-title">Work</h2>
+        <div class="grid-wrapper">
+            <div class="grid">
+
+                <!-- Card 1 -->
+                <figure>
+                    <a href="https://wengindustry.com/tools/covid19/" target="_blank">
+                        <img class="img-contain" src="assets/img/websites/covid.png" alt="Covid-19 Tracker app">
+                        <figcaption>
+                            <h3>Covid 19 Tracker</h3>
+                            <p>
+                                Made by Weng. Simple Covid-19 Tracker for the Los Angeles metropolitan area and other interest areas. A combination of jQuery, PHP, cronjobs, and scraping.
+                            </p>
+                        </figcaption>
+                        <div class="overlay overlay-color-1"></div>
+                        <div class="overlay-toggle-description">
+                            <a href="javascript:void(0);" onclick="toggleDescription(event, event.target)"><i class='fa fa-eye'></i></a>
+                        </div>
+                    </a>
+                </figure>
+
+
+                <!-- Card 2 -->
+                <figure>
+                    <a href="https://americasfavors.com/" target="_blank">
+                        <img class="img-contain" src="assets/img/websites/amfavs.png" alt="Americas Favors">
+                        <figcaption>
+                            <h3>Americas Favors</h3>
+                            <p>
+                                Adjusted layout on BigCommerce platform using their Liquid templating language. Added interactivity and calculations using javascript.
+                            </p>
+                        </figcaption>
+                        <div class="overlay overlay-color-2"></div>
+                        <div class="overlay-toggle-description">
+                            <a href="javascript:void(0);" onclick="toggleDescription(event, event.target)"><i class='fa fa-eye'></i></a>
+                        </div>
+                    </a>
+                </figure>
+
+
+                <!-- Card etc -->
+                <figure>
+                    <a href="https://exrx.net/Store/Other/Licensing" target="_blank">
+                        <img class="img-contain" src="assets/img/websites/exrx.png" alt="ExRx.net API">
+                        <figcaption>
+                            <h3>ExRx.net Exercise API</h3>
+                            <p>
+                                Created an API that provides exercise information to other companies' workout apps.
+                            </p>
+                        </figcaption>
+                        <div class="overlay overlay-color-3"></div>
+                        <div class="overlay-toggle-description">
+                            <a href="javascript:void(0);" onclick="toggleDescription(event, event.target)"><i class='fa fa-eye'></i></a>
+                        </div>
+                    </a>
+                </figure>
+
+                <!-- Card etc -->
+                <figure>
+                    <a href="https://amaioofficial.com/" target="_blank">
+                        <img class="img-clip-50-50" src="assets/img/websites/amaio.png" alt="Amaio Swimwear">
+                        <figcaption>
+                            <h3>Amaio Swim</h3>
+                            <p>
+                                Worked with blueprints provided by the designer Natalie T. to create different template pages on the Shopify platform.
+                            </p>
+                        </figcaption>
+                        <div class="overlay overlay-color-4"></div>
+                        <div class="overlay-toggle-description">
+                            <a href="javascript:void(0);" onclick="toggleDescription(event, event.target)"><i class='fa fa-eye'></i></a>
+                        </div>
+                    </a>
+                </figure>
+
+
+                <!-- Card etc -->
+                <figure>
+                    <a href="https://wengindustry.com/tools/medit/" target="_blank">
+                        <img class="img-contain" src="assets/img/websites/medit.png" alt="Meditation Guide Creator">
+                        <figcaption>
+                            <h3>Create Your Own Meditation</h3>
+                            <p>
+                                Made by Weng. Create your own audio meditation track. Type sentences into a timeline and have the app read them.
+                            </p>
+                        </figcaption>
+                        <div class="overlay overlay-color-5"></div>
+                        <div class="overlay-toggle-description">
+                            <a href="javascript:void(0);" onclick="toggleDescription(event, event.target)"><i class='fa fa-eye'></i></a>
+                        </div>
+                    </a>
+                </figure>
+
+
+                <!-- Card etc -->
+                <figure>
+                    <a href="https://wengindustry.com/tools/Bible/" target="_blank">
+                        <img class="img-contain" src="assets/img/websites/Bible.png" alt="Bible reading app">
+                        <figcaption>
+                            <h3>Bible</h3>
+                            <p>
+                                Made by Weng. Bible app.
+                            </p>
+                        </figcaption>
+                        <div class="overlay overlay-color-5"></div>
+                        <div class="overlay-toggle-description">
+                            <a href="javascript:void(0);" onclick="toggleDescription(event, event.target)"><i class='fa fa-eye'></i></a>
+                        </div>
+                    </a>
+                </figure>
+
+                <!-- Card etc -->
+                <figure>
+                    <a href="https://wengindustry.com/tools/multitimers/" target="_blank">
+                        <img class="img-contain" src="assets/img/websites/multitimers.png" alt="Multiple timers">
+                        <figcaption>
+                            <h3>Multitimers</h3>
+                            <p>
+                                Made by Weng. Create multiple timers.
+                            </p>
+                        </figcaption>
+                        <div class="overlay overlay-color-5"></div>
+                        <div class="overlay-toggle-description">
+                            <a href="javascript:void(0);" onclick="toggleDescription(event, event.target)"><i class='fa fa-eye'></i></a>
+                        </div>
+                    </a>
+                </figure>
+
+                <!-- Card etc -->
+                <figure>
+                    <a href="https://wengindustry.com/demo/retype-notes/" target="_blank">
+                        <img class="img-contain" src="assets/img/websites/retype-notes.png" alt="Retype and rearrange lines to learn programming languages">
+                        <figcaption>
+                            <h3>Retype and Rearrange Notes</h3>
+                            <p>
+                                Made by Weng. Learn any programming language by retyping and rearranging lines of code.
+                            </p>
+                        </figcaption>
+                        <div class="overlay overlay-color-5"></div>
+                        <div class="overlay-toggle-description">
+                            <a href="javascript:void(0);" onclick="toggleDescription(event, event.target)"><i class='fa fa-eye'></i></a>
+                        </div>
+                    </a>
+                </figure>
+
+            </div>
+            <!-- /grid -->
+        </div>
+        <!-- /grid-wrapper -->
+
+        <aside id="collab" class="work collab section">
+            <h2 class="section-title">Collaborative</h2>
+            <div class="grid-wrapper">
+                <div class="grid">
+
+                    <!-- Card etc -->
+                    <figure style="height:75%">
+                        <aside class="add-github-link">
+                            <a target="_blank" href="https://github.com/Siphon880gh/goals-social">Checkout Github repository</a>
+                        </aside>
+                        <a href="https://goals-social-network.herokuapp.com/" target="_blank">
+                            <img class="img-contain" src="assets/img/websites/goals-social.gif" alt="Goals Social">
+                            <figcaption>
+                                <h3>Goals Social</h3>
+                                <p>
+                                    2/10/21<br/> By Weng Fei Fung, Aidan Meyer, and Angela Kao. A social network based around people’s goals. Find inspiration and help others complete similar goals. Look into their milestones, leave helpful comments,
+                                    and chat with like-minded driven users.<br/><br/><br/>
+                                </p>
+                            </figcaption>
+                            <div class="overlay overlay-color-5"></div>
+                            <div class="overlay-toggle-description">
+                                <a href="javascript:void(0);" onclick="toggleDescription(event, event.target)"><i class='fa fa-eye'></i></a>
+                            </div>
+                        </a>
+                    </figure>
+
+                    <!-- Card etc -->
+                    <figure>
+                        <a href="https://siphon880gh.github.io/your-daily-portal-adaigo-element/" target="_blank">
+                            <img class="img-contain" src="assets/img/websites/your-daily-portal.gif" alt="Your Daily Portal app">
+                            <figcaption>
+                                <h3>Your Daily Portal</h3>
+                                <p>
+                                    11/24/20<br/>By Weng Fei Fung, Stephanie Freyler, and Robert Campagna. Homepage customized by you, for you.
+                                </p>
+                            </figcaption>
+                            <div class="overlay overlay-color-5"></div>
+                            <div class="overlay-toggle-description">
+                                <a href="javascript:void(0);" onclick="toggleDescription(event, event.target)"><i class='fa fa-eye'></i></a>
+                            </div>
+                        </a>
+                    </figure>
+
+
+                </div>
+                <!-- /grid -->
+            </div>
+            <!-- /grid-wrapper -->
+
+            <aside id="credited" class="credited flushed-to-grid">
+                <div class="content-inner">
+                    <p class="text-med">Weng was also credited at:</p>
+                    <ul>
+
+                        <li>
+                            <details>
+                                <summary>
+                                    <i class="fa fa-info"></i>
+                                    <a href="https://exrx.net/People/Staff/" target="_blank">ExRx.net - Exercise Rx</a>
+                                </summary>
+                                <div>Exercise information and news. Also now provides exercise information API to workout apps. Weng created an admin panel to manage exercise information and also created an API that other companies can subscribe to. Weng orientated
+                                    many new interns to the code at ExRx.</div>
+                            </details>
+                        </li>
+
+                        <li>
+                            <details>
+                                <summary>
+                                    <i class="fa fa-info"></i>
+                                    <a href="https://web.archive.org/web/20181120025439/http://www.mixotype.com/#about" target="_blank">Mixotype.com
+                                    </a>
+                                </summary>
+                                <div>Social network that matches you by the Mixotype patented personality trait test. Weng worked on their Android beta app and social network web app.</div>
+                            </details>
+                        </li>
+
+                        <li>
+                            <details>
+                                <summary>
+                                    <i class="fa fa-info"></i>
+                                    <a href="https://www.vibee.tv/vibeetv-team/" target="_blank">Vibee TV</a>
+                                </summary>
+                                <div>Online music video channel and music news. Based in Italy. Weng worked on solutions to help streamline the music video management, add live DJing, and a commenting system.</div>
+                            </details>
+                        </li>
+
+                        <li>
+                            <details>
+                                <summary>
+                                    <i class="fa fa-info"></i>
+                                    <a href="assets/img/testimonials.png" target="_blank">LinkedIn Testimonies</a>
+                                    <span>&nbsp;|&nbsp;</span>
+                                    <a href="//linkedin.com/in/weng-fung/" target="_blank">LinkedIn</a>
+                                </summary>
+                                <div>Testimonials from satisfied clients.</div>
+                            </details>
+                        </li>
+
+                    </ul>
+                </div>
+            </aside>
+
+        </aside>
+
+
+        <footer id="contact" class="contact section">
+            <h2 class="section-title hidden-xs-up">Contact</h2>
+            <div class="spacer-vertical-small hidden-xs-up"></div>
+            <div class="flex flex-row flex-space-between">
+                <h3 class="text-light hidden-xs-down">Contact me! Or see my CV:</h3>
+                <ul class="flex flex-row flex-space-around">
+                    <li><a href="tel:3238427514" target="_blank">323-842-7514</a></li>
+                    <li><a href="mailto:weffung@ucdavis.edu" target="_blank">weffung@ucdavis.edu</a></li>
+                    <li><a href="//github.com/Siphon880gh" target="_blank">Github</a></li>
+                    <li><a href="//linkedin.com/in/weng-fung/" target="_blank">LinkedIn</a></li>
+                    <li><a href="//www.wengindustry.com" target="_blank">WengIndustry.com</a></li>
+                </ul>
+            </div>
+        </footer>
+
+        <script src="assets/js/app.js"></script>
+</body>
+
+</html>

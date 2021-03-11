@@ -1,0 +1,76 @@
+/* Utility classes: Flex */
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+.flex-row {
+    flex-direction: row;
+}
+.flex-col {
+    flex-direction: column;
+}
+.flex-space-around {
+    justify-content: space-around;
+}
+.flex-space-between {
+    justify-content: space-between;
+}
+.flex-justify-middle {
+    justify-content: middle;
+}
+
+/* Utility classes: Spacing */
+.padding-left-15px {
+    padding-left: 15px;
+}
+.clearfix {
+    clear:both;
+}
+
+/* Utility class: Center horizontally and vertically */
+.center-x-y {
+    display: block;
+    margin: 0 auto;
+    margin-top: 50%;
+    transform: translateY(-100%);
+}
+/* Utility class: Center horizontally */
+.center-x {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Utility text classes */
+.text-light {
+    color: var(--light);
+}
+.text-med {
+    color: var(--med);
+}
+.text-shade {
+    color: var(--shade);
+}
+.text-dark {
+    color: var(--dark);
+}
+.text-bold {
+    font-weight: bold;
+}
+
+/* Utility classes: Different Devices */
+.spacer-vertical-small {
+    height: 10px;
+}
+@media (max-width: 768px) {
+
+}
+@media (max-width: 568px) {
+    .hidden-xs-down {
+        display: none !important;
+    }
+}
+@media (min-width: 568px) {
+    .hidden-xs-up {
+        display: none !important;
+    }
+}

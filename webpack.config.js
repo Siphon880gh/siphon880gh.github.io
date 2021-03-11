@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-    entry: path.resolve(__dirname, './assets/js/Components/App.js'),
+    entry: path.resolve(__dirname, './src/assets/js/Components/App.js'),
     mode: "production",
     module: {
         rules: [{
@@ -14,7 +14,7 @@ module.exports = {
         extensions: ['*', '.js']
     },
     output: {
-        path: path.resolve(__dirname, './'),
+        path: path.resolve(__dirname, './dist/assets/js'),
         filename: 'bundle.min.js',
     },
     devServer: {

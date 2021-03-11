@@ -17,8 +17,8 @@ View Portfolio
 
 Screenshot
 ---
-![Latest Screenshot](README/v2-screenshot-react.png)
+![Latest Screenshot](docs/README/v2-screenshot-react.png)
 
 Older Versions
 ---
-[See older designs](./README-old-versions.md) of the portfolio.
+[See older designs](docs/README-old-versions.md) of the portfolio.

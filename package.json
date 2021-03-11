@@ -5,7 +5,7 @@
     "main": "dev/src/assets/js/app.js",
     "scripts": {
         "watch": "livereload .",
-        "build": "webpack",
+        "build": "rm -r dist; mkdir dist; mkdir dist/assets; cp -r src/assets/* dist/assets; rm -r dist/assets/js/*; webpack;",
         "deploy": "git push origin master"
     },
     "dependencies": {
