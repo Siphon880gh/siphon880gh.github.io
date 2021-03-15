@@ -45,7 +45,7 @@ export default class Credit extends React.Component {
                             <details open>
                                 <summary>
                                     <i className="fa fa-info"></i>
-                                    <a href="assets/img/testimonials.png" target="_blank">LinkedIn Testimonies</a>
+                                    <a href="./dist/assets/img/testimonials.png" target="_blank">LinkedIn Testimonies</a>
                                     <span>&nbsp;|&nbsp;</span>
                                     <a href="//linkedin.com/in/weng-fung/" target="_blank">LinkedIn</a>
                                 </summary>
