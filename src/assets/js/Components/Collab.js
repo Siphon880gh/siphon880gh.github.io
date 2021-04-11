@@ -17,7 +17,14 @@ export default class Collab extends React.Component {
                 title: "Your Daily Portal",
                 desc: "11/24/20 By Weng Fei Fung, Stephanie Freyler, and Robert Campagna. Homepage customized by you, for you.",
                 repos: "https://github.com/Siphon880gh/your-daily-portal-adaigo-element"
+            },{
+                link: "https://reprint-media.herokuapp.com/",
+                screenshot: "dist/assets/img/websites/reprint.gif",
+                title: "NoFT (Not-NFT Reprints)",
+                desc: "4/8/20 By Weng Fei Fung, Aidan Guarniere, Cassandra Hurlbut, and Jonathan Wilferd. NoFT is an environment where users can share, favorite, download, and discuss all of their favorite NFT works without actually interacting with any real non-fungible tokens. No changes to the chain-of-title, no interaction with cryptocurrency wallets, no financial transactions of any kind.",
+                repos: "https://github.com/Siphon880gh/reprint/"
             }
+
         ]
 
         return (
