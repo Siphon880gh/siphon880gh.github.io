@@ -17,7 +17,7 @@ export default class WhoAmI extends React.Component {
 
                                             <h2 id="about-anchor" className="f1a">About  <address className="author">Weng Fei Fung</address></h2>
                                             <div className="f1b">
-                                                <p>Passionate about all things coding 💻 especially web development 🌎, Weng has made this a hobby and side job for countless years. Have worked with startups including Mixotype, companies like ExRx, and small gigs by word of mouth. He graduated from <span className="ucla">UCLA</span>-Trilogy Coding Bootcamp on 4/8/2021.</p>
+                                                <p>Passionate about all things coding 💻 especially web development 🌎, Weng has made this a hobby and side job for five years. Have worked with startups including Mixotype, companies like ExRx, and small gigs by word of mouth (with jQuery/Php/MySQL). He graduated from <span className="ucla">UCLA</span>-Trilogy Coding Bootcamp on 4/8/2021, certifying in the MERN stack (MongoDB, Mongoose, Express, React, Node) and GraphQL with completed projects and top marks.</p>
                                                 <p>He is looking forward to working with your company as a full stack web developer or related web developer role. Look at my LinkedIn for client testimonials.</p>
                                                 <p>You can see his passion on other links:</p>
 
