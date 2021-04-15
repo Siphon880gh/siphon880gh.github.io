@@ -1,6 +1,7 @@
 
 import React from "react";
 import ReactDOM from "react-dom";
+import {NavLink} from "react-router-dom";
 
 export default class WhoAmI extends React.Component {
     render() {
@@ -15,11 +16,10 @@ export default class WhoAmI extends React.Component {
                                 <span className="bb2">
                                         <div className="flexie mt-2">
 
-                                            <h2 id="about-anchor" className="f1a">About  <address className="author">Weng Fei Fung</address></h2>
+                                            <h2 id="about-anchor" className="f1a"><address className="author">Weng Fei Fung</address></h2>
                                             <div className="f1b">
-                                                <p>Passionate about all things coding 💻 especially web development 🌎, Weng has made this a hobby and side job for five years. Have worked with startups including Mixotype, companies like ExRx, and small gigs by word of mouth (with jQuery/Php/MySQL). He graduated from <span className="ucla">UCLA</span>-Trilogy Coding Bootcamp on 4/8/2021, certifying in the MERN stack (MongoDB, Mongoose, Express, React, Node) and GraphQL with completed projects and top marks.</p>
-                                                <p>He is looking forward to working with your company as a full stack web developer or related web developer role. Look at my LinkedIn for client testimonials.</p>
-                                                <p>You can see his passion on other links:</p>
+                                                <p>Passionate about all things coding 💻 especially web development 🌎, Weng has made this a hobby and side job for five years. Have worked with startups including Mixotype, companies like ExRx, and small gigs by word of mouth (with jQuery/Php/MySQL). Certified in MERN (MongoDB, Mongoose, Express, React, Node) and GraphQL with top marks at <span className="ucla">UCLA</span>-Trilogy Coding Bootcamp.</p>
+                                                <p>He is looking forward to working with your company as a web developer. See <NavLink to="./testimonials">Testimonials</NavLink>.</p>
 
                                                 <aside className="badges">
 
@@ -35,6 +35,9 @@ export default class WhoAmI extends React.Component {
                                                             
                                                             </a>
                                                 </aside>
+
+                                                { /* Do not remove line breaks because they guarantee overflow-y scroll won't cut off bottom content */ }
+                                                <br/><br/><br/>
 
                                             </div>
                                         </div>
