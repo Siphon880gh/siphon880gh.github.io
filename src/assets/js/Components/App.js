@@ -40,7 +40,6 @@ export default class App extends React.Component {
                             <Route path="*/collab" component={Collab}/>
                             <Route path="*/credited" component={Credit}/>
                             <Route path="*/contact" component={Contact}/>
-                            <Route path="*" component={WhoAmI}/>
                         </Switch>
     
                         <FooterSpace></FooterSpace>
