@@ -71,7 +71,7 @@ export default class Work extends React.Component {
                 tech: "BigCommerce CMS, templating, CSS"
             },
             {
-                link: "https://amaioofficial.com/",
+                link: "https://web.archive.org/web/20200723024427/https://amaioofficial.com/",
                 screenshot: "dist/assets/img/websites/amaio.png",
                 title: "Amaio Swimwear",
                 desc: "Worked with blueprints provided by the designer Natalie T. to create different template pages on the Shopify platform.",
@@ -120,31 +120,28 @@ export default class Work extends React.Component {
                 tech: "jQuery, PHP"
             }
         ]
-
         return (
-                <main data-component="work" id="work" className="work section">
-                    <div className="grid-wrapper">
-                        <div className="grid max-width">
 
-                            {projects.map(project=>{
-                                let {link="",screenshot="",title="",desc="", tech="", repos="", bgColor=""} = project;
-                                return (
-                                    <Project
-                                        link={link}
-                                        screenshot={screenshot}
-                                        title={title}
-                                        desc={desc}
-                                        tech={tech}
-                                        repos={repos}
-                                        bgColor={bgColor}
-                                    >
-                                    </Project>
-                                )
-                            })}
+            <div data-component="work" id="work" className="work section">
+                <div className="row">
 
-                        </div>
-                    </div>
-                </main>
+                    {projects.map(project=>{
+                            let {link="",screenshot="",title="",desc="", tech="", repos="", bgColor=""} = project;
+                            return (
+                                <Project
+                                    link={link}
+                                    screenshot={screenshot}
+                                    title={title}
+                                    desc={desc}
+                                    repos={repos}
+                                    bgColor={bgColor}
+                                >
+                                </Project>
+                            )
+                        })}
+
+                </div>
+            </div>
         )
-    }
+    } // render
 }

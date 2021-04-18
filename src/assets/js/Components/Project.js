@@ -34,21 +34,23 @@ export default class Project extends React.Component {
             </aside>);
         }
         return (
-            <figure className="project" data-component="Project">
-                {repos}
-                <img className="img-contain" src={this.props.screenshot} alt={this.props.title}/>
-                <figcaption>
-                    <h3>{this.props.title}</h3>
-                    <p>
-                        {this.props.desc}  
-                    </p>
-                    <span><label>Tech:&nbsp;</label><span>{this.props.tech}</span></span>
-                </figcaption>
-                <div className="overlay" style={getColorOverlay.call(null, bgColor)} onClick={this.openWindow.bind(this)}></div>
-                <div className="overlay-toggle-description">
-                    <a onClick={this.toggleDescription}><i className='fa fa-eye'></i></a>
-                </div>
-            </figure>
+            <div className="card col-sm-4 col-md-3 project" data-component="Project">
+                <figure className="card-body">
+                    {repos}
+                    <img className="img-contain" src={this.props.screenshot} alt={this.props.title}/>
+                    <figcaption>
+                        <h6>{this.props.title}</h6>
+                        <p>
+                            {this.props.desc}  
+                        </p>
+                        <span><label>Tech:&nbsp;</label><span>{this.props.tech}</span></span>
+                    </figcaption>
+                    <div className="overlay" style={getColorOverlay.call(null, bgColor)} onClick={this.openWindow.bind(this)}></div>
+                    <div className="overlay-toggle-description">
+                        <a onClick={this.toggleDescription}><i className='fa fa-eye'></i></a>
+                    </div>
+                </figure>
+            </div>
         )
     }
 }

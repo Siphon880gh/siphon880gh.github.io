@@ -113,13 +113,6 @@ body {
 }
 
 
-/* Responsive Images that will shrink */
-
-.grid-wrapper img {
-    width: 100%;
-}
-
-
 /** Header **/
 
 .site-header {
@@ -536,65 +529,12 @@ address {
 
 .project {
     cursor: pointer;
+    background-color: transparent;
+    border: 0;
 }
 
-.grid {
-    display: grid;
-    margin: 0 auto;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    justify-content: space-between;
-    grid-gap: 5px;
-    grid-auto-flow: dense;
-    /* Grid items that are not given coordinates, automatically fill in as much blank spaces from top left origin as possible */
-}
-
-.grid figure {
-    width: 100%;
-    height: 100%;
-}
-
-.grid figure:first-child {
-    grid-column: 1 / span 4;
-    grid-row: 1 / span 2;
-}
-
-.grid figure:not(:first-child) {
-    grid-column-end: span 2;
-    grid-row-end: span 1;
-}
-
-
-/* Project Grid on mobile */
-
-@media screen and (max-width: 957px) {
-    .grid {
-        padding-left: 25px;
-        padding-right: 25px;
-        width: 100%;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(4, 1fr);
-    }
-    .grid figure {
-        grid-column-end: span 1 !important;
-        grid-row-end: span 1 !important;
-    }
-    .grid .flushed-to-grid {
-        grid-column-end: span 1 !important;
-        grid-row-end: fit-content;
-    }
-    .collab .grid {
-        grid-template-columns: repeat(4, 1fr) !important;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .grid {
-        grid-template-columns: repeat(1, 1fr);
-    }
-    .grid figcaption {
-        font-size: 60%;
-    }
+.project .card-body {
+    background-color: transparent;
 }
 
 
@@ -630,10 +570,6 @@ address {
     border-bottom-right-radius: 5px;
 }
 
-.grid-wrapper .grid figcaption h3 {
-    font-size: 100% !important;
-}
-
 .work figure .overlay,
 .collab figure .overlay {
     /* Todo: Review: Overlay color when hovering */
@@ -657,13 +593,6 @@ address {
     bottom: 0;
     right: 0;
     z-index: 3;
-}
-
-@media screen and (max-width: 957px) {
-    .work figure figcaption {
-        font-size: 60%;
-        line-height: 2;
-    }
 }
 
 .slide-b .wrapper {
@@ -794,6 +723,7 @@ address {
     color: lightgray;
 }
 
+#work,
 #collab {
     margin-top: 40px;
     padding: 20px 0 !important;
