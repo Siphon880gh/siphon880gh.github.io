@@ -32,12 +32,9 @@ export default class WhoAmI extends React.Component {
                                                     <a target="_blank" href="https://www.youtube.com/user/Siphon880yt/" rel="nofollow">
                                                         <img src="https://camo.githubusercontent.com/0bf5ba8ac9f286f95b2a2e86aee46371e0ac03d38b64ee2b78b9b1490df38458/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f596f75747562652d7265643f7374796c653d666c6174266c6f676f3d796f7574756265266c6162656c436f6c6f723d726564"
                                                             className="github-style badge-style" alt="Youtube" data-canonical-src="https://img.shields.io/badge/Youtube-red?style=flat&amp;logo=youtube&amp;labelColor=red"/>
-                                                            
-                                                            </a>
+                                                    </a>
+                                                    
                                                 </aside>
-
-                                                { /* Do not remove line breaks because they guarantee overflow-y scroll won't cut off bottom content */ }
-                                                <br/><br/><br/>
 
                                             </div>
                                         </div>
