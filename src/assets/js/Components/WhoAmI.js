@@ -16,10 +16,13 @@ export default class WhoAmI extends React.Component {
                                 <span className="bb2">
                                         <div className="flexie mt-2">
 
-                                            <h2 id="about-anchor" className="f1a"><address className="author">Weng Fei Fung</address></h2>
+                                            {/* <h2 id="about-anchor" className="f1a"><address className="author">Weng Fei Fung</address></h2> */}
                                             <div className="f1b">
-                                                <p>Passionate about all things coding 💻 especially web development 🌎, Weng has made this a hobby and side job for five years. Have worked with startups including Mixotype, companies like ExRx, and small gigs by word of mouth (with jQuery/Php/MySQL). Certified in MERN (MongoDB, Mongoose, Express, React, Node) and GraphQL with top marks at <span className="ucla">UCLA</span>-Trilogy Coding Bootcamp.</p>
-                                                <p>He is looking forward to working with your company as a web developer. See <NavLink to="./testimonials">Testimonials</NavLink>.</p>
+                                                {/* <p>Passionate about all things coding 💻 especially web development 🌎, Weng has made this a hobby and side job for five years. Have worked with startups including Mixotype, companies like ExRx, and small gigs by word of mouth (with jQuery/Php/MySQL). Certified in MERN (MongoDB, Mongoose, Express, React, Node) and GraphQL with top marks at <span className="ucla">UCLA</span>-Trilogy Coding Bootcamp.</p>
+                                                <p>He is looking forward to working with your company as a web developer. See <NavLink to="./testimonials">Testimonials</NavLink>.</p> */}
+                                                
+                                                <h2 id="about-anchor" className="f1a">Full Stack Developer<br/><address className="author">Weng Fei Fung</address></h2>
+                                                <p>Full stack developer with a background in nursing. 5 years of freelancing jQuery/Php/MySQL. Certified with top marks at UCLA for MERN stack (MongoDB/Mongoose, Express, React, Node) and GraphQL. Have worked with startups including Mixotype, and companies like ExRx and People's Care. Known as an innovative problem solver, developer friends go to me when they are stuck or have startup ideas. My strong points are jQuery, React, PHP, Express JS, and Node. My strength is in listening to business requirements and translating them into real products. In the future I'd like to take a more entrepreneurship and management role combining healthcare and programming in the hospital setting, as I saw a need for charting software made by healthcare professionals.</p>
 
                                                 <aside className="badges">
 
@@ -35,6 +38,8 @@ export default class WhoAmI extends React.Component {
                                                     </a>
                                                     
                                                 </aside>
+
+                                                <aside class="info-spacer" style={{width:"1px", height:"10px"}}></aside>
 
                                             </div>
                                         </div>
