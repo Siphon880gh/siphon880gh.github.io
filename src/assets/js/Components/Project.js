@@ -42,6 +42,7 @@ export default class Project extends React.Component {
                     <p>
                         {this.props.desc}  
                     </p>
+                    <span><label>Tech:&nbsp;</label><span>{this.props.tech}</span></span>
                 </figcaption>
                 <div className="overlay" style={getColorOverlay.call(null, bgColor)} onClick={this.openWindow.bind(this)}></div>
                 <div className="overlay-toggle-description">
