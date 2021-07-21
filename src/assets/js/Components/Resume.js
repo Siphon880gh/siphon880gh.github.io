@@ -3,7 +3,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 const baseLink = "https://www.wengindustry.com/me/docs/resume/";
-const filename = "Fung, Weng Fei - Resume - Central Grader or Tutor - Transitional v1.4.docx";
+const filename = "Fung, Weng Fei - Resume - 2022 Web Developer v1.0.doc";
 const docLink = baseLink + filename;
 
 export default class Resume extends React.Component {
