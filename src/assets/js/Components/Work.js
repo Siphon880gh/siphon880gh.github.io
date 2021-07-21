@@ -135,6 +135,7 @@ export default class Work extends React.Component {
                                     desc={desc}
                                     repos={repos}
                                     bgColor={bgColor}
+                                    tech={tech}
                                 >
                                 </Project>
                             )

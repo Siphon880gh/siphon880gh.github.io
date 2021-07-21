@@ -619,8 +619,9 @@ address {
     width: 300px;
     height: 100%;
     float: left;
-    background: rgba(255, 255, 255, 1) url("../../assets/img/me.png") repeat scroll 50% 50%;
-    background-size: cover;
+    /* background: rgba(255, 255, 255, 1) url("../../assets/img/me.png") repeat scroll 50% 50%; */
+    background: 15px 15px / contain transparent url("../../assets/img/me.png") no-repeat;
+    /* background-size: cover; */
     margin-right: 20px;
 }
 
@@ -668,11 +669,11 @@ address {
 
 @media (max-width: 825px) {
     .slide-b .wrapper {
-        margin-top: -22px;
+        /* margin-top: -22px; */
         display: block;
     }
-    .slide-b .wrapper .a {
-        display: none;
+    .slide-b .a {
+        display: none !important;
     }
 }
 
@@ -683,6 +684,9 @@ address {
     }
     .slide-b .b {
         height: 850px !important;
+    }
+    .slide-b .bb1 {
+        background: 15px 15px / contain no-repeat url("../../assets/img/me2.jpg") !important;
     }
 }
 

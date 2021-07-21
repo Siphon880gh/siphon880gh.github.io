@@ -47,6 +47,7 @@ export default class Collab extends React.Component {
                                         desc={desc}
                                         repos={repos}
                                         bgColor={bgColor}
+                                        tech={tech}
                                     >
                                     </Project>
                                 )
