@@ -363,7 +363,8 @@ body {
 .f1b {
     font-family: "Montserrat", Sans-serif;
     line-height: 2;
-    height: 80vh;
+    padding-right: 20px;
+    /* height: 80vh; */
     overflow-y: scroll;
 }
 
@@ -410,20 +411,31 @@ body {
     letter-spacing: 2px;
 }
 
-@media (max-width: 600px) {
-    .slide-hero {
-        height: 90vh;
-    }
-}
-
-@media (max-height: 750px) {
+@media screen AND (max-height: 750px) {
     .slide-a .slide-hero {
         justify-content: flex-start;
         padding-top: 20px;
     }
 }
 
-@media (max-height: 380px) {
+@media screen AND (max-width: 600px) AND (min-width: 380px) {
+    .wrapper {
+        text-align: center;
+    }
+    .slide-b .bb1 {
+        display: block;
+        margin: 0 auto;
+        transform: translateY(20px);
+        width: 100%;
+        height: 250px;
+        float: none;
+    }
+    .slide-hero {
+        height: 90vh;
+    }
+}
+
+@media screen AND (max-height: 380px) {
     .slide-a .slide-hero {
         height: 90vh;
     }
@@ -642,7 +654,7 @@ address {
 }
 
 .slide-b .a {
-    width: 40vw;
+    width: 20vw;
     height: 100%;
     display: inline-block;
     background: #d0e4f5 url("../../assets/img/coding-stock.jpg") repeat scroll 50% 50%;
@@ -651,7 +663,7 @@ address {
 
 .slide-b .b {
     width: 100%;
-    height: 80vh;
+    /* height: 80vh; */
     background-color: #e5e4e2;
     /* platinum */
 }
@@ -679,8 +691,7 @@ address {
 .slide-b .bb2 .va .flexie {
     line-height: 150%;
     letter-spacing: 1px;
-    /* height: 80vh;
-	 */
+    /* height: 80vh; */
 }
 
 @media (max-height: 736px) {
@@ -860,7 +871,7 @@ details div {
 
 .footer-spacer {
     width: 1px;
-    height: 95px;
+    height: 50px;
     z-index: 1;
 }
 
@@ -877,9 +888,24 @@ details div {
     margin-bottom: 1rem;
     overflow: scroll;
     /* height: 2.5rem; */
-    width: 100vw;
+    width: 100%;
     white-space: nowrap;
     text-align: center;
+}
+
+
+/* Hide ugly horizontal scroller but still allow scrolling */
+
+.footer ul {
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.footer ul::-webkit-scrollbar {
+    display: none;
+    /* Safari and Chrome */
 }
 
 .footer li {
@@ -1035,4 +1061,58 @@ footer {
 .modal-header,
 .modal-footer {
     border: 0;
+}
+
+
+/* WhoAmI next version */
+
+.sides {
+    display: table;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: row wrap;
+    column-gap: 10px;
+    height: calc(100vh - 100px - 50px);
+}
+
+.side-a {
+    margin-top: 10px;
+    background: #d0e4f5 url(../../assets/img/coding-stock.jpg) repeat scroll 50% 50%;
+    min-width: 10vw;
+    height: 100%;
+    display: table-cell;
+}
+
+.side-b {
+    background: 15px 30px / contain transparent url(../../assets/img/me.png) no-repeat;
+    background-color: #e5e4e2;
+    min-width: 20vw;
+    height: 100%;
+    display: table-cell;
+    margin-top: 20px;
+}
+
+.side-c {
+    display: table-cell;
+    background-color: #e5e4e2;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+img.me {
+    margin-top: 35px;
+    width: 40vw;
+    height: 40vw;
+}
+
+@media screen AND (min-width:600px) {
+    .hidden-600px-up {
+        display: none;
+    }
+}
+
+@media screen AND (max-width:600px) {
+    .side-b {
+        display: none;
+    }
 }
