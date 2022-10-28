@@ -36,15 +36,19 @@ export default class Project extends React.Component {
         return (
             <div className="card col-sm-4 col-md-3 project" data-component="Project">
                 <figure className="card-body">
-                    <img className="img-contain" src={this.props.screenshot} alt={this.props.title}/>
                     <figcaption>
-                        <h6>{this.props.title}</h6>
+                        <a href={this.props.link} target="_blank">
+                            <h6>{this.props.title}</h6>
+                        </a>
                         <p>
                             {this.props.desc}  
                         </p>
                         <span><label>Tech:&nbsp;</label><span>{this.props.tech}</span></span>
                     </figcaption>
-                    <div className="overlay" style={getColorOverlay.call(null, bgColor)} onClick={this.openWindow.bind(this)}></div>
+                    {/* <div className="overlay" style={getColorOverlay.call(null, bgColor)}></div> */}
+                    <a href={this.props.link} target="_blank">
+                        <img className="img-contain" src={this.props.screenshot} alt={this.props.title}/>
+                    </a>
                     <div className="overlay-toggle-description">
                         {repos}
                         <a onClick={this.toggleDescription}><i className='fa fa-eye'></i></a>
