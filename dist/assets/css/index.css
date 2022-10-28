@@ -560,6 +560,13 @@ address {
 
 /* Work section other css */
 
+.collab-call-to-action {
+    color: white;
+    background-color: rgba(0, 0, 0, .5);
+    display: inline;
+    padding: 2.5px 5px;
+}
+
 .work figure,
 .collab figure {
     border: 2px solid rgba(41, 38, 35, 0.5);
