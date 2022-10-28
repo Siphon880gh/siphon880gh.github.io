@@ -13,6 +13,7 @@ import Collab from "./Collab.js";
 import Credit from "./Credit.js";
 import Contact from "./Contact.js";
 import Testimonials from "./Testimonials.js";
+import Students from "./Students.js";
 
 // Router
 import React from "react";
@@ -42,6 +43,7 @@ export default class App extends React.Component {
                             <Route path="*/credited" component={Credit}/>
                             <Route path="*/contact" component={Contact}/>
                             <Route path="*/testimonials" component={Testimonials}/>
+                            <Route path="*/students" component={Students}/>
                         </Switch>
     
                         <FooterSpace></FooterSpace>

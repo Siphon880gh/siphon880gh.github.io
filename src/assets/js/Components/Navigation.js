@@ -38,9 +38,9 @@ export default class Navigation extends React.Component {
             <nav data-component="Navigation" className="site-nav">
             <span className="fa fa-grip-lines site-nav-mobile-btn" onClick={this.onClickMobileHamburgerIcon}></span>
             <ul>
-                <li>
+                {/* <li>
                     <NavLink data-php-rerouter="tech" to="./tech" activeClassName="text-bold-colored" onClick={this.collapseMobileMenu}>Tech</NavLink>
-                </li>
+                </li> */}
                 <li>
                     <NavLink data-php-rerouter="whoami" to="./whoami" activeClassName="text-bold-colored" onClick={this.collapseMobileMenu} className="whoami">About Me</NavLink>
                 </li>
@@ -58,6 +58,9 @@ export default class Navigation extends React.Component {
                 </li>
                 <li>
                     <NavLink data-php-rerouter="testimonials" to="./testimonials" activeClassName="text-bold-colored" onClick={this.collapseMobileMenu}>Testimonials</NavLink>
+                </li>
+                <li>
+                    <NavLink data-php-rerouter="students" to="./students" activeClassName="text-bold-colored" onClick={this.collapseMobileMenu}>Student Testimonials</NavLink>
                 </li>
                 <li>
                     <NavLink data-php-rerouter="contact" to="./contact" activeClassName="text-bold-colored" onClick={this.collapseMobileMenu}>Contact</NavLink>
