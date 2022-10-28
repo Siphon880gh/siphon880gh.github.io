@@ -24,6 +24,10 @@ body {
     background: linear-gradient(90deg, rgba(94, 88, 83, 1) 0%, rgba(121, 121, 121, 1) 25%, rgba(41, 38, 35, 1) 98%);
 }
 
+.author {
+    font-size: 80%;
+}
+
 
 /* Utility classes: Flex */
 

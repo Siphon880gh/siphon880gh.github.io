@@ -14,6 +14,13 @@ export default class Work extends React.Component {
                 title: "Covid 19 Tracker",
                 tech: "jQuery, PHP, Node, Chart JS, Cronjobs, cURL, phpQuery, and scraping",
                 desc: "By Weng Fei Fung. Simple Covid-19 Tracker for the Los Angeles metropolitan area and other interest areas.",
+            },{
+                link: "https://wengindustry.com/tools/run-app/",
+                screenshot: "dist/assets/img/websites/run.png",
+                title: "Run App",
+                tech: "jQuery, Bootstrap, PWA",
+                desc: "By Weng Fei Fung. After trying run club with a friend, I realized how out of shape I was, so I made an app as soon as possible to train myself. It took less than 3 hours and I had an app I could use. I'm now using the app to condition my running every week and improving it useability over time.",
+                repos: "https://github.com/Siphon880gh/run-app/"
             },
             {
 
