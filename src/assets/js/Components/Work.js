@@ -89,7 +89,7 @@ export default class Work extends React.Component {
             {
 
 
-                link: "https://wengindustry.com/tools/medit/",
+                link: "https://wengindustry.com/tools/sp/medit/",
                 screenshot: "dist/assets/img/websites/medit.png",
                 title: "Create Your Own Meditation",
                 desc: "Made by Weng. Create your own audio meditation track. Type sentences into a timeline and have the app read them.",
@@ -97,7 +97,7 @@ export default class Work extends React.Component {
             },
             {
 
-                link: "https://wengindustry.com/tools/Bible",
+                link: "https://wengindustry.com/tools/sp/Bible",
                 screenshot: "dist/assets/img/websites/Bible.png",
                 title: "Bible",
                 desc: "Made by Weng. Bible app.",
@@ -122,7 +122,7 @@ export default class Work extends React.Component {
         ]
         return (
 
-            <div data-component="work" id="work" className="work section">
+            <div data-component="work" id="work" className="work section mx-2">
                 <div className="row">
 
                     {projects.map(project=>{

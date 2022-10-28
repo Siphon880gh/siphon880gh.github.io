@@ -192,19 +192,21 @@ body {
     float: right;
     margin: 15px 20px 0 0;
     cursor: pointer;
-    border: 2px solid black;
-    color: black;
+    border: 2px solid #fff;
+    color: rgba(255, 255, 255, 0.8);
+    ;
     padding: 5px;
 }
 
 .site-nav-mobile-btn:hover {
-    color: #fff;
-    border: 2px solid rgba(255, 255, 255, 0.8);
+    color: rgba(0, 0, 0, 0.8);
+    ;
+    border: 2px solid rgba(0, 0, 0, 0.8);
 }
 
 .site-nav-mobile-btn.active {
-    color: rgba(255, 255, 255, 0.8);
-    border: 2px solid rgba(255, 255, 255, 0.6);
+    color: black;
+    border: 2px solid rgba(0, 0, 0, 0.6);
 }
 
 .site-nav-mobile-btn.active:hover {
@@ -531,6 +533,7 @@ address {
     cursor: pointer;
     background-color: transparent;
     border: 0;
+    min-height: 250px;
 }
 
 .project .card-body {
@@ -551,11 +554,12 @@ address {
 .collab figure img {
     width: 100%;
     height: 100%;
+    max-height: 400px;
 }
 
 .work figure figcaption,
 .collab figure figcaption {
-    background-color: #4a4a4a;
+    background-color: rgba(74, 74, 74, .90);
     color: white;
     font-family: "Montserrat";
     padding: 10px;
@@ -568,11 +572,13 @@ address {
     /* Todo: Review;
 	 Smooth out specific corner */
     border-bottom-right-radius: 5px;
+    overflow-y: scroll;
+    text-overflow: ellipsis;
+    max-height: 150px;
 }
 
 .work figure .overlay,
 .collab figure .overlay {
-    /* Todo: Review: Overlay color when hovering */
     width: 100%;
     height: 100%;
     position: absolute;
@@ -581,6 +587,22 @@ address {
     z-index: 2;
     opacity: 0;
     transition: opacity 500ms;
+}
+
+.work figure .overlay:hover,
+.collab figure .overlay:hover {
+    max-height: none;
+}
+
+@media screen AND (max-width:850px) {
+    .work figure .overlay,
+    .collab figure .overlay {
+        font-size: 60%;
+    }
+    .work figure .overlay h6,
+    .collab figure .overlay h6 {
+        font-size: .55rem;
+    }
 }
 
 .work figure .overlay:hover,
@@ -703,8 +725,8 @@ address {
 
 /* Project Grid: Github link */
 
-.add-github-link {
-    background-color: #292623;
+
+/* .add-github-link {
     z-index: 5;
     padding: 10px;
     position: absolute;
@@ -713,10 +735,8 @@ address {
     font-size: 0.8rem;
     line-height: 1.5;
     border-top-left-radius: 5px;
-    /* Todo: Review;
-	 Smooth out specific corner */
     border-bottom-left-radius: 5px;
-}
+} */
 
 .add-github-link a {
     color: gray;
@@ -739,18 +759,19 @@ address {
 }
 
 
-/** Overlay eye toggle icon on project grids **/
+/** Overlay eye toggle icon and if applicable Github icon on project grids **/
 
-.overlay-toggle-description a {
-    color: purple !important;
+.overlay-toggle-description a:not(:last-child) {
+    margin-right: 2ch;
 }
 
-.overlay-toggle-description a i {
+.overlay-toggle-description a {
+    color: gray !important;
     cursor: pointer;
 }
 
 .overlay-toggle-description a:hover {
-    color: red !important;
+    color: white !important;
 }
 
 
@@ -826,18 +847,18 @@ details div {
 
 .footer {
     width: 100vw;
-    color: white;
-    z-index: 2;
+    color: rgba(255, 255, 255, 0.8);
+    z-index: 6;
 }
 
 .footer ul {
     padding: 0;
+    padding-top: 10px;
     margin-top: 0;
     margin-bottom: 1rem;
     overflow: scroll;
-    height: 2.5rem;
+    /* height: 2.5rem; */
     width: 100vw;
-    overflow-y: hidden;
     white-space: nowrap;
     text-align: center;
 }
@@ -880,7 +901,8 @@ footer a:hover {
 footer {
     margin: 0 !important;
     background-color: rgba(41, 38, 35, 1);
-    padding: 20px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
     border-radius: 0;
     position: fixed;
     bottom: 0;

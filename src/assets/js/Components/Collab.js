@@ -34,7 +34,7 @@ export default class Collab extends React.Component {
 
         return (
 
-                <div data-component="collab" id="collab" className="collab section">
+                <div data-component="collab" id="collab" className="collab section mx-2">
                     <div className="row">
 
                         {projects.map(project=>{

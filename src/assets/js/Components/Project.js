@@ -29,14 +29,13 @@ export default class Project extends React.Component {
         // If provided github link, add github link
         let repos = "";
         if(this.props.repos) {
-            repos = (<aside className="add-github-link">
-                <a target="_blank" href={this.props.repos}>Checkout Github repository</a>
-            </aside>);
+            repos = (
+                <a target="_blank" href={this.props.repos}><i className="fab fa-github"></i></a>
+            );
         }
         return (
             <div className="card col-sm-4 col-md-3 project" data-component="Project">
                 <figure className="card-body">
-                    {repos}
                     <img className="img-contain" src={this.props.screenshot} alt={this.props.title}/>
                     <figcaption>
                         <h6>{this.props.title}</h6>
@@ -47,6 +46,7 @@ export default class Project extends React.Component {
                     </figcaption>
                     <div className="overlay" style={getColorOverlay.call(null, bgColor)} onClick={this.openWindow.bind(this)}></div>
                     <div className="overlay-toggle-description">
+                        {repos}
                         <a onClick={this.toggleDescription}><i className='fa fa-eye'></i></a>
                     </div>
                 </figure>
