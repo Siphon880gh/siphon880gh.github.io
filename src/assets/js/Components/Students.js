@@ -48,7 +48,7 @@ export default class Students extends React.Component {
                 </div>
 
                 <div className={"rotation rotation-2 " + (this.state.count!==2?"d-none":"")}>
-                    <p className="tag-description-line">My supervisors gaving a shout out on the Slack platform we use for students to reach us.</p>
+                    <p className="tag-description-line">My supervisors giving me a shout out on the Slack platform which we use for students to reach us.</p>
                     <img src="./src/assets/img/students/testimonials-la/a.png"></img>
                     <img src="./src/assets/img/students/testimonials-la/b.png"></img>
                     <img src="./src/assets/img/students/testimonials-la/c.png"></img>
