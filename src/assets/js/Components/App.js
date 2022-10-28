@@ -3,7 +3,7 @@ import Header from "./Header.js";
 import Footer from "./Footer.js";
 import FooterSpace from "./FooterSpace.js";
 
-import Tech from "./Tech.js";
+import Tech from "./Tech.v0.js";
 import WhoAmI from "./WhoAmI.js";
 import Resume from "./Resume.js";
 

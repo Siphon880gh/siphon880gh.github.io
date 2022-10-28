@@ -1111,18 +1111,17 @@ footer {
 }
 
 img.me {
-    margin-top: 35px;
-    width: 40vw;
-    height: 40vw;
+    margin-top: 15px;
+    max-height: 250px;
 }
 
-@media screen AND (min-width:600px) {
-    .hidden-600px-up {
+@media screen AND (min-width:950px) {
+    .hidden-950px-up {
         display: none;
     }
 }
 
-@media screen AND (max-width:600px) {
+@media screen AND (max-width:950px) {
     .side-b {
         display: none;
     }
