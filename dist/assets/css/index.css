@@ -186,7 +186,7 @@ body {
 }
 
 .site-nav ul li:last-child {
-    margin-right: 10px;
+    margin-right: 20px;
 }
 
 
@@ -564,11 +564,16 @@ address {
 
 /* Work section other css */
 
-.collab-call-to-action {
+.collab-call-to-action,
+.tag-description-line {
     color: white;
     background-color: rgba(0, 0, 0, .5);
     display: inline;
     padding: 2.5px 5px;
+}
+
+.tag-description-line {
+    font-size: 150%;
 }
 
 .work figure,
@@ -1131,4 +1136,85 @@ img.me {
     vertical-align: middle;
     max-width: 60vw;
     margin: 10px auto;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.clickable:hover {
+    font-weight: 800;
+}
+
+.flushed-left,
+.flushed-right {
+    height: 100vh;
+    width: 4ch;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+}
+
+.flushed-left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 5;
+}
+
+.flushed-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 5;
+}
+
+.text-gray {
+    color: gray !important;
+}
+
+.spacer-50px {
+    width: 10px;
+    height: 50px;
+}
+
+.rotation {
+    margin-left: 20vw;
+    margin-right: 20vw;
+    max-width: 60vw;
+    text-align: center;
+}
+
+.rotation img {
+    width: 100%;
+}
+
+.rotation.rotation-2 img {
+    width: 75%;
+}
+
+@media screen AND (min-width: 500px) {
+    .rotation {
+        margin-left: 5vw;
+        margin-right: 5vw;
+        max-width: 90vw;
+    }
+}
+
+@media screen AND (min-width: 900px) {
+    .rotation {
+        margin-left: 10vw;
+        margin-right: 10vw;
+        max-width: 80vw;
+    }
+}
+
+.rotation-2 img {
+    margin-bottom: 10px;
+}
+
+.rotation-3 img {
+    margin-bottom: 10px;
 }
