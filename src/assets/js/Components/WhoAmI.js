@@ -8,6 +8,14 @@ import {Link, NavLink} from "react-router-dom";
 // }
 
 export default class WhoAmI extends React.Component {
+    constructor() {
+        super();
+    }
+    componentDidMount() {
+        document.querySelectorAll(".wbr-slash").forEach(node => { 
+            node.innerHTML = node.innerHTML.replaceAll("/", "/<wbr>")
+         });
+    }
     
     render() {
         return (
@@ -25,7 +33,7 @@ export default class WhoAmI extends React.Component {
 
                                 <p><i>Cut to the chase? See my <a href="./?page=work">work</a>.</i></p>
                                 
-                                <p>Full stack developer with 5 years of freelancing <b>Javascript/jQuery/PHP/MySQL</b>. Certified for <b>MERN stack</b> (MongoDB/Mongoose, Express, React, Node) and GraphQL at UCLA extensions, and have been tutoring MERN Coding Bootcamp students as a senior tutor. Have worked with startups including Mixotype, and companies like ExRx and People's Care. Known as an innovative problem solver, developer friends go to me when they are stuck or have startup ideas. My strong points are jQuery, React, PHP, Express JS, and Node. Please see <a target="_blank" href="./?page=testimonials">testimonials</a>.</p>
+                                <p>Full stack developer with 5 years of freelancing <b className='wbr-slash'>Javascript/jQuery/PHP/MySQL</b>. Certified for <b>MERN stack</b> (MongoDB/Mongoose, Express, React, Node), MySQL/Sequelize, and <b>GraphQL</b> at UCLA extensions, and have been tutoring MERN Coding Bootcamp students as a senior tutor. Have worked with startups including Mixotype, and companies like ExRx and People's Care. Known as an innovative problem solver, developer friends go to me when they are stuck or have startup ideas. My strong points are jQuery, React, PHP, Express JS, and Node. Please see <a target="_blank" href="./?page=testimonials">testimonials</a>.</p>
 
                                 <p>I also like <b>learning new technologies</b>, languages, and frameworks. Have recently developed a proof of concept of Flutter connecting to Firebase, and having Firebase add more data in the backend using Google Cloud Functions. I've also experimented with Jupyter Notebook to make requests for datasets. I am making guides while exploring those technologies (Flutter, Data Science, etc). I am saving them to Obsidian MD which is a notebook software that deals mostly with Markdown MD files. My initial attempt was using my <a href="https://wengindustry.com/tools/snippets-mastery/" target="_blank"> own tool I call Snippets Mastery</a>. Later I wanted to combine the ability to practice typing code with the programming guides so I revamped it into a tool called <a href="https://wengindustry.com/tools/retype-notes/" target="_blank"> Retype Notes</a>. However as Markdown MD is part of the open source community, I've switched over to their software and I want to see if I can make a vault of programming languages and concepts. I plan to publish Quick Start articles for different languages and technologies in the future. In the past I made <a href="https://www.youtube.com/channel/UCg1O9uttSv3ZBzd1iep25Ig" target="_blank">Youtube videos</a>.</p>
 
@@ -50,7 +58,7 @@ export default class WhoAmI extends React.Component {
                                     
                                 </aside>
 
-                                <aside class="info-spacer" style={{width:"1px", height:"10px"}}></aside>
+                                <aside className="info-spacer" style={{width:"1px", height:"10px"}}></aside>
 
                             </div>
                         </div>
