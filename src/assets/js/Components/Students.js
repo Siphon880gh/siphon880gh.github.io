@@ -50,13 +50,13 @@ export default class Students extends React.Component {
                 <div className={"rotation rotation-2 " + (this.state.count!==2?"d-none":"")}>
                     <p className="tag-description-line">My supervisors giving me a shout out on the Slack platform which we use for students to reach us.</p>
                     <img src="./src/assets/img/students/testimonials-la/a.png"></img>
-                    <img src="./src/assets/img/students/testimonials-la/b.png"></img>
-                    <img src="./src/assets/img/students/testimonials-la/c.png"></img>
                     <img src="./src/assets/img/students/testimonials-la/d.png"></img>
+                    <img src="./src/assets/img/students/testimonials-la/c.png"></img>
+                    <img src="./src/assets/img/students/testimonials-la/b.png"></img>
                 </div>
 
                 <div className={"rotation rotation-3 " + (this.state.count!==3?"d-none":"")}>
-                    <p className="tag-description-line">The "Rating Percentage" is how many students actually gave a score after a tutoring session which is optional. But all the students who rated gave me 5 stars, therefore my "Average Rating" is 5</p>
+                    <p className="tag-description-line">Excellant ratings. Rating Percentage is how many students actually gave a score which is optional after tutoring. But all the students who rated gave me the max 5 stars, therefore my Average Rating is 5</p>
                     <div className="subgroup">
                         <img src="./src/assets/img/students/scores-la/a.png"></img>
                         <img src="./src/assets/img/students/scores-la/b.png"></img>

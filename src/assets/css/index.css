@@ -1158,14 +1158,14 @@ img.me {
 }
 
 .flushed-left {
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     z-index: 5;
 }
 
 .flushed-right {
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 0;
     z-index: 5;
@@ -1200,6 +1200,12 @@ img.me {
         margin-left: 5vw;
         margin-right: 5vw;
         max-width: 90vw;
+    }
+}
+
+@media screen AND (max-width: 500px) {
+    .tag-description-line {
+        font-size: 85%;
     }
 }
 

@@ -1,8 +1,9 @@
 const path = require('path');
 
+// Reminder: mode is development vs production
 module.exports = {
     entry: path.resolve(__dirname, './src/assets/js/Components/App.js'),
-    mode: "development",
+    mode: "production",
     module: {
         rules: [{
             test: /\.(js)$/,
