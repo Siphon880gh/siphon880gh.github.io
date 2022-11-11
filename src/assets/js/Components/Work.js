@@ -19,7 +19,8 @@ export default class Work extends React.Component {
                 screenshot: "dist/assets/img/websites/run.png",
                 title: "Run App",
                 tech: "jQuery, Bootstrap, PWA",
-                desc: "By Weng Fei Fung. After trying run club with a friend, I realized how out of shape I was, so I made an app as soon as possible to train myself to run for prolonged periods. It took less than 3 hours to code and I had an app I could use. I'm now using the app to condition my running every week and improving its useability over time.",
+                desc: ["By Weng Fei Fung. After trying run club with a friend, I realized how out of shape I was, so I made an app as soon as possible to train myself to run for prolonged periods. It took less than 3 hours to code and I had an app I could use. I'm now using the app to condition my running every week and improving its useability over time."],
+                // desc: ["Featured on ", <a href='https://exrx.net/Links' target='_blank'>ExRx</a>,<p/>,"By Weng Fei Fung. After trying run club with a friend, I realized how out of shape I was, so I made an app as soon as possible to train myself to run for prolonged periods. It took less than 3 hours to code and I had an app I could use. I'm now using the app to condition my running every week and improving its useability over time."],
                 repos: "https://github.com/Siphon880gh/run-app/"
             },
             {
