@@ -175,7 +175,7 @@ body {
     width: 100%;
     list-style-type: none;
     display: block;
-    border-top: 1px solid gray;
+    /* border-top: 1px solid gray; */
     margin: 0 auto;
     text-align: center;
     font-size: 18px;
