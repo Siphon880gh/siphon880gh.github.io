@@ -24,6 +24,16 @@ body {
     background: linear-gradient(90deg, rgba(94, 88, 83, 1) 0%, rgba(121, 121, 121, 1) 25%, rgba(41, 38, 35, 1) 98%);
 }
 
+a {
+    color: rgb(36, 69, 92);
+    /* #24455C */
+}
+
+a:hover,
+a:active {
+    color: #427EA8;
+}
+
 .author {
     font-size: 80%;
 }
@@ -175,7 +185,7 @@ body {
     width: 100%;
     list-style-type: none;
     display: block;
-    border-top: 1px solid gray;
+    /* border-top: 1px solid gray; */
     margin: 0 auto;
     text-align: center;
     font-size: 18px;

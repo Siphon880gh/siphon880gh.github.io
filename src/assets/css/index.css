@@ -24,6 +24,16 @@ body {
     background: linear-gradient(90deg, rgba(94, 88, 83, 1) 0%, rgba(121, 121, 121, 1) 25%, rgba(41, 38, 35, 1) 98%);
 }
 
+a {
+    color: rgb(36, 69, 92);
+    /* #24455C */
+}
+
+a:hover,
+a:active {
+    color: #427EA8;
+}
+
 .author {
     font-size: 80%;
 }
