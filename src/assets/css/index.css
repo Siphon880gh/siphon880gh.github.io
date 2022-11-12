@@ -196,21 +196,25 @@ body {
     float: right;
     margin: 15px 20px 0 0;
     cursor: pointer;
-    border: 2px solid #fff;
-    color: rgba(255, 255, 255, 0.8);
-    ;
+    /* border: 2px solid #fff; */
+    border: 2px solid #FFCB78;
+    /* color: rgba(255, 255, 255, 0.8); */
+    color: #FFCB78;
     padding: 5px;
 }
 
 .site-nav-mobile-btn:hover {
-    color: rgba(0, 0, 0, 0.8);
-    ;
-    border: 2px solid rgba(0, 0, 0, 0.8);
+    /* color: rgba(0, 0, 0, 0.8); */
+    color: rgba(225, 255, 255, 1);
+    /* border: 2px solid rgba(0, 0, 0, 0.8); */
+    border: 2px solid rgba(225, 255, 255, 1);
 }
 
 .site-nav-mobile-btn.active {
-    color: black;
-    border: 2px solid rgba(0, 0, 0, 0.6);
+    /* color: black; */
+    color: rgba(225, 255, 255, 1);
+    /* border: 2px solid rgba(0, 0, 0, 0.6); */
+    border: 2px solid rgba(225, 255, 255, 1);
 }
 
 .site-nav-mobile-btn.active:hover {
