@@ -21,6 +21,7 @@ export default class Navigation extends React.Component {
     onClickMobileHamburgerIcon(event){
         let icon = event.target;
         icon.classList.toggle("active");
+        icon.classList.toggle("fa-grip-lines");
     }
 
     collapseMobileMenu() {
