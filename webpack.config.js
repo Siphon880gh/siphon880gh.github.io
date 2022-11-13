@@ -5,11 +5,24 @@ module.exports = {
     entry: path.resolve(__dirname, './src/assets/js/Components/App.js'),
     mode: "production",
     module: {
-        rules: [{
+        rules: [
+        {
             test: /\.(js)$/,
             exclude: /node_modules/,
             use: ['babel-loader']
-        }]
+        },
+        {
+            test: /\.(png|jpg|gif)$/i,
+            use: [
+              {
+                loader: 'url-loader',
+                options: {
+                  limit: 8192
+                }
+              }
+            ]
+        }
+        ]
     },
     resolve: {
         extensions: ['*', '.js']
