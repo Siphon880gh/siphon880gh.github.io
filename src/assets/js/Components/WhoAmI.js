@@ -42,7 +42,7 @@ export default class WhoAmI extends React.Component {
                                 <p>In the future I'd like to take a more entrepreneurship role leveraging my technical knowledge to make software for hospitals and clinics. I saw a need for charting software made by healthcare professionals (I continue to work as registered nurse in ICU a few times a month with a staffing agency so I can keep up to date in that industry). In order to learn more entrepreneurship and managing, I am completing <b>Project Management</b> certificates at UC Berkeley and Coursera slated for December 2022. My motto is to always grow your craft.</p>
 
                                 <a href="//github.com/Siphon880gh" target="_blank">
-                                    <img className="contributions" src="https://www.wengindustry.com/me/dist/assets/img/contributions-year-v2.png"/>
+                                    <img className="contributions" src="https://www.wengindustry.com/me/dist/assets/img/contributions-year-v3.png"/>
                                 </a>
 
                                 <aside className="badges">
