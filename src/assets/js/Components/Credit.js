@@ -6,7 +6,7 @@ export default class Credit extends React.Component {
         return (
             <aside data-component="credit" id="credited" className="credited flushed-to-grid">
                 <div className="content-inner">
-                    <p className="text-med">Weng was also credited at:</p>
+                    <p className="text-med">Weng was credited at:</p>
                     <ul>
 
                         <li>
@@ -50,6 +50,23 @@ export default class Credit extends React.Component {
                                     <a href="//linkedin.com/in/weng-fung/" target="_blank">LinkedIn</a>
                                 </summary>
                                 <div>Testimonials from satisfied clients.</div>
+                            </details>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div className="content-inner">
+                    <p className="text-med">Weng's apps have been mentioned at:</p>
+                    <ul>
+
+                        <li>
+                            <details open>
+                                <summary>
+                                    <i className="fa fa-info"></i>
+                                    <a href="https://exrx.net/Notes/Links/Miscellaneous#Apps" target="_blank">ExRx.net - Apps for Mobile Browser</a>
+                                </summary>
+                                <div>Weng's Diet and Run apps are listed at ExRx.net - Information for the exercise professional, coach, or fitness enthusiast.</div>
                             </details>
                         </li>
 
