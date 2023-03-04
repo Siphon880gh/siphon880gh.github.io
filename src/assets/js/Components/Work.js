@@ -14,6 +14,17 @@ export default class Work extends React.Component {
                 title: "Covid 19 Tracker",
                 tech: "jQuery, PHP, Node, Chart JS, Cronjobs, cURL, phpQuery, and scraping",
                 desc: "By Weng Fei Fung. Simple Covid-19 Tracker for the Los Angeles metropolitan area and other interest areas.",
+            },
+            {
+
+
+                link: "https://budget-tracker-wff.herokuapp.com/",
+                screenshot: "dist/assets/img/websites/budget-tracker.png",
+                title: "Budget Tracker",
+                desc: "By Weng Fei Fung. Budget Tracker is an offline capable PWA that lets you record your expenses and deposits so you can track your budget anywhere you are. Even if you are traveling to a remote area where internet is spotty, the app remembers your offline changes.",
+                tech: "Express Routes, MongoDB, Mongoose ODM, IndexedDB, Service Worker, Cache, PWA",
+                repos: "https://github.com/Siphon880gh/budget-tracker"
+
             },{
                 link: "https://wengindustry.com/tools/run-app/",
                 screenshot: "dist/assets/img/websites/run.png",
@@ -31,17 +42,6 @@ export default class Work extends React.Component {
                 desc: "By Weng Fei Fung. Weather forecast. Shows today's weather forecast as well as the next five days. Make it your homepage to stay up to date on the weather! Or use it to plan your trips.",
                 tech: "JS, Bootstrap, Font-Awesome, OpenWeather API, Google Places API, LocalStorage",
                 repos: "https://github.com/Siphon880gh/weather-dashboard"
-            },
-            {
-
-
-                link: "https://budget-tracker-wff.herokuapp.com/",
-                screenshot: "dist/assets/img/websites/budget-tracker.png",
-                title: "Budget Tracker",
-                desc: "By Weng Fei Fung. Budget Tracker is an offline capable PWA that lets you record your expenses and deposits so you can track your budget anywhere you are. Even if you are traveling to a remote area where internet is spotty, the app remembers your offline changes.",
-                tech: "Express Routes, MongoDB, Mongoose ODM, IndexedDB, Service Worker, Cache, PWA",
-                repos: "https://github.com/Siphon880gh/budget-tracker"
-
             },
             {
 
