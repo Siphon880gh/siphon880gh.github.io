@@ -44,10 +44,10 @@ export default class Navigation extends React.Component {
                         <NavLink data-php-rerouter="whoami" to="./whoami" activeClassName="text-bold-colored" onClick={this.collapseMobileMenu} className="whoami">Me</NavLink>
                     </li>
                     <li>
-                        <NavLink data-php-rerouter="work" to="./work" activeClassName="text-bold-colored" onClick={this.collapseMobileMenu}>Work</NavLink>
+                        <NavLink data-php-rerouter="testimonials" to="./testimonials" activeClassName="text-bold-colored" onClick={this.collapseMobileMenu}>Client Testimonials</NavLink>
                     </li>
                     <li>
-                        <NavLink data-php-rerouter="testimonials" to="./testimonials" activeClassName="text-bold-colored" onClick={this.collapseMobileMenu}>Client Testimonials</NavLink>
+                        <NavLink data-php-rerouter="work" to="./work" activeClassName="text-bold-colored" onClick={this.collapseMobileMenu}>Work</NavLink>
                     </li>
                     {/* <li>
                         <NavLink data-php-rerouter="contact" to="./contact" activeClassName="text-bold-colored" onClick={this.collapseMobileMenu}>Contact</NavLink>
@@ -59,6 +59,12 @@ export default class Navigation extends React.Component {
                     </li> */}
                     {/* <li>
                         <NavLink data-php-rerouter="resume" to="./resume" activeClassName="text-bold-colored" onClick={this.collapseMobileMenu}>Resume</NavLink>
+                    </li> */}
+                    {/* <li>
+                        <NavLink data-php-rerouter="collab" to="./achievements" activeClassName="text-bold-colored">Achievements</NavLink>
+                    </li>
+                    <li>
+                        <NavLink data-php-rerouter="collab" to="./collab" activeClassName="text-bold-colored">Certs</NavLink>
                     </li> */}
                     <li>
                         <NavLink data-php-rerouter="collab" to="./collab" activeClassName="text-bold-colored" onClick={this.collapseMobileMenu}>Collab</NavLink>
