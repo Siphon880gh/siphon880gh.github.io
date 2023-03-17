@@ -1,7 +1,7 @@
 
 import React, {useState, useEffect} from "react";
 import ReactDOM from "react-dom";
-import calloutBubble from "../../img/callout-yt-v2.png"
+import calloutBubble from "../../img/callout-yt-v3.png"
 import "./Footer.css"
 
 const gradientBottom = {

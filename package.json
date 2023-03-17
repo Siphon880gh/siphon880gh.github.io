@@ -4,7 +4,7 @@
     "description": "Weng's Web Industry === Do you want to implement your idea into a reality on the world wide web? Or do you need an in house developer that can understand your business' vision, implement features, and fix bugs? This is a portfolio of my work...",
     "main": "dev/src/assets/js/app.js",
     "scripts": {
-        "watch": "livereload .",
+        "watch": "nodemon --exec \"npm run build\" -e js --ignore dist/",
         "build": "rm -r dist; mkdir dist; mkdir dist/assets; cp -r src/assets/* dist/assets; rm -r dist/assets/js/*; webpack;",
         "deploy": "git push origin master"
     },
