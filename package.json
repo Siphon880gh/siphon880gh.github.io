@@ -14,6 +14,22 @@
         "node-livereload": "^0.6.0",
         "url-loader": "^4.1.1"
     },
+    "devDependencies": {
+        "@babel/core": "^7.13.10",
+        "@babel/plugin-syntax-jsx": "^7.12.13",
+        "@babel/plugin-transform-react-jsx": "^7.12.17",
+        "@babel/preset-env": "^7.13.10",
+        "@babel/preset-react": "^7.12.13",
+        "babel-loader": "^8.2.2",
+        "css-loader": "^6.7.3",
+        "react": "^17.0.1",
+        "react-dom": "^17.0.1",
+        "react-router": "^5.2.0",
+        "react-router-dom": "^5.2.0",
+        "style-loader": "^3.3.2",
+        "webpack": "^5.24.4",
+        "webpack-cli": "^4.5.0"
+    },
     "author": "Weng Fei Fung",
     "license": "ISC",
     "repository": {
@@ -24,19 +40,5 @@
     "bugs": {
         "url": "https://github.com/Siphon880gh/siphon880gh.github.io/issues"
     },
-    "homepage": "https://github.com/Siphon880gh/siphon880gh.github.io#readme",
-    "devDependencies": {
-        "@babel/core": "^7.13.10",
-        "@babel/plugin-syntax-jsx": "^7.12.13",
-        "@babel/plugin-transform-react-jsx": "^7.12.17",
-        "@babel/preset-env": "^7.13.10",
-        "@babel/preset-react": "^7.12.13",
-        "babel-loader": "^8.2.2",
-        "react": "^17.0.1",
-        "react-dom": "^17.0.1",
-        "react-router": "^5.2.0",
-        "react-router-dom": "^5.2.0",
-        "webpack": "^5.24.4",
-        "webpack-cli": "^4.5.0"
-    }
+    "homepage": "https://github.com/Siphon880gh/siphon880gh.github.io#readme"
 }

@@ -6,22 +6,26 @@ module.exports = {
     mode: "production",
     module: {
         rules: [
-        {
-            test: /\.(js)$/,
-            exclude: /node_modules/,
-            use: ['babel-loader']
-        },
-        {
-            test: /\.(png|jpg|gif)$/i,
-            use: [
-              {
-                loader: 'url-loader',
-                options: {
-                  limit: 8192
-                }
-              }
-            ]
-        }
+            {
+                test: /\.(js)$/,
+                exclude: /node_modules/,
+                use: ['babel-loader']
+            },
+            {
+                test: /\.(png|jpg|gif)$/i,
+                use: [
+                    {
+                        loader: 'url-loader',
+                        options: {
+                            limit: 8192
+                        }
+                    }
+                ]
+            },
+            {
+                test: /\.css$/,
+                use: [ 'style-loader', 'css-loader' ]
+            }
         ]
     },
     resolve: {

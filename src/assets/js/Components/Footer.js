@@ -1,7 +1,8 @@
 
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import ReactDOM from "react-dom";
-import calloutBubble from "../../img/callout-yt.png"
+import calloutBubble from "../../img/callout-yt-v2.png"
+import "./Footer.css"
 
 const gradientBottom = {
     width: "100vw",
@@ -11,7 +12,6 @@ const gradientBottom = {
     left: "0",
     backgroundRepeat: "repeat-x",
     backgroundImage: `url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAADGCAYAAAAT+OqFAAAAdklEQVQoz42QQQ7AIAgEF/T/D+kbq/RWAlnQyyazA4aoAB4FsBSA/bFjuF1EOL7VbrIrBuusmrt4ZZORfb6ehbWdnRHEIiITaEUKa5EJqUakRSaEYBJSCY2dEstQY7AuxahwXFrvZmWl2rh4JZ07z9dLtesfNj5q0FU3A5ObbwAAAABJRU5ErkJggg==)`,
-    transition: "opacity 2s cubic-bezier(0,0,0.2,1)",
     pointerEvents: "none",
     transform: "scaleY(-1)"
 }
@@ -24,15 +24,28 @@ const relativeParent = {
 const absoluteChild = {
     position: "absolute",
     top: "-95px",
-    right: "-180px",
-    overflow: "visible",
-    transition: "opacity 2s cubic-bezier(0,0,0.2,1)",
+    left: "-180px",
+    overflow: "visible"
 }
 
 const calloutImage = {
     width: "200px",
-    height: "100px"
+    height: "100px",
+    maxHeight: "100px"
 }
+
+
+const uiStyles = {
+    callout: {
+        active: Object.assign({}, absoluteChild, calloutImage),
+        inactive: Object.assign({}, Object.assign(absoluteChild, calloutImage), { opacity:0 }),
+    },
+    ytLink: {
+        active: {color:"red"},
+        inactive: {color:"white"}
+    }
+}
+
 /**
  * overflow scroll that allows horizontal scrolling on the footer is conflicting with the child absolutely positioned in a relative parent. This conflict prevents the child from being visible when out of bound.
  * when the callout bubble disappears, allowe overflow scrolling again.
@@ -46,38 +59,62 @@ const overflowScroll = {
 }
 
 
-export default class Footer extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            firstSeconds: true
-        }
+export default function Footer() {
+    let [firstSeconds, setFirstSeconds] = useState(true)
+    let [laterSeconds, setLaterSeconds] = useState(false)
+
+    function handleScroll() {
+        setFirstSeconds(false)
     }
+
+    useEffect(()=>{
+        window.addEventListener('scroll', handleScroll);
+        
+        return (()=>{
+            window.removeEventListener('scroll', handleScroll);
+        })
+    }, [])
+
+    useEffect(()=>{
+        setTimeout(()=>{
+            setLaterSeconds(true)
+        }, 2000);
+    }, firstSeconds)
     
-    componentDidMount() {
-        const timer = setTimeout(()=>{
-            this.setState({firstSeconds:false})
-        }, 1000);
-        return timer;
-    }
-    render() {
+    
         return (
             <footer data-component="Footer" id="footer" className="footer section container-fluid">
                 <div className="noop">
                     {
-                        this.state.firstSeconds?
-                        (<div style={gradientBottom}></div>):
+                        firstSeconds?
+                        (<div className="fadeAll" style={gradientBottom}></div>):
                         (<></>)
                     }
-                    <ul className="noop" style={this.state.firstSeconds?overflowVisible:overflowScroll}>
+                    <ul className="noop" style={!laterSeconds?overflowVisible:overflowScroll}>
+                    {/* <ul className="noop"> */}
                         <li><a className="text-bold" href="//linkedin.com/in/weng-fung/" target="_blank"><i className='fa fa-briefcase'>&nbsp;</i>Hire Me!</a></li>
                         <li><a href="//github.com/Siphon880gh" target="_blank"><i className='fab fa-github'>&nbsp;</i>Github</a></li>
                         <li style={relativeParent}>
-                            <a href="//www.youtube.com/channel/UCg1O9uttSv3ZBzd1iep25Ig" target="_blank"><i className='fab fa-youtube'>&nbsp;</i>Youtube</a>
+                            <a href="//www.youtube.com/channel/UCg1O9uttSv3ZBzd1iep25Ig" target="_blank" className="fadeAll" style={
+                                    firstSeconds?
+                                    uiStyles.ytLink.active
+                                    :
+                                    uiStyles.ytLink.inactive
+                                }
+                            ><i className='fab fa-youtube'>&nbsp;</i>Youtube</a>
                             {
-                                this.state.firstSeconds?
-                                (<img src={calloutBubble} style={Object.assign(absoluteChild, calloutImage)}></img>):
-                                (<></>)
+                                !laterSeconds?
+
+                                (<img className="fadeAll" src={calloutBubble} style={
+                                    firstSeconds?
+                                    uiStyles.callout.active
+                                    :
+                                    uiStyles.callout.inactive
+                                }></img>)
+                                
+                                :
+                                
+                                ""
                             }
                         </li>
                         <li><a href="tel:3238427514" target="_blank"><i className='fa fa-phone'>&nbsp;</i>323-842-7514</a></li>
@@ -87,5 +124,4 @@ export default class Footer extends React.Component {
                 </div>
             </footer>
         )
-    }
-}
+} // Footer

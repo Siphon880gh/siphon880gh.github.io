@@ -1,13 +1,12 @@
 
-import React from "react";
+import React, {Component} from "react";
 import ReactDOM from "react-dom";
 import {Link, NavLink} from "react-router-dom";
+import githubContributions2023 from "../../img/github-contributions-2022.png"
+import githubContributions2023march from "../../img/github-contributions-2023-03.png"
+import "./WhoAmI.css"
 
-// function openWindow(routed) {
-//     document.querySelector(`[data-php-rerouter={routed}]`).click();
-// }
-
-export default class WhoAmI extends React.Component {
+export default class WhoAmI extends Component {
     constructor() {
         super();
     }
@@ -43,8 +42,21 @@ export default class WhoAmI extends React.Component {
                                     
                                 <p>In the future I'd like to take a more entrepreneurship role leveraging my technical knowledge to make software for hospitals and clinics. I saw a need for charting software made by healthcare professionals (I continue to work as registered nurse in ICU a few times a month with a staffing agency so I can keep up to date in that industry). In order to learn more entrepreneurship and managing, I completed a <b>Project Management</b> certificate at UC Berkeley on December 2022. My motto is to always grow your craft.</p>
 
+                                {/* Contributions */}
+
+                                {/* 
+                                    Go to profile page: https://github.com/Siphon880gh
+                                        - Open up inspect to:
+                                        - Remove "Contribution settings..." top right of the chart
+                                        - Remove "Learn how we count contributions" under the chart
+                                        - Remove bottom left and bottom right grids in the table
+                                        - Zoom in until the chart (gray borders) is at least 1010px. Screen crop it. The React app will scale it back down to 1010px. 
+                                */}
+
+
                                 <a href="//github.com/Siphon880gh" target="_blank">
-                                    <img className="contributions" src="https://www.wengindustry.com/me/dist/assets/img/contributions-year-v3.png"/>
+                                    <img className="contributions" src={githubContributions2023}/>
+                                    <img className="contributions" src={githubContributions2023march}/>
                                 </a>
 
                                 <aside className="badges">
