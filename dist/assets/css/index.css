@@ -319,19 +319,6 @@ a:active {
     }
 }
 
-.github-style {
-    height: 20px;
-    border-radius: 2.5px;
-}
-
-.badge-style {
-    max-width: 100%;
-}
-
-.badges a:not(:last-child) {
-    margin-right: 10px;
-}
-
 address {
     display: inline;
 }
@@ -1059,6 +1046,11 @@ img.me {
     color: gray !important;
 }
 
+.spacer-20px {
+    width: 10px;
+    height: 20px;
+}
+
 .spacer-50px {
     width: 10px;
     height: 50px;
@@ -1090,6 +1082,8 @@ img.me {
 @media screen AND (max-width: 500px) {
     .tag-description-line {
         font-size: 85%;
+        border-radius: 15px;
+        padding: 5px 10px;
     }
 }
 
@@ -1107,4 +1101,35 @@ img.me {
 
 .rotation-3 img {
     margin-bottom: 10px;
+}
+
+
+/*
+ * Social badges
+ */
+
+
+/* Github style needs readjustment */
+
+.github-style {
+    height: 20px;
+    border-radius: 2.5px;
+}
+
+.badges {
+    text-align: center;
+}
+
+.badge-style-a {
+    display: inline !important;
+    width: 150px;
+}
+
+.badge-style {
+    display: inline !important;
+    max-width: 100%;
+}
+
+.badges a:not(:last-child) {
+    margin-right: 20px;
 }
