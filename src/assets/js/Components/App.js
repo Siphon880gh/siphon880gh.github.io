@@ -15,6 +15,8 @@ import Contact from "./Contact.js";
 import Testimonials from "./Testimonials.js";
 import Students from "./Students.js";
 
+import IframeAdapter from "./IframeAdapter.js";
+
 // Router
 import React from "react";
 import ReactDOM from "react-dom";
@@ -39,11 +41,12 @@ export default class App extends React.Component {
                             <Route path={`*/whoami(/.*)*`} component={WhoAmI}/>
                             <Route path="*/resume(/.*)*" component={Resume}/>
                             <Route path={`*/work(/.*)*`} component={Work}/>
-                            <Route path="*/collab(/.*)*" component={Collab}/>
-                            <Route path="*/credited(/.*)*" component={Credit}/>
-                            <Route path="*/contact(/.*)*" component={Contact}/>
-                            <Route path="*/testimonials(/.*)*" component={Testimonials}/>
-                            <Route path="*/students(/.*)*" component={Students}/>
+                            <Route path={"*/certs(/.*)*"} render={() => <IframeAdapter url="php-faster-development/index.php"/>}/>
+                            <Route path={"*/collab(/.*)*"} component={Collab}/>
+                            <Route path={"*/credited(/.*)*"} component={Credit}/>
+                            <Route path={"*/contact(/.*)*"} component={Contact}/>
+                            <Route path={"*/testimonials(/.*)*"} component={Testimonials}/>
+                            <Route path={"*/students(/.*)*"} component={Students}/>
                         </Switch>
     
                         <FooterSpace></FooterSpace>

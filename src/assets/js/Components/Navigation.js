@@ -67,13 +67,16 @@ export default class Navigation extends React.Component {
                         <NavLink data-php-rerouter="collab" to="./collab" activeClassName="text-bold-colored">Certs</NavLink>
                     </li> */}
                     <li>
-                        <NavLink data-php-rerouter="collab" to="./collab" activeClassName="text-bold-colored" onClick={this.collapseMobileMenu}>Collab</NavLink>
+                        <NavLink data-php-rerouter="certs" to="./certs" activeClassName="text-bold-colored" onClick={this.collapseMobileMenu}>Certs</NavLink>
                     </li>
                     <li>
                         <NavLink data-php-rerouter="credited" to="./credited" activeClassName="text-bold-colored" onClick={this.collapseMobileMenu}>Credited</NavLink>
                     </li>
                     <li>
                         <NavLink data-php-rerouter="students" to="./students" activeClassName="text-bold-colored" onClick={this.collapseMobileMenu}>Student Testimonials</NavLink>
+                    </li>
+                    <li>
+                        <NavLink data-php-rerouter="collab" to="./collab" activeClassName="text-bold-colored" onClick={this.collapseMobileMenu}>Collab</NavLink>
                     </li>
                 </ul>
                 <div className="spacer-bottom-mobile"/>
