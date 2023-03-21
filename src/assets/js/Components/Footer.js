@@ -23,8 +23,8 @@ const relativeParent = {
 
 const absoluteChild = {
     position: "absolute",
-    top: "-95px",
-    left: "-180px",
+    top: "-125px",
+    left: "-190px",
     overflow: "visible"
 }
 

@@ -30,7 +30,8 @@ export default class WhoAmI extends Component {
                                 <img className="hidden-950px-up me" src="https://wengindustry.com/me/src/assets/img/me2.jpg" alt="Picture of me"></img>
                                 <h2 id="about-anchor" className="f1a">Full Stack Developer<br/><address className="author">Weng Fei Fung</address></h2>
 
-                                <p><i>Cut to the chase? See 📂 <a href="./?page=work">my work</a>.</i></p>
+                                {/* <p><i>Cut to the chase? See 📂 <a href="./?page=work">my work</a>.</i></p> */}
+                                <p><i>Cut to the chase? See 📂 <Link to="work/#php">my work</Link>.</i></p>
                                 
                                 <p>Full stack developer with 7 years of freelancing {/* Linkedin -> Experience -> People's Care Jan 2016 - atm Jan 2023 */} <b className='wbr-slash'>Javascript + jQuery + Handlebars + PHP + MySQL</b>. Have worked with startups including Mixotype, and companies like ExRx and People's Care. Known as an innovative problem solver, developer friends go to me when they are stuck or have startup ideas. My strong points are jQuery, PHP, MySQL, React, Express JS, and Node. Please see 📍 <a target="_blank" href="./?page=testimonials">client testimonials</a>.</p>
 

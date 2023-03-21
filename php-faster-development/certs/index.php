@@ -19,6 +19,7 @@
         /** General */
         body, .certs {
             margin: 10px;
+            margin-bottom: 20px;
             background-color: rgba(223,222,219,1);
         }
         a {
@@ -32,7 +33,7 @@
             background-color: #4d4844;
             font-weight: 800;
             box-shadow: 5px 5px #453647;
-            margin-bottom: 60px;
+            margin-bottom: 20px;
             color: rgba(255,255,255,0.8);
         }
         h3 {
@@ -92,7 +93,7 @@
             border-radius: 5px;
 
             overflow-y: scroll;
-            max-height: 670px;
+            /* max-height: 670px; */
             margin: 0 30px;
             border: 5px solid rgba(69,54,71,1);
             padding: 10px;
@@ -331,7 +332,7 @@
             </article> <!-- ends col -->
         </div> <!-- Ends certs-inner -->
     </main> <!-- Ends certs -->
-    <aside>
+    <!-- <aside>
         May not have certificates in PHP, but here is my body of work to prove.
         Need more proof?
         <ul>
@@ -343,7 +344,7 @@
             <li>Work</li>
         </ul>
 
-    </aside>
+    </aside> -->
 
     <script>
         window.fullScreenApiInstance = null;

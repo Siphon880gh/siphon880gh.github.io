@@ -35,15 +35,15 @@ export default class App extends React.Component {
                         <Header></Header>
     
                         <Switch>
-                            <Route path="*/tech" component={Tech}/>
-                            <Route path="*/whoami" component={WhoAmI}/>
-                            <Route path="*/resume" component={Resume}/>
-                            <Route path="*/work" component={Work}/>
-                            <Route path="*/collab" component={Collab}/>
-                            <Route path="*/credited" component={Credit}/>
-                            <Route path="*/contact" component={Contact}/>
-                            <Route path="*/testimonials" component={Testimonials}/>
-                            <Route path="*/students" component={Students}/>
+                            <Route path="*/tech(/.*)*" component={Tech}/>
+                            <Route path={`*/whoami(/.*)*`} component={WhoAmI}/>
+                            <Route path="*/resume(/.*)*" component={Resume}/>
+                            <Route path={`*/work(/.*)*`} component={Work}/>
+                            <Route path="*/collab(/.*)*" component={Collab}/>
+                            <Route path="*/credited(/.*)*" component={Credit}/>
+                            <Route path="*/contact(/.*)*" component={Contact}/>
+                            <Route path="*/testimonials(/.*)*" component={Testimonials}/>
+                            <Route path="*/students(/.*)*" component={Students}/>
                         </Switch>
     
                         <FooterSpace></FooterSpace>
