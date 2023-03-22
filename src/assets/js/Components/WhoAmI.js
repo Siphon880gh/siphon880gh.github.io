@@ -4,6 +4,7 @@ import ReactDOM from "react-dom";
 import {Link, NavLink} from "react-router-dom";
 import githubContributions2023 from "../../img/github-contributions-2022.png"
 import githubContributions2023march from "../../img/github-contributions-2023-03.png"
+import mePic from "../../img/me3.jpg"
 import "./WhoAmI.css"
 
 export default class WhoAmI extends Component {
@@ -27,7 +28,7 @@ export default class WhoAmI extends Component {
                             <div className="side-a">&nbsp;</div>
                             <div className="side-b">&nbsp;</div>
                             <div className="side-c">
-                                <img className="hidden-950px-up me" src="https://wengindustry.com/me/src/assets/img/me2.jpg" alt="Picture of me"></img>
+                                <img className="hidden-950px-up me" src={mePic} alt="Picture of me"></img>
                                 <h2 id="about-anchor" className="f1a">Full Stack Developer<br/><address className="author">Weng Fei Fung</address></h2>
 
                                 {/* <p><i>Cut to the chase? See 📂 <a href="./?page=work">my work</a>.</i></p> */}

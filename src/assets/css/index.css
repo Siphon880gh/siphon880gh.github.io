@@ -560,7 +560,7 @@ address {
     height: 100%;
     float: left;
     /* background: rgba(255, 255, 255, 1) url("../../assets/img/me.png") repeat scroll 50% 50%; */
-    background: 15px 15px / contain transparent url("../../assets/img/me.png") no-repeat;
+    background: 15px 15px / contain transparent url("../../assets/img/me3.jpg") no-repeat;
     /* background-size: cover; */
     margin-right: 20px;
 }
@@ -971,7 +971,7 @@ footer {
 }
 
 .side-b {
-    background: 15px 30px / contain transparent url(../../assets/img/me.png) no-repeat;
+    background: 15px 30px / contain transparent url(../../assets/img/me3.jpg) no-repeat;
     background-color: #e5e4e2;
     min-width: 20vw;
     height: 100%;
