@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sandbox</title>
+    <title>Certificates</title>
 
 
     <!-- jQuery and Bootstrap  -->
@@ -16,7 +16,8 @@
     <script src="//raw.githack.com/hazzik/livequery/master/src/jquery.livequery.js"></script>
 
     <style>
-        /** General */
+        /* GENERAL
+        –––––––––––––––––––––––––––––––––––––––––––––––––– */
         body, .certs {
             margin: 10px;
             margin-bottom: 20px;
@@ -88,7 +89,8 @@
         .d-none {
             display: none;
         }
-        /* Columns container */
+        /* COLUMNS CONTAINER
+        –––––––––––––––––––––––––––––––––––––––––––––––––– */
         .certs {
             border-radius: 5px;
 
@@ -116,7 +118,8 @@
             bottom: 20px;
             right: 20px; 
         }
-        /* Column */
+        /* COLUMN
+        –––––––––––––––––––––––––––––––––––––––––––––––––– */
         .tech.col {
             /* #453647 */
             
@@ -142,7 +145,8 @@
         .tech.col .col-body {
             padding: 15px;
         }
-        /* Certificate in column */
+        /* COLUMN CELL (CERTIFICATE)
+        –––––––––––––––––––––––––––––––––––––––––––––––––– */
         .cert hr {
             height: 2.5px;
         }
@@ -169,7 +173,8 @@
             font-style: italic;
             margin-top:5px;
         }
-        /* Underneath certificates section */
+        /* BELOW CERTIFICATES (Not using?)
+        –––––––––––––––––––––––––––––––––––––––––––––––––– */
         aside {
             margin-top:60px;
         }
@@ -193,7 +198,7 @@
                         <img src="___" alt="">
                     </a>
                     <figcaption></figcaption>
-                    <hr/>
+                    <hr class="">
                 </figure>
             </section>
         </article> <!-- ends col -->
