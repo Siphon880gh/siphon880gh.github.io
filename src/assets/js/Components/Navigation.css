@@ -3,7 +3,8 @@
 .site-header {
     margin: -7.5px 0 0 0;
     padding: 0;
-    background-color: #36322f;
+    /* background-color: #36322f; */
+    background-color: rgba(24, 38, 50, .9);
     /* Sticky bar */
     position: sticky;
     top: 0;
@@ -21,7 +22,8 @@
     box-shadow: 5px 5px #4d4844;
     border-radius: 15px;
     padding: 10px;
-    background: #4d4844 url("../../img/coding-stock.jpg") repeat scroll 50% 50%;
+    /* background: #4d4844 url("../../img/coding-stock.jpg") repeat scroll 50% 50%; */
+    background: rgba(80, 58, 50) url("../../img/coding-stock.jpg") repeat scroll 50% 50%;
     background-size: cover;
     float: left;
 }
