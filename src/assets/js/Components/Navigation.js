@@ -1,7 +1,15 @@
 
 import React from "react";
 import ReactDOM from "react-dom";
-import "./Navigation.css?v=2"
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
+import { 
+    faAddressBook as meIcon, 
+    faThumbsUp as clientTestimonialsIcon, 
+    faStarHalfStroke as clientTestimonialsIconAlt,  
+    faAddressCard as certificatesIcon, 
+    faChessBishop as workIcon,  
+} from '@fortawesome/free-solid-svg-icons'
+import "./Navigation.css"
 
 // Router
 import {BrowserRouter} from "react-router-dom";
@@ -41,13 +49,16 @@ export default class Navigation extends React.Component {
             <div id="navs">
                 <ul id="nav-primary">
                     <li>
-                        <NavLink data-php-rerouter="whoami" to="./whoami" activeClassName="text-bold-colored" onClick={this.collapseMobileMenu} className="whoami">Me</NavLink>
+                        <NavLink data-php-rerouter="whoami" to="./whoami" activeClassName="text-bold-colored" onClick={this.collapseMobileMenu} className="whoami"><FontAwesomeIcon icon={meIcon} /> ME</NavLink>
                     </li>
                     <li>
-                        <NavLink data-php-rerouter="testimonials" to="./testimonials" activeClassName="text-bold-colored" onClick={this.collapseMobileMenu}>Client Testimonials</NavLink>
+                        <NavLink data-php-rerouter="testimonials" to="./testimonials" activeClassName="text-bold-colored" onClick={this.collapseMobileMenu}><FontAwesomeIcon icon={clientTestimonialsIcon} /> CLIENT TESTIMONIALS</NavLink>
                     </li>
                     <li>
-                        <NavLink data-php-rerouter="work" to="./work" activeClassName="text-bold-colored" onClick={this.collapseMobileMenu}>Work</NavLink>
+                        <NavLink data-php-rerouter="certs" to="./certs#a" activeClassName="text-bold-colored" onClick={this.collapseMobileMenu}><FontAwesomeIcon icon={certificatesIcon} /> CERTIFICATES</NavLink>
+                    </li>                    
+                    <li>
+                        <NavLink data-php-rerouter="work" to="./work" activeClassName="text-bold-colored" onClick={this.collapseMobileMenu}><FontAwesomeIcon icon={workIcon} /> WORK</NavLink>
                     </li>
                     {/* <li>
                         <NavLink data-php-rerouter="contact" to="./contact" activeClassName="text-bold-colored" onClick={this.collapseMobileMenu}>Contact</NavLink>
@@ -66,8 +77,9 @@ export default class Navigation extends React.Component {
                     <li>
                         <NavLink data-php-rerouter="collab" to="./collab" activeClassName="text-bold-colored">Certs</NavLink>
                     </li> */}
+
                     <li>
-                        <NavLink data-php-rerouter="certs" to="./certs" activeClassName="text-bold-colored" onClick={this.collapseMobileMenu}>Certs</NavLink>
+                        <NavLink data-php-rerouter="credited" to="./achievements" activeClassName="text-bold-colored" onClick={this.collapseMobileMenu}>Achievements</NavLink>
                     </li>
                     <li>
                         <NavLink data-php-rerouter="credited" to="./credited" activeClassName="text-bold-colored" onClick={this.collapseMobileMenu}>Credited</NavLink>
