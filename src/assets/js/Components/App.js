@@ -57,6 +57,7 @@ export default class App extends React.Component {
                                 <Route path={`*/contact${this.state.hashCompatible}`} component={Contact}/>
                                 <Route path={`*/testimonials${this.state.hashCompatible}`} component={Testimonials}/>
                                 <Route path={`*/students${this.state.hashCompatible}`} component={Students}/>
+                                <Route path={`/${this.state.hashCompatible}`} component={WhoAmI}/>
                             </Switch>
                         </div>
     

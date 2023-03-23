@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
 
     <style>
+
+        /* GENERAL
+        –––––––––––––––––––––––––––––––––––––––––––––––––– */
         :root {
             --black: #181818;
             --beige: #F6EEE2;
@@ -58,13 +61,16 @@
 
         .section {
             /* padding: 150px 205px; */
-            padding: 150px 60px 150px 205px;
+            padding: 150px 40px;
             margin: 0 auto;
         }
 
         @media (max-width: 768px) {
+
             .section {
-                padding: 60px 15px 60px 15px;
+                /* padding: 150px 205px; */
+                padding: 70px 20px;
+                margin: 0 auto;
             }
         }
 
@@ -100,8 +106,6 @@
             100% {
                 background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
             }
-
-            ;
         }
 
         .section-btn:hover {
@@ -116,6 +120,8 @@
             position: relative;
         }
 
+        /* SUBMENU
+        –––––––––––––––––––––––––––––––––––––––––––––––––– */
         #submenu {
             /* width: 205px; */
             position: fixed;
@@ -169,45 +175,24 @@
             white-space: nowrap;
         }
 
+        /* IMG SLIDES
+        –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
         img.standalone {
-            width: 65vw;
+            width: 85vw;
             margin: 60px auto;
             display: block;
             border: 1px solid gray;
+            transition: all 300ms ease;
         }
 
         img.standalone:hover {
-            width: 70vw;
+            width: 88vw;
         }
 
-        @media (max-width: 768px) {
-            #submenu ul {
-                font-size: 60%;
-            }
 
-            .section-horizontal .leaderboard-mimo {
-                width: 85vw;
-                /** Maintain aspect ratio of phone. For example: 409px width, 861px height */
-                height: calc(85vw / 0.475029036004646);
-                transition: all 400ms ease;
-            }
-
-            .section-horizontal .leaderboard-mimo:hover {
-                width: 88vw;
-                /** Maintain aspect ratio of phone. For example: 409px width, 861px height */
-                height: calc(88vw / 0.475029036004646);
-            }
-
-            img.standalone {
-                width: 85vw;
-            }
-
-            img.standalone:hover {
-                width: 90vw;
-            }
-
-        }
-
+        /* CAROUSEL
+        –––––––––––––––––––––––––––––––––––––––––––––––––– */
         .carousel-control-prev-icon,
         .carousel-control-next-icon {
             filter: invert();
@@ -246,6 +231,38 @@
 
         .carousel-item img {
             margin-right: 30px;
+        }
+
+
+        /* RESPONSIVE
+        –––––––––––––––––––––––––––––––––––––––––––––––––– */
+        @media (max-width: 768px) {
+            #submenu ul {
+                font-size: 60%;
+            }
+
+            .section-horizontal .leaderboard-mimo {
+                width: 85vw;
+                /** Maintain aspect ratio of phone. For example: 409px width, 861px height */
+                height: calc(85vw / 0.475029036004646);
+                transition: all 400ms ease;
+                margin-bottom:10px;
+            }
+
+            .section-horizontal .leaderboard-mimo:hover {
+                width: 88vw;
+                /** Maintain aspect ratio of phone. For example: 409px width, 861px height */
+                height: calc(88vw / 0.475029036004646);
+            }
+
+            img.standalone {
+                width: 85vw;
+            }
+
+            img.standalone:hover {
+                width: 90vw;
+            }
+
         }
     </style>
 

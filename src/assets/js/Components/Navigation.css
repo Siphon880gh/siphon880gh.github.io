@@ -97,7 +97,11 @@
     text-align: center;
 }
 
-.site-nav-mobile-btn:not(.fa-grip-lines)::before {
+.site-nav:not(.active) .site-nav-mobile-btn::before {
+    content: "\f7a4";
+}
+
+.site-nav.active .site-nav-mobile-btn::before {
     content: "X";
     font-family: sans-serif;
 }
