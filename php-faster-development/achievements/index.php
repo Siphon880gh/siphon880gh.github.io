@@ -119,8 +119,8 @@
         #submenu {
             /* width: 205px; */
             position: fixed;
-            right: 0;
-            top: 0;
+            right: 10px;
+            top: 10px;
             border: 2.5px dashed rgba(255, 255, 255, 0.75);
             z-index: 5;
             background: white;
@@ -248,6 +248,12 @@
             margin-right: 30px;
         }
     </style>
+
+    <script>
+        function clickNavCredited() {
+            window.parent.document.querySelector('[data-php-rerouter=credited]').click();
+        }
+    </script>
 </head>
 
 <body>
@@ -275,7 +281,7 @@
                 <div class="section-text">
                     I'm credited at several websites
                 </div>
-                <a href="../../credited" class="section-btn" target="_blank">
+                <a href="javascript:void(0)" onclick="clickNavCredited();" class="section-btn">
                     See my credits →
                 </a>
             </section>

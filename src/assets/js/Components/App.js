@@ -44,19 +44,21 @@ export default class App extends React.Component {
                     <div data-component="App" className="container-fluid p-0">
                         <Header></Header>
     
-                        <Switch>
-                            <Route path={`*/tech${this.state.hashCompatible}`} component={Tech}/>
-                            <Route path={`*/whoami${this.state.hashCompatible}`} component={WhoAmI}/>
-                            <Route path={`*/resume${this.state.hashCompatible}`} component={Resume}/>
-                            <Route path={`*/work${this.state.hashCompatible}`} component={Work}/>
-                            <Route path={`*/achievements${this.state.hashCompatible}`} render={() => <IframeAdapter url="php-faster-development/achievements/index.php"/>}/>
-                            <Route path={`*/certs${this.state.hashCompatible}`} render={() => <IframeAdapter url="php-faster-development/certs/index.php"/>}/>
-                            <Route path={`*/collab${this.state.hashCompatible}`} component={Collab}/>
-                            <Route path={`*/credited${this.state.hashCompatible}`} component={Credit}/>
-                            <Route path={`*/contact${this.state.hashCompatible}`} component={Contact}/>
-                            <Route path={`*/testimonials${this.state.hashCompatible}`} component={Testimonials}/>
-                            <Route path={`*/students${this.state.hashCompatible}`} component={Students}/>
-                        </Switch>
+                        <div class="body-fixed">
+                            <Switch>
+                                <Route path={`*/tech${this.state.hashCompatible}`} component={Tech}/>
+                                <Route path={`*/whoami${this.state.hashCompatible}`} component={WhoAmI}/>
+                                <Route path={`*/resume${this.state.hashCompatible}`} component={Resume}/>
+                                <Route path={`*/work${this.state.hashCompatible}`} component={Work}/>
+                                <Route path={`*/achievements${this.state.hashCompatible}`} render={() => <IframeAdapter url="php-faster-development/achievements/index.php"/>}/>
+                                <Route path={`*/certs${this.state.hashCompatible}`} render={() => <IframeAdapter url="php-faster-development/certs/index.php"/>}/>
+                                <Route path={`*/collab${this.state.hashCompatible}`} component={Collab}/>
+                                <Route path={`*/credited${this.state.hashCompatible}`} component={Credit}/>
+                                <Route path={`*/contact${this.state.hashCompatible}`} component={Contact}/>
+                                <Route path={`*/testimonials${this.state.hashCompatible}`} component={Testimonials}/>
+                                <Route path={`*/students${this.state.hashCompatible}`} component={Students}/>
+                            </Switch>
+                        </div>
     
                         <FooterSpace></FooterSpace>
                         <Footer></Footer>

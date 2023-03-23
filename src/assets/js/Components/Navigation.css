@@ -4,10 +4,14 @@
     margin: -7.5px 0 0 0;
     padding: 0;
     /* background-color: #36322f; */
-    background-color: rgba(24, 38, 50, .9);
+    background-color: rgba(24, 38, 50, .97);
     /* Sticky bar */
-    position: sticky;
+    /* position: sticky;
+    top: 0; */
+    position: fixed;
     top: 0;
+    left: 0;
+    width: 100%;
     /* Sticky bar scroll threshold for element to stick in place */
     min-height: 130px;
     z-index: 10;
@@ -15,15 +19,17 @@
 
 .site-header .page-title {
     padding: 5px;
-    margin: 15px 0 20px 10px;
-    color: white;
+    margin: 30px 0 20px 10px;
+    color: rgb(36, 69, 92);
     background-color: #453647;
     font-weight: 800;
     box-shadow: 5px 5px #4d4844;
     border-radius: 15px;
     padding: 10px;
     /* background: #4d4844 url("../../img/coding-stock.jpg") repeat scroll 50% 50%; */
-    background: rgba(80, 58, 50) url("../../img/coding-stock.jpg") repeat scroll 50% 50%;
+    /* background: rgba(80, 58, 50) url("../../img/coding-stock.jpg") repeat scroll 50% 50%; */
+    /* background: #A88D62 url("../../img/coding-stock.jpg") repeat scroll 50% 50%; */
+    background-image: linear-gradient(to right, #E88D62, #A88D62);
     background-size: cover;
     float: left;
 }
@@ -78,7 +84,7 @@
 
 .site-nav-mobile-btn {
     float: right;
-    margin: 15px 20px 0 0;
+    margin: 25px 20px 0 0;
     cursor: pointer;
     /* border: 2px solid #fff; */
     border: 2px solid #FFCB78;
@@ -136,6 +142,9 @@
     .spacer-bottom-mobile {
         width: 1px;
         height: 30px;
+    }
+    #nav-primary {
+        margin-top: 8px !important;
     }
 }
 

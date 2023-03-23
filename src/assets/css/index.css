@@ -1133,3 +1133,15 @@ img.me {
 .badges a:not(:last-child) {
     margin-right: 20px;
 }
+
+.body-fixed {
+    position: fixed;
+    top: 120px;
+    overflow-y: scroll;
+    max-height: calc(100vh - 120px - 50px);
+    min-height: calc(100vh - 120px - 50px);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}

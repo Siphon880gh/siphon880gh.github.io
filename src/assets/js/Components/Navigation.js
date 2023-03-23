@@ -79,7 +79,7 @@ export default class Navigation extends React.Component {
                     </li> */}
 
                     <li>
-                        <NavLink data-php-rerouter="credited" to="./achievements" activeClassName="text-bold-colored" onClick={this.collapseMobileMenu}>Achievements</NavLink>
+                        <NavLink data-php-rerouter="achievements" to="./achievements" activeClassName="text-bold-colored" onClick={this.collapseMobileMenu}>Achievements</NavLink>
                     </li>
                     <li>
                         <NavLink data-php-rerouter="credited" to="./credited" activeClassName="text-bold-colored" onClick={this.collapseMobileMenu}>Credited</NavLink>
