@@ -62,26 +62,6 @@ td {
 
 .xl65 {
     mso-style-parent: style0;
-    text-align: left;
-    background: white;
-    mso-pattern: black none;
-}
-
-.xl66 {
-    mso-style-parent: style0;
-    mso-number-format: "Short Date";
-    text-align: left;
-    background: white;
-    mso-pattern: black none;
-}
-
-.xl67 {
-    mso-style-parent: style0;
-    text-align: left;
-}
-
-.xl68 {
-    mso-style-parent: style0;
     color: #0D0D0D;
     text-align: left;
     vertical-align: top;
@@ -90,10 +70,36 @@ td {
     white-space: normal;
 }
 
-.xl69 {
+.xl66 {
     mso-style-parent: style0;
     color: #0D0D0D;
     text-align: center;
+    vertical-align: top;
+    background: white;
+    mso-pattern: black none;
+    white-space: normal;
+}
+
+.xl67 {
+    mso-style-parent: style0;
+    text-align: left;
+    vertical-align: top;
+    background: white;
+    mso-pattern: black none;
+}
+
+.xl68 {
+    mso-style-parent: style0;
+    mso-number-format: "Short Date";
+    text-align: left;
+    vertical-align: top;
+    background: white;
+    mso-pattern: black none;
+}
+
+.xl69 {
+    mso-style-parent: style0;
+    text-align: left;
     vertical-align: top;
     background: white;
     mso-pattern: black none;
@@ -103,11 +109,7 @@ td {
 .xl70 {
     mso-style-parent: style0;
     text-align: center;
+    vertical-align: top;
     background: white;
     mso-pattern: black none;
-}
-
-.xl71 {
-    mso-style-parent: style0;
-    text-align: center;
 }
