@@ -1068,7 +1068,13 @@ img.me {
 }
 
 .rotation.rotation-2 img {
-    width: 75%;
+    width: 50%;
+}
+
+.rotation.rotation-1 {
+    margin-left: 50px;
+    margin-right: 50px;
+    max-width: 100%;
 }
 
 @media screen AND (min-width: 500px) {
@@ -1092,6 +1098,9 @@ img.me {
         margin-left: 10vw;
         margin-right: 10vw;
         max-width: 80vw;
+    }
+    .rotation.rotation-2 img {
+        width: 75%;
     }
 }
 

@@ -42,14 +42,14 @@ export default class Students extends React.Component {
     
     B. Open CSV to remove unnecessary columns and fix format up for better viewing:
     
-        1. Remove columns A, C, D, E, and N, O (Timestamp, Student Email, Your class code, Was Session Back to Back) (Are you spending minimal recommended.., Regular attendance at Office Hours..)
+        1. Remove columns A, C, D, E, and I, and N, O (Timestamp, Student Email, Your class code, Was Session Back to Back) (How long was the session?..) (Are you spending minimal recommended.., Regular attendance at Office Hours..)
         ^ To double check, that's 6 columns being removed.
 
         2. Select Columns G to I and search for any 1 / 2 / 3, and figure out causes for continuous improvement. Make notes somewhere else for yourself.
 
         3. CMD+A to select all cells that have text. Then create a table by going Insert -> Table. Make sure to have first row as headers.
-        4. Sort date column by Descending.
-        5. Make all the cells' background color white and make sure the text color remains black at the header row. Do not remove all formatting using the Home Ribbon tab because you'd remove the date formatting.
+        4. Sort Session Date column by Descending.
+        5. Make all the cells' background color white but then make sure the text color remains black at the header row. Do not remove all formatting using the Home Ribbon tab because you'd remove the date formatting.
         
         6. All cells gets Horizontal left align (Click top left diagonal icon)
         
@@ -61,7 +61,7 @@ export default class Students extends React.Component {
         11. Column B gets Width 16.5 (Your Course Type gets shown what is FSF and emphasizes Full Stack teaching)
         Replace all "FSF - Full Stack Flex Web Development(Javascript)" to "FSF - Full Stack Flex"
         12. Column C gets Width 13.17 (Who was your tutor gets long enough to emphasize my name)
-        13. Column D gets Width 7 (Who was your tutor gets long enough to emphasize my name)
+        13. Column D gets Width 9 (Session Date) (Even if there are a few spaces to the right, still stay with 9 because in the end the htm might become ###### at some rows)
         14. Column E gets Width 54.5 -AND- Wrap Text (Topic(s) Covered)
         15. Columns G to I gets Width 17 AND Horizontal centering (Ratings equal column widths)
         16. Column J getes Width 84.5 -AND- Wrap Text (Please share some comments...)
@@ -87,7 +87,10 @@ export default class Students extends React.Component {
             }
             ```
 
-        20. Move Student-Ratings.fld and Student-Ratings.htm to inside src/embeds/student-ratings/
+        20. To protect students' privacy even more, remove the truncated off portion of their names from source:
+            Edit Student-Ratings.fld/sheet001.htm, and perform a Regular Expression search and replace into blanks from: <span style='display:none'>(.*)</span>
+
+        21. Move Student-Ratings.fld and Student-Ratings.htm to inside src/embeds/student-ratings/
         
     */
 

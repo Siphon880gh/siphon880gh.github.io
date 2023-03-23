@@ -68,11 +68,7 @@ export default function Footer() {
     }
 
     useEffect(()=>{
-        window.addEventListener('scroll', handleScroll);
-        
-        return (()=>{
-            window.removeEventListener('scroll', handleScroll);
-        })
+        window.document.querySelector(".body-fixed").addEventListener('click', handleScroll);
     }, [])
 
     useEffect(()=>{
