@@ -88,8 +88,8 @@ export default function Footer() {
                     }
                     <ul className="noop" style={!laterSeconds?overflowVisible:overflowScroll}>
                     {/* <ul className="noop"> */}
-                        <li><a className="text-bold" href="//linkedin.com/in/weng-fung/" target="_blank"><i className='fa fa-briefcase'>&nbsp;</i>Hire Me!</a></li>
                         <li><a href="//github.com/Siphon880gh" target="_blank"><i className='fab fa-github'>&nbsp;</i>Github</a></li>
+                        <li><a className="text-bold" href="//linkedin.com/in/weng-fung/" target="_blank"><i className='fa fa-briefcase'>&nbsp;</i>LinkedIn</a></li>
                         <li style={relativeParent}>
                             <a href="//www.youtube.com/@WayneTeachesCode" target="_blank" className="fadeAll" style={
                                     firstSeconds?

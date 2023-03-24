@@ -113,7 +113,7 @@ export default class Students extends React.Component {
 
                 <div className={"rotation rotation-1 " + (this.state.count!==1?"d-none":"")}>
                     <p className="tag-description-line">Coding students giving me excellant testimonials.</p>
-
+                    <p></p>
                     <img className="crop-instead-of-shrink" src="./src/assets/img/students/testimonials-tutor/a.png"></img>
                     <iframe src="./src/embeds/student-ratings/Student-Ratings.htm" style={{width:"100%", height:"800px", backgroundColor:"white"}}></iframe>
                 </div>

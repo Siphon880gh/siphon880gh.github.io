@@ -1068,10 +1068,17 @@ img.me {
 }
 
 .rotation img.crop-instead-of-shrink {
-    object-fit: none;
+    object-fit: contain;
     min-height: 190px;
     width: 100%;
     object-position: 0 0;
+    margin: 0 auto;
+}
+
+@media (max-width:1556px) {
+    .rotation img.crop-instead-of-shrink {
+        object-fit: none;
+    }
 }
 
 .rotation.rotation-2 img {
