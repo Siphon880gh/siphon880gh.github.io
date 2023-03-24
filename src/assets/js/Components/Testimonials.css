@@ -1,5 +1,19 @@
 img {
     display: block;
-    margin: 20px auto;
+    margin: 20px;
     text-align: center;
+    margin: 20px 60px;
+}
+
+@media screen AND (max-width:768px) {
+    img {
+        margin: 20px 20px;
+    }
+}
+
+@media screen AND (min-width:992px) {
+    img {
+        width: 65vw;
+        margin: 20px auto;
+    }
 }

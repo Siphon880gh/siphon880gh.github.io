@@ -27,12 +27,12 @@ export default class Navigation extends React.Component {
     }
 
     onClickMobileHamburgerIcon(event){
-        console.log("onClickMobileHamburgerIcon")
+        // console.log("onClickMobileHamburgerIcon")
         document.querySelector(".site-nav").classList.toggle("active");
     }
 
     collapseMobileMenu() {
-        console.log("collapseMobileMenu")
+        // console.log("collapseMobileMenu")
         document.querySelector(".site-nav").classList.remove("active");
     }
 
