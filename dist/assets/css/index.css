@@ -1067,6 +1067,13 @@ img.me {
     width: 100%;
 }
 
+.rotation img.crop-instead-of-shrink {
+    object-fit: none;
+    min-height: 190px;
+    width: 100%;
+    object-position: 0 0;
+}
+
 .rotation.rotation-2 img {
     width: 50%;
 }
@@ -1088,7 +1095,7 @@ img.me {
 @media screen AND (max-width: 500px) {
     .tag-description-line {
         font-size: 85%;
-        border-radius: 15px;
+        /* border-radius: 15px; */
         padding: 5px 10px;
     }
 }
