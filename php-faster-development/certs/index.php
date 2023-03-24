@@ -145,6 +145,22 @@
         .tech.col .col-body {
             padding: 15px;
         }
+
+        @media (max-width:768px) {
+            .certs {
+                margin: 0;
+            }
+            .tech.col {
+                /* #453647 */
+                min-width: 100% !important;
+                width:100% !important;
+            }
+            .tech.col:hover {
+                /* #453647 */
+                min-width: 101% !important;
+                width:101% !important;
+            }
+        }
         /* COLUMN CELL (CERTIFICATE)
         –––––––––––––––––––––––––––––––––––––––––––––––––– */
         .cert hr {
