@@ -1,3 +1,8 @@
+/*
+    TODO: Was experimenting on different designs during development. So CSS need cleanup.
+*/
+
+
 /* Reset CSS */
 
 :root {
@@ -970,6 +975,12 @@ footer {
     display: table-cell;
 }
 
+@media screen and (max-width:768px) {
+    .side-a {
+        display: none;
+    }
+}
+
 .side-b {
     background: 15px 30px / contain transparent url(../../assets/img/me3.jpg) no-repeat;
     background-color: #e5e4e2;
@@ -1003,7 +1014,7 @@ img.me {
     }
 }
 
-.contributions {
+.gh-contributions {
     vertical-align: middle;
     max-width: 60vw;
     margin: 10px auto;

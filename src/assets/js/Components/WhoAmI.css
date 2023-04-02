@@ -1,0 +1,11 @@
+.gh-contributions {
+    vertical-align: middle;
+    max-width: 60vw;
+    margin: 10px auto;
+}
+
+@media screen and (max-width: 950px) {
+    .gh-contributions {
+        max-width: 100%;
+    }
+}

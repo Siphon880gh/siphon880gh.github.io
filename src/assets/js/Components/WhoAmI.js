@@ -34,9 +34,9 @@ export default class WhoAmI extends Component {
                                 {/* <p><i>Cut to the chase? See 📂 <a href="./?page=work">my work</a>.</i></p> */}
                                 <p><i>Cut to the chase? See 📂 <Link to="work">my work</Link>.</i></p>
                                 
-                                <p>Full stack developer with {(new Date()).getFullYear() - (new Date("01/01/2015")).getFullYear()} years of freelancing {/* Linkedin -> Experience -> ExRx Jan 2015 */} <b className='wbr-slash'>Javascript + jQuery + Handlebars + PHP + MySQL</b>. Have worked with startups including Mixotype, and companies like ExRx and People's Care. Known as an innovative problem solver, developer friends go to me when they are stuck or have startup ideas. My strong points are jQuery, PHP, MySQL, React, Express JS, and Node. Please see 📍 <a target="_blank" href="./?page=testimonials">client testimonials</a>.</p>
+                                <p>Full stack developer with {(new Date()).getFullYear() - (new Date("01/01/2015")).getFullYear()} years of freelancing {/* Linkedin -> Experience -> ExRx Jan 2015 */} <b className='wbr-slash'>Javascript + jQuery + Handlebars + PHP + MySQL</b>. Have worked with startups including Mixotype, and companies like ExRx and People's Care. Known as an innovative problem solver, developer friends go to me when they are stuck or have startup ideas. My strong points are React, jQuery, Javascript, PHP, MySQL, Express JS, and Node. Please see 📍 <a target="_blank" href="./?page=testimonials">client testimonials</a>.</p>
 
-                                <p>Tutored EdEx coding students for {(new Date()).getFullYear() - (new Date("04/21/2021")).getFullYear()} years {/* March 2021 - atm March 2023 */} on the <b>MERN stack + Handlebars + jQuery + MySQL/Sequelize + GraphQL</b>. In addition, MERN Stack is MongoDB/Mongoose, Express, React with Redux, and NodeJS. I am a Senior Tutor who qualified for the entire curriculum because I am MERN certified at UCLA extensions with <Link to="achievements#top-marks">top marks</Link>. Please see 👨🏻‍🏫 <a target="_blank" href="./?page=students"> coding students' reviews</a>.</p>
+                                <p>Tutored EdX coding students for {(new Date()).getFullYear() - (new Date("04/21/2021")).getFullYear()} years {/* March 2021 - atm March 2023 */} on the <b>MERN stack + Handlebars + jQuery + MySQL/Sequelize + GraphQL</b>. In addition, MERN Stack is MongoDB/Mongoose, Express, React with Redux, and NodeJS. I am a Senior Tutor who qualified for the entire curriculum because I am MERN certified at UCLA extensions with <Link to="achievements#top-marks">top marks</Link>. Please see 👨🏻‍🏫 <a target="_blank" href="./?page=students"> coding students' reviews</a>.</p>
 
                                 <p>An example of <b>innovation</b> is this portfolio where I combined PHP and htaccess with React to speed up development and allow you to visit links directly to a part of the SPA. Since it's not a mix of API and HTML files, skipping Express JS server routes makes sense. By knowing multiple generations of coding languages (JS/jQuery/Handlebars/PHP/MySQL, MERN, and GraphQL), I can offer innovative solutions to your unique business needs.</p>
 
@@ -57,8 +57,8 @@ export default class WhoAmI extends Component {
 
 
                                 <a href="//github.com/Siphon880gh" target="_blank">
-                                    <img className="contributions" src={githubContributions2023}/>
-                                    <img className="contributions" src={githubContributions2023march}/>
+                                    <img className="gh-contributions" src={githubContributions2023}/>
+                                    <img className="gh-contributions" src={githubContributions2023march}/>
                                 </a>
 
                                 <aside className="badges">

@@ -7,7 +7,9 @@ import "./Testimonials.css"
 export default class Testimonials extends React.Component {
     render() {
         return (
-            <img src="./src/assets/img/testimonials.png"></img>
+            <div class="client-testimonials">
+                <img src="./src/assets/img/testimonials.png"></img>
+            </div>
         )
     }
 }

@@ -1,25 +1,26 @@
 
-import React from "react";
+import React,{useState} from "react";
 import ReactDOM from "react-dom";
 
 import Navigation from "./Navigation.js";
 
-export default class Header extends React.Component {
-    render() {
-        return (
-                <header data-component="Header" className="site-header">
+export default function Header() {
 
-                    <div className="page-title-wrapper">
-                        <a href="./">
-                            <h1 className="page-title">Weng Industry</h1>
-                        </a>
-                    </div>
+    let [forceScrollbarByHeight, set_forceScrollbarByHeight]=useState(0);
+    return (
+            // <header data-component="Header" className="site-header">
+            <header data-component="Header" className="site-header" style={forceScrollbarByHeight?{maxHeight:forceScrollbarByHeight}:{}}>
 
-                    <Navigation></Navigation>
+                <div className="page-title-wrapper">
+                    <a href="./">
+                        <h1 className="page-title">Weng Industry</h1>
+                    </a>
+                </div>
 
-                    <span className="clear-fix"></span>
+                <Navigation set_forceScrollbarByHeight={set_forceScrollbarByHeight}></Navigation>
 
-                </header>
-        )
-    }
+                <span className="clear-fix"></span>
+
+            </header>
+    )
 }
