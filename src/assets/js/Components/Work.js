@@ -39,7 +39,8 @@ export default class Work extends React.Component {
                 link: "https://siphon880gh.github.io/weather-dashboard/",
                 screenshot: "dist/assets/img/websites/weather-dashboard.png",
                 title: "Weather Dashboard",
-                desc: "By Weng Fei Fung. Weather forecast. Shows today's weather forecast as well as the next five days. Make it your homepage to stay up to date on the weather! Or use it to plan your trips.",
+                desc: "By Weng Fei Fung. If you travel frequently, it shows weather for the next 5 days, and it remembers what city you searched so you can easily search if you go back.",
+                // desc: "By Weng Fei Fung. Weather forecast. Shows today's weather forecast as well as the next five days. Make it your homepage to stay up to date on the weather! Or use it to plan your trips.",
                 tech: "JS, Bootstrap, Font-Awesome, OpenWeather API, Google Places API, LocalStorage",
                 repos: "https://github.com/Siphon880gh/weather-dashboard"
             },
