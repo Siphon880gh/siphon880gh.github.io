@@ -50,8 +50,8 @@ export default class App extends React.Component {
                                 <Route path={`*/whoami${this.state.hashCompatible}`} component={WhoAmI}/>
                                 <Route path={`*/resume${this.state.hashCompatible}`} component={Resume}/>
                                 <Route path={`*/work${this.state.hashCompatible}`} component={Work}/>
-                                <Route path={`*/achievements${this.state.hashCompatible}`} render={() => <IframeAdapter url="php-faster-development/achievements/index.php"/>}/>
-                                <Route path={`*/certs${this.state.hashCompatible}`} render={() => <IframeAdapter url="php-faster-development/certs/index.php"/>}/>
+                                <Route path={`*/achievements${this.state.hashCompatible}`} render={() => <IframeAdapter url="php-react-mixin/achievements/index.php"/>}/>
+                                <Route path={`*/certs${this.state.hashCompatible}`} render={() => <IframeAdapter url="php-react-mixin/certs/index.php"/>}/>
                                 <Route path={`*/collab${this.state.hashCompatible}`} component={Collab}/>
                                 <Route path={`*/credited${this.state.hashCompatible}`} component={Credit}/>
                                 <Route path={`*/contact${this.state.hashCompatible}`} component={Contact}/>
