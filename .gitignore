@@ -1,3 +1,4 @@
 .sass_compass/
 node_modules/
 .DS_Store
+backups/
