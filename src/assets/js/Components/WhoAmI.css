@@ -23,6 +23,10 @@ h3 {
     margin: 10px auto;
 }
 
+.hover-color:hover {
+    color: attr(data-color);
+}
+
 @media screen and (max-width: 950px) {
     .gh-contributions {
         max-width: 100%;
