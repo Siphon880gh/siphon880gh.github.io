@@ -63,6 +63,8 @@ export default function Footer() {
     let [firstSeconds, setFirstSeconds] = useState(true)
     let [laterSeconds, setLaterSeconds] = useState(false)
 
+    const isMobile = /Mobi|Android|iOS/i.test(navigator.userAgent) || document.body.clientWidth < 760;
+
     function handleScroll() {
         setFirstSeconds(false)
     }
@@ -102,7 +104,7 @@ export default function Footer() {
                                 !laterSeconds?
 
                                 (<img className="fadeAll" src={calloutBubble} style={
-                                    firstSeconds?
+                                    !isMobile && firstSeconds?
                                     uiStyles.callout.active
                                     :
                                     uiStyles.callout.inactive

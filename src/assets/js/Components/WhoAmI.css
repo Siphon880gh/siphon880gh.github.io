@@ -1,3 +1,16 @@
+h3 {
+    font-size: 1.15rem;
+    text-decoration: underline !important;
+}
+
+.page-whoami  {
+    font-family: 'Roboto', sans-serif;
+}
+
+.page-whoami a {
+    text-decoration: none !important;
+}
+
 .gh-contributions {
     vertical-align: middle;
     max-width: 60vw;

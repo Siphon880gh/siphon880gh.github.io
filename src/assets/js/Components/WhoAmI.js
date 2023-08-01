@@ -19,7 +19,7 @@ export default class WhoAmI extends Component {
     
     render() {
         return (
-                <div data-component="WhoAmI">
+                <div data-component="WhoAmI" className="page-whoami">
 
                     <div className="wrapper max-width">
                    
@@ -32,34 +32,51 @@ export default class WhoAmI extends Component {
                                 <h2 id="about-anchor" className="f1a">Full Stack Developer<br/><address className="author">Weng Fei Fung</address></h2>
 
                                 {/* <p><i>Cut to the chase? See 📂 <a href="./?page=work">my work</a>.</i></p> */}
-                                <p><i>Cut to the chase? See 📂 <Link to="work">my work</Link>.</i></p>
-                                
-                                <p>Full stack developer with {(new Date()).getFullYear() - (new Date("01/01/2015")).getFullYear()} years of freelancing {/* Linkedin -> Experience -> ExRx Jan 2015 */} <b className='wbr-slash'>Javascript + jQuery + Handlebars + PHP + MySQL</b>. Have worked with startups including Mixotype, and companies like ExRx and People's Care. Known as an innovative problem solver, developer friends go to me when they are stuck or have startup ideas. My strong points are React, jQuery, Javascript, PHP, MySQL, Express JS, and Node. Please see 📍 <a target="_blank" href="./?page=testimonials">client testimonials</a>.</p>
+                                {/* <p><i>Cut to the chase? See 📂 <Link to="work">my work</Link>.</i></p> */}
+                                <br/>
 
-                                <p>Tutored EdX coding students for {(new Date()).getFullYear() - (new Date("04/21/2021")).getFullYear()} years {/* March 2021 - atm March 2023 */} on the <b>MERN stack + Handlebars + jQuery + MySQL/Sequelize + GraphQL</b>. In addition, MERN Stack is MongoDB/Mongoose, Express, React with Redux, and NodeJS. I am a Senior Tutor who qualified for the entire curriculum because I am MERN certified at UCLA extensions with <Link to="achievements#top-marks">top marks</Link>. Please see 👨🏻‍🏫 <a target="_blank" href="./?page=students"> coding students' reviews</a>.</p>
+                                <h3>Introduction</h3>
+                                <p>I'm a full-stack developer with several years of freelancing and teaching, specializing in React, Express, Mongo and Javascript, jQuery, PHP, and MySQL. I've worked with startups and companies such as Mixotype, ExRx and People's Care, and am often consulted for innovative problem-solving. My strengths include Javascript, React, jQuery, PHP, MySQL, Express JS, and Node. See <a target="_blank" href="./?page=testimonials">📍client testimonials</a>.</p>
 
-                                <p>An example of <b>innovation</b> is this portfolio where I combined PHP and htaccess with React to speed up development and allow you to visit links directly to a part of the SPA. Since it's not a mix of API and HTML files, skipping Express JS server routes makes sense. By knowing multiple generations of coding languages (JS/jQuery/Handlebars/PHP/MySQL, MERN, and GraphQL), I can offer innovative solutions to your unique business needs.</p>
+                                <h3>Innovation</h3>
+                                <p>Familiarity with multiple coding languages helps me provide unique business and tech solutions.</p>
+                                <ul>
+                                    <li>PHP and React: I have innovatively combined PHP and htaccess with React in my portfolio to streamline development. </li>
+                                    <li>Cloud Solutions: I have used both AWS Services and Google Cloud. For Google Cloud, I used Google Functions to integrate external API data into the Firebase when creating or updating into the database (a combination of NodeJS Google Cloud SDK and axios). For AWS, I used S3 bucket with public read permissions on a React form (combination of AWS S3, Multer, React, Express).</li>
+                                </ul>
 
-                                <p>I am passionate about <b>learning and sharing new technologies</b>, languages, and frameworks. Have recently developed a proof of concept of Flutter connecting to Firebase, and having Firebase add more data in the backend using Google Cloud Functions. I've also experimented with Jupyter Notebook to make requests for datasets. I am making guides while exploring those technologies (Flutter, Data Science, etc). I am saving them to Obsidian MD which is a notebook software that deals mostly with Markdown MD files. My initial attempt was using my own tool I call <a href="https://wengindustry.com/tools/snippets-mastery/" target="_blank"> Snippets Mastery</a>. Later I wanted to combine the ability to practice typing code with the programming guides so I revamped it into a tool called <a href="https://wengindustry.com/tools/retype-notes/" target="_blank"> Retype Notes</a>. However, as Obsidian MD is part of the open source community, I've switched over to their software and I want to see if I can make a vault of programming languages and concepts. I plan to publish Quick Start articles for different languages and technologies in the future. See my <a href="https://www.youtube.com/channel/UCg1O9uttSv3ZBzd1iep25Ig" target="_blank"><i class="fab fa-youtube" style={{color: "rgba(255,0,0,.75)"}}></i> tutorial videos</a>. This portfolio was created using an innovative combination of ReactJS and htaccess so that there may be React routes in a single page application but you can visit a route's URL directly in the address bar.</p>
-                                    
-                                <p>In the future I'd like to take a more entrepreneurship role leveraging my technical knowledge to make software for hospitals and clinics. I saw a need for charting software made by healthcare professionals (I continue to work as registered nurse in ICU a few times a month with a staffing agency so I can keep up to date in that industry). In order to learn more entrepreneurship and managing, I completed a <b>Project Management</b> certificate at UC Berkeley on December 2022. My motto is to always grow your craft.</p>
+                                <h3>Sharing my passion of programming</h3>
+                                <p>I share my passion via bootcamps, youtube, and electronic publishing. I have a certificate for MERN web development at UCLA, having achieved  <Link to="achievements#top-marks">🌟 top marks</Link>. Before the bootcamp I freelanced with the Javascript-jQuery-PHP-MySQL tech stack which I self-learned. After certification, I've tutored EdX coding students on the MERN stack, Handlebars, jQuery, MySQL/Sequelize, GraphQL, and React State management (Context, Reducers, Redux, Redux Toolkit). I'm a senior tutor for coding bootcamps at universities nationwide and internationally via EdX. Check out <a target="_blank" href="./?page=students">👨🏻‍🏫 student reviews</a>. In addition to sharing my passion with future generations of programmers through bootcamps, I also made tutorials at <a href="https://www.youtube.com/@WayneTeachesCode" target="_blank"><i class="fab fa-youtube" style={{color:"#FF0000"}}></i> @WayneTeachesCode</a>. See my <a href="https://wengindustry.com/tools/gamified-knowledge/" target="_blank">📄 coding snippets and guides</a> in a gamified knowledge app.</p>
 
-                                {/* Contributions */}
+                                <h3>Growth</h3>
+                                <p>I aim to take an entrepreneurial role in the future, leveraging my technical knowledge for healthcare software which is my prior background. I stay updated in the healthcare industry by working as a registered nurse periodically at a staffing agency. For entrepreneurship and management, I broadened my skills by completing a Project Management course at UC Berkeley in December 2022. My mantra is continuous growth. At the moment I want to transition out of contracts and freelancing and move into a career pathway towards management.</p>
 
-                                {/* 
-                                    Go to profile page: https://github.com/Siphon880gh
-                                        - Open up inspect to:
-                                        - Remove "Contribution settings..." top right of the chart
-                                        - Remove "Learn how we count contributions" under the chart
-                                        - Remove bottom left and bottom right grids in the table
-                                        - Zoom in until the chart (gray borders) is at least 1010px. Screen crop it. The React app will scale it back down to 1010px. 
-                                */}
+                                I code almost everyday contributing to the GitHub community:
 
-
+                                {/* <h3>2021 Nov to 2022 Nov</h3>
                                 <a href="//github.com/Siphon880gh" target="_blank">
                                     <img className="gh-contributions" src={githubContributions2023}/>
+                                </a>
+
+                                <h3>2022 March to 2023 March</h3>
+                                <a href="//github.com/Siphon880gh" target="_blank">
+                                    <img className="gh-contributions" src={githubContributions2023march}/>
+                                </a> */}
+
+                                <br/>
+
+                                <p></p>
+                                <b><u>2023-Jan to 2023-Dec</u></b>
+                                <a href="//github.com/Siphon880gh" target="_blank">
                                     <img className="gh-contributions" src={githubContributions2023march}/>
                                 </a>
+
+                                <p></p>
+                                <b><u>2022-Jan to 2022-Dec</u></b>
+                                <a href="//github.com/Siphon880gh" target="_blank">
+                                    <img className="gh-contributions" src={githubContributions2023}/>
+                                </a>
+
 
                                 <aside className="badges">
 
