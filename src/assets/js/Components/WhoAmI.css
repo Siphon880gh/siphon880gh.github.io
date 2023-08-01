@@ -10,6 +10,12 @@ h3 {
 .page-whoami a {
     text-decoration: none !important;
 }
+.page-whoami a {
+    color: #427EA8 !important;
+}
+.page-whoami a:hover {
+    color: rgb(36, 69, 92) !important;
+}
 
 .gh-contributions {
     vertical-align: middle;
@@ -20,5 +26,8 @@ h3 {
 @media screen and (max-width: 950px) {
     .gh-contributions {
         max-width: 100%;
+    }
+    .page-whoami ul {
+        list-style: none;
     }
 }

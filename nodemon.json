@@ -1,0 +1,6 @@
+{
+    "watch": ["src"], 
+    "ext": "js,jsx,css,scss",
+    "exec": "npm run build",
+    "ignore": ["dist"]
+  }
