@@ -68,16 +68,17 @@ function VideoGallery() {
                 {videos.map(video => (
                     <Carousel.Item key={video.id}>
                         <img
-                            className="d-block"
+                            className="d-block clickable"
                             src={video.thumbnail}
                             alt={video.title}
                             style={{
                                 width: "50% !important",
                                 margin: "0 auto"
                             }}
+                            onClick={()=>{ window.open(video.url) }}
                         />
                         <Carousel.Caption>
-                            <h3>{video.title}</h3>
+                            <h3 className="clickable" onClick={()=>{ window.open(video.url) }}>{video.title}</h3>
                         </Carousel.Caption>
                     </Carousel.Item>
                 ))}
