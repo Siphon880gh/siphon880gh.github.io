@@ -1023,6 +1023,7 @@ img.hidden-950px-up.me {
 }
 
 .clickable:hover {
+    font-weight: 800;
 }
 
 .flushed-left,

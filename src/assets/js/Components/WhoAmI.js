@@ -38,6 +38,25 @@ const videos = [
         thumbnail: 'https://i9.ytimg.com/vi_webp/eNh6t2_tuAI/mq1.webp?sqp=CLD3paYG&rs=AOn4CLDfYEpP5J445JqMi47EWjB--ubLYg',
         url: 'https://www.youtube.com/watch?v=eNh6t2_tuAI'
     },
+    {
+        id: 3,
+        title: 'Weng Teaches - React Parent to Child props passing',
+        thumbnail: 'https://i9.ytimg.com/vi_webp/AQ2h7spCH3U/mqdefault.webp?v=64c98a2c&sqp=CMCTpqYG&rs=AOn4CLBqJEY7aPoImY3-kwR-ATfRDkIBHw',
+        url: 'https://www.youtube.com/watch?v=AQ2h7spCH3U'
+    },
+    {
+        id: 4,
+        title: 'Weng feeds trade information into ChatGPT with Javascript by Weng',
+        thumbnail: 'https://i9.ytimg.com/vi_webp/c4C9QmbY-fY/mq2.webp?sqp=CNz5paYG-oaymwEmCMACELQB8quKqQMa8AEB-AHQCIAC0AWKAgwIABABGHIgRig8MA8=&rs=AOn4CLC1W5Fyf1EWOk2kezXk_7gfUQX3wg',
+        url: 'https://www.youtube.com/watch?v=c4C9QmbY-fY'
+    }
+    // {
+    //     commentedOut: "Need permission first - was a collab",
+    //     id: 100,
+    //     title: 'Weng feeds trade information into ChatGPT with Javascript by Weng',
+    //     thumbnail: 'https://i9.ytimg.com/vi_webp/rbk3H45fToA/mq3.webp?sqp=CNz5paYG&rs=AOn4CLC7uGIuxTRb6kgnuKmInWsSeF8oag',
+    //     url: 'https://www.youtube.com/watch?v=rbk3H45fToA'
+    // },
     // more videos...
 ]
 
