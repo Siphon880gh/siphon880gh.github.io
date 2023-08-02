@@ -3,6 +3,39 @@ h3 {
     text-decoration: underline !important;
 }
 
+.blur-gradient {
+    position: relative;
+    /* height:100%;
+    width: 50vw; */
+    background: linear-gradient(to right, #333, #000, #333); 
+    opacity: 0.8;
+  }
+  
+  .blur-gradient::before,
+  .blur-gradient::after {
+    content: '';
+    position: absolute;
+    top: 0; 
+    bottom: 0;
+    width: 100px; 
+    opacity:.85;
+  }
+  
+  .blur-gradient::before {
+    left: 0;
+    background: inherit;
+    filter: blur(20px); 
+  }
+  
+  .blur-gradient::after {
+    right: 0;
+    background: inherit;
+    filter: blur(20px);
+  }
+
+
+  /* ***** */
+
 .page-whoami  {
     font-family: 'Roboto', sans-serif;
 }
@@ -17,14 +50,139 @@ h3 {
     color: rgb(36, 69, 92) !important;
 }
 
+/* ******* */
+
+.carousel-wrapper {
+    width: 50%;
+    margin: 15px 0;
+    border: 1px solid black;
+    background-color: rgb(255, 204, 162);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+.carousel.slide {
+    padding: 15px;
+
+}
+.yt-gallery-header {
+
+    display:inline-block;
+    width: 100%;
+    text-align: center;
+    height: 90px;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.yt-gallery-header h3 {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+    padding: 15px 60px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-flow: column nowrap;
+}
+.yt-gallery-header a {
+    color: #FF0000 !important;
+    text-decoration: none !important;
+}
+.yt-gallery-header a:hover {
+    color: #FF0000 !important;
+}
+
+@media screen and (max-width: 950px) {
+    .carousel-wrapper {
+        width: 100%;
+    }
+}
+
+.carousel-caption {
+    position: unset;
+    bottom: unset;
+    right: unset;
+    color: #427EA8 !important;
+    cursor: pointer;
+    min-height:120px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+.carousel-caption {
+    color: rgb(36, 69, 92) !important;
+}
+
+.carousel-indicators {
+    bottom: 15px;
+}
+
+.carousel-indicators button {
+    margin-right: 0.5em;
+    width:30px;
+    height:5px;
+}
+.carousel-indicators button.active {
+    background-color: lightblue;
+}
+
+/* ******* */
+
 .gh-contributions {
     vertical-align: middle;
     max-width: 60vw;
     margin: 10px auto;
 }
 
-.hover-color:hover {
-    color: attr(data-color);
+[data-is-colored] {
+    margin-left: 2.5px;
+    vertical-align: text-bottom;
+    padding: 5px;
+    border-radius:15px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    padding-left: 2.5px;
+    font-family:'Roboto', sans-serif;
+    transition: all 300ms ease-in;
+}
+[data-is-colored="React"] {
+    color: #61dafb !important;
+    background-color: gray;
+}
+[data-is-colored="Express"] {
+    color: #444 !important;
+    background-color: ghostwhite;
+}
+[data-is-colored="Mongo"] {
+    color: #4faa41 !important;
+    background-color: lightgray;
+}
+[data-is-colored="Javascript"] {
+    color: #f0db4f !important;
+    background-color: gray !important;
+}
+[data-is-colored="jQuery"] {
+    color: #0769ad !important;
+    background-color: lightgray !important;
+}
+[data-is-colored="PHP"] {
+    color: #6181b6 !important;
+    background-color: lightgray !important;
+}
+[data-is-colored="MySQL"] {
+    color: #00618a !important;
+    background-color: lightgray !important;
+}
+[data-is-colored="NodeJS"] {
+    color: #83cd29 !important;
+    background-color: black !important;
+}
+[data-is-colored="GCloud"] {
+    color: #557ebf !important;
+    background-color: lightgray !important;
+}
+[data-is-colored="AWS"] {
+    color: #f7a80d !important;
+    background-color: black !important;
 }
 
 @media screen and (max-width: 950px) {
