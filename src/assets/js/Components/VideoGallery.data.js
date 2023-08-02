@@ -1,4 +1,19 @@
-
+/**
+ * VideoGallery Data
+ * This is a function that receives the thumbnails imported from the path of the parent component
+ * Then returns an array of objects representing videos. You can use this for VideoGallery or other mapping rendering
+ *
+ * @module VideoGalleryData
+ * @param {Props} props
+ * @returns {Array<Video>}
+ * 
+ */
+/**
+ * Props for the component.
+ * 
+ * @typedef {Object} Props - Will be variables of your imported thumbnails with their built paths
+ * 
+ */
 export default function videosPreimport(importedIcons) {
     const { ytEcommerceBackend,
         ytCodeOrganization,
