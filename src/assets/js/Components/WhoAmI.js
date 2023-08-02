@@ -5,137 +5,21 @@ import { Link, NavLink } from "react-router-dom";
 import githubContributions2023 from "../../img/github-contributions-2022.png"
 import githubContributions2023march from "../../img/github-contributions-2023-03.png"
 import mePic from "../../img/me3.jpg"
-import ytCover from "../../img/yt-cover.png"
+import ytHeaderCover from "../../img/yt-cover.png"
 import "./WhoAmI.css"
-import { Carousel } from 'react-bootstrap';
-import iconChatGPT from '../../img/ChatGPT.png';
-
 
 import ytCodeOrganization from '../../img/yt-gallery/code-organization.png'
 import ytEcommerceBackend from '../../img/yt-gallery/ecommerce-backend.png'
 import ytReactProps from '../../img/yt-gallery/react-props.png'
 import ytTrading from '../../img/yt-gallery/trading.png'
 import ytDailyPortal from '../../img/yt-gallery/daily-portal.png'
+import videosPreimport from "./VideoGallery.data.js";
+const videos = videosPreimport({ytCodeOrganization, ytEcommerceBackend, ytReactProps, ytTrading, ytDailyPortal})
+import VideoGallery from "./VideoGallery.comp";
 
-class LangIcon extends Component {
-    constructor(props) {
-        super(props)
-    }
-    render() {
+import LangIcon from "./LangIcon.comp";
+import iconChatGPT from '../../img/ChatGPT.png';
 
-        const { techName, text, iconClassName, globalTechName, techColorOn, techColorOff, toggleTechName } = this.props;
-        console.log(this.props)
-
-        let styles = {
-            display: "inline-block"
-        }
-        if(typeof iconClassName!=="string") {
-            let {importedIcon} = iconClassName;
-            styles.background = `url("${importedIcon}")`;
-            styles.backgroundSize = 'cover';
-            styles.backgroundRepeat = "no-repeat";
-            styles.paddingLeft = "22px";
-            styles.maxHeight = "27px";
-            styles.backgroundPosition = "2px 5px";
-            styles.letterSpacing = "-0.7px";
-            styles.marginBottom = 0;
-            // styles.marginBottom = -"2.5px";
-        }
-
-        return (
-            <div className={typeof iconClassName==="string" && iconClassName} 
-                data-tech={techName} 
-                data-is-colored={globalTechName === techName && techName} 
-                onClick={toggleTechName} 
-                onMouseEnter={techColorOn} 
-                onMouseOut={techColorOff} 
-                style={styles}> 
-            {text}
-            </div>
-        )
-    }
-} // LangIcon
-
-const videos = [
-    {
-        id: 1,
-        title: 'Demo: Ecommerce Backend',
-        thumbnail: ytEcommerceBackend,
-        url: 'https://www.youtube.com/watch?v=s-0sNWgcSIQ'
-    },
-    {
-        id: 2,
-        title: 'Code Organization - Publisher/Subscriber, Service Layer, Data Access Layer',
-        thumbnail: ytCodeOrganization,
-        url: 'https://www.youtube.com/watch?v=eNh6t2_tuAI'
-    },
-    {
-        id: 3,
-        title: 'Weng Teaches - React Parent to Child props passing',
-        thumbnail: ytReactProps,
-        url: 'https://www.youtube.com/watch?v=AQ2h7spCH3U'
-    },
-    {
-        id: 4,
-        title: 'Weng feeds trade information into ChatGPT with Javascript by Weng',
-        thumbnail: ytTrading,
-        url: 'https://www.youtube.com/watch?v=c4C9QmbY-fY'
-    }
-    // {
-    //     commentedOut: "Need permission first - was a collab",
-    //     id: 100,
-    //     title: 'Weng feeds trade information into ChatGPT with Javascript by Weng',
-    //     thumbnail: ytDailyPortal,
-    //     url: 'https://www.youtube.com/watch?v=rbk3H45fToA'
-    // },
-    // more videos...
-]
-
-function VideoGallery() {
-    const [index, setIndex] = useState(0);
-
-    const handleSelect = (selectedIndex) => {
-        setIndex(selectedIndex);
-    }
-
-    return (
-        <div className="carousel-wrapper">
-            <header className="yt-gallery-header"
-                style={{
-
-                    backgroundImage: `url(${ytCover})`,
-                    backgroundSize: 'cover',
-                    backgroundBlendMode: 'darken',
-                    backgroundColor: 'rgba(0,0,0,0.5)'
-                }}>
-                <h3 className="blur-gradient">
-                    <a href="//www.youtube.com/@WayneTeachesCode" target="_blank">
-                        <i class="fab fa-youtube">&nbsp;</i>My Tutorials
-                    </a>
-                </h3>
-            </header>
-            <Carousel activeIndex={index} onSelect={handleSelect}>
-                {videos.map(video => (
-                    <Carousel.Item key={video.id}>
-                        <img
-                            className="d-block clickable"
-                            src={video.thumbnail}
-                            alt={video.title}
-                            style={{
-                                width: "50% !important",
-                                margin: "0 auto"
-                            }}
-                            onClick={()=>{ window.open(video.url) }}
-                        />
-                        <Carousel.Caption>
-                            <h3 className="clickable" onClick={()=>{ window.open(video.url) }}>{video.title}</h3>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                ))}
-            </Carousel>
-        </div>
-    );
-}
 
 export default class WhoAmI extends Component {
     constructor(props) {
@@ -201,7 +85,7 @@ export default class WhoAmI extends Component {
                         <div className="side-c">
                             <img className="hidden-950px-up me" src={mePic} alt="Picture of me"></img>
 
-                            <VideoGallery></VideoGallery>
+                            <VideoGallery videos={videos} ytHeaderCover={ytHeaderCover}></VideoGallery>
 
 
                             {/* <p><i>Cut to the chase? See 📂 <a href="./?page=work">my work</a>.</i></p> */}
