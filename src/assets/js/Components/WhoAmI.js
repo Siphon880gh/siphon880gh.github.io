@@ -10,6 +10,13 @@ import "./WhoAmI.css"
 import { Carousel } from 'react-bootstrap';
 import iconChatGPT from '../../img/ChatGPT.png';
 
+
+import ytCodeOrganization from '../../img/yt-gallery/code-organization.png'
+import ytEcommerceBackend from '../../img/yt-gallery/ecommerce-backend.png'
+import ytReactProps from '../../img/yt-gallery/react-props.png'
+import ytTrading from '../../img/yt-gallery/trading.png'
+import ytDailyPortal from '../../img/yt-gallery/daily-portal.png'
+
 class LangIcon extends Component {
     constructor(props) {
         super(props)
@@ -53,32 +60,32 @@ const videos = [
     {
         id: 1,
         title: 'Demo: Ecommerce Backend',
-        thumbnail: 'https://i9.ytimg.com/vi_webp/s-0sNWgcSIQ/mqdefault.webp?v=600adee1&sqp=CNjypaYG&rs=AOn4CLAzMCVJ-mrIB0lU3_BiL8S-WveGuA',
+        thumbnail: ytEcommerceBackend,
         url: 'https://www.youtube.com/watch?v=s-0sNWgcSIQ'
     },
     {
         id: 2,
         title: 'Code Organization - Publisher/Subscriber, Service Layer, Data Access Layer',
-        thumbnail: 'https://i9.ytimg.com/vi_webp/eNh6t2_tuAI/mq1.webp?sqp=CLD3paYG&rs=AOn4CLDfYEpP5J445JqMi47EWjB--ubLYg',
+        thumbnail: ytCodeOrganization,
         url: 'https://www.youtube.com/watch?v=eNh6t2_tuAI'
     },
     {
         id: 3,
         title: 'Weng Teaches - React Parent to Child props passing',
-        thumbnail: 'https://i9.ytimg.com/vi_webp/AQ2h7spCH3U/mqdefault.webp?v=64c98a2c&sqp=CMCTpqYG&rs=AOn4CLBqJEY7aPoImY3-kwR-ATfRDkIBHw',
+        thumbnail: ytReactProps,
         url: 'https://www.youtube.com/watch?v=AQ2h7spCH3U'
     },
     {
         id: 4,
         title: 'Weng feeds trade information into ChatGPT with Javascript by Weng',
-        thumbnail: 'https://i9.ytimg.com/vi_webp/c4C9QmbY-fY/mq2.webp?sqp=CNz5paYG-oaymwEmCMACELQB8quKqQMa8AEB-AHQCIAC0AWKAgwIABABGHIgRig8MA8=&rs=AOn4CLC1W5Fyf1EWOk2kezXk_7gfUQX3wg',
+        thumbnail: ytTrading,
         url: 'https://www.youtube.com/watch?v=c4C9QmbY-fY'
     }
     // {
     //     commentedOut: "Need permission first - was a collab",
     //     id: 100,
     //     title: 'Weng feeds trade information into ChatGPT with Javascript by Weng',
-    //     thumbnail: 'https://i9.ytimg.com/vi_webp/rbk3H45fToA/mq3.webp?sqp=CNz5paYG&rs=AOn4CLC7uGIuxTRb6kgnuKmInWsSeF8oag',
+    //     thumbnail: ytDailyPortal,
     //     url: 'https://www.youtube.com/watch?v=rbk3H45fToA'
     // },
     // more videos...
@@ -240,7 +247,7 @@ export default class WhoAmI extends Component {
 
                                 <p>In order to explore the cutting-edge and what opportunities are there in 2023, I took courses in 
                                 <LangIcon iconClassName="devicon-python-plain" techName="Python" text="Python" globalTechName={this.state.techName} {...otherProps}></LangIcon> and 
-                                <LangIcon iconClassName={{importedIcon:iconChatGPT}} techName="AIPromptEngineering" text="Prompt Engineering" globalTechName={this.state.techName} {...otherProps}></LangIcon>.{/* I have earned multiple certificates in python and prompt engineering.*/}</p>
+                                <LangIcon iconClassName={{importedIcon:iconChatGPT}} techName="AIPromptEngineering" text="Prompt Engineering" globalTechName={this.state.techName} {...otherProps}></LangIcon>. {/*I have earned multiple <Link to="certs#a">certificates</Link> in python and prompt engineering.*/}</p>
 
                                 <p>I code almost everyday contributing to the GitHub community:</p>
 
