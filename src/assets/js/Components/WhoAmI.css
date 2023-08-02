@@ -235,6 +235,20 @@ h3 {
     color: #f7a80d !important;
     background-color: black !important;
 }
+ 
+[data-is-colored="Python"] {
+    color: #ffd845 !important;
+    background-color: #235F8B !important;
+}
+[data-tech="AIPromptEngineering"] {
+    background-size: 20px 20px !important;
+    font-family: 'devicon' !important;
+}
+[data-is-colored="AIPromptEngineering"] {
+    background-blend-mode: invert !important;
+    filter: invert(1) !important;
+    background-color: white !important;
+}
 
 
 .gh-contributions {

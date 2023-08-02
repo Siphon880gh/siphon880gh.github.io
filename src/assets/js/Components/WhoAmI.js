@@ -8,6 +8,7 @@ import mePic from "../../img/me3.jpg"
 import ytCover from "../../img/yt-cover.png"
 import "./WhoAmI.css"
 import { Carousel } from 'react-bootstrap';
+import iconChatGPT from '../../img/ChatGPT.png';
 
 class LangIcon extends Component {
     constructor(props) {
@@ -18,8 +19,31 @@ class LangIcon extends Component {
         const { techName, text, iconClassName, globalTechName, techColorOn, techColorOff, toggleTechName } = this.props;
         console.log(this.props)
 
+        let styles = {
+            display: "inline-block"
+        }
+        if(typeof iconClassName!=="string") {
+            let {importedIcon} = iconClassName;
+            styles.background = `url("${importedIcon}")`;
+            styles.backgroundSize = 'cover';
+            styles.backgroundRepeat = "no-repeat";
+            styles.paddingLeft = "22px";
+            styles.maxHeight = "27px";
+            styles.backgroundPosition = "2px 5px";
+            styles.letterSpacing = "-0.7px";
+            styles.marginBottom = 0;
+            // styles.marginBottom = -"2.5px";
+        }
+
         return (
-            <div className={iconClassName} data-tech={techName} data-is-colored={globalTechName === techName && techName} onClick={toggleTechName} onMouseEnter={techColorOn} onMouseOut={techColorOff} style={{ display: "inline-block" }}> {text}
+            <div className={typeof iconClassName==="string" && iconClassName} 
+                data-tech={techName} 
+                data-is-colored={globalTechName === techName && techName} 
+                onClick={toggleTechName} 
+                onMouseEnter={techColorOn} 
+                onMouseOut={techColorOff} 
+                style={styles}> 
+            {text}
             </div>
         )
     }
@@ -214,7 +238,11 @@ export default class WhoAmI extends Component {
                                 <h3>Growth</h3>
                                 <p>I aim to take an entrepreneurial role in the future, leveraging my technical knowledge for healthcare software which is my prior background. I stay updated in the healthcare industry by working as a registered nurse periodically at a staffing agency. For entrepreneurship and management, I broadened my skills by completing a Project Management course at UC Berkeley in December 2022. My mantra is continuous growth. At the moment I want to transition out of contracts and freelancing and move into a career pathway towards management.</p>
 
-                                I code almost everyday contributing to the GitHub community:
+                                <p>In order to explore the cutting-edge and what opportunities are there in 2023, I took courses in 
+                                <LangIcon iconClassName="devicon-python-plain" techName="Python" text="Python" globalTechName={this.state.techName} {...otherProps}></LangIcon> and 
+                                <LangIcon iconClassName={{importedIcon:iconChatGPT}} techName="AIPromptEngineering" text="Prompt Engineering" globalTechName={this.state.techName} {...otherProps}></LangIcon>.{/* I have earned multiple certificates in python and prompt engineering.*/}</p>
+
+                                <p>I code almost everyday contributing to the GitHub community:</p>
 
                                 {/* <h3>2021 Nov to 2022 Nov</h3>
                                     <a href="//github.com/Siphon880gh" target="_blank">
