@@ -69,6 +69,12 @@ h3 {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+@media screen and (max-width: 520px) {
+    .carousel-wrapper {
+        width: 100%;
+    }
+}
+
 .carousel.slide {
     padding: 15px;
 
@@ -103,11 +109,8 @@ h3 {
 .yt-gallery-header a:hover {
     color: #FF0000 !important;
 }
-
-@media screen and (max-width: 520px) {
-    .carousel-wrapper {
-        width: 100%;
-    }
+.carousel-control-prev, .carousel-control-next {
+    margin-bottom:30px;
 }
 
 .carousel-caption {
