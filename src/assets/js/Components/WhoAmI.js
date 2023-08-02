@@ -25,6 +25,66 @@ class LangIcon extends Component {
     }
 } // LangIcon
 
+const videos = [
+    {
+        id: 1,
+        title: 'Demo: Ecommerce Backend',
+        thumbnail: 'https://i9.ytimg.com/vi_webp/s-0sNWgcSIQ/mqdefault.webp?v=600adee1&sqp=CNjypaYG&rs=AOn4CLAzMCVJ-mrIB0lU3_BiL8S-WveGuA',
+        url: 'https://www.youtube.com/watch?v=s-0sNWgcSIQ'
+    },
+    {
+        id: 2,
+        title: 'Code Organization - Publisher/Subscriber, Service Layer, Data Access Layer',
+        thumbnail: 'https://i9.ytimg.com/vi_webp/eNh6t2_tuAI/mq1.webp?sqp=CLD3paYG&rs=AOn4CLDfYEpP5J445JqMi47EWjB--ubLYg',
+        url: 'https://www.youtube.com/watch?v=eNh6t2_tuAI'
+    },
+    // more videos...
+]
+
+function VideoGallery() {
+    const [index, setIndex] = useState(0);
+
+    const handleSelect = (selectedIndex) => {
+        setIndex(selectedIndex);
+    }
+
+    return (
+        <div className="carousel-wrapper">
+            <header className="yt-gallery-header"
+                style={{
+
+                    backgroundImage: `url(${ytCover})`,
+                    backgroundSize: 'cover',
+                    backgroundBlendMode: 'darken',
+                    backgroundColor: 'rgba(0,0,0,0.5)'
+                }}>
+                <h3 className="blur-gradient">
+                    <a href="//www.youtube.com/@WayneTeachesCode" target="_blank">
+                        <i class="fab fa-youtube">&nbsp;</i>My Tutorials
+                    </a>
+                </h3>
+            </header>
+            <Carousel activeIndex={index} onSelect={handleSelect}>
+                {videos.map(video => (
+                    <Carousel.Item key={video.id}>
+                        <img
+                            className="d-block"
+                            src={video.thumbnail}
+                            alt={video.title}
+                            style={{
+                                width: "50% !important",
+                                margin: "0 auto"
+                            }}
+                        />
+                        <Carousel.Caption>
+                            <h3>{video.title}</h3>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                ))}
+            </Carousel>
+        </div>
+    );
+}
 
 export default class WhoAmI extends Component {
     constructor(props) {
@@ -89,11 +149,21 @@ export default class WhoAmI extends Component {
                         <div className="side-b">&nbsp;</div>
                         <div className="side-c">
                             <img className="hidden-950px-up me" src={mePic} alt="Picture of me"></img>
-                            <h2 id="about-anchor" className="f1a">Full Stack Developer<br /><address className="author">Weng Fei Fung</address></h2>
+
+                            <VideoGallery></VideoGallery>
+
 
                             {/* <p><i>Cut to the chase? See 📂 <a href="./?page=work">my work</a>.</i></p> */}
                             {/* <p><i>Cut to the chase? See 📂 <Link to="work">my work</Link>.</i></p> */}
-                            <br />
+
+                            <main class="main-content">
+
+                            <h2 id="about-anchor" className="f1a">
+                                Full Stack Developer
+                                <hr />
+                                <address className="author">Weng Fei Fung</address>
+                            </h2>
+                            <br/>
 
                             <h3>Introduction</h3>
                             <p>I'm a full-stack developer with several years of freelancing and teaching, specializing in
@@ -112,11 +182,6 @@ export default class WhoAmI extends Component {
                                 <li>PHP and React: I have innovatively combined PHP and htaccess with React in my portfolio to streamline development. </li>
                                 <li>Cloud Solutions: I have used both AWS Services and Google Cloud. For <LangIcon iconClassName="devicon-googlecloud-plain" techName="GCloud" text="Google Cloud" globalTechName={this.state.techName} {...otherProps}></LangIcon>, I used Google Functions to integrate external API data into the Firebase when creating or updating into the database (a combination of NodeJS Google Cloud SDK and axios). For <LangIcon iconClassName="devicon-amazonwebservices-original" techName="AWS" text="AWS" globalTechName={this.state.techName} {...otherProps}></LangIcon>, I used S3 bucket with public read permissions on a React form (combination of AWS S3, Multer, React, Express).</li>
                             </ul>
-
-
-
-
-
 
 
                             <h3>Sharing my passion of programming</h3>
@@ -154,15 +219,14 @@ export default class WhoAmI extends Component {
 
                             <aside className="badges">
 
-                                <a className="badge-style-a" target="_blank" href="https://www.linkedin.com/in/weng-fung/" rel="nofollow">
-                                    <img src="https://camo.githubusercontent.com/0f56393c2fe76a2cd803ead7e5508f916eb5f1e62358226112e98f7e933301d7/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c696e6b6564496e2d626c75653f7374796c653d666c6174266c6f676f3d6c696e6b6564696e266c6162656c436f6c6f723d626c7565"
-                                        className="github-style badge-style" alt="Linked-In" data-canonical-src="https://img.shields.io/badge/LinkedIn-blue?style=flat&amp;logo=linkedin&amp;labelColor=blue" />
-                                </a>
-
                                 <a className="badge-style-a" target="_blank" href="https://github.com/Siphon880gh" rel="nofollow">
                                     <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" className="github-style badge-style" alt="Github" data-canonical-src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" />
                                 </a>
 
+                                <a className="badge-style-a" target="_blank" href="https://www.linkedin.com/in/weng-fung/" rel="nofollow">
+                                    <img src="https://camo.githubusercontent.com/0f56393c2fe76a2cd803ead7e5508f916eb5f1e62358226112e98f7e933301d7/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c696e6b6564496e2d626c75653f7374796c653d666c6174266c6f676f3d6c696e6b6564696e266c6162656c436f6c6f723d626c7565"
+                                        className="github-style badge-style" alt="Linked-In" data-canonical-src="https://img.shields.io/badge/LinkedIn-blue?style=flat&amp;logo=linkedin&amp;labelColor=blue" />
+                                </a>
 
                                 <a className="badge-style-a" target="_blank" href="//www.youtube.com/@WayneTeachesCode/" rel="nofollow">
                                     <img src="https://camo.githubusercontent.com/0bf5ba8ac9f286f95b2a2e86aee46371e0ac03d38b64ee2b78b9b1490df38458/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f596f75747562652d7265643f7374796c653d666c6174266c6f676f3d796f7574756265266c6162656c436f6c6f723d726564"
@@ -172,6 +236,7 @@ export default class WhoAmI extends Component {
                             </aside>
 
                             <aside className="info-spacer" style={{ width: "1px", height: "10px" }}></aside>
+                            </main>
 
                         </div>
                     </div>
