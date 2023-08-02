@@ -37,14 +37,21 @@ h3 {
 /* ***** */
 
 .page-whoami {
-    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
 }
+
 
 .page-whoami .main-content {
     border: 1px solid black;
-    padding: 10px;
     margin-top: 30px;
     background-color: ghostwhite;
+}
+.page-whoami .main-content header.header {
+    background-color: rgba(0,0,0,0.5);
+    padding: 10px;
+}
+.page-whoami .main-content section.body {
+    padding: 10px;
 }
 
 .page-whoami a {
@@ -59,7 +66,9 @@ h3 {
     color: rgb(36, 69, 92) !important;
 }
 
-/* ******* */
+/* ********** */
+/* YT Gallery */
+/* ********** */
 
 .carousel-wrapper {
     width: 50%;
@@ -69,7 +78,7 @@ h3 {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 871px) {
     .carousel-wrapper {
         width: 100%;
     }
@@ -77,7 +86,6 @@ h3 {
 
 .carousel.slide {
     padding: 15px;
-
 }
 
 .yt-gallery-header {
@@ -93,12 +101,14 @@ h3 {
 .yt-gallery-header h3 {
     width: 100%;
     height: 100%;
+    font-size: 2rem;
     background-color: rgba(0, 0, 0, .5);
     padding: 15px 60px;
     margin: 0;
     display: flex;
     justify-content: center;
     flex-flow: column nowrap;
+    font-family: "Playfair Display", Sans-serif; 
 }
 
 .yt-gallery-header a {
@@ -143,13 +153,22 @@ h3 {
     background-color: lightblue;
 }
 
-/* ******* */
 
-.gh-contributions {
-    vertical-align: middle;
-    max-width: 60vw;
-    margin: 10px auto;
+
+/* *********** */
+/* Author Line */
+/* *********** */
+
+.author {
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin-bottom: 30px;
 }
+
+
+/* *********** */
+/* Tech Icons  */
+/* *********** */
 
 [data-is-colored] {
     margin-left: 2.5px;
@@ -160,7 +179,7 @@ h3 {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     padding-left: 2.5px;
-    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
     transition: all 300ms ease-in;
 }
 
@@ -213,6 +232,13 @@ h3 {
 [data-is-colored="AWS"] {
     color: #f7a80d !important;
     background-color: black !important;
+}
+
+
+.gh-contributions {
+    vertical-align: middle;
+    max-width: 60vw;
+    margin: 10px auto;
 }
 
 @media screen and (max-width: 950px) {

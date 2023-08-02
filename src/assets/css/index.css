@@ -39,10 +39,6 @@ a:active {
     color: #427EA8;
 }
 
-.author {
-    font-size: 80%;
-}
-
 
 /* Utility classes: Flex */
 
@@ -322,10 +318,6 @@ a:active {
     .slide-a .slide-hero {
         height: 90vh;
     }
-}
-
-address {
-    display: inline;
 }
 
 * {
@@ -970,6 +962,11 @@ footer {
     display: table-cell;
 }
 
+@media screen and (max-width:1068px) {
+    .side-a {
+        display: none;
+    }
+}
 @media screen and (max-width:768px) {
     .side-a {
         display: none;
@@ -995,6 +992,10 @@ footer {
 img.me {
     margin-top: 15px;
     max-height: 250px;
+}
+
+img.hidden-950px-up.me {
+    min-height: 50vh;
 }
 
 @media screen AND (min-width:950px) {
