@@ -150,7 +150,7 @@
     box-sizing: border-box;
 }
 
-@font-face {
+/* @font-face {
     font-family: "Playfair Display";
     src: url(../../assets/fonts/playfair-display/PlayfairDisplay-Regular.ttf);
 }
@@ -158,7 +158,7 @@
 @font-face {
     font-family: "Montserrat";
     src: url(../../assets/fonts/montserrat/Montserrat-Regular.ttf);
-}
+} */
 
 
 /* Necessary for wrapper to be positioned relatively so the darker background child can be positioned absolutely to it */
@@ -223,7 +223,9 @@
 }
 
 .slide-hero .line:first-child {
-    font-family: "Playfair Display", Sans-serif;
+    /* font-family: "Playfair Display", Sans-serif; */
+
+    font-family: 'Roboto', sans-serif;
     font-size: 300%;
     text-transform: capitalize;
 }
@@ -263,7 +265,9 @@
 }
 
 .f1a {
-    font-family: "Playfair Display", Sans-serif;
+    /* font-family: "Playfair Display", Sans-serif; */
+
+    font-family: 'Roboto', sans-serif;
 }
 
 .f1b {

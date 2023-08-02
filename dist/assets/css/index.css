@@ -11,15 +11,15 @@
     box-sizing: border-box;
 }
 
-@font-face {
+/* @font-face {
     font-family: "Playfair Display";
     src: url(../../assets/fonts/playfair-display/PlayfairDisplay-Regular.ttf);
-}
+} */
 
-@font-face {
+/* @font-face {
     font-family: "Montserrat";
     src: url(../../assets/fonts/montserrat/Montserrat-Regular.ttf);
-}
+} */
 
 
 /* General */
@@ -196,7 +196,9 @@ a:active {
 }
 
 .slide-hero .line:first-child {
-    font-family: "Playfair Display", Sans-serif;
+    /* font-family: "Playfair Display", Sans-serif; */
+
+    font-family: 'Roboto', sans-serif;
     font-size: 300%;
     text-transform: capitalize;
 }
@@ -236,7 +238,7 @@ a:active {
 }
 
 .f1a {
-    font-family: "Playfair Display", Sans-serif;
+    font-family: " Display", Sans-serif;
 }
 
 .f1b {

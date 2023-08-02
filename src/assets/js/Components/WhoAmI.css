@@ -48,10 +48,11 @@ h3 {
 }
 .page-whoami .main-content header.header {
     background-color: rgba(0,0,0,0.5);
-    padding: 10px;
+    padding: 35px;
+    color:white;
 }
 .page-whoami .main-content section.body {
-    padding: 10px;
+    padding: 35px;
 }
 
 .page-whoami a {
@@ -85,7 +86,7 @@ h3 {
 }
 
 .carousel.slide {
-    padding: 15px;
+    padding: 35px;
 }
 
 .yt-gallery-header {
@@ -103,12 +104,13 @@ h3 {
     height: 100%;
     font-size: 2rem;
     background-color: rgba(0, 0, 0, .5);
-    padding: 15px 60px;
     margin: 0;
     display: flex;
     justify-content: center;
     flex-flow: column nowrap;
-    font-family: "Playfair Display", Sans-serif; 
+    /* font-family: "Playfair Display", Sans-serif;  */
+    font-family: 'Roboto', sans-serif;
+    padding: 35px;
 }
 
 .yt-gallery-header a {
@@ -140,7 +142,7 @@ h3 {
 }
 
 .carousel-indicators {
-    bottom: 15px;
+    bottom: 35px;
 }
 
 .carousel-indicators button {
