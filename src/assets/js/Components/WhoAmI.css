@@ -44,6 +44,7 @@ h3 {
     border: 1px solid black;
     padding: 10px;
     margin-top: 30px;
+    background-color: ghostwhite;
 }
 
 .page-whoami a {
@@ -149,6 +150,7 @@ h3 {
 
 [data-is-colored] {
     margin-left: 2.5px;
+    margin-bottom:-2.5px;
     vertical-align: text-bottom;
     padding: 5px;
     border-radius: 15px;
@@ -166,7 +168,8 @@ h3 {
 
 [data-is-colored="Express"] {
     color: #444 !important;
-    background-color: ghostwhite;
+    background-color: #F5F5F5;
+    border:1px solid rgba(0,0,0,.7);
 }
 
 [data-is-colored="Mongo"] {

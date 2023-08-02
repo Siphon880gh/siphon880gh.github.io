@@ -159,7 +159,7 @@ export default class WhoAmI extends Component {
                             <main class="main-content">
 
                             <h2 id="about-anchor" className="f1a">
-                                Full Stack Developer
+                                Full Stack Web Developer
                                 <hr />
                                 <address className="author">Weng Fei Fung</address>
                             </h2>
@@ -167,14 +167,17 @@ export default class WhoAmI extends Component {
 
                             <h3>Introduction</h3>
                             <p>I'm a full-stack developer with several years of freelancing and teaching, specializing in
-                                <LangIcon iconClassName="devicon-react-original" techName="React" text="React" globalTechName={this.state.techName} {...otherProps}></LangIcon>, <LangIcon iconClassName="devicon-express-original" techName="Express" text="Express" globalTechName={this.state.techName} {...otherProps}></LangIcon>,  <LangIcon iconClassName="devicon-mongodb-plain" techName="Mongo" text="Mongo" globalTechName={this.state.techName}  {...otherProps}></LangIcon>, and
+                                <LangIcon iconClassName="devicon-react-original" techName="React" text="React" globalTechName={this.state.techName} {...otherProps}></LangIcon>, 
+                                <LangIcon iconClassName="devicon-express-original" techName="Express" text="Express" globalTechName={this.state.techName} {...otherProps}></LangIcon>, 
                                 <LangIcon iconClassName="devicon-javascript-plain" techName="Javascript" text="Javascript" globalTechName={this.state.techName} {...otherProps}></LangIcon>,
                                 <LangIcon iconClassName="devicon-jquery-plain" techName="jQuery" text="jQuery" globalTechName={this.state.techName} {...otherProps}></LangIcon>,
-                                <LangIcon iconClassName="devicon-php-plain" techName="PHP" text="PHP" globalTechName={this.state.techName} {...otherProps}></LangIcon>,  and
+                                with databases 
+                                <LangIcon iconClassName="devicon-mongodb-plain" techName="Mongo" text="Mongo" globalTechName={this.state.techName}  {...otherProps}></LangIcon> and 
                                 <LangIcon iconClassName="devicon-mysql-plain" techName="MySQL" text="MySQL" globalTechName={this.state.techName} {...otherProps}></LangIcon>,
-                                with backend technology in
+                                and with backend technologies
+                                <LangIcon iconClassName="devicon-php-plain" techName="PHP" text="PHP" globalTechName={this.state.techName} {...otherProps}></LangIcon> and
                                 <LangIcon iconClassName="devicon-nodejs-plain" techName="NodeJS" text="NodeJS" globalTechName={this.state.techName} {...otherProps}></LangIcon>.
-                                I've worked with startups and companies such as Mixotype, ExRx and People's Care, and am often consulted for innovative problem-solving. My strengths include Javascript, React, jQuery, PHP, MySQL, Express JS, and Node. See <a target="_blank" href="./?page=testimonials">📍client testimonials</a>.</p>
+                                I've worked with startups and companies such as Mixotype, ExRx and People's Care, and am consulted for innovative problem-solving. My strengths include Javascript, React, jQuery, PHP, MySQL, Express JS, and Node. See <a target="_blank" href="./?page=testimonials">📍client testimonials</a>.</p>
 
                             <h3>Innovation</h3>
                             <p>Familiarity with multiple coding languages helps me provide unique business and tech solutions.</p>
