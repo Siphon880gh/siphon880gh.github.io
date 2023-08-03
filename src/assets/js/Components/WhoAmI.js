@@ -83,7 +83,14 @@ export default class WhoAmI extends Component {
                         <div className="side-a">&nbsp;</div>
                         <div className="side-b">&nbsp;</div>
                         <div className="side-c">
-                            <img className="hidden-950px-up me" src={mePic} alt="Picture of me"></img>
+                            <div className="hidden-950px-up-off me">
+                                <img src={mePic} alt="Picture of me"></img>
+                                <div style={{width:"100%"}}>
+                                    <span className="pic-me-name">Weng Fei Fung</span>
+                                    <span>&nbsp;&nbsp;&nbsp;</span>
+                                    <span className="pic-me-title">Coding Bootcamp Senior Tutor | Freelancer</span>
+                                </div>
+                            </div>
 
                             <VideoGallery videos={videos} ytHeaderCover={ytHeaderCover}></VideoGallery>
 
@@ -99,7 +106,7 @@ export default class WhoAmI extends Component {
                                 </h2>
                             </header>
                             <section className="body">
-                                <div className="author">Weng Fei Fung</div>
+                                <div className="author">Hi, I'm Weng Fei Fung (Just call me Weng)</div>
 
                                 <h3>Introduction</h3>
                                 <p>I'm a full-stack developer with several years of freelancing and teaching, specializing in
@@ -149,13 +156,13 @@ export default class WhoAmI extends Component {
                                 <br />
 
                                 <p></p>
-                                <b><u>2023-Jan to 2023-Dec</u></b>
+                                <b><u>2023-Jan to 2023-Dec</u></b><br/>
                                 <a href="//github.com/Siphon880gh" target="_blank">
                                     <img className="gh-contributions" src={githubContributions2023march} />
                                 </a>
 
                                 <p></p>
-                                <b><u>2022-Jan to 2022-Dec</u></b>
+                                <b><u>2022-Jan to 2022-Dec</u></b><br/>
                                 <a href="//github.com/Siphon880gh" target="_blank">
                                     <img className="gh-contributions" src={githubContributions2023} />
                                 </a>

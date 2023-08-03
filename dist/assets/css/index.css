@@ -27,6 +27,7 @@
 body {
     background: #5e5853;
     background: linear-gradient(90deg, rgba(94, 88, 83, 1) 0%, rgba(121, 121, 121, 1) 25%, rgba(41, 38, 35, 1) 98%);
+    font-family: 'Roboto', sans-serif !important;
 }
 
 a {
@@ -204,7 +205,7 @@ a:active {
 }
 
 .slide-hero .line:not(:first-child) {
-    font-family: "Montserrat", Sans-serif;
+    /* font-family: "Montserrat", Sans-serif; */
     font-size: 500%;
     font-weight: 800;
     text-transform: capitalize;
@@ -238,11 +239,11 @@ a:active {
 }
 
 .f1a {
-    font-family: " Display", Sans-serif;
+    /* font-family: " Display", Sans-serif; */
 }
 
 .f1b {
-    font-family: "Montserrat", Sans-serif;
+    /* font-family: "Montserrat", Sans-serif; */
     line-height: 2;
     padding-right: 20px;
     /* height: 80vh; */
@@ -455,7 +456,7 @@ a:active {
 .collab figure figcaption {
     background-color: rgba(74, 74, 74, .90);
     color: white;
-    font-family: "Montserrat";
+    /* font-family: "Montserrat"; */
     padding: 10px;
     position: absolute;
     bottom: 20px;
@@ -976,29 +977,46 @@ footer {
 }
 
 .side-b {
-    background: 15px 30px / contain transparent url(../../assets/img/me3.jpg) no-repeat;
+    /* background: 15px 30px / contain transparent url(../../assets/img/me3.jpg) no-repeat;
     background-color: #e5e4e2;
     min-width: 20vw;
     height: 100%;
     display: table-cell;
-    margin-top: 20px;
+    margin-top: 20px; */
+    display:none;
 }
 
 .side-c {
-    display: table-cell;
+    /* display: table-cell; */
     background-color: #e5e4e2;
     padding-left: 15px;
     padding-right: 15px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    gap:20px;
 }
 
-img.me {
+.me {
     margin-top: 15px;
-    max-height: 250px;
+    min-width: 275px;
+    max-width: 275px;
+    max-height: 500px;
+    min-height: 500px;
+    text-align: center;
+    font-size: .9rem;
+    border:1px solid black;
 }
 
-img.hidden-950px-up.me {
-    min-height: 50vh;
+.me img {
+    width:100%;
+    height: calc(100% - 60px);
+    margin-bottom: 10px;
 }
+
+/* img.hidden-950px-up.me {
+    min-height: 50vh;
+} */
 
 @media screen AND (min-width:950px) {
     .hidden-950px-up {

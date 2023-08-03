@@ -231,7 +231,7 @@
 }
 
 .slide-hero .line:not(:first-child) {
-    font-family: "Montserrat", Sans-serif;
+    /* font-family: "Montserrat", Sans-serif; */
     font-size: 500%;
     font-weight: 800;
     text-transform: capitalize;
@@ -615,7 +615,7 @@ address {
 .collab figure figcaption {
     background-color: #4a4a4a;
     color: white;
-    font-family: "Montserrat";
+    /* font-family: "Montserrat"; */
     padding: 10px;
     position: absolute;
     bottom: 20px;

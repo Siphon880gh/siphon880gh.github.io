@@ -43,7 +43,6 @@ h3 {
 
 .page-whoami .main-content {
     border: 1px solid black;
-    margin-top: 30px;
     background-color: ghostwhite;
 }
 .page-whoami .main-content header.header {
@@ -67,19 +66,47 @@ h3 {
     color: rgb(36, 69, 92) !important;
 }
 
+
+/* *********** */
+/* Me caption  */
+/* *********** */
+
+.pic-me-name {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: center;
+  /* margin: 20px 0 10px; */
+  color: #333;
+}
+
+.pic-me-title {
+  font-family: 'Roboto', sans-serif; 
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-align: center;
+  margin: 0;
+  color: #666;
+}
+
 /* ********** */
 /* YT Gallery */
 /* ********** */
 
 .carousel-wrapper {
     width: 50%;
-    margin: 30px 0 0 0;
+    max-height:500px;
+    min-height:500px;
+    margin: 15px 0 0 0;
     border: 1px solid black;
-    background-color: rgb(255, 204, 162);
+    background-color: rgb(200, 70, 0, 0.1);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 @media screen and (max-width: 871px) {
+    .side-c {
+        justify-content: center;
+    }
     .carousel-wrapper {
         /* width: -webkit-fill-available;
         box-sizing: border-box; */
