@@ -1,0 +1,14 @@
+.page-title {
+    text-align: center;
+    color: var(--yellow);
+    margin-top: 35px;
+}
+.contact {
+    margin-top: 20px !important;
+}
+.modal-backdrop {
+    z-index: -1 !important;
+}
+.modal-dialog {
+    margin-top: 260px !important;
+}

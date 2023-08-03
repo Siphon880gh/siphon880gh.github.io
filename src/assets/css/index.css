@@ -1,8 +1,3 @@
-/*
-    TODO: Was experimenting on different designs during development. So CSS need cleanup.
-*/
-
-
 /* Reset CSS */
 
 :root {
@@ -11,15 +6,12 @@
     box-sizing: border-box;
 }
 
-/* @font-face {
-    font-family: "Playfair Display";
-    src: url(../../assets/fonts/playfair-display/PlayfairDisplay-Regular.ttf);
-} */
-
-/* @font-face {
-    font-family: "Montserrat";
-    src: url(../../assets/fonts/montserrat/Montserrat-Regular.ttf);
-} */
+/* Color Themes */
+:root {
+    --darkblue: rgb(0,18,38);
+    --blue: rgb(77,171,214);
+    --yellow: rgb(250,225,75);
+}
 
 
 /* General */
@@ -127,12 +119,6 @@ a:active {
         display: none !important;
     }
 }
-
-.text-bold-colored {
-    font-weight: bold;
-    color: #FFCB78 !important;
-}
-
 
 /* About Me Slide */
 

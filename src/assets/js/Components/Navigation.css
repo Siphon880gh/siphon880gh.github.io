@@ -34,30 +34,43 @@
 } */
 
 .site-nav li a {
-    color: white;
+    color: var(--yellow);
+    font-weight: 500;
     text-decoration: none;
-    transition: color 500ms;
-    letter-spacing: 1px;
+    transition: all 500ms ease-in;
+    letter-spacing: 1.5px;
+}
+.site-nav li:not(:first-child)::before {
+    content: "\00a0\00a0\00a0\00a0•\00a0\00a0\00a0\00a0";
+    color: var(--yellow);
 }
 
+
 .site-nav li a:visited {
-    color: white;
+    color: var(--yellow);
     text-decoration: none;
     transition: color 500ms;
-    letter-spacing: 1px;
 }
 
 .site-nav li a:active,
 .site-nav li a:hover {
-    color: white;
     text-decoration: underline;
 }
 
-.site-nav ul#nav-primary {
-    padding: 100px 0 0 0;
-    font-size: 18px;
-    /* Menu needs to be lower than hamburger icon */
+.site-nav li a.active {
+
+    filter: saturate(400%);
+    text-decoration: underline;
 }
+
+/* a.text-bold-colored {
+    filter: saturate(400%);
+    text-decoration: underline;
+} */
+
+/* .site-nav ul#nav-primary {
+    font-size: 18px;
+} */
 
 .site-nav ul#nav-secondary {
     padding: 20px 0 0;
@@ -83,13 +96,16 @@
 
 .site-nav-mobile-btn {
     /* float: right; */
+    position: absolute;
+    top:0;
+    right:0;
     margin: 25px 20px 0 0;
     cursor: pointer;
     /* border: 2px solid #fff; */
-    border: 2px solid #FFCB78;
+    border: 2px solid var(--yellow);
     border-radius: 3px;
     /* color: rgba(255, 255, 255, 0.8); */
-    color: #FFCB78;
+    color: var(--yellow);
     padding: 5px;
     min-width: 33px;
     max-width: 33px;
@@ -128,6 +144,10 @@
 /* Smaller */
 
 @media (max-width: 1398px) {
+    .site-nav li:not(:first-child)::before {
+        content: "";
+        margin-left: auto;
+    }
     .site-nav:not(.active) #navs {
         display: none !important;
     }
@@ -147,13 +167,27 @@
         height: 30px;
     }
     #nav-primary {
-        margin-top: 8px !important;
+        border-top:1px solid gray;
+        height:100%;
+        padding-left: 0 !important;
+        padding-top: 20px;
+        margin-top:5px;
     }
 }
 
 
 /* Wider */
 
+#navs {
+    height: 100%;
+    display: flex !important;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+ul#nav-primary {
+    margin-right: 15px;
+    margin-bottom: 0; /* Reboot code likes to put margin=bottom to 1rem */
+}
 @media (min-width: 1398px) {
     #navs {
         margin-right: 15px;
@@ -170,8 +204,7 @@
     }
     .site-nav ul#nav-primary {
         float: right;
-        padding: 20px 5px 0 0;
-        font-size: 18px;
+        font-size: 1.34rem;
     }
     .site-nav ul#nav-secondary {
         float: right;
@@ -188,7 +221,6 @@
         list-style-type: none;
         width: auto;
         border-top: none;
-        margin-left: 60px;
     }
     .site-nav ul li:hover {
         background-color: transparent;

@@ -43,57 +43,32 @@ export default function Navigation(props) {
         document.querySelector(".site-nav").classList.remove("active");
     }
 
-
         return (
             <nav data-component="Navigation" className="site-nav">
             <span className="fa site-nav-mobile-btn" onClick={onClickMobileHamburgerIcon}></span>
             <div id="navs">
                 <ul id="nav-primary">
                     <li>
-                        <NavLink data-php-rerouter="whoami" to="./whoami" activeClassName="text-bold-colored" className="whoami" onClick={collapseMobileMenu}><FontAwesomeIcon icon={meIcon} /> ME</NavLink>
+                        <NavLink data-php-rerouter="whoami" to="./whoami" onClick={collapseMobileMenu}>ABOUT</NavLink>
                     </li>
                     <li>
-                        <NavLink data-php-rerouter="testimonials" to="./testimonials" activeClassName="text-bold-colored" onClick={collapseMobileMenu}><FontAwesomeIcon icon={clientTestimonialsIcon} /> CLIENT TESTIMONIALS</NavLink>
+                        <NavLink data-php-rerouter="contact" to="./contact" onClick={collapseMobileMenu}>SKILLS/SERVICES</NavLink>
                     </li>
                     <li>
-                        <NavLink data-php-rerouter="certs" to="./certs#a" activeClassName="text-bold-colored" onClick={collapseMobileMenu}><FontAwesomeIcon icon={certificatesIcon} /> CERTIFICATES</NavLink>
+                        <NavLink data-php-rerouter="testimonials" to="./testimonials" onClick={collapseMobileMenu}>TESTIMONIALS</NavLink>
+                    </li>
+                    <li>
+                        <NavLink data-php-rerouter="certs" to="./certs#a" onClick={collapseMobileMenu}>CERTIFICATES</NavLink>
                     </li>                    
                     <li>
-                        <NavLink data-php-rerouter="work" to="./work" activeClassName="text-bold-colored" onClick={collapseMobileMenu}><FontAwesomeIcon icon={workIcon} /> WORK</NavLink>
+                        <NavLink data-php-rerouter="work" to="./work" onClick={collapseMobileMenu}>PORTFOLIO</NavLink>
                     </li>
+                    {/* <li>
+                        <NavLink data-php-rerouter="work" to="./work" onClick={collapseMobileMenu}>CONTACT</NavLink>
+                    </li> */}
                     {/* <li>
                         <NavLink data-php-rerouter="contact" to="./contact" activeClassName="text-bold-colored" onClick={collapseMobileMenu}>Contact</NavLink>
                     </li> */}
-                </ul><br style={{clear:"both"}}/>
-                <ul id="nav-secondary">
-                    {/* <li>
-                        <NavLink data-php-rerouter="tech" to="./tech" activeClassName="text-bold-colored" onClick={collapseMobileMenu}>Tech</NavLink>
-                    </li> */}
-                    {/* <li>
-                        <NavLink data-php-rerouter="resume" to="./resume" activeClassName="text-bold-colored" onClick={collapseMobileMenu}>Resume</NavLink>
-                    </li> */}
-                    {/* <li>
-                        <NavLink data-php-rerouter="collab" to="./achievements" activeClassName="text-bold-colored">Achievements</NavLink>
-                    </li>
-                    <li>
-                        <NavLink data-php-rerouter="collab" to="./collab" activeClassName="text-bold-colored">Certs</NavLink>
-                    </li> */}
-
-                    <li>
-                        <NavLink data-php-rerouter="achievements" to="./achievements" activeClassName="text-bold-colored" onClick={collapseMobileMenu}>Achievements</NavLink>
-                    </li>
-                    <li>
-                        <NavLink data-php-rerouter="credited" to="./credited" activeClassName="text-bold-colored" onClick={collapseMobileMenu}>Credited</NavLink>
-                    </li>
-                    <li>
-                        <NavLink data-php-rerouter="students" to="./students" activeClassName="text-bold-colored" onClick={collapseMobileMenu}>Student Testimonials</NavLink>
-                    </li>
-                    <li>
-                        <a target="_blank" href="https://www.youtube.com/@WayneTeachesCode" activeClassName="text-bold-colored" onClick={collapseMobileMenu}>Tutorials</a>
-                    </li>
-                    <li>
-                        <NavLink data-php-rerouter="collab" to="./collab" activeClassName="text-bold-colored" onClick={collapseMobileMenu}>Collab</NavLink>
-                    </li>
                 </ul>
                 <div className="spacer-bottom-mobile"/>
             </div>

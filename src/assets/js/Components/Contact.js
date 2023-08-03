@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import "./Contact.css";
 
 export default class Contact extends React.Component {
     componentDidMount() {
@@ -89,6 +90,8 @@ export default class Contact extends React.Component {
         } // validateFormOnSubmit
         
         return (
+            <>
+            <h2 className="page-title">Weng offers teaching and building. Let me know what you want!</h2>
             <div data-component="Resume" className="contact m-5">
                 <form className="p-4" onSubmit={validateFormOnSubmit} action="" method="post">
                     <div className="input-group mb-2">
@@ -134,6 +137,7 @@ export default class Contact extends React.Component {
                     </div>
                 </div>
             </div>
+            </>
         )
     }
 }

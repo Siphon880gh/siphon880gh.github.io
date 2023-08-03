@@ -24,25 +24,25 @@ class Navigation extends React.Component {
             <span className="fa fa-grip-lines site-nav-mobile-btn" onClick={this.onClickMobileHamburgerIcon}></span>
             <ul>
                 <li>
-                    <NavLink to="./tech" activeClassName="text-bold-colored" onClick={this.collapseMobileMenu}>Tech</NavLink>
+                    <NavLink to="./tech" onClick={this.collapseMobileMenu}>Tech</NavLink>
                 </li>
                 <li>
-                    <NavLink to="./whoami" activeClassName="text-bold-colored" onClick={this.collapseMobileMenu} className="whoami">About Me</NavLink>
+                    <NavLink to="./whoami" onClick={this.collapseMobileMenu} className="whoami">About Me</NavLink>
                 </li>
                 <li>
-                    <NavLink to="./resume" activeClassName="text-bold-colored" onClick={this.collapseMobileMenu}>Resume</NavLink>
+                    <NavLink to="./resume" onClick={this.collapseMobileMenu}>Resume</NavLink>
                 </li>
                 <li>
-                    <NavLink to="./work" activeClassName="text-bold-colored" onClick={this.collapseMobileMenu}>Work</NavLink>
+                    <NavLink to="./work" onClick={this.collapseMobileMenu}>Work</NavLink>
                 </li>
                 <li>
-                    <NavLink to="./collab" activeClassName="text-bold-colored" onClick={this.collapseMobileMenu}>Collab</NavLink>
+                    <NavLink to="./collab" onClick={this.collapseMobileMenu}>Collab</NavLink>
                 </li>
                 <li>
-                    <NavLink to="./credited" activeClassName="text-bold-colored" onClick={this.collapseMobileMenu}>Credited</NavLink>
+                    <NavLink to="./credited" onClick={this.collapseMobileMenu}>Credited</NavLink>
                 </li>
                 <li>
-                    <NavLink to="./contact" activeClassName="text-bold-colored" onClick={this.collapseMobileMenu}>Contact</NavLink>
+                    <NavLink to="./contact" onClick={this.collapseMobileMenu}>Contact</NavLink>
                 </li>
             </ul>
         </nav>

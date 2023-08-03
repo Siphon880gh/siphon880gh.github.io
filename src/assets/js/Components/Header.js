@@ -15,8 +15,8 @@ export default function Header() {
             <header data-component="Header" className="site-header" style={forceScrollbarByHeight?{maxHeight:forceScrollbarByHeight}:{}}>
 
                 <div className="page-title-wrapper">
-                    <a href="./">
-                        <img src={LogoSquare} alt="Weng Industry Logo"/>
+                    <a className="logo-wrapper" href="./">
+                        <img className="logo" src={LogoSquare} alt="Weng Industry Logo"/>
                     </a>
                     <div className="taglines">
                         <div className="tagline-a">Weng Industry</div>
