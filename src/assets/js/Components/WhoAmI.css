@@ -164,6 +164,12 @@ h3 {
 .yt-gallery-header a:hover {
     color: #FF0000 !important;
 }
+
+.carousel-item img {
+    width: 339px;
+    height: 179px;
+}
+
 .carousel-control-prev, .carousel-control-next {
     margin-bottom:30px;
 }
