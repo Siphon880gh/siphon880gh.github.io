@@ -48,7 +48,7 @@ h3 {
 .page-whoami .main-content header.header {
     background-color: rgba(0,0,0,0.5);
     padding: 35px;
-    color:white;
+    color:ghostwhite;
 }
 .page-whoami .main-content section.body {
     padding: 35px;
@@ -157,7 +157,7 @@ h3 {
 }
 
 .yt-gallery-header a {
-    color: #FF0000 !important;
+    color: ghostwhite !important;
     text-decoration: none !important;
 }
 
