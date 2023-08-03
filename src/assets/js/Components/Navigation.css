@@ -19,7 +19,7 @@
     overflow-y: scroll;
 }
 
-.site-header .page-title {
+/* .site-header .page-title {
     padding: 5px;
     margin: 30px 0 20px 10px;
     color: rgb(36, 69, 92);
@@ -28,13 +28,10 @@
     box-shadow: 5px 5px #4d4844;
     border-radius: 15px;
     padding: 10px;
-    /* background: #4d4844 url("../../img/coding-stock.jpg") repeat scroll 50% 50%; */
-    /* background: rgba(80, 58, 50) url("../../img/coding-stock.jpg") repeat scroll 50% 50%; */
-    /* background: #A88D62 url("../../img/coding-stock.jpg") repeat scroll 50% 50%; */
     background-image: linear-gradient(to right, #E88D62, #A88D62);
     background-size: cover;
     float: left;
-}
+} */
 
 .site-nav li a {
     color: white;
@@ -85,7 +82,7 @@
 /** Mobile First Menu **/
 
 .site-nav-mobile-btn {
-    float: right;
+    /* float: right; */
     margin: 25px 20px 0 0;
     cursor: pointer;
     /* border: 2px solid #fff; */

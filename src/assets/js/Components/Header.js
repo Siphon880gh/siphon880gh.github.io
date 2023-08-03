@@ -2,7 +2,10 @@
 import React,{useState} from "react";
 import ReactDOM from "react-dom";
 
+import "./Header.css"
+
 import Navigation from "./Navigation.js";
+import LogoSquare from "../../img/logo-square.png"
 
 export default function Header() {
 
@@ -13,13 +16,15 @@ export default function Header() {
 
                 <div className="page-title-wrapper">
                     <a href="./">
-                        <h1 className="page-title">Weng Industry</h1>
+                        <img src={LogoSquare} alt="Weng Industry Logo"/>
                     </a>
+                    <div className="taglines">
+                        <div className="tagline-a">Weng Industry</div>
+                        <div className="tagline-b"><span className="tagphrase-a">Realize Your</span> <span className="tagphrase-b">Tech Vision</span></div>
+                    </div>
                 </div>
 
                 <Navigation set_forceScrollbarByHeight={set_forceScrollbarByHeight}></Navigation>
-
-                <span className="clear-fix"></span>
 
             </header>
     )
