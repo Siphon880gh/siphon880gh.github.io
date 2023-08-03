@@ -59,6 +59,27 @@
             margin-top: 10px;
         }
 
+
+        /* PAGE
+        –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+        /* Color Themes */
+        :root {
+            --darkblue: rgb(0,18,38);
+            --darkblue-alpha3: rgba(0,18,38,.99);
+            --darkblue-alpha2: rgba(0,18,38,.66);
+            --darkblue-alpha1: rgba(0,18,38,.33);
+            --blue: rgb(77,171,214);
+            --blue-alpha3: rgb(77,171,214, .99);
+            --blue-alpha2: rgb(77,171,214, .66);
+            --blue-alpha1: rgb(77,171,214, .33);
+            --yellow: rgb(250,225,75);
+            --yellow-alpha3: rgb(250,225,75, .99);
+            --yellow-alpha2: rgb(250,225,75, .66);
+            --yellow-alpha1: rgb(250,225,75, .33);
+        }
+
+
         .section {
             /* padding: 150px 205px; */
             padding: 150px 40px;

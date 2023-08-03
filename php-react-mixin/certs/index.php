@@ -31,7 +31,7 @@
             color: rgba(150,75,0,1)
         }
         h2 {
-            background-color: #4d4844;
+            background-color: var(--darkblue-alpha2);
             font-weight: 800;
             box-shadow: 5px 5px #453647;
             margin-bottom: 20px;
@@ -39,7 +39,7 @@
         }
         h3 {
             /* #4d4844 */
-            background-color: rgba(77,72,68,0.5);
+            background-color: var(--darkblue-alpha2);;
             font-weight: 600;
         }
         h2 {
@@ -89,6 +89,21 @@
         .d-none {
             display: none;
         }
+        /* Color Themes */
+        :root {
+            --darkblue: rgb(0,18,38);
+            --darkblue-alpha3: rgba(0,18,38,.99);
+            --darkblue-alpha2: rgba(0,18,38,.66);
+            --darkblue-alpha1: rgba(0,18,38,.33);
+            --blue: rgb(77,171,214);
+            --blue-alpha3: rgb(77,171,214, .99);
+            --blue-alpha2: rgb(77,171,214, .66);
+            --blue-alpha1: rgb(77,171,214, .33);
+            --yellow: rgb(250,225,75);
+            --yellow-alpha3: rgb(250,225,75, .99);
+            --yellow-alpha2: rgb(250,225,75, .66);
+            --yellow-alpha1: rgb(250,225,75, .33);
+        }
         /* COLUMNS CONTAINER
         –––––––––––––––––––––––––––––––––––––––––––––––––– */
         .certs {
@@ -97,7 +112,7 @@
             overflow-y: scroll;
             /* max-height: 670px; */
             margin: 0 30px;
-            border: 5px solid rgba(69,54,71,1);
+            border: 5px solid var(--darkblue-alpha2);
             padding: 10px;
             padding-bottom:15px;
         }
@@ -123,21 +138,22 @@
         .tech.col {
             /* #453647 */
             
-            border: 2.5px solid rgba(69,54,71,0.5);
+            border: 2.5px solid var(--darkblue-alpha1);
             min-width: 20vw;
             height: 100%;
-            transition: all 100ms linear;
+            transition: all 200ms linear;
         }
         .tech.col:hover {
             /* #453647 */
             /* background: rgba(223,222,219,1); */
-            background-color: rgba(100,50,20,0.2);
-            border: 2.5px solid rgba(69,54,71,1);
+            background-color: var(--darkblue-alpha1);
+            border: 2.5px solid var(--darkblue-alpha2);
             min-width: 22vw !important;
+            color:white !important;
         }
         .tech.col:hover h3 {
             /* background-color: rgba(77,72,68,0.5); */
-            background-color: rgba(0,0,0,.25);
+            background-color: var(--darkblue-alpha3);
         }
         .col-desc {
             padding: 0 10px;
