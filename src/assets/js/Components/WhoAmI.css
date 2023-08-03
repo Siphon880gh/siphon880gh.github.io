@@ -81,7 +81,23 @@ h3 {
 
 @media screen and (max-width: 871px) {
     .carousel-wrapper {
-        width: 100%;
+        /* width: -webkit-fill-available;
+        box-sizing: border-box; */
+        width: calc(100vw - 30px);
+        max-width: calc(100vw - 30px);
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    .carousel-control-prev {
+        left: -15px;
+    }
+    .carousel-control-next {
+        right: -15px;
+    }
+    .main-content {
+        width: calc(100vw - 30px);
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
 }
 
