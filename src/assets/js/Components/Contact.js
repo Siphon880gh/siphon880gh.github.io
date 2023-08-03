@@ -80,6 +80,14 @@ export default class Contact extends React.Component {
 
             // Future version: Implement saving messages
             if(errorCount===0) {
+
+                const nameVal = name.value, emailVal = email.value, messageVal = message.value;
+
+                fetch(`../me--mailer?name=${nameVal}&email=${emailVal}&message=${messageVal}`).then(response=>response.text())
+                .then(data=>{
+                    console.log("Sent email: " + data);
+                })
+
                 form.reset();
 
                 // Show custom dialog that the form was submitted
