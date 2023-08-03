@@ -6,7 +6,8 @@
 
 @media screen AND (max-width:768px) {
     .client-testimonials img {
-        margin: 20px auto;
+        /* margin: 20px auto; */
+        margin:0;
         width: 100%;
     }
 }
@@ -14,7 +15,7 @@
 @media screen AND (min-width:992px) {
     .client-testimonials img {
         min-width: 992px;
-        width: 65vw;
+        max-width: 25vw;
         margin: 20px auto;
     }
 }
