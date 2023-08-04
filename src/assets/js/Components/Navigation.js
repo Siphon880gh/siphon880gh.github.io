@@ -70,6 +70,9 @@ export default function Navigation(props) {
                     <li style={{display:"none"}}>
                         <NavLink data-php-rerouter="credited" to="./credited" activeClassName="text-bold-colored" onClick={collapseMobileMenu}>Credited</NavLink>
                     </li>
+                    <li style={{display:"none"}}>
+                        <NavLink data-php-rerouter="students" to="./students" activeClassName="text-bold-colored" onClick={collapseMobileMenu}>Student Ratings</NavLink>
+                    </li>
                 </ul>
                 <div className="spacer-bottom-mobile"/>
             </div>
