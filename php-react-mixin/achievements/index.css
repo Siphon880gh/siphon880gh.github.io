@@ -1,0 +1,324 @@
+/* GENERAL
+        –––––––––––––––––––––––––––––––––––––––––––––––––– */
+:root {
+    --black: #181818;
+    /* --beige: #ffebb2; */
+    --beige: rgb(230, 225, 200);
+    --red: #e74c3c;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a {
+    color: gray;
+}
+
+
+a:hover {
+    color: white;
+}
+
+body {
+    font: 20px/30px sans-serif;
+}
+
+/* UTILITY CLASSES
+        –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.hidden {
+    display:none;
+}
+
+/* PAGE LAYOUT
+        –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.nav-wrapper {
+    margin-top:45px;
+    padding-left: 10px;
+    border-bottom: 1px solid var(--darkblue-alpha3);
+    min-height: 80px;
+}
+.nav-wrapper h2 {
+    padding: 5px;
+    background-color: var(--darkblue-alpha2);
+    font-weight: 800;
+    box-shadow: 5px 5px #453647;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-right: 35px;
+    cursor:pointer;
+    transition: all 300ms ease-in;
+    display: inline-block;
+}
+
+.nav-wrapper h2:not(.active) {
+    opacity:0.25;
+}
+.nav-wrapper h2:not(.active):hover {
+    opacity:1;
+    box-shadow: 5px 5px blue;
+}
+
+
+.text-intro {
+    text-align: center;
+    margin: 10vh 0;
+    padding: 0 15px;
+}
+
+h1 {
+    font-size: 30px;
+    line-height: normal;
+    margin-top: 10px;
+}
+
+
+/* PAGE
+        –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Color Themes */
+:root {
+    --darkblue: rgb(0, 18, 38);
+    --darkblue-alpha3: rgba(0, 18, 38, .99);
+    --darkblue-alpha2: rgba(0, 18, 38, .66);
+    --darkblue-alpha1: rgba(0, 18, 38, .33);
+    --blue: rgb(77, 171, 214);
+    --blue-alpha3: rgb(77, 171, 214, .99);
+    --blue-alpha2: rgb(77, 171, 214, .66);
+    --blue-alpha1: rgb(77, 171, 214, .33);
+    --yellow: rgb(250, 225, 75);
+    --yellow-alpha3: rgb(250, 225, 75, .99);
+    --yellow-alpha2: rgb(250, 225, 75, .66);
+    --yellow-alpha1: rgb(250, 225, 75, .33);
+}
+
+
+.section {
+    /* padding: 150px 205px; */
+    padding: 150px 40px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+
+    .section {
+        /* padding: 150px 205px; */
+        padding: 70px 20px;
+        margin: 0 auto;
+    }
+}
+
+.section:nth-of-type(1),
+.section:nth-of-type(3) {
+    background: var(--beige);
+}
+
+.section-text {
+    margin: 50px 0;
+    /* max-width: 800px; */
+}
+
+.section-btn {
+    display: inline-block;
+    color: var(--beige);
+    background: var(--black);
+    border: 1px solid var(--black);
+    min-width: 200px;
+    height: 50px;
+    padding: 9px 40px;
+    text-align: center;
+    transition: all 300ms ease;
+}
+
+@keyframes forward-white {
+    0% {
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    }
+
+    ;
+
+    100% {
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+    }
+}
+
+.section-btn:hover {
+
+    /* background: white; */
+    background: var(--darkblue);
+    color: var(--yellow);
+    animation-name: forward-white;
+    animation-duration: 2s;
+}
+
+.container-fluid {
+    position: relative;
+}
+
+/* SUBMENU
+        –––––––––––––––––––––––––––––––––––––––––––––––––– */
+#submenu {
+    /* width: 205px; */
+    position: fixed;
+    right: 10px;
+    top: 165px;
+    border: 2.5px dashed rgba(255, 255, 255, 0.75);
+    z-index: 5;
+    background: white;
+    transition: all 300ms ease-in-out;
+}
+.sticky#submenu {
+    top: 37px !important;
+}
+
+#submenu ul {
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    opacity:0.5;
+}
+
+#submenu ul:hover {
+    opacity: 1;
+}
+
+#submenu li {
+    padding: 20px 45px;
+    /* border: 2.5px dashed rgba(255,255,255,1); */
+    border: 2.5px dashed rgba(255, 180, 0, .5);
+}
+
+#submenu li:hover {
+    color: white;
+    background-color: #453647;
+    border: 2.5px solid rgba(255, 255, 255, 1);
+    text-decoration: underline;
+}
+
+#submenu li.active {
+    background-color: #FFCB78;
+    font-weight: 800;
+}
+
+#submenu li:hover a {
+    color: white;
+}
+
+#submenu ul {
+    width: 100%;
+}
+
+#submenu ul li {
+    display: inline-block;
+}
+
+/* Keep for now in case decide to do a | menu style */
+#submenu ul li:not(.divider) {
+    display: block;
+    padding: 5px;
+    white-space: nowrap;
+    text-align: right;
+}
+
+/* IMG SLIDES
+        –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+img.standalone {
+    width: 85vw;
+    margin: 60px auto;
+    display: block;
+    border: 1px solid gray;
+    transition: all 300ms ease;
+}
+
+img.standalone:hover {
+    width: 88vw;
+}
+
+
+/* CAROUSEL
+        –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert();
+}
+
+.section-horizontal {
+    padding: 20px 0;
+    padding-bottom: 110px;
+}
+
+.section-horizontal .leaderboard-mimo {
+    width: 20vw;
+    /** Maintain aspect ratio of phone. For example: 409px width, 861px height */
+    height: calc(20vw / 0.475029036004646);
+    transition: all 400ms ease;
+}
+
+.section-horizontal .leaderboard-mimo:hover {
+    width: 23vw;
+    /** Maintain aspect ratio of phone. For example: 409px width, 861px height */
+    height: calc(23vw / 0.475029036004646);
+}
+
+.section-horizontal {
+    display: flex;
+    justify-content: center;
+    flex-flow: row nowrap;
+    width: 100%;
+    overflow-x: scroll;
+    gap: 10px;
+}
+
+.carousel-item {
+    text-align: center;
+}
+
+.carousel-item img {
+    margin-right: 30px;
+}
+
+
+/* RESPONSIVE
+        –––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media (max-width: 768px) {
+    #submenu ul {
+        font-size: 60%;
+    }
+
+    .section-horizontal .leaderboard-mimo {
+        width: 85vw;
+        /** Maintain aspect ratio of phone. For example: 409px width, 861px height */
+        height: calc(85vw / 0.475029036004646);
+        transition: all 400ms ease;
+        margin-bottom: 10px;
+    }
+
+    .section-horizontal .leaderboard-mimo:hover {
+        width: 88vw;
+        /** Maintain aspect ratio of phone. For example: 409px width, 861px height */
+        height: calc(88vw / 0.475029036004646);
+    }
+
+    img.standalone {
+        width: 85vw;
+    }
+
+    img.standalone:hover {
+        width: 90vw;
+    }
+
+}

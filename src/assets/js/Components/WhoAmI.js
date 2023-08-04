@@ -153,9 +153,6 @@ export default class WhoAmI extends Component {
                                         <img className="gh-contributions" src={githubContributions2023march}/>
                                     </a> */}
 
-                                <br />
-
-                                <p></p>
                                 <b><u>2023-Jan to 2023-Dec</u></b><br/>
                                 <a href="//github.com/Siphon880gh" target="_blank">
                                     <img className="gh-contributions" src={githubContributions2023march} />
@@ -186,7 +183,7 @@ export default class WhoAmI extends Component {
 
                                 </aside>
 
-                                <aside className="info-spacer" style={{ width: "1px", height: "10px" }}></aside>
+                                <aside className="info-spacer mobile-invisible" style={{ width: "1px", height: "10px" }}></aside>
                                 
                             </section>
 

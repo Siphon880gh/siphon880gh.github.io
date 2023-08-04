@@ -71,6 +71,37 @@ h3 {
 /* Me caption  */
 /* *********** */
 
+
+.me {
+    margin-top: 15px;
+    min-width: 275px;
+    max-width: 275px;
+    max-height: 500px;
+    min-height: 500px;
+    text-align: center;
+    font-size: .9rem;
+    border:1px solid black;
+}
+
+.me img {
+    width:100%;
+    height: calc(100% - 60px);
+    margin-bottom: 10px;
+}
+
+@media screen AND (max-width:768px) {
+    .me img {
+        height: calc(100% - 85px);
+    }
+    .me {
+        max-height: 400px;
+        min-height: 400px;
+        min-width: 220px;
+        max-width: 220px;
+    }
+}
+
+
 .pic-me-name {
   font-family: 'Roboto', sans-serif;
   font-weight: 700;

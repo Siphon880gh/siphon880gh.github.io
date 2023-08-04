@@ -64,11 +64,12 @@ export default function Navigation(props) {
                         <NavLink data-php-rerouter="work" to="./work" onClick={collapseMobileMenu}>PORTFOLIO</NavLink>
                     </li>
                     {/* <li>
-                        <NavLink data-php-rerouter="work" to="./work" onClick={collapseMobileMenu}>CONTACT</NavLink>
+                        <NavLink data-php-rerouter="contact" to="./contact" onClick={collapseMobileMenu}>CONTACT</NavLink>
                     </li> */}
-                    {/* <li>
-                        <NavLink data-php-rerouter="contact" to="./contact" activeClassName="text-bold-colored" onClick={collapseMobileMenu}>Contact</NavLink>
-                    </li> */}
+                    {/* Credited link lets you load the Credited component and is programmatically clicked from Achievements page which is a PHP mix in. Leave display none */}
+                    <li style={{display:"none"}}>
+                        <NavLink data-php-rerouter="credited" to="./credited" activeClassName="text-bold-colored" onClick={collapseMobileMenu}>Credited</NavLink>
+                    </li>
                 </ul>
                 <div className="spacer-bottom-mobile"/>
             </div>
