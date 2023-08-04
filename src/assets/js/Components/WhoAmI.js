@@ -165,7 +165,7 @@ export default class WhoAmI extends Component {
                                 </a>
 
 
-                                <aside className="badges">
+                                <aside className="badges mobile-invisible">
 
                                     <a className="badge-style-a" target="_blank" href="https://github.com/Siphon880gh" rel="nofollow">
                                         <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" className="github-style badge-style" alt="Github" data-canonical-src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" />
@@ -183,7 +183,7 @@ export default class WhoAmI extends Component {
 
                                 </aside>
 
-                                <aside className="info-spacer mobile-invisible" style={{ width: "1px", height: "10px" }}></aside>
+                                <aside className="info-spacer" style={{ width: "1px", height: "10px" }}></aside>
                                 
                             </section>
 

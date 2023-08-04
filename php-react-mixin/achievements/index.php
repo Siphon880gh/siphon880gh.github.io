@@ -14,9 +14,16 @@
 
 
     <script>
+        // Clicking show credits will open the Credits component back over at React
         function clickNavCredited() {
             window.parent.document.querySelector('[data-php-rerouter=credited]').click();
         }
+        // Initially hide the scroll position indicator on mobile because of screen real estate
+        document.addEventListener("DOMContentLoaded",()=>{
+            if(document.body.clientWidth<768) {
+                document.querySelector("#submenu ul").previousElementSibling.dispatchEvent(new Event("click"));
+            }
+        })
     </script>
 </head>
 

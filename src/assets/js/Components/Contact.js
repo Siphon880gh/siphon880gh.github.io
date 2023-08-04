@@ -124,6 +124,7 @@ export default class Contact extends React.Component {
                     <div>
                         <button className="btn btn-primary mt-3" type="submit" name="submit" tabIndex="4">Send</button>
                     </div>
+                    <br/><br/>
 
                     <div className="clear-fix"></div>
                 </form>
