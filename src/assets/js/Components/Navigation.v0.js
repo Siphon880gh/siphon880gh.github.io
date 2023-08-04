@@ -53,7 +53,7 @@ export default function Navigation(props) {
                         <NavLink data-php-rerouter="whoami" to="./whoami" activeClassName="text-bold-colored" className="whoami" onClick={collapseMobileMenu}><FontAwesomeIcon icon={meIcon} /> ME</NavLink>
                     </li>
                     <li>
-                        <NavLink data-php-rerouter="testimonials" to="./testimonials" activeClassName="text-bold-colored" onClick={collapseMobileMenu}><FontAwesomeIcon icon={clientTestimonialsIcon} /> CLIENT TESTIMONIALS</NavLink>
+                        <NavLink data-php-rerouter="testimonials" to="./testimonials#students" activeClassName="text-bold-colored" onClick={collapseMobileMenu}><FontAwesomeIcon icon={clientTestimonialsIcon} /> CLIENT TESTIMONIALS</NavLink>
                     </li>
                     <li>
                         <NavLink data-php-rerouter="certs" to="./certs#a" activeClassName="text-bold-colored" onClick={collapseMobileMenu}><FontAwesomeIcon icon={certificatesIcon} /> CERTIFICATES</NavLink>

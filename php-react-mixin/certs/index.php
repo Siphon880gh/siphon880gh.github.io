@@ -21,7 +21,7 @@
         body, .certs {
             margin: 10px;
             margin-bottom: 20px;
-            background-color: rgba(223,222,219,1);
+            background-color: rgb(230,225,200);
         }
         a {
             color: rgba(150,75,0,.5);
@@ -191,7 +191,7 @@
             border: 5px solid transparent;
         }
         .cert a>img:hover {
-            border: 5px solid rgba(200,0,0,0.25);
+            border: 5px solid var(--darkblue-alpha1);
         }
         .cert figcaption {
             padding: 0 10px;

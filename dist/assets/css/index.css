@@ -421,8 +421,8 @@ a:active {
 
 .collab-call-to-action,
 .tag-description-line {
-    color: white;
-    background-color: rgba(0, 0, 0, .5);
+    color: darkgray;
+    /* background-color: rgba(0, 0, 0, .5); */
     display: inline;
     padding: 2.5px 5px;
 }
@@ -1038,35 +1038,13 @@ footer {
     font-weight: 800;
 }
 
-.flushed-left,
-.flushed-right {
-    height: 100vh;
-    width: 4ch;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: column wrap;
-}
-
-.flushed-left {
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 5;
-}
-
-.flushed-right {
-    position: fixed;
-    right: 0;
-    top: 0;
-    z-index: 5;
-}
-
 .text-gray {
     color: gray !important;
 }
-
+.opacity-50 {
+    opacity:0.5;
+    cursor: no-drop;
+}
 .spacer-20px {
     width: 10px;
     height: 20px;
@@ -1077,48 +1055,13 @@ footer {
     height: 50px;
 }
 
-.rotation {
-    margin-left: 20vw;
-    margin-right: 20vw;
-    max-width: 60vw;
-    text-align: center;
-}
-
-.rotation img {
-    width: 100%;
-}
-
-.rotation img.crop-instead-of-shrink {
+/* .rotation img.crop-instead-of-shrink {
     object-fit: contain;
     min-height: 190px;
     width: 100%;
     object-position: 0 0;
     margin: 0 auto;
-}
-
-@media (max-width:1556px) {
-    .rotation img.crop-instead-of-shrink {
-        object-fit: none;
-    }
-}
-
-.rotation.rotation-2 img {
-    width: 50%;
-}
-
-.rotation.rotation-1 {
-    margin-left: 50px;
-    margin-right: 50px;
-    max-width: 100%;
-}
-
-@media screen AND (min-width: 500px) {
-    .rotation {
-        margin-left: 5vw;
-        margin-right: 5vw;
-        max-width: 90vw;
-    }
-}
+} */
 
 @media screen AND (max-width: 500px) {
     .tag-description-line {
@@ -1128,24 +1071,6 @@ footer {
     }
 }
 
-@media screen AND (min-width: 900px) {
-    .rotation {
-        margin-left: 10vw;
-        margin-right: 10vw;
-        max-width: 80vw;
-    }
-    .rotation.rotation-2 img {
-        width: 75%;
-    }
-}
-
-.rotation-2 img {
-    margin-bottom: 10px;
-}
-
-.rotation-3 img {
-    margin-bottom: 10px;
-}
 
 
 /*

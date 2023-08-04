@@ -4,7 +4,7 @@ import ReactDOM from "react-dom";
 
 import "./Header.css"
 
-import Navigation from "./Navigation.v0.js";
+import Navigation from "./Navigation.js";
 import LogoSquare from "../../img/logo-square.png"
 
 export default function Header() {
