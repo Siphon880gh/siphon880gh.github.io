@@ -18,41 +18,41 @@ export default function videosPreimport(importedIcons) {
     const { ytEcommerceBackend,
         ytCodeOrganization,
         ytReactProps,
-        ytTrading } = importedIcons;
+        ytTrading,
+        ytDailyPortal } = importedIcons;
         // console.log(importedIcons)
 
     return [
         {
             id: 1,
-            title: 'Demo: Ecommerce Backend',
+            title: 'Ecommerce Backend - Overview Tutorial',
             thumbnail: ytEcommerceBackend,
             url: 'https://www.youtube.com/watch?v=s-0sNWgcSIQ'
         },
         {
             id: 2,
-            title: 'Code Organization - Publisher/Subscriber, Service Layer, Data Access Layer',
+            title: 'Code Organization - Publisher/Subscriber, Service Layer, Data Access Layer - Overview Tutorial',
             thumbnail: ytCodeOrganization,
             url: 'https://www.youtube.com/watch?v=eNh6t2_tuAI'
         },
         {
             id: 3,
-            title: 'Weng Teaches - React Parent to Child props passing',
+            title: 'React - Pass Prop from Parent to Child - Weng Teaches',
             thumbnail: ytReactProps,
             url: 'https://www.youtube.com/watch?v=AQ2h7spCH3U'
         },
         {
             id: 4,
-            title: 'Weng feeds trade information into ChatGPT with Javascript by Weng',
+            title: 'Feed stock trader information into ChatGPT with Javascript by Weng',
             thumbnail: ytTrading,
             url: 'https://www.youtube.com/watch?v=c4C9QmbY-fY'
-        }
-        // {
-        //     commentedOut: "Need permission first - was a collab",
-        //     id: 100,
-        //     title: 'Weng feeds trade information into ChatGPT with Javascript by Weng',
-        //     thumbnail: ytDailyPortal,
-        //     url: 'https://www.youtube.com/watch?v=rbk3H45fToA'
-        // },
+        },
+        {
+            id: 100,
+            title: '"Your Daily Portal" Homepage for Web Browser - Explaining Code in Team',
+            thumbnail: ytDailyPortal,
+            url: 'https://www.youtube.com/watch?v=rbk3H45fToA'
+        },
         // more videos...
     ]
 }

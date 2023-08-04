@@ -58,7 +58,7 @@ export default class Credit extends React.Component {
                 </div>
 
                 <div className="content-inner">
-                    <p className="text-med">Weng's apps have been mentioned at:</p>
+                    <p className="text-large">Weng's apps have been mentioned at:</p>
                     <ul>
 
                         <li>

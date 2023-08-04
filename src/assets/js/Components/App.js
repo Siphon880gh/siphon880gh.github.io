@@ -4,6 +4,7 @@ import Footer from "./Footer.js";
 import FooterSpace from "./FooterSpace.js";
 
 import Tech from "./Tech.v0.js";
+import Oldie from "./WhoAmI.v1.js";
 import WhoAmI from "./WhoAmI.js";
 import Resume from "./Resume.js";
 

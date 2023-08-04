@@ -1,8 +1,14 @@
 
 import React from "react";
 import ReactDOM from "react-dom";
+import "./Work.css";
 
-import Project from "./Project.js";
+// Components
+import Project from "./Project";
+
+// Merge in older pages
+import Collab from "./Collab"
+import Credited from "./Credit"
 
 export default class Work extends React.Component {
 
@@ -129,9 +135,19 @@ export default class Work extends React.Component {
                 tech: "jQuery, PHP"
             }
         ]
-        return (
 
+
+        // const dividerStyle = {
+        //     width: "100px",
+        //     backgroundColor: "black",
+        //     border: "1px solid black",
+        //     margin: "50px auto",
+        // }
+
+        return (
+<>
             <div data-component="work" id="work" className="work section mx-2">
+                <h2>Work</h2>
                 <div className="row">
 
                     {projects.map(project=>{
@@ -152,6 +168,15 @@ export default class Work extends React.Component {
 
                 </div>
             </div>
+
+            {/* <hr style={dividerStyle}/> */}
+
+            <h2>Contributions / Group Work</h2>
+            <Collab/>
+
+            <h2>Credited</h2>
+            <Credited/>
+    </>
         )
     } // render
 }

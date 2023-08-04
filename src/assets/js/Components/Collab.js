@@ -54,7 +54,7 @@ export default class Collab extends React.Component {
                             })}
 
                     </div>
-                    <p className="collab-call-to-action">These are collaborations I've done with other people. To see my client work and projects, please go to <a href="./?page=work">Work</a></p>
+                    {/* <p className="collab-call-to-action">These are collaborations I've done with other people. To see my client work and projects, please go to <a href="./?page=work">Work</a></p> */}
                 </div>
         )
     }
