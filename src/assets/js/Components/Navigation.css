@@ -141,41 +141,6 @@
 }
 
 
-/* Smaller */
-
-@media (max-width: 1398px) {
-    .site-nav li:not(:first-child)::before {
-        content: "";
-        margin-left: auto;
-    }
-    .site-nav:not(.active) #navs {
-        display: none !important;
-    }
-    .site-nav.active #navs {
-        display: block !important;
-    }
-    .site-nav #nav-secondary {
-        padding-left: 0;
-        border-top: 1px solid gray;
-        margin: 0 40px;
-    }
-    .site-nav br {
-        display: none;
-    }
-    .spacer-bottom-mobile {
-        width: 1px;
-        height: 30px;
-    }
-    #nav-primary {
-        border-top:1px solid gray;
-        height:100%;
-        padding-left: 0 !important;
-        padding-top: 20px;
-        margin-top:5px;
-    }
-}
-
-
 /* Wider */
 
 #navs {
@@ -224,5 +189,48 @@ ul#nav-primary {
     }
     .site-nav ul li:hover {
         background-color: transparent;
+    }
+}
+
+
+/* Smaller */
+
+@media (max-width: 1398px) {
+    .site-nav li:not(:first-child)::before {
+        content: "";
+        margin-left: auto;
+    }
+    .site-nav:not(.active) #navs {
+        display: none !important;
+    }
+    .site-nav.active #navs {
+        display: block !important;
+    }
+    .site-nav #nav-secondary {
+        padding-left: 0;
+        border-top: 1px solid gray;
+        margin: 0 40px;
+    }
+    .site-nav br {
+        display: none;
+    }
+    .spacer-bottom-mobile {
+        width: 1px;
+        height: 30px;
+    }
+    ul#nav-primary {
+        border-top:1px solid gray;
+        height:100%;
+        padding-left: 0 !important;
+        padding-top: 20px;
+        margin-top:5px;
+        margin-right:65px;
+    }
+}
+
+/* Mobile have to reverse the iPad style */
+@media (max-width:768px) {
+    ul#nav-primary {
+        margin-right: 0;
     }
 }

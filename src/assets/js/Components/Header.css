@@ -30,8 +30,8 @@
 }
 
 .page-title-wrapper img.logo { 
-    width: 80px;
-    height: 80px;
+    width: 72px;
+    height: 72px;
     margin-left: 20px;
 }
 
@@ -49,12 +49,12 @@
 .tagline-a {
     text-transform: uppercase;
     color: var(--blue);
-    font-size: 2rem;
-    line-height: 2rem;
+    font-size: 1.8rem;
+    line-height: 1.8rem;
 }
 .tagline-b {
-    font-size: 1.34rem;
-    line-height: 1.4rem;
+    font-size: 1.2rem;
+    line-height: 1.3rem;
     color: var(--yellow);
 }
 .tagphrase-b {
