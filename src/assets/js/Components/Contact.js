@@ -83,7 +83,11 @@ export default class Contact extends React.Component {
 
                 const nameVal = name.value, emailVal = email.value, messageVal = message.value;
 
-                fetch(`../me--mailer?name=${nameVal}&email=${emailVal}&message=${messageVal}`).then(response=>response.text())
+                fetch(`../me--mailer/index.php`, {
+                    method: 'POST',
+                    body: (new FormData(document.querySelector(".contact form")))
+                })
+                .then(data=>data.text())
                 .then(data=>{
                     console.log("Sent email: " + data);
                 })
