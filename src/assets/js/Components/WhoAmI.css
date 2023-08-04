@@ -261,6 +261,7 @@ h3 {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     padding-left: 2.5px;
+    border: 1px solid transparent;
     /* font-family: 'Roboto', sans-serif; */
     transition: all 300ms ease-in;
 }
@@ -315,7 +316,25 @@ h3 {
     color: #f7a80d !important;
     background-color: black !important;
 }
- 
+
+[data-is-colored="Handlebars"] {
+    color: #000 !important;
+    background-color: ghostwhite !important;
+    border: 1px solid #000 !important;
+}
+
+[data-is-colored="GraphQL"] {
+    color: #e434aa !important;
+    background-color: ghostwhite !important;
+    border: 1px solid #e434aa !important;
+}
+
+[data-is-colored="Redux"] {
+    color: #764abc !important;
+    background-color: ghostwhite !important;
+    border: 1px solid #764abc !important;
+}
+
 [data-is-colored="Python"] {
     color: #ffd845 !important;
     background-color: #235F8B !important;
@@ -330,6 +349,9 @@ h3 {
     background-color: white !important;
 }
 
+/* *********** */
+/* GH Contribs */
+/* *********** */
 
 .gh-contributions {
     vertical-align: middle;

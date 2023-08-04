@@ -49,11 +49,14 @@
     <link href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
+    <style> 
+    /* *********** */
+    /* DataTables  */
+    /* *********** */
     #search-presets {
         border-top: 1px solid gray;
         padding-top:30px;
-        padding-bottom:15px;
+        padding-bottom:0;
         padding-left: 30px;
         padding-right:30px;
     }
@@ -82,6 +85,127 @@
     }
     .paginate_button.next {
         padding-right: 0  !important;
+    }
+
+    /* *********** */
+    /* Tech Icons  */
+    /* *********** */
+    [data-tech] {
+        margin-left: 2.5px;
+        margin-bottom:-2.5px;
+        vertical-align: text-bottom;
+        padding: 5px;
+        border-radius: 15px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        padding-left: 2.5px;
+        border: 1px solid transparent;
+        /* font-family: 'Roboto', sans-serif; */
+        transition: all 300ms ease-in;
+    }
+
+    [data-tech="React"] {
+        color: #61dafb !important;
+        background-color: gray;
+    }
+
+    [data-tech="Express"] {
+        color: #444 !important;
+        background-color: #F5F5F5;
+        border:1px solid rgba(0,0,0,.7);
+    }
+
+    [data-tech="Mongo"] {
+        color: #4faa41 !important;
+        background-color: lightgray;
+    }
+
+    [data-tech="Javascript"] {
+        color: #f0db4f !important;
+        background-color: gray !important;
+    }
+
+    [data-tech="jQuery"] {
+        color: #0769ad !important;
+        background-color: lightgray !important;
+    }
+
+    [data-tech="PHP"] {
+        color: #6181b6 !important;
+        background-color: lightgray !important;
+    }
+
+    [data-tech="MySQL"] {
+        color: #00618a !important;
+        background-color: lightgray !important;
+    }
+
+    [data-tech="NodeJS"] {
+        color: #83cd29 !important;
+        background-color: black !important;
+    }
+
+    [data-tech="GCloud"] {
+        color: #557ebf !important;
+        background-color: lightgray !important;
+    }
+
+    [data-tech="AWS"] {
+        color: #f7a80d !important;
+        background-color: black !important;
+    }
+    
+    [data-tech="Handlebars"] {
+        color: #000 !important;
+        background-color: ghostwhite !important;
+        border: 1px solid #000 !important;
+    }
+
+    [data-tech="GraphQL"] {
+        color: #e434aa !important;
+        background-color: ghostwhite !important;
+        border: 1px solid #e434aa !important;
+    }
+
+    [data-tech="Redux"] {
+        color: #764abc !important;
+        background-color: ghostwhite !important;
+        border: 1px solid #764abc !important;
+    }
+
+    [data-tech="Python"] {
+        color: #ffd845 !important;
+        background-color: #235F8B !important;
+    }
+    [data-tech="AIPromptEngineering"] {
+        background-size: 20px 20px !important;
+        font-family: 'devicon' !important;
+    }
+    [data-tech="AIPromptEngineering"] {
+        background-blend-mode: invert !important;
+        filter: invert(1) !important;
+        background-color: white !important;
+    }
+    /* Override just for Student Ratings */
+    /* [x] Keep the same structure of HTML for the icons (those you taught, those you haven't taught but made apps in) but alphabetize the languages. */
+    /* [x] Adjust the HTML of ChatGPT icon. Remove all other instyle rules besides background. */
+    /* [x] Adjust to data-is-colored="not-taught" for those languages you haven't taught but made apps in */
+    [data-tech="AIPromptEngineering"] {
+        padding-left: 16px;
+        max-height: 25px;
+        letter-spacing: -0.7px;
+        margin-bottom: 0px;
+        background-size: 15px 15px !important;
+        padding-bottom: 2.5px;
+        padding-top: 2.5px;
+        top: 2.5px;
+        position: relative;
+    }
+    [data-tech] {
+        cursor: pointer;
+    }
+    [data-is-colored="not-taught"] {
+        cursor: default;
     }
     </style>
     <script>
@@ -116,10 +240,39 @@
         // Search by language clicking:
         var divElement = $('<div/>', { 
             id: 'search-presets',
-            text: 'This is a new div.'
+            html: $('script[type="template/langicons"]').html()
         });
         $('.dataTables_wrapper').eq(0).before(divElement);
+        $("[data-tech]").filter(':not([data-is-colored="not-taught"])').on("click", (event)=>{
+            const langIcon = event.target;
+            const langText = langIcon.innerText.trim()
+            console.log(langText);
+
+            $(".dataTables_filter input").val(langText).trigger("keyup");
+        })
     })
+    </script>
+    <script type="template/langicons">
+    <div style="font-weight:bold; margin-bottom:5px;">See what languages and frameworks I taught:</div>
+        <div class="devicon-express-original" data-tech="Express" data-is-colored="false" style="display: inline-block;">&nbsp;Express</div>
+        <div class="devicon-graphql-plain" data-tech="GraphQL" data-is-colored="false" style="display: inline-block;">&nbsp;GraphQL</div>
+        <div class="devicon-handlebars-plain" data-tech="Handlebars" data-is-colored="false" style="display: inline-block;">&nbsp;Handlebars</div>
+        <div class="devicon-javascript-plain" data-tech="Javascript" data-is-colored="false" style="display: inline-block;">&nbsp;Javascript</div>
+        <div class="devicon-jquery-plain" data-tech="jQuery" data-is-colored="false" style="display: inline-block;">&nbsp;jQuery</div>
+        <div class="devicon-mongodb-plain" data-tech="Mongo" data-is-colored="false" style="display: inline-block;">&nbsp;Mongo</div>
+        <div class="devicon-mysql-plain" data-tech="MySQL" data-is-colored="false" style="display: inline-block;">&nbsp;MySQL</div>
+        <div class="devicon-nodejs-plain" data-tech="NodeJS" data-is-colored="false" style="display: inline-block;">&nbsp;NodeJS</div>
+        <div class="devicon-react-original" data-tech="React" data-is-colored="false" style="display: inline-block;">&nbsp;React</div>
+
+        <!-- State management like Redux is a bonus assignment and students have been skipping it and not going to us for learning it, so no ratings available. The Bootcamp was intensive so I understand. -->
+        <!-- <div class="devicon-redux-plain" data-tech="Redux" data-is-colored="false" style="display: inline-block;">&nbsp;Redux</div> -->
+
+    <div style="filter:grayscale(1); opacity:0.25; margin-top:20px;">
+    <i>Please note I know more languages/frameworks but the bootcamp students don't cover them:</i>
+        <div class="devicon-php-plain" data-tech="PHP" data-is-colored="not-taught" style="display: inline-block;">&nbsp;PHP</div>
+        <div class="devicon-python-plain" data-tech="Python" data-is-colored="not-taught" style="display: inline-block;">&nbsp;Python</div>
+        <div data-tech="AIPromptEngineering" data-is-colored="not-taught" style="display: inline-block; background: url(&quot;data:image/png;base64,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&quot;) 2px 5px / cover no-repeat;">&nbsp;Prompt Engineering</div>
+    </div>
     </script>
     <!-- END: Make interactive -->
 
