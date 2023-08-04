@@ -180,6 +180,10 @@ nav {
     color: white !important;
 }
 
+.tech.col:hover .hover-invert {
+    filter: invert(1);
+}
+
 .tech.col:hover h3 {
     /* background-color: rgba(77,72,68,0.5); */
     background-color: var(--darkblue-alpha3);

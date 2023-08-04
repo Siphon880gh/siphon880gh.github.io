@@ -14,6 +14,10 @@
     
     <!-- Livequery -->
     <script src="//raw.githack.com/hazzik/livequery/master/src/jquery.livequery.js"></script>
+
+    <!-- Devicon, Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <link rel="stylesheet" href="./index.css">
 </head>
@@ -56,7 +60,7 @@
         <div class="certs-inner">
             <article class="tech col">
                 <header>
-                    <h3>Webdev</h3>
+                    <h3><i class="devicon-html5-plain"></i> Webdev</h3>
                     <div class="col-desc">
                     </div>
                 </header>
@@ -87,7 +91,7 @@
 
             <article class="tech col">
                 <header>
-                    <h3>CSS</h3>
+                    <h3><i class="devicon-css3-plain"></i> CSS</h3>
                     <div class="col-desc">
                     </div>
                 </header>
@@ -106,7 +110,7 @@
             </article> <!-- ends col -->
 
             <article class="tech col">
-                <h3>MySQL</h3>
+                <h3><i class="devicon-mysql-plain"></i> MySQL</h3>
                 <section class="col-body">
                     <figure class="cert">
                         <h4>MySQL 2023-Feb</h4>
@@ -137,7 +141,7 @@
 
             <article class="tech col">
                 <header>
-                    <h3>Python</h3>
+                    <h3><i class="devicon-python-plain"></i> Python</h3>
                     <div class="col-desc">
                         
                     </div>
@@ -156,9 +160,42 @@
                 </section>
             </article> <!-- ends col -->
 
+
+            <!--<article class="tech col">
+                <header>
+                    <h3><img class="hover-invert" src="./img/icons/ChatGPT.png" style="width:30px; height:30px; margin-top:-5px;"></img> Prompt Engineering</h3>
+                    <div class="col-desc">
+                        
+                    </div>
+                </header>
+                <section class="col-body">
+                    <figure class="cert">
+                        <h4>EdX AI Applications and Prompt Engineering 2023-August</h4>
+                        <a href="https://execedcertificates.berkeley.edu/7eb1670c-a8b4-4336-8184-0f155d0fbf77#gs.t7j61o" target="_blank">
+                            <img src="img/pms-2022-12.png" alt="">
+                        </a>
+                        <figcaption>
+                            <p>...</p>
+                        </figcaption>
+                        <hr class="d-none">
+                    </figure>
+
+                    <figure class="cert">
+                        <h4>EdX Prompt Engineering and Advanced ChatGPT 2023-August</h4>
+                        <a href="https://execedcertificates.berkeley.edu/7eb1670c-a8b4-4336-8184-0f155d0fbf77#gs.t7j61o" target="_blank">
+                            <img src="img/pms-2022-12.png" alt="">
+                        </a>
+                        <figcaption>
+                            <p>...</p>
+                        </figcaption>
+                        <hr class="d-none">
+                    </figure>
+                </section>
+            </article> --><!-- ends col -->
+
             <article class="tech col">
                 <header>
-                    <h3>Project Management</h3>
+                    <h3><i class="fa fa-project-diagram"></i> Project Management</h3>
                     <div class="col-desc">
                         
                     </div>

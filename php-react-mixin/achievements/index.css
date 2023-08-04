@@ -173,7 +173,7 @@ h1 {
 #submenu {
     /* width: 205px; */
     position: fixed;
-    right: 10px;
+    right: 30px;
     top: 165px;
     border: 2.5px dashed rgba(255, 255, 255, 0.75);
     z-index: 5;
