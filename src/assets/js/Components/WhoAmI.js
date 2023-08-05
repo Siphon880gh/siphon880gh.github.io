@@ -152,15 +152,17 @@ export default class WhoAmI extends Component {
                                         <img className="gh-contributions" src={githubContributions2023march}/>
                                     </a> */}
 
-                                <b><u>2023-Jan to 2023-Dec</u></b><br/>
+                                <hr style={{margin:"30px auto"}}/>
+
+                                <b style={{fontSize:"120%"}}><u>2023-Jan to 2023-Dec</u></b><br/>
                                 <a href="//github.com/Siphon880gh" target="_blank">
-                                    <img className="gh-contributions" src={githubContributions2023march} />
+                                    <img className="gh-contributions" src={githubContributions2023march} style={{marginLeft:"30px"}}/>
                                 </a>
 
                                 <p></p>
-                                <b><u>2022-Jan to 2022-Dec</u></b><br/>
+                                <b style={{fontSize:"120%"}}><u>2022-Jan to 2022-Dec</u></b><br/>
                                 <a href="//github.com/Siphon880gh" target="_blank">
-                                    <img className="gh-contributions" src={githubContributions2023} />
+                                    <img className="gh-contributions" src={githubContributions2023} style={{marginLeft:"30px"}}/>
                                 </a>
 
 

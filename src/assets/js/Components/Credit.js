@@ -5,6 +5,7 @@ import "./Credit.css"
 export default class Credit extends React.Component {
     render() {
         return (
+            <>
             <aside data-component="credit" id="credited" className="credited flushed-to-grid">
                 <div className="content-inner">
                     <p className="text-large">Weng was credited at:</p>
@@ -73,7 +74,11 @@ export default class Credit extends React.Component {
 
                     </ul>
                 </div>
+
             </aside>
+            <br/><br/>
+
+            </>
         )
     }
 }

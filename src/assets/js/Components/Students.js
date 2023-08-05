@@ -77,6 +77,7 @@ export default class Students extends React.Component {
                 </div>
             </div>
 
+            <br/><br/>
             </>
         )
     }

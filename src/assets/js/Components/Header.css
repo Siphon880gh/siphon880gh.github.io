@@ -30,8 +30,8 @@
 }
 
 .page-title-wrapper img.logo { 
-    width: 72px;
-    height: 72px;
+    width: 80px;
+    height: 80px;
     margin-left: 20px;
 }
 
@@ -49,16 +49,54 @@
 .tagline-a {
     text-transform: uppercase;
     color: var(--blue);
-    font-size: 1.8rem;
-    line-height: 1.8rem;
+    font-size: 2rem;
+    line-height: 2rem;
 }
 .tagline-b {
-    font-size: 1.2rem;
-    line-height: 1.3rem;
+    font-size: 1.34rem;
+    line-height: 1.4rem;
     color: var(--yellow);
 }
 .tagphrase-b {
     -webkit-text-stroke: 0.5px var(--yellow);
     -webkit-text-fill-color: transparent; 
     font-weight: 700;
+}
+
+/* Smaller logo on tablet and mobile so does not collide with menu and does not look too large */
+
+@media (max-width: 1398px) {
+    .page-title-wrapper img.logo { 
+        width: 72px;
+        height: 72px;
+        margin-left: 20px;
+    }
+    .tagline-a {
+        text-transform: uppercase;
+        color: var(--blue);
+        font-size: 1.8rem;
+        line-height: 1.8rem;
+    }
+
+    .tagline-b {
+        font-size: 1.2rem;
+        line-height: 1.3rem;
+        color: var(--yellow);
+    }
+}
+
+
+@media (max-width: 501px) {
+    .page-title-wrapper img.logo {
+        position: relative;
+        top: -15px;
+    }
+    .logo {
+        margin: 5px;
+        margin-top: 30px;
+    }
+    .site-nav-mobile-btn {
+        margin-top:20px;
+        margin-right:10px;
+    }
 }
