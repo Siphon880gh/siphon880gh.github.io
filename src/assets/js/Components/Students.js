@@ -28,7 +28,11 @@ export default class Students extends React.Component {
                 let scrollHeight = this.myIframeRef.current?.contentWindow?.document?.querySelector("frame")?.contentWindow?.document?.body?.scrollHeight
 
                 console.log({scrollWidth,scrollHeight})
-                // debugger
+
+                // iOS Bug causing iFrame at some point of dragging to be stuck and unable to scroll out of that view
+                // Maybe: https://stackoverflow.com/questions/58159526/draggable-element-in-iframe-on-mobile-is-buggy
+                document.getElementsByTagName("body")[0].addEventListener("touchstart",function(){});
+
                 this.setState({
                     ...this.state,
                     iframeWidth: scrollWidth + "px",
