@@ -67,6 +67,42 @@ h3 {
 }
 
 
+/* ***************** */
+/* Cue: Scroll down  */
+/* ***************** */
+
+.cue-scroll-down-wrapper {
+    position: fixed;
+    left: 50%;
+    bottom: 60px;
+    transform: translateX(-50%);
+    color: white;
+    transition: all 0.2s ease-out;
+    animation: flash 1.5s infinite linear;
+    z-index: 999;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    
+}
+.cue-scroll-down {
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 40px solid white;
+    transform: rotate(180deg);
+}
+@keyframes flash {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.2;
+    }
+}
+
+
 /* *********** */
 /* Me caption  */
 /* *********** */

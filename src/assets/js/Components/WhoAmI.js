@@ -1,5 +1,5 @@
 
-import React, { Component, useState } from "react";
+import React, { Component, useState, useRef } from "react";
 import ReactDOM from "react-dom";
 import { Link, NavLink } from "react-router-dom";
 import githubContributions2023 from "../../img/github-contributions-2022.png"
@@ -25,14 +25,42 @@ export default class WhoAmI extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            hasScrolledDown: false,
             techName: ""
         }
+        this.intersectionObserverRef = React.createRef();
     }
     componentDidMount() {
         document.querySelectorAll(".wbr-slash").forEach(node => {
             node.innerHTML = node.innerHTML.replaceAll("/", "/<wbr>")
         });
-    }
+
+        // window.addEventListener("scroll", function() {
+        //         console.log("scrolling down");
+        // }, false);
+
+        // Set up the Intersection Observer on the element
+        this.observer = new IntersectionObserver(
+            entries => {
+            // The callback will return an array of entries, even if you are only observing a single element
+            if (entries[0].isIntersecting) {
+                this.userHasScrolledDown()
+            } else {
+                console.log('Element is not in the viewport.');
+            }
+            },
+            {
+            root: null, // default is the viewport
+            rootMargin: '0px',
+            threshold: 0.1  // 0.1 means that at least 10% of the target's visibility has crossed the threshold of being in viewport
+            }
+        );
+    
+        if (this.intersectionObserverRef.current) {
+            this.observer.observe(this.intersectionObserverRef.current); // Start observing the ref
+        }
+
+    } // componentDidMount
 
     techColorOn = (event) => {
         event.stopPropagation();
@@ -42,9 +70,10 @@ export default class WhoAmI extends Component {
 
         // Make sure it's the container
         if (!techName) techName = event.target.parent?.getAttribute("data-tech")
-
         console.log(`Tech name ${techName}`);
+
         this.setState({
+            ...this.state,
             techName
         })
     }
@@ -52,6 +81,7 @@ export default class WhoAmI extends Component {
     techColorOff = (event) => {
         event.stopPropagation();
         this.setState({
+            ...this.state,
             techName: ""
         })
     }
@@ -60,7 +90,15 @@ export default class WhoAmI extends Component {
 
         const techName = event.target.getAttribute("data-tech");
         this.setState({
+            ...this.state,
             techName: this.state.techName.length ? "" : techName
+        })
+    }
+
+    userHasScrolledDown = () => {
+        this.setState({
+            ...this.state,
+            hasScrolledDown: true
         })
     }
 
@@ -75,6 +113,11 @@ export default class WhoAmI extends Component {
 
         return (
             <div data-component="WhoAmI" className="page-whoami">
+                <div className="cue-scroll-down-wrapper" style={{display:!this.state.hasScrolledDown?"block":"none"}}>
+                    <div>Scroll down</div>                
+                    <div className="cue-scroll-down"></div>
+                </div>
+               
 
                 <div className="wrapper max-width">
 
@@ -92,7 +135,7 @@ export default class WhoAmI extends Component {
                             </div>
 
                             <VideoGallery videos={videos} ytHeaderCover={ytHeaderCover}></VideoGallery>
-
+                            <div ref={this.intersectionObserverRef} style={{width:"1px",height:"1px"}}></div>
 
                             {/* <p><i>Cut to the chase? See 📂 <a href="./?page=work">my work</a>.</i></p> */}
                             {/* <p><i>Cut to the chase? See 📂 <Link to="work">my work</Link>.</i></p> */}
