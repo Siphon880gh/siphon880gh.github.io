@@ -42,12 +42,12 @@ export default class WhoAmI extends Component {
         // Set up the Intersection Observer on the element
         this.observer = new IntersectionObserver(
             entries => {
-            // The callback will return an array of entries, even if you are only observing a single element
-            if (entries[0].isIntersecting) {
-                this.userHasScrolledDown()
-            } else {
-                console.log('Element is not in the viewport.');
-            }
+                // The callback will return an array of entries, even if you are only observing a single element
+                if (entries[0].isIntersecting) {
+                    this.userHasScrolledDown()
+                } else {
+                    console.log('Element is not in the viewport.');
+                }
             },
             {
             root: null, // default is the viewport

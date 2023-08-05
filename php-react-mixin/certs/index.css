@@ -2,7 +2,7 @@
         –––––––––––––––––––––––––––––––––––––––––––––––––– */
 body,
 .certs {
-    margin: 10px;
+    margin: 0;
     margin-bottom: 20px;
     background-color: rgb(230, 225, 200);
     /* background-color: #ffebb2; */
@@ -18,9 +18,13 @@ a:hover {
 }
 
 .nav-wrapper {
-    margin-top: 45px;
+    padding-left: 10px;
+    /* margin-top:70px; */
+    margin-top:45px;
+    width:100%;
     border-bottom: 1px solid var(--darkblue-alpha3);
 }
+
 .nav-wrapper h2 {
     padding: 5px;
     background-color: var(--darkblue-alpha2);
@@ -81,6 +85,9 @@ nav {
 }
 
 /* Utility classes */
+.hidden {
+    display: none;
+}
 .ta-right {
     text-align: right;
 }
@@ -125,6 +132,45 @@ nav {
     --yellow-alpha2: rgb(250, 225, 75, .66);
     --yellow-alpha1: rgb(250, 225, 75, .33);
 }
+
+/* Cue: Scroll down
+        –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.cue-scroll-down-wrapper {
+    display: flex;
+    color: white;
+    transition: all 0.2s ease-out;
+    animation: flash 1.5s infinite linear;
+    z-index: 999;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    width: fit-content;
+    margin-right: 0;
+    margin-left: auto;
+}
+.cue-label {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    margin-right: 20px;
+}
+.cue-scroll-down {
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 40px solid white;
+    transform: rotate(90deg);
+}
+@keyframes flash {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.2;
+    }
+}
+
 
 /* COLUMNS CONTAINER
         –––––––––––––––––––––––––––––––––––––––––––––––––– */

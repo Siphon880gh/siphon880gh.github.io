@@ -52,7 +52,12 @@
             <a href="../achievements"><h2>Achievements</h2></a>
         </nav>
         <nav>
-            <button class="btn btn-full-screen" onclick="uiFullScreenRequest()" style="margin-left:30px;">Full screen</button>
+            <!-- <button class="btn btn-full-screen" onclick="uiFullScreenRequest()" style="margin-left:30px;">Full screen</button> -->
+
+            <div class="cue-scroll-down-wrapper hidden">
+                <div class="cue-label">Scroll right</div>                
+                <div class="cue-scroll-down"></div>
+            </div>
         </nav>
     </div>
     <main class="certs">
@@ -89,7 +94,7 @@
                 </section>
             </article> <!-- ends col -->
 
-            <article class="tech col">
+            <article class="tech col" id="intersection-observer">
                 <header>
                     <h3><i class="devicon-css3-plain"></i> CSS</h3>
                     <div class="col-desc">
@@ -230,6 +235,7 @@
     </aside> -->
 
     <script>
+        /** Full Screen */
         window.fullScreenApiInstance = null;
         function uiFullScreenRequest() {
             if(window.fullScreenApiInstance===null) {
@@ -279,6 +285,47 @@
                 }
             } // cancelFullscreen
         } // class
+
+
+        /* Observe if element goes into view or viewport */
+
+        document.addEventListener("DOMContentLoaded", ()=>{
+            if(document.body.clientWidth<768) {
+                $(".cue-scroll-down-wrapper").removeClass("hidden");
+            } else {
+                $(".cue-scroll-down-wrapper").remove();
+            }
+        })
+
+        class ElementIntoViewport {
+            constructor() {
+
+                // Set up the Intersection Observer on the element
+                this.observer = new IntersectionObserver(
+                entries => {
+                    // The callback will return an array of entries, even if you are only observing a single element
+                    if (entries[0].isIntersecting) {
+                        // console.log('Element IS in the viewport.');
+                        $(".cue-scroll-down-wrapper").remove();
+                    } else {
+                        // console.log('Element is not in the viewport.');
+                    }
+                },
+                {
+                root: null, // default is the viewport
+                rootMargin: '0px',
+                threshold: 0.1  // 0.1 means that at least 10% of the target's visibility has crossed the threshold of being in viewport
+                }
+            );
+        
+            if (document.querySelector("#intersection-observer")) {
+                this.observer.observe(document.querySelector("#intersection-observer")); // Start observing the ref
+            }
+
+        } // constructor
+
+    } // class ElementIntoViewport
+    const evp = new ElementIntoViewport();
 
     </script>
     

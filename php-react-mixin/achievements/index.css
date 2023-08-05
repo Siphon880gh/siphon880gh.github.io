@@ -46,10 +46,12 @@ body {
         –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .nav-wrapper {
+    /* margin-top:70px; */
     margin-top:45px;
+    width:100%;
     padding-left: 10px;
     border-bottom: 1px solid var(--darkblue-alpha3);
-    min-height: 80px;
+    min-height: 105px;
 }
 .nav-wrapper h2 {
     padding: 5px;
@@ -175,19 +177,20 @@ h1 {
     position: fixed;
     right: 30px;
     top: 165px;
-    border: 2.5px dashed rgba(255, 255, 255, 0.75);
+    /* border: 2.5px dashed rgba(255, 255, 255, 0.75); */
     z-index: 5;
-    background: white;
+    background: transparent;
     transition: all 300ms ease-in-out;
+    border: 2.5px solid transparent;
 }
 .sticky#submenu {
-    top: 37px !important;
+    top: 50px !important;
 }
 
 #submenu ul {
     margin: 0;
     padding: 0;
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    /* background-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); */
     opacity:0.5;
 }
 
@@ -198,7 +201,8 @@ h1 {
 #submenu li {
     padding: 20px 45px;
     /* border: 2.5px dashed rgba(255,255,255,1); */
-    border: 2.5px dashed rgba(255, 180, 0, .5);
+    border: 1px dashed rgba(255, 180, 0, .5);
+    margin: 5px;
 }
 
 #submenu li:hover {
@@ -227,7 +231,7 @@ h1 {
 
 /* Keep for now in case decide to do a | menu style */
 #submenu ul li:not(.divider) {
-    display: block;
+    display: inline-block;
     padding: 5px;
     white-space: nowrap;
     text-align: right;
