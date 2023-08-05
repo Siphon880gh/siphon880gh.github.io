@@ -43,10 +43,10 @@
     <![endif]>
 
     <!-- START: Make interactive -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
-    <link href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" rel="stylesheet"/>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <link href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style> 
@@ -62,7 +62,6 @@
     }
     #DataTables_Table_0_wrapper {
         padding: 30px 0;
-        border-bottom: 1px solid gray;
     }
     .dataTables_filter {
         float: left !important;
@@ -86,7 +85,26 @@
     .paginate_button.next {
         padding-right: 0  !important;
     }
-
+    #DataTables_Table_0 {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    table.dataTable thead th, table.dataTable thead td {
+        padding: 0 !important;
+        border: 1px solid #111 !important;
+    }
+    #DataTables_Table_0 > thead > tr > th.sorting_asc,
+    #DataTables_Table_0 > thead > tr > th.sorting_desc,
+    #DataTables_Table_0 > thead > tr > th.sorting  {
+        padding: 2.5px !important;
+        padding-right: 15px !important;
+        vertical-align: top !important;
+        background-position: right 7.5px !important;
+        overflow-wrap: anywhere !important;
+    }
+    /* table.dataTable {
+        table-layout: fixed;
+    } */
     /* *********** */
     /* Tech Icons  */
     /* *********** */
@@ -190,6 +208,13 @@
     /* [x] Keep the same structure of HTML for the icons (those you taught, those you haven't taught but made apps in) but alphabetize the languages. */
     /* [x] Adjust the HTML of ChatGPT icon. Remove all other instyle rules besides background. */
     /* [x] Adjust to data-is-colored="not-taught" for those languages you haven't taught but made apps in */
+    [data-tech] {
+        cursor: pointer;
+        margin: 2.5px;
+    }
+    [data-is-colored="not-taught"] {
+        cursor: default;
+    }
     [data-tech="AIPromptEngineering"] {
         padding-left: 16px;
         max-height: 25px;
@@ -198,14 +223,8 @@
         background-size: 15px 15px !important;
         padding-bottom: 2.5px;
         padding-top: 2.5px;
-        top: 2.5px;
+        top: -3px;
         position: relative;
-    }
-    [data-tech] {
-        cursor: pointer;
-    }
-    [data-is-colored="not-taught"] {
-        cursor: default;
     }
     </style>
     <script>
@@ -230,11 +249,57 @@
 
 
         // Initiate searchable, filterable, sortable table, changing placement of the table information and nav items
+        // Make room for mobile screens:
+        // Hide columns "Your Course Type" (because it'll either be Full Stack or Frontend Students) and "Who was your tutor" (because it'll be my name for all rows)
         $table.DataTable({
+            "columnDefs": [
+                {
+                    targets: 0,
+                    width: "80px"
+                },
+                {
+                    targets: 1,
+                    visible: false,
+                    searchable: false
+                },
+                {
+                    targets: 1,
+                    visible: false,
+                    searchable: false
+                },
+                {
+                    targets: 2,
+                    visible: false,
+                    searchable: false
+                },
+                {
+                    targets: 3,
+                    width: "115px"
+                },
+                {
+                    targets: 4,
+                    width: "270px"
+                },
+                {
+                    targets: 5,
+                    width: "230px"
+                },
+                {
+                    targets: 6,
+                    width: "230px"
+                },
+                {
+                    targets: 7,
+                    width: "230px"
+                },
+            ],
+            "responsive": false,
             "pageLength": 50,
             "lengthMenu": [[10, 25, 50, 100, 200, -1], [10, 25, 50, 100, 200, "All"]],
             "dom": '<"top"fl><"bottom"ip><"clear">'
         });
+
+        
         
 
         // Search by language clicking:
@@ -248,8 +313,14 @@
             const langText = langIcon.innerText.trim()
             console.log(langText);
 
-            $(".dataTables_filter input").val(langText).trigger("keyup");
+            // Toggle to clear search
+            if(!$(".dataTables_filter input").val().includes(langText))
+                $(".dataTables_filter input").val(langText).trigger("keyup");
+            else {
+                $(".dataTables_filter input").val("").trigger("keyup");
+            }
         })
+        $("colgroup").remove();
     })
     </script>
     <script type="template/langicons">

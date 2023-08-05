@@ -1036,6 +1036,9 @@ footer {
 .text-gray {
     color: gray !important;
 }
+.text-darkgray {
+    color: darkgray !important;
+}
 .opacity-50 {
     opacity:0.5;
     cursor: no-drop;

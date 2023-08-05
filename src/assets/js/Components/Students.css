@@ -1,4 +1,35 @@
 
+#student-ratings-browser {
+    height: 50px;
+    /* position: sticky; */
+    width: 100px;
+    /* top: 0; */
+    background-color: rgba(0,0,0,0.5);
+    /* left: 0px; */
+    /* padding-top: 7.5px; */
+    /* margin: 0 auto; */
+    /* margin-right: 0; */
+    /* margin-bottom: 30px; */
+    /* margin-top: -65px; */
+}
+i.browse-left {
+    margin-right: 15px;
+    display: inline-block;
+}
+
+i.browse-right {
+    margin-left: 15px;
+    display: inline-block;
+}
+i.browse-left:not(.text-darkgray) {
+    -webkit-text-stroke: 1px rgba(0,0,0,0.75);
+}
+
+i.browse-right:not(.text-darkgray) {
+    -webkit-text-stroke: 1px rgba(0,0,0,0.75);
+}
+
+/* 
 .flushed-left,
 .flushed-right {
     width: 4ch;
@@ -8,9 +39,9 @@
     align-items: center;
     flex-flow: column wrap;
     background-color: rgba(0,0,0,.2);
-}
+} */
 
-.flushed-left {
+/* .flushed-left {
     position: absolute;
     left: 10px;
     top: 190px;
@@ -22,7 +53,7 @@
     right: 10px;
     top: 190px;
     z-index: 5;
-}
+} */
 
 .rotation img {
     display: block;

@@ -16,7 +16,7 @@ export default class Testimonials extends React.Component {
                     <a href="https://www.linkedin.com/in/weng-fung/#recommendations" target="_blank"><img src="./src/assets/img/testimonials.png"></img></a>
                 </div>
 
-                <h2>Students:</h2>
+                <hr style={{border: "1px solid black", marginTop:"40px"}}/>
                 <Students/>
             </>
         )
