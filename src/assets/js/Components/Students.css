@@ -1,16 +1,18 @@
 
 #student-ratings-browser {
-    height: 50px;
-    /* position: sticky; */
-    width: 100px;
-    /* top: 0; */
-    background-color: rgba(0,0,0,0.5);
-    /* left: 0px; */
-    /* padding-top: 7.5px; */
-    /* margin: 0 auto; */
-    /* margin-right: 0; */
-    /* margin-bottom: 30px; */
-    /* margin-top: -65px; */
+    position:sticky;
+    top: 5px;
+    z-index:999;
+    color: var(--darkblue-alpha3);
+    margin: 30px auto;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    margin-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.2), rgba(255,255,255, 0.5));
 }
 i.browse-left {
     margin-right: 15px;
@@ -28,6 +30,21 @@ i.browse-left:not(.text-darkgray) {
 i.browse-right:not(.text-darkgray) {
     -webkit-text-stroke: 1px rgba(0,0,0,0.75);
 }
+.mobile-instructions {
+    display: none;
+    margin-top: 10px;
+    margin-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.2), rgba(255,255,255, 0.5));
+
+}
+/* @media screen and (max-width: 768px) {
+    .mobile-instructions {
+        display: block;
+    }
+    
+} */
 
 /* 
 .flushed-left,
@@ -55,17 +72,14 @@ i.browse-right:not(.text-darkgray) {
     z-index: 5;
 } */
 
-.rotation img {
+/* .rotation img {
     display: block;
     text-align: center;
-    /* margin: 20px 60px; */
-    /* margin: 0 60px; */
-        margin:0 auto;
+    margin:0 auto;
 
 }
 @media screen AND (max-width:768px) {
     .rotation img {
-        /* margin: 20px auto; */
         min-width:100%;
         max-width:100%;
     }
@@ -75,6 +89,26 @@ i.browse-right:not(.text-darkgray) {
     .rotation img {
         min-width: 992px;
         max-width: 25vw;
-        /* margin: 20px auto; */
+    }
+} */
+
+img.tutor-request-feedback {
+    width:1556px;
+    height:auto;
+    margin: 0 auto 0 0;
+    display: block;
+}
+img.tutor-la-misc {
+    width: 756px;
+    height:auto;
+    display: block;
+    margin: 0 auto;
+}
+@media screen AND (max-width:768px) {
+    img.tutor-la-misc {
+        width: 100%;
+        height:auto;
+        display: block;
+        margin: 0 auto;
     }
 }

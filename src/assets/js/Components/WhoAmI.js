@@ -126,16 +126,16 @@ export default class WhoAmI extends Component {
                         <div className="side-a">&nbsp;</div>
                         <div className="side-b">&nbsp;</div>
                         <div className="side-c">
-                            <div className="hidden-950px-up-off me">
+                            <div className="hidden-950px-up-off me" style={{position:"relative"}}>
                                 <img src={mePic} alt="Picture of me"></img>
                                 <div style={{width:"100%"}}>
                                     <span className="pic-me-name">Weng Fei Fung</span>
                                     <span className="pic-me-title"> • Coding Bootcamp Senior Tutor • Freelancer</span>
                                 </div>
+                                <span ref={this.intersectionObserverRef} style={{backgroundColor:"transparent",width:"1px",height:"1px",position:"absolute",bottom:0,right:0}}></span>
                             </div>
 
-                            <VideoGallery videos={videos} ytHeaderCover={ytHeaderCover}></VideoGallery>
-                            <div ref={this.intersectionObserverRef} style={{width:"1px",height:"1px"}}></div>
+                            <VideoGallery ref={this.intersectionObserverRef} videos={videos} ytHeaderCover={ytHeaderCover}></VideoGallery>
 
                             {/* <p><i>Cut to the chase? See 📂 <a href="./?page=work">my work</a>.</i></p> */}
                             {/* <p><i>Cut to the chase? See 📂 <Link to="work">my work</Link>.</i></p> */}

@@ -298,9 +298,6 @@
             "dom": '<"top"fl><"bottom"ip><"clear">'
         });
 
-        
-        
-
         // Search by language clicking:
         var divElement = $('<div/>', { 
             id: 'search-presets',
@@ -319,6 +316,7 @@
                 $(".dataTables_filter input").val("").trigger("keyup");
             }
         })
+        // Removing colgroup makes it easier to have custom widths
         $("colgroup").remove();
     })
     </script>

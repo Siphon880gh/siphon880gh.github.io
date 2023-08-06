@@ -1,22 +1,20 @@
 h2 {
-    color: var(--darkblue-alpha3);
-    /* margin-left:.5rem!important;
-    margin-right:.5rem!important; */
-    margin: 30px auto;
-    display: block;
-    width: 100%;
     text-align: center;
+    margin-top:28px;
 }
 
+.client-testimonials {
+    text-align: center;
+}
 .client-testimonials img {
-    display: block;
+    display: inline;
     text-align: center;
     /* margin: 20px 60px; */
     margin: 0 60px;
 }
 
 @media screen AND (max-width:768px) {
-    .client-testimonials img {
+    img.clients-1 {
         /* margin: 20px auto; */
         margin:0;
         width: 100%;
@@ -24,9 +22,8 @@ h2 {
 }
 
 @media screen AND (min-width:992px) {
-    .client-testimonials img {
-        min-width: 992px;
-        max-width: 25vw;
+    img.clients-1 {
+        width: 792px;
         margin: 20px auto;
     }
 }

@@ -166,7 +166,7 @@ h3 {
     min-height:500px;
     margin: 15px 0 0 0;
     border: 1px solid black;
-    background-color: rgb(200, 70, 0, 0.1);
+    /* background-color: rgb(200, 70, 0, 0.1); */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -383,6 +383,15 @@ h3 {
     background-blend-mode: invert !important;
     filter: invert(1) !important;
     background-color: white !important;
+}
+
+
+
+/* *********** */
+/*     Bio     */
+/* *********** */
+#about-anchor {
+    margin: 0 auto;
 }
 
 /* *********** */
