@@ -43,7 +43,7 @@ export default function VideoGallery({videos, ytHeaderCover}) {
                 }}>
                 <h3 className="blur-gradient">
                     <a href="//www.youtube.com/@WayneTeachesCode" target="_blank">
-                        <i class="fab fa-youtube">&nbsp;</i>My Tutorials
+                        <i className="fab fa-youtube">&nbsp;</i>My Tutorials
                     </a>
                 </h3>
             </header>

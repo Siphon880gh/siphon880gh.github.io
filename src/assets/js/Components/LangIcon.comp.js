@@ -48,15 +48,15 @@ export default class LangIcon extends Component {
         }
 
         return (
-            <div className={typeof iconClassName==="string" && iconClassName} 
+            <span className={typeof iconClassName==="string"?iconClassName:""} 
                 data-tech={techName} 
-                data-is-colored={globalTechName === techName && techName} 
+                data-is-colored={globalTechName === techName ? techName : "false"} 
                 onClick={toggleTechName} 
                 onMouseEnter={techColorOn} 
                 onMouseOut={techColorOff} 
                 style={styles}> 
             &nbsp;{text}
-            </div>
+            </span>
         )
     }
 } // LangIcon

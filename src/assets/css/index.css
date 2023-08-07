@@ -1112,3 +1112,24 @@ footer {
     flex-direction: column;
     justify-content: stretch;
 }
+
+/* Full page mode that gets rid of header temporarily. 
+Useful for when scrolling into student ratings table and scrolling out of on mobile
+*/
+
+.site-header, .body-fixed {
+    transition: top 500ms ease;
+
+}
+
+.site-header.full-page {
+    top:-100vh;
+}
+
+.body-fixed.full-page {
+    top:0;
+    max-height: calc(100vh - 50px);
+    min-height: calc(100vh - 50px);
+    /* min-height: calc(100vh - 120px - 50px); */
+    /* No header when in full page mode */
+}

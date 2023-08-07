@@ -135,12 +135,12 @@ export default class WhoAmI extends Component {
                                 <span ref={this.intersectionObserverRef} style={{backgroundColor:"transparent",width:"1px",height:"1px",position:"absolute",bottom:0,right:0}}></span>
                             </div>
 
-                            <VideoGallery ref={this.intersectionObserverRef} videos={videos} ytHeaderCover={ytHeaderCover}></VideoGallery>
+                            <VideoGallery videos={videos} ytHeaderCover={ytHeaderCover}></VideoGallery>
 
                             {/* <p><i>Cut to the chase? See 📂 <a href="./?page=work">my work</a>.</i></p> */}
                             {/* <p><i>Cut to the chase? See 📂 <Link to="work">my work</Link>.</i></p> */}
 
-                            <main class="main-content">
+                            <main className="main-content">
 
                             <header className="header">
                                 <h2 id="about-anchor" className="f1a">
@@ -173,7 +173,7 @@ export default class WhoAmI extends Component {
 
 
                                 <h3>Sharing my passion of programming</h3>
-                                <p>I share my passion via bootcamps, youtube, and electronic publishing. I have a certificate for MERN web development at UCLA, having achieved  <Link to="achievements#top-marks">🌟 top marks</Link>. Before the bootcamp I freelanced with the Javascript-jQuery-PHP-MySQL tech stack which I self-learned. After certification, I've tutored EdX coding students on the MERN stack, <LangIcon iconClassName="devicon-handlebars-plain" techName="Handlebars" text="Handlebars" globalTechName={this.state.techName} {...otherProps}/>, jQuery, MySQL/Sequelize, <LangIcon iconClassName="devicon-graphql-plain" techName="GraphQL" text="GraphQL" globalTechName={this.state.techName} {...otherProps}/>, and React State management (Context, Reducers, <LangIcon iconClassName="devicon-redux-plain" techName="Redux" text="Redux" globalTechName={this.state.techName} {...otherProps}/>, Redux Toolkit). I'm a senior tutor for coding bootcamps at universities nationwide and internationally via EdX. Check out <a href="./?page=students">👨🏻‍🏫 student reviews</a>. In addition to sharing my passion with future generations of programmers through bootcamps, I also made tutorials at <a href="https://www.youtube.com/@WayneTeachesCode" target="_blank"><i class="fab fa-youtube" style={{ color: "#FF0000" }}></i> @WayneTeachesCode</a>. See my <a href="https://wengindustry.com/tools/gamified-knowledge/" target="_blank">📄 coding snippets and guides</a> in a gamified knowledge app.</p>
+                                <p>I share my passion via bootcamps, youtube, and electronic publishing. I have a certificate for MERN web development at UCLA, having achieved  <Link to="achievements#top-marks">🌟 top marks</Link>. Before the bootcamp I freelanced with the Javascript-jQuery-PHP-MySQL tech stack which I self-learned. After certification, I've tutored EdX coding students on the MERN stack, <LangIcon iconClassName="devicon-handlebars-plain" techName="Handlebars" text="Handlebars" globalTechName={this.state.techName} {...otherProps}/>, jQuery, MySQL/Sequelize, <LangIcon iconClassName="devicon-graphql-plain" techName="GraphQL" text="GraphQL" globalTechName={this.state.techName} {...otherProps}/>, and React State management (Context, Reducers, <LangIcon iconClassName="devicon-redux-plain" techName="Redux" text="Redux" globalTechName={this.state.techName} {...otherProps}/>, Redux Toolkit). I'm a senior tutor for coding bootcamps at universities nationwide and internationally via EdX. Check out <a href="./?page=students">👨🏻‍🏫 student reviews</a>. In addition to sharing my passion with future generations of programmers through bootcamps, I also made tutorials at <a href="https://www.youtube.com/@WayneTeachesCode" target="_blank"><i className="fab fa-youtube" style={{ color: "#FF0000" }}></i> @WayneTeachesCode</a>. See my <a href="https://wengindustry.com/tools/gamified-knowledge/" target="_blank">📄 coding snippets and guides</a> in a gamified knowledge app.</p>
 
                                 <h3>Growth</h3>
                                 <p>
@@ -195,18 +195,20 @@ export default class WhoAmI extends Component {
                                         <img className="gh-contributions" src={githubContributions2023march}/>
                                     </a> */}
 
-                                <hr style={{margin:"30px auto"}}/>
+                                {/* <hr style={{margin:"30px auto"}}/> */}
 
-                                <b style={{fontSize:"120%"}}><u>2023-Jan to 2023-Dec</u></b><br/>
-                                <a href="//github.com/Siphon880gh" target="_blank">
-                                    <img className="gh-contributions" src={githubContributions2023march} style={{marginLeft:"30px"}}/>
-                                </a>
+                                <div style={{textAlign:"center", marginTop:"20px"}}>
+                                    <b style={{fontSize:"120%"}}><u>2023-Jan to 2023-Dec</u></b><br/>
+                                    <a href="//github.com/Siphon880gh" target="_blank">
+                                        <img className="gh-contributions" src={githubContributions2023march}/>
+                                    </a>
 
-                                <p></p>
-                                <b style={{fontSize:"120%"}}><u>2022-Jan to 2022-Dec</u></b><br/>
-                                <a href="//github.com/Siphon880gh" target="_blank">
-                                    <img className="gh-contributions" src={githubContributions2023} style={{marginLeft:"30px"}}/>
-                                </a>
+                                    <p></p>
+                                    <b style={{fontSize:"120%"}}><u>2022-Jan to 2022-Dec</u></b><br/>
+                                    <a href="//github.com/Siphon880gh" target="_blank">
+                                        <img className="gh-contributions" src={githubContributions2023}/>
+                                    </a>
+                                </div>
 
 
                                 <aside className="badges mobile-invisible">

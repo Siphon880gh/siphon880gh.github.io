@@ -1,7 +1,7 @@
 
 #student-ratings-browser {
     position:sticky;
-    top: 5px;
+    top: 0;
     z-index:999;
     color: var(--darkblue-alpha3);
     margin: 30px auto;
@@ -13,6 +13,9 @@
     padding-top: 20px;
     padding-bottom: 20px;
     background: linear-gradient(to bottom, rgba(255,255,255,0.2), rgba(255,255,255, 0.5));
+}
+#student-ratings-browser.sticked-white {
+    background: #eee !important;
 }
 i.browse-left {
     margin-right: 15px;
@@ -30,6 +33,32 @@ i.browse-left:not(.text-darkgray) {
 i.browse-right:not(.text-darkgray) {
     -webkit-text-stroke: 1px rgba(0,0,0,0.75);
 }
+#tutor-request-feed-back-wrapper {
+    margin: 1rem 15px;
+    width: calc(100% - 30px);
+    overflow-x: scroll;
+    background-color: white;
+}
+
+#student-ratings-iframe-wrapper {
+    position: sticky;
+    top: 80px;
+    width:100%;
+    height: calc(100vh - 130px);
+    /* height: 100vh; */
+    /* height: calc(100vh - 15px); */
+    /* height:auto; */
+    /* "Students" browser headline */
+    /* Minus out sticky student header, footer, and some breathing space*/
+    /* No need to minus out site header because at on scroll when bounding client rect top reaches a certain px, it will hide site header */
+    padding-left: 15px;
+    padding-right: 15px;
+}
+#student-ratings-iframe-wrapper iframe {
+    /* margin-left: 15px;
+    margin-right: 15px; */
+}
+
 .mobile-instructions {
     display: none;
     margin-top: 10px;

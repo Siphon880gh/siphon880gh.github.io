@@ -34,18 +34,31 @@ export default class App extends React.Component {
         constructor() {
             super();
             this.state = {
-                hashCompatible: "(#.*)?"
+                hashCompatible: "(#.*)?",
+                fullPageMode: false
+            }
+            this.changeToPageMode = (willPageMode) => {
+                if(willPageMode)
+                    this.setState({
+                        ...this.state,
+                        fullPageMode:true
+                    })
+                else
+                    this.setState({
+                        ...this.state,
+                        fullPageMode:false
+                    })
             }
 
         }
-        
+
         render() {
             return (
                 <Router>
                     <div data-component="App" className="container-fluid p-0">
-                        <Header></Header>
-    
-                        <div class="body-fixed">
+                        <Header fullPageMode={this.state.fullPageMode}></Header>
+                        
+                        <div className={"body-fixed " + (()=>this.state.fullPageMode?"full-page":"")()}>
                             <Switch>
                                 <Route path={`*/tech${this.state.hashCompatible}`} component={Tech}/>
                                 <Route path={`*/whoami${this.state.hashCompatible}`} component={WhoAmI}/>
@@ -56,7 +69,7 @@ export default class App extends React.Component {
                                 <Route path={`*/collab${this.state.hashCompatible}`} component={Collab}/>
                                 <Route path={`*/credited${this.state.hashCompatible}`} component={Credit}/>
                                 <Route path={`*/contact${this.state.hashCompatible}`} component={Contact}/>
-                                <Route path={`*/testimonials${this.state.hashCompatible}`} component={Testimonials}/>
+                                <Route path={`*/testimonials${this.state.hashCompatible}`} render={(routeProps) => <Testimonials {...routeProps} changeToPageMode={this.changeToPageMode}/>}/>
                                 <Route path={`*/students${this.state.hashCompatible}`} component={Students}/>
                                 <Route path={`/${this.state.hashCompatible}`} component={WhoAmI}/>
                             </Switch>
