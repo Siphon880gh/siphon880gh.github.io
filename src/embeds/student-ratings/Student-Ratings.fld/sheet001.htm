@@ -48,16 +48,19 @@
     <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
     <link href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.dataTables.min.css">
+    <script src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
     <style> 
     /* *********** */
     /* DataTables  */
     /* *********** */
     #search-presets {
         border-top: 1px solid gray;
-        padding-top:30px;
+        /* padding-top:30px;
         padding-left: 30px;
-        padding-right:30px;
+        padding-right:30px; */
 
         position: sticky;
         top: 0;
@@ -67,10 +70,32 @@
         padding-bottom: 5px;
         border-bottom: 1px solid black;
     }
+    .show-mobile-down {
+        display: none;
+    }
     @media screen AND (max-width:768px) {
         .hide-mobile-up {
             display: none;
         }
+        .show-mobile-down {
+            display: block;
+            font-weight: 300;
+            color: black;
+        }
+        .paginate_button.previous,
+        .paginate_button.next {
+            display: none !important
+        }
+    }
+    button#cycle-view-mobile {
+        text-decoration: none;
+        transition: color 300msg ease;
+        transform: scale(.8);
+        margin-left: -12px;
+        margin-top:-3px;
+    }
+    button#cycle-view-mobile:hover {
+        color: blue;
     }
     #DataTables_Table_0_wrapper {
         padding: 30px 0;
@@ -102,9 +127,20 @@
         margin-left: 0 !important;
         margin-right: 0 !important;
     }
+    table.dataTable thead {
+        position: sticky;
+        top: 130px;
+    }
+    table.dataTable thead tr {
+        background-color: rgba(220,220,220);
+    }
     table.dataTable thead th, table.dataTable thead td {
         padding: 0 !important;
-        border: 1px solid #111 !important;
+        border-right: 1px solid #111 !important;
+        border-left: 1px solid #111 !important;
+    }
+    table.dataTable>thead>tr>th, table.dataTable>thead>tr>td {
+        border-bottom: 0 !important;
     }
     #DataTables_Table_0 > thead > tr > th.sorting_asc,
     #DataTables_Table_0 > thead > tr > th.sorting_desc,
@@ -115,13 +151,40 @@
         background-position: right 7.5px !important;
         overflow-wrap: anywhere !important;
     }
+     /* this keeps your columns width as per your wish at columnDefs */
     /* table.dataTable {
+        width: 100%;
         table-layout: fixed;
     } */
     @media screen AND (max-width:768px) {
         .dataTables_length, .dataTables_info {
             display: none;
         }
+    }
+    /* th, td {
+        white-space: pre-wrap;
+        overflow: scroll;
+        text-overflow: ellipsis;
+        overflow-wrap: anywhere;
+    } */
+    /* th, td {
+        white-space: pre-wrap;
+        overflow: scroll;
+        text-overflow: ellipsis;
+        overflow-wrap: anywhere;
+        display: table-cell;
+    } */
+    /* th, td { */
+    th {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    li[data-dtr-index] {
+        white-space: pre-wrap;
+        overflow: scroll;
+        text-overflow: ellipsis;
+        overflow-wrap: anywhere;
     }
     </style>
     <style>
@@ -237,12 +300,11 @@
     }
     [data-tech="AIPromptEngineering"] {
         padding-left: 16px;
-        max-height: 25px;
+        max-height: 27px;
         letter-spacing: -0.7px;
         margin-bottom: 0px;
         background-size: 15px 15px !important;
-        padding-bottom: 2.5px;
-        padding-top: 2.5px;
+        padding-top: 0;
         top: -3px;
         position: relative;
     }
@@ -250,7 +312,7 @@
     <style id="js-hide-columns">
     </style>
     <script>
-    $(()=>{        
+    $(()=>{
         var $table = $('table').eq(0);
     
         // Create a thead element if it doesn't exist
@@ -271,58 +333,88 @@
         // Initiate searchable, filterable, sortable table, changing placement of the table information and nav items
         // Make room for mobile screens:
         // Hide columns "Your Course Type" (because it'll either be Full Stack or Frontend Students) and "Who was your tutor" (because it'll be my name for all rows)
+        // {
+        //     targets: 0,
+        //     width: "280px",
+        //     comment: "This doesn't work"
+        // },
         $table.DataTable({
             "columnDefs": [
                 {
-                    targets: 0,
-                    width: "80px"
-                },
-                {
                     targets: 1,
                     visible: false,
-                    searchable: false
-                },
-                {
-                    targets: 1,
-                    visible: false,
-                    searchable: false
+                    searchable: false,
+                    comment: "Your Course Type"
                 },
                 {
                     targets: 2,
                     visible: false,
-                    searchable: false
-                },
-                {
-                    targets: 3,
-                    width: "115px"
-                },
-                {
-                    targets: 4,
-                    width: "270px"
-                },
-                {
-                    targets: 5,
-                    width: "230px"
-                },
-                {
-                    targets: 6,
-                    width: "230px"
-                },
-                {
-                    targets: 7,
-                    width: "230px"
-                },
+                    searchable: false,
+                    comment: "Who was your tutor?"
+                }
             ],
+            "fixedHeader": true,
             "responsive": false,
             "pageLength": 50,
             "lengthMenu": [[10, 25, 50, 100, 200, -1], [10, 25, 50, 100, 200, "All"]],
             "dom": '<"top"fl><"bottom"ip><"clear">'
         });
 
-        // Search by language clicking:
+        // Removing colgroup makes it easier to have custom widths
+        $("colgroup").remove();
+
+        // Reassert widths
+        function reassertWidths() {
+            /* 
+              The display: table-cell; property in CSS works similarly to a traditional HTML table cell. 
+              The widths of the table and the table cells are determined by a number of factors, such as 
+              the content of the cells, the table-layout property, and any specified widths. The widths 
+              and max-widths of elements with display: table-cell might not behave exactly like widths and
+              max-widths of normal block-level elements.
+
+              Workaround: Use a div inside the table-cell
+            */
+            function forceWidthOnTableCell($cell, px) {
+                // style="width: 57px" is automatically set by DataTable and doesnt even follow its own rules
+                // because it's a table-cell in display css. So remove it
+                $cell.css("width", px); 
+
+                // Workaround
+                let text = $cell.text();
+                // $cell.html($(`<div style="min-width:${px}; max-width:${px}">${text}</div>`));
+                $cell.html($(`<div style="display:inline;" onClick="alert('${text}'); event.preventDefault(); event.stopPropagation();">${text}</div>`));
+            }
+
+            // Because it's table-cell, even though the width affects the rendered width, it takes
+            // in other considerations to decide final width.
+            forceWidthOnTableCell($(`table.dataTable thead tr th:nth-child(1)`), "30px")
+            forceWidthOnTableCell($(`table.dataTable thead tr th:nth-child(2)`), "30px")
+            forceWidthOnTableCell($(`table.dataTable thead tr th:nth-child(3)`), "30px")
+            forceWidthOnTableCell($(`table.dataTable thead tr th:nth-child(4)`), "30px")
+            forceWidthOnTableCell($(`table.dataTable thead tr th:nth-child(5)`), "30px")
+            forceWidthOnTableCell($(`table.dataTable thead tr th:nth-child(6)`), "30px")
+            forceWidthOnTableCell($(`table.dataTable thead tr th:nth-child(7)`), "100px")
+            // $(`table.dataTable thead tr th:nth-child(1)`).css("max-width", "80px").css("width", "80px")
+            // $(`table.dataTable thead tr th:nth-child(2)`).css("max-width", "80px").css("width", "80px")
+            // $(`table.dataTable thead tr th:nth-child(3)`).css("max-width", "80px").css("width", "80px")
+            // $(`table.dataTable thead tr th:nth-child(4)`).css("max-width", "80px").css("width", "80px")
+            // $(`table.dataTable thead tr th:nth-child(5)`).css("max-width", "80px").css("width", "80px")
+            // $(`table.dataTable thead tr th:nth-child(6)`).css("max-width", "80px").css("width", "80px")
+            // $(`table.dataTable thead tr th:nth-child(6)`).css("max-width", "180px").css("width", "180px")
+
+            /* Bug Fixed: Column header is very tall set by Microsoft Excel */
+            $(`table.dataTable thead tr`).attr("height", false)
+            $(`table.dataTable thead tr`).attr("style", "")
+        }
+        reassertWidths();
+        $("table.dataTable").css("width", "160%");
+
+        // Enrich surrounding the table
+        // - Search by language clicking:
         var divElement = $('<div/>', { 
             id: 'search-presets',
-            html: $('script[type="template/langicons"]').html()
+            html: $('script[type="template/langicons"]').html(),
+            width: document.querySelector(".dataTable").clientWidth + "px"
         });
         $('.dataTables_wrapper').eq(0).before(divElement);
         $("[data-tech]").filter(':not([data-is-colored="not-taught"])').on("click", (event)=>{
@@ -337,12 +429,89 @@
                 $(".dataTables_filter input").val("").trigger("keyup");
             }
         })
-        // Removing colgroup makes it easier to have custom widths
-        $("colgroup").remove();
-    })
+        // - Ellipsis for long headers which impact width causing excessive need for scrolling and fixed header blocking mobile view
+        // var countTh = document.querySelectorAll("table thead tr th").length
+        // var theadEl = document.querySelector("table thead");
+        // theadEl.append((()=> {
+
+        //     let tr = document.createElement("tr");
+        //     for(var i = 0; i<countTh; i++) {
+        //         let th = document.createElement("th");
+        //         th.style.textAlign = "left";
+        //         th.style.fontSize = "20%";
+        //         let eye = document.createElement("i");
+        //         eye.className = "fa fa-ellipsis-h";
+        //         eye.style.cursor = "pointer";
+        //         eye.style.paddingLeft = "5px";
+        //         eye.style.paddingTop = "15px";
+        //         eye.style.paddingBottom = "5px";
+        //         eye.setAttribute("data-index", i); 
+        //         eye.addEventListener("click", (event)=>{
+        //             let i = $(event.target).data("index")
+        //             let text = document.querySelector(`table thead tr th:nth-child(${i+1})`).textContent;
+        //             alert(text);                    
+        //         });
+        //         th.appendChild(eye);
+        //         tr.appendChild(th);
+        //     } // for
+        //     return tr;
+            
+        // })())
+
+        // - On mobile, offer different condensed table views
+        window.countCycle = 0;
+        $("#cycle-view-mobile").on("click",(event)=>{
+            event.preventDefault();
+            event.stopPropagation();
+            let selector = "";
+            switch(window.countCycle) {
+                case 0:
+                    selector = `table.dataTable thead tr th:nth-child(1), table.dataTable tbody tr td:nth-child(1)` // Hide Students
+                    $("table.dataTable").css("width", "160%");
+                    $("#cycle-view-mobile span").text("Hide dates"); // Next option
+                    window.countCycle=window.countCycle+1;
+                    break;
+                case 1:
+                    selector = `table.dataTable thead tr th:nth-child(1), table.dataTable tbody tr td:nth-child(1),
+                    table.dataTable thead tr th:nth-child(2), table.dataTable tbody tr td:nth-child(2)
+                    ` // Hide Students, Dates
+                    $("table.dataTable").css("width", "160%");
+                    $("#cycle-view-mobile span").text("Hide scores"); // Next option
+                    window.countCycle=window.countCycle+1;
+                    break;
+                case 2:
+                    selector = `table.dataTable thead tr th:nth-child(1), table.dataTable tbody tr td:nth-child(1),
+                    table.dataTable thead tr th:nth-child(2), table.dataTable tbody tr td:nth-child(2),
+                    table.dataTable thead tr th:nth-child(4), table.dataTable tbody tr td:nth-child(4),
+                    table.dataTable thead tr th:nth-child(5), table.dataTable tbody tr td:nth-child(5),
+                    table.dataTable thead tr th:nth-child(6), table.dataTable tbody tr td:nth-child(6)
+                    ` // Hide Students, Dates, Scores x3
+                    $("table.dataTable").css("width", "100%");
+                    $("#cycle-view-mobile span").text("Show ALL"); // Next Option
+                    window.countCycle=window.countCycle+1;
+                    break;
+                case 3:
+                    selector = `.FOOBAR`; // Show all
+                    $("table.dataTable").css("width", "160%");
+                    $("#cycle-view-mobile span").text("Hide students"); // Next option
+                    window.countCycle=0;
+                    break;
+            }
+            document.querySelector("style#js-hide-columns").innerHTML = `
+                ${selector} {
+                    display: none;
+                }
+            `
+            // Have to reassert the widths
+            setTimeout(()=>{
+                reassertWidths()
+            }, 100)
+        }) // Clicked #cycle-view-mobile
+
+    }) // dom ready
     </script>
     <script type="template/langicons">
-    <div style="font-weight:bold; margin-bottom:5px">See what languages and frameworks I taught:</div>
+    <div style="font-weight:bold; margin-bottom:5px">Filter what I taught:</div>
 
     <div style="height: 45px;padding-bottom: 10px;overflow: scroll;display: flex;flex-flow: row nowrap;">
         <div class="devicon-express-original" data-tech="Express" data-is-colored="false" style="display: inline-block;">&nbsp;Express</div>
@@ -360,11 +529,15 @@
     </div>
 
     <div style="height:50px; overflow-x: scroll;">
-        <div class="hide-mobile-up" style="filter:grayscale(1); opacity:0.25; margin-top:20px;">
+        <div class="hide-mobile-up" style="filter:grayscale(1); opacity:0.25;">
             <i>Please note I know more languages/frameworks but the bootcamp students don't cover them:</i>
                 <div class="devicon-php-plain" data-tech="PHP" data-is-colored="not-taught" style="display: inline-block;">&nbsp;PHP</div>
                 <div class="devicon-python-plain" data-tech="Python" data-is-colored="not-taught" style="display: inline-block;">&nbsp;Python</div>
                 <div data-tech="AIPromptEngineering" data-is-colored="not-taught" style="display: inline-block; background: url(&quot;data:image/png;base64,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&quot;) 2px 5px / cover no-repeat;">&nbsp;Prompt Engineering</div>
+        </div>
+        <div class="show-mobile-down" style="filter:grayscale(1);">
+            You are on a small screen. Best viewed on desktop.<br/>
+            <button id="cycle-view-mobile" href="javascript:void(0)"><i class='fas fa-eye'></i>&nbsp;<span>Hide students</span></button>
         </div>
     </div>
     </script>
@@ -435,8 +608,7 @@
   font-weight:700;text-decoration:none;text-underline-style:none;text-line-through:
   none;font-family:Calibri, sans-serif;border-top:.5pt solid #8EA9DB;
   border-right:.5pt solid #8EA9DB;border-bottom:.5pt solid #8EA9DB;border-left:
-  none;background:white;mso-pattern:black none'>Please share some comments in regards to the session and tutor.<span style='mso-spacerun:yes'> 
-  </span>Thank you.</td>
+  none;background:white;mso-pattern:black none'>Please share some comments in regards to the session and tutor.</td>
         </tr>
         <tr height=23 style='height:17.0pt'>
             <td height=23 class=xl67 style='height:17.0pt;font-size:12.0pt;color:black;
