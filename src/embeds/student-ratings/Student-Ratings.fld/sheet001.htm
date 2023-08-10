@@ -460,10 +460,13 @@
 
         // - On mobile, offer different condensed table views
         window.countCycle = 0;
-        $("#cycle-view-mobile").on("click",(event)=>{
+        function cycleMobileView(fromCountCycle) {
             event.preventDefault();
             event.stopPropagation();
             let selector = "";
+            if(fromCountCycle && typeof fromCountCycle==="number") {
+                window.countCycle = fromCountCycle;
+            }
             switch(window.countCycle) {
                 case 0:
                     selector = `table.dataTable thead tr th:nth-child(1), table.dataTable tbody tr td:nth-child(1)` // Hide Students
@@ -487,7 +490,7 @@
                     table.dataTable thead tr th:nth-child(6), table.dataTable tbody tr td:nth-child(6)
                     ` // Hide Students, Dates, Scores x3
                     $("table.dataTable").css("width", "100%");
-                    $("#cycle-view-mobile span").text("Show ALL"); // Next Option
+                    $("#cycle-view-mobile span").text("Show all columns"); // Next Option
                     window.countCycle=window.countCycle+1;
                     break;
                 case 3:
@@ -506,7 +509,13 @@
             setTimeout(()=>{
                 reassertWidths()
             }, 100)
-        }) // Clicked #cycle-view-mobile
+        } // cycleMobileView
+        
+        $("#cycle-view-mobile").on("click", cycleMobileView) // Clicked #cycle-view-mobile
+
+        if(document.body.clientWidth<=768) {
+            cycleMobileView(2);
+        }
 
     }) // dom ready
     </script>
