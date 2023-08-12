@@ -58,17 +58,21 @@ export default function Navigation(props) {
                         <NavLink data-php-rerouter="testimonials" to="./testimonials" onClick={collapseMobileMenu}>TESTIMONIALS</NavLink>
                     </li>
                     <li>
-                        <NavLink data-php-rerouter="certs" to="./certs#a" onClick={collapseMobileMenu}>CERTIFICATES</NavLink>
+                        <NavLink data-php-rerouter="certs" to="./certs" onClick={collapseMobileMenu}>CERTIFICATES</NavLink>
                     </li>                    
                     <li>
                         <NavLink data-php-rerouter="work" to="./work" onClick={collapseMobileMenu}>PORTFOLIO</NavLink>
                     </li>
-                    {/* <li>
-                        <NavLink data-php-rerouter="contact" to="./contact" onClick={collapseMobileMenu}>CONTACT</NavLink>
-                    </li> */}
-                    {/* Credited link lets you load the Credited component and is programmatically clicked from Achievements page which is a PHP mix in. Leave display none */}
+
+                    {/* Hidden Routes */}
                     <li style={{display:"none"}}>
                         <NavLink data-php-rerouter="credited" to="./credited" activeClassName="text-bold-colored" onClick={collapseMobileMenu}>Credited</NavLink>
+                    </li>
+                    <li style={{display:"none"}}>
+                        <NavLink data-php-rerouter="achievements#top-marks" to="./achievements#top-marks" activeClassName="text-bold-colored" onClick={collapseMobileMenu}>UCLA Top Marks</NavLink>
+                    </li>
+                    <li style={{display:"none"}}>
+                        <NavLink data-php-rerouter="achievements" to="./achievements" activeClassName="text-bold-colored" onClick={collapseMobileMenu}>Achievements</NavLink>
                     </li>
                     <li style={{display:"none"}}>
                         <NavLink data-php-rerouter="students" to="./students" activeClassName="text-bold-colored" onClick={collapseMobileMenu}>Student Ratings</NavLink>

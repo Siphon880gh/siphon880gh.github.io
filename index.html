@@ -35,28 +35,24 @@
 
     <div class="react-root"></div>
 
-    <!-- Make routing deployable to servers not supporting Node too! -->
-    <!-- By Weng Fei Fung -->
-    <!-- Example: URL subpath /tech can be dynamically changed from React frontend or visited directly -->
-    <!-- If visited directly in the web browser without a node process on the server, htaccess will reroute to ?subpath=tech -->
-    <!-- Then React can be signaled to reroute on the frontend -->
-    <!-- Part 1: This goes before bundle.min.js -->
-    <script>
-        const queryString = window.location.search;
-        if (queryString.length) {
-            const urlParams = new URLSearchParams(queryString);
-            const pageName = urlParams.get("page");
-            window.rerouteReact = pageName;
-        }
-    </script>
 
     <!-- Components -->
     <script src="./dist/assets/js/bundle.min.js"></script>
 
     <!-- Make routing deployable to servers not supporting Node too! -->
     <!-- By Weng Fei Fung -->
-    <!-- Part 2: This goes after bundle.min.js -->
+    <!-- Example: URL subpath /tech can be dynamically changed from React frontend or visited directly -->
+    <!-- If visited directly in the web browser without a node process on the server, htaccess will reroute to ?subpath=tech -->
+    <!-- Then React can be signaled to reroute on the frontend -->
     <script>
+        const queryString = window.location.search;
+        if (queryString.length) {
+            const urlParams = new URLSearchParams(queryString);
+            let pageName = urlParams.get("page");
+            let hash = window.location.hash;
+            if(hash) pageName+=hash;
+            window.rerouteReact = pageName;
+        }
         if (window.rerouteReact) {
             document.querySelector(`[data-php-rerouter="${window.rerouteReact}"]`).click();
         }
