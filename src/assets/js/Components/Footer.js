@@ -28,7 +28,7 @@ export default function Footer() {
                     <li><a className="text-bold" href="//linkedin.com/in/weng-fung/" target="_blank"><i className='fa fa-briefcase'>&nbsp;</i>LinkedIn</a></li>
                     <li><a href="//www.youtube.com/@WayneTeachesCode" target="_blank"><i className='fab fa-youtube'>&nbsp;</i>Youtube</a></li>
                     <li><a href="tel:3238427514" target="_blank"><i className='fa fa-phone'>&nbsp;</i>323-842-7514</a></li>
-                    <li><a href="mailto:weffung@ucdavis.edu" target="_blank"><i className='fa fa-envelope'>&nbsp;</i>weffung@ucdavis.edu</a></li>
+                    <li><a href="mailto:weng.f.fung@gmail.com" target="_blank"><i className='fa fa-envelope'>&nbsp;</i>weng.f.fung@gmail.com</a></li>
                     {/* <li><a href="//www.wengindustry.com" target="_blank">WengIndustry.com</a></li>*/}
                 </ul>
             </div>

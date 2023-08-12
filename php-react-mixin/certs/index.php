@@ -55,7 +55,7 @@
             <!-- <button class="btn btn-full-screen" onclick="uiFullScreenRequest()" style="margin-left:30px;">Full screen</button> -->
 
             <div class="cue-scroll-down-wrapper hidden">
-                <div class="cue-label">Scroll right</div>                
+                <div class="cue-label">Scroll right at certificates</div>                
                 <div class="cue-scroll-down"></div>
             </div>
         </nav>
