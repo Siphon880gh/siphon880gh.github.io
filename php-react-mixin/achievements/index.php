@@ -106,7 +106,7 @@
             <section class="section col-12" id="top-marks">
                 <h2>Top Marks</h2>
                 <div class="section-text">
-                    <p>Attended UCLA Extension for 6-month intensive web development course to update my skillset to modern MERN, and it covered additional jQuery, Handlebars, MySQL, GraphQL. Scored <b>top marks</b> in the class:</p>
+                    <p>Attended UCLA Extension for 6-month intensive web development course to update my skillset to modern MERN and Express-GraphQL hybrid, although it also covered older technologies I'm familiar with already - jQuery, Handlebars, MySQL. Scored <b>top marks</b> in the class:</p>
                     <a href="img/top-marks.pdf" target="_blank">
                         <img class="standalone" src="img/top-marks.png" alt="" />
                     </a>

@@ -2,17 +2,24 @@
 #student-ratings-browser {
     position:sticky;
     top: 0;
+    left: 0;
+    margin: 0 !important;
     z-index:999;
     color: var(--darkblue-alpha3);
-    margin: 30px auto;
+    /* margin: 30px auto; */
     display: block;
     width: 100%;
     text-align: center;
     margin-top: 10px;
-    margin-right: 20px;
+    /* margin-right: 20px; */
     padding-top: 20px;
     padding-bottom: 20px;
-    background: linear-gradient(to bottom, rgba(255,255,255,0.2), rgba(255,255,255, 0.5));
+    /* background: linear-gradient(to bottom, rgba(255,255,255,0.2), rgba(255,255,255, 0.5)); */
+}
+@media screen AND (max-width:768px) {
+    #tutor-students-ratings-testimonials {
+        display: none;
+    }
 }
 #student-ratings-browser.sticked-white {
     background: #eee !important;
@@ -39,6 +46,11 @@ i.browse-right:not(.text-darkgray) {
     overflow-x: scroll;
     background-color: white;
 }
+@media screen AND (max-width:768px) {
+    #tutor-request-feed-back-wrapper {
+        display:none;
+    }
+}
 
 #student-ratings-iframe-wrapper {
     position: sticky;
@@ -51,8 +63,8 @@ i.browse-right:not(.text-darkgray) {
     /* "Students" browser headline */
     /* Minus out sticky student header, footer, and some breathing space*/
     /* No need to minus out site header because at on scroll when bounding client rect top reaches a certain px, it will hide site header */
-    padding-left: 15px;
-    padding-right: 15px;
+    /* padding-left: 15px;
+    padding-right: 15px; */
 }
 #student-ratings-iframe-wrapper iframe {
     /* margin-left: 15px;
