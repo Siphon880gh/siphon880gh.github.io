@@ -113,65 +113,37 @@ td
     /* *********** */
     /* DataTables  */
     /* *********** */
-    #search-presets {
-        position: sticky;
-        top: 0;
-        left: 0;
-        background: white;
-        z-index: 9999;
-        padding-bottom: 5px;
-        border-bottom: 1px solid black;
-        text-align: left;
-        min-width: 100vw;
-        margin: 0;
-    }
-    .show-mobile-down {
-        display: none;
-    }
-    @media screen AND (max-width:768px) {
-        .hide-mobile-up {
-            display: none;
-        }
-        .show-mobile-down {
-            display: block;
-            font-weight: 300;
-            color: black;
-            margin-top: -5px;
-        }
-        .paginate_button.previous,
-        .paginate_button.next {
-            display: none !important
-        }
-    }
-    button#cycle-view-mobile {
-        text-decoration: none;
-        transition: color 300msg ease;
-        transform: scale(.8);
-        margin-left: -12px;
-        margin-top:-3px;
-    }
-    button#cycle-view-mobile:hover {
-        color: blue;
-    }
     #DataTables_Table_0_wrapper {
         padding: 30px 0;
     }
+    /* Filter is the search box */
     .dataTables_filter {
         float: left !important;
         margin-left:30px !important;
     }
+    /* Length is Showing -dropdown- entries */
     .dataTables_length {
         float: right !important;
         margin-right:30px !important;
         margin-top:5px !important;
     }
+    @media screen AND (max-width:768px) {
+        .dataTables_length, .dataTables_info {
+            display: none;
+        }
+    }
+    /* Pagination */
+    /* So can maximize screen use around the Previous and Next buttons at pagination controls without making the CSS look clipped: */
+    .dataTables_wrapper .dataTables_paginate .paginate_button:hover,
+    .dataTables_wrapper .dataTables_paginate .paginate_button:active {
+        color: unset !important;
+        background: unset !important;
+        border: unset !important;
+        box-shadow: unset !important;
+    }
     .dataTables_paginate {
         float: left !important;
         margin-left:30px !important;
-    }
-    .dataTables_info {
-        float: right !important;
-        margin-right:30px !important;
     }
     .paginate_button.previous {
         padding-left: 0  !important;
@@ -179,6 +151,12 @@ td
     .paginate_button.next {
         padding-right: 0  !important;
     }
+    /* Info is Showing X to Y of Z entries */
+    .dataTables_info {
+        float: right !important;
+        margin-right:30px !important;
+    }
+    /* The actual table */
     #DataTables_Table_0 {
         margin-left: 0 !important;
         margin-right: 0 !important;
@@ -220,17 +198,8 @@ td
         text-align: left;
         border:1px solid gray;
     }
-     /* this keeps your columns width as per your wish at columnDefs */
-    /* table.dataTable {
-        width: 100%;
-        table-layout: fixed;
-    } */
-    @media screen AND (max-width:768px) {
-        .dataTables_length, .dataTables_info {
-            display: none;
-        }
-    }
-    /* th, td { */
+    
+    /* Further considerations for mobile view */
     th, td {
         min-width: 5ch;
     }
@@ -252,8 +221,49 @@ td
         text-overflow: ellipsis;
         overflow-wrap: anywhere;
     }
-    </style>
-    <style>
+    /* *************** */
+    /* Extra Controls  */
+    /* *************** */
+    #search-presets {
+        position: sticky;
+        top: 0;
+        left: 0;
+        background: white;
+        z-index: 9999;
+        padding-bottom: 5px;
+        border-bottom: 1px solid black;
+        text-align: left;
+        min-width: 100vw;
+        margin: 0;
+    }
+    .show-mobile-down {
+        display: none;
+    }
+    @media screen AND (max-width:768px) {
+        .hide-mobile-up {
+            display: none;
+        }
+        .show-mobile-down {
+            display: block;
+            font-weight: 300;
+            color: black;
+            margin-top: -5px;
+        }
+        .paginate_button.previous,
+        .paginate_button.next {
+            display: none !important
+        }
+    }
+    button#cycle-view-mobile {
+        text-decoration: none;
+        transition: color 300msg ease;
+        transform: scale(.8);
+        margin-left: -12px;
+        margin-top:-3px;
+    }
+    button#cycle-view-mobile:hover {
+        color: blue;
+    }
     /* *********** */
     /* Tech Icons  */
     /* *********** */
@@ -353,7 +363,7 @@ td
         filter: invert(1) !important;
         background-color: white !important;
     }
-    /* Override just for Student Ratings */
+    /* Override language icons just for Student Ratings */
     /* [x] Keep the same structure of HTML for the icons (those you taught, those you haven't taught but made apps in) but alphabetize the languages. */
     /* [x] Adjust the HTML of ChatGPT icon. Remove all other instyle rules besides background. */
     /* [x] Adjust to data-is-colored="not-taught" for those languages you haven't taught but made apps in */
@@ -375,8 +385,10 @@ td
         position: relative;
     }
     </style>
+
     <style id="js-hide-columns">
     </style>
+    
     <script>
     $(()=>{
         var $table = $('table').eq(0);
