@@ -103,7 +103,7 @@ export default class Contact extends React.Component {
         
         return (
             <>
-            <h2 className="page-title">Weng offers consultation, teaching, and building. Let me know what you want!</h2>
+            <h2 className="page-title">Contact Weng. He offers consultation, teaching, and building. Here you can also provide feedback on apps or inquiry about business opportunities.</h2>
             <div data-component="Resume" className="contact m-5">
                 <form className="p-4" onSubmit={validateFormOnSubmit} action="" method="post">
                     <div className="input-group mb-2">
