@@ -29,11 +29,12 @@ export default class LangIcon extends Component {
     render() {
 
         const { techName, text, iconClassName, globalTechName, techColorOn, techColorOff, toggleTechName } = this.props;
-        // console.log(this.props)
-
+        
         let styles = {
             display: "inline-block"
         }
+        
+
         if(typeof iconClassName!=="string") {
             let {importedIcon} = iconClassName;
             styles.background = `url("${importedIcon}")`;
@@ -41,10 +42,9 @@ export default class LangIcon extends Component {
             styles.backgroundRepeat = "no-repeat";
             styles.paddingLeft = "22px";
             styles.maxHeight = "27px";
-            styles.backgroundPosition = "2px 5px";
-            styles.letterSpacing = "-0.7px";
-            styles.marginBottom = 0;
-            // styles.marginBottom = -"2.5px";
+            styles.backgroundPosition = "2px 2px";
+            styles.letterSpacing = "-.95px";
+            styles.marginBottom = "4px !important";
         }
 
         return (

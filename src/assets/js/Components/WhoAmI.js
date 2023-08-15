@@ -177,11 +177,13 @@ export default class WhoAmI extends Component {
 
                                 <h3>Growth</h3>
                                 <p>
-                                In the future, I aim to take an entrepreneurial role developing innovative healthcare software solutions leveraging my technical knowledge and prior healthcare background. I stay updated in the healthcare industry which is why I continue working as a registered nurse periodically at a staffing agency on the weekends. For entrepreneurship and management, I broadened my skills by completing a Project Management course at UC Berkeley in December 2022. My mantra is continuous growth. At the moment I want to transition out of contracts and freelancing and move into a career pathway towards management.</p>
+                                In the future, I aim to take an entrepreneurial role developing innovative healthcare software solutions leveraging my technical knowledge and prior healthcare background. I stay updated in the healthcare industry which is why I continue working as a registered nurse periodically at a staffing agency on the weekends.</p>
+                                
+                                <p>For entrepreneurship and management, I broadened my skills by completing a Project Management course at UC Berkeley in December 2022. My mantra is continuous growth. At the moment I want to transition out of contracts and freelancing and move into a career pathway towards management.</p>
 
-                                <p>In order to explore the cutting-edge and what opportunities are there in 2023, I took courses in 
+                                <p>I see that a lot of AI apps are coming out in the market so I took courses and obtained certificates in 
                                 <LangIcon iconClassName="devicon-python-plain" techName="Python" text="Python" globalTechName={this.state.techName} {...otherProps}/> and 
-                                <LangIcon iconClassName={{importedIcon:iconChatGPT}} techName="AIPromptEngineering" text="Prompt Engineering" globalTechName={this.state.techName} {...otherProps}/>. {/*I have earned multiple <Link to="certs#a">certificates</Link> in python and prompt engineering.*/}</p>
+                                <LangIcon iconClassName={{importedIcon:iconChatGPT}} techName="AIPromptEngineering" text="AI Applications and Prompt Engineering" globalTechName={this.state.techName} {...otherProps}/>. {/*I have earned multiple <Link to="certs#a">certificates</Link> in python and prompt engineering.*/}</p>
 
                                 <p>I code almost everyday contributing to the GitHub community:</p>
 

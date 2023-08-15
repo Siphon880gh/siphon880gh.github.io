@@ -378,6 +378,9 @@ h3 {
 [data-tech="AIPromptEngineering"] {
     background-size: 20px 20px !important;
     font-family: 'devicon' !important;
+    margin-bottom: -2px;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 [data-is-colored="AIPromptEngineering"] {
     background-blend-mode: invert !important;
