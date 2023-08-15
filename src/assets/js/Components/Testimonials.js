@@ -64,7 +64,7 @@ export default class Testimonials extends React.Component {
     
     render() {
         return (
-            <>
+            <div id="testimonials">
                 <h2>Clients:</h2>
                 <div className="client-testimonials">
                     <a href="https://www.linkedin.com/in/weng-fung/#recommendations" target="_blank"><img className="clients-1" src="./src/assets/img/testimonials.png"></img></a>
@@ -72,7 +72,7 @@ export default class Testimonials extends React.Component {
 
                 <hr style={{border: "1px solid black", marginTop:"40px"}}/>
                 <Students stickiedWhite={this.state.stickiedWhite}/>
-            </>
+            </div>
         )
     }
 }

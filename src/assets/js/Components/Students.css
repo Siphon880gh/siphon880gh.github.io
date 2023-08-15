@@ -1,4 +1,9 @@
 
+#students {
+    background-color: white;
+    background: white;
+}
+
 #student-ratings-browser {
     position:sticky;
     top: 0;
@@ -152,4 +157,21 @@ img.tutor-la-misc {
         display: block;
         margin: 0 auto;
     }
+}
+
+/* #student-ratings-browser {
+    position: unset !important;
+} */
+
+.rotation.rotation-1 {
+    background-color: white !important;
+}
+ 
+img.tutor-request-feedback {
+
+    max-width: 1556px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    border: 1px solid black;
 }
