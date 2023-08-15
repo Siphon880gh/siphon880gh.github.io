@@ -235,6 +235,14 @@ nav {
     background-color: var(--darkblue-alpha3);
 }
 
+.tech.col h3 img {
+    transition: all 200ms linear;
+}
+
+.tech.col:hover h3 img {
+    filter: invert(1);
+}
+
 .col-desc {
     padding: 0 10px;
 }

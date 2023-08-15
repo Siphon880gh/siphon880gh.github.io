@@ -15,5 +15,5 @@ RedirectMatch "(?i)(.*)me/(testimonials)" "http://localhost:8888/weng/me?page=$2
 RedirectMatch "(?i)(.*)me/(students)" "http://localhost:8888/weng/me?page=$2"
 RedirectMatch "(?i)(.*)me/(achievements#top-marks)$" "http://localhost:8888/weng/me?page=$2"
 RedirectMatch "(?i)(.*)me/(achievements)$" "http://localhost:8888/weng/me?page=$2"
-RedirectMatch "(?i)(.*)me/(certs)" "http://localhost:8888/weng/me?page=$2"
-RedirectMatch "(?i)(.*)me/(certificates)" "http://localhost:8888/weng/me?page=$2"
+RedirectMatch "(?i)(.*)me/(certs)" "http://localhost:8888/weng/me?page=certs"
+RedirectMatch "(?i)(.*)me/(certificates)" "http://localhost:8888/weng/me?page=certs"

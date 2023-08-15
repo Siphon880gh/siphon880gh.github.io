@@ -77,7 +77,7 @@
                         </a>
                         <figcaption>
                             <p>MERN Stack and additionally jQuery, Handlebars, Redux, mySQL, Sequelize, Mongoose, GraphQL.</p>
-                            <p>Have been doing PHP-jQuery-MySQL since 2015, and had experimented with React; however wanted to cement my skills of modern stacks so decided to join UCLA's 6 month intensive program. Obtained <a href="#">top marks</a> in class.</p>
+                            <p>Have been doing PHP-jQuery-MySQL since 2015, and had experimented with React; however wanted to cement my skills of modern stacks so decided to join UCLA's 6 month intensive program. Obtained <a href="../achievements/#top-marks">top marks</a> in class.</p>
                         </figcaption>
                         <hr class="">
                     </figure>
@@ -159,6 +159,27 @@
                         </a>
                         <figcaption>
                             <p>Learned Python with the vision of using AI and data science in my apps in the future.</p>
+                        </figcaption>
+                        <hr class="d-none">
+                    </figure>
+                </section>
+            </article> <!-- ends col -->
+
+            <article class="tech col">
+                <header>
+                    <h3><img alt="ChatGPT Icon" src="img/icons/ChatGPT.png" style="width:25px; height:25px; margin-top:-7.5px;"></img> AI</h3>
+                    <div class="col-desc">
+                        
+                    </div>
+                </header>
+                <section class="col-body">
+                    <figure class="cert">
+                        <h4>AI Applications and Prompt Engineering 2023-Aug</h4>
+                        <a href="https://courses.edx.org/certificates/241409be78d347f4bdde9434c9c10450" target="_blank">
+                            <img class="opacity-70 color-preset-1" src="img/ai-app-prompt-2023-08.png" alt="">
+                        </a>
+                        <figcaption>
+                            <p>Trained on building AI applications with LangChan library for OpenAI text generative AI to stay updated on how to develop the latest products and services in the market that leverage AI. Practiced advanced prompting techniques to optimize ChatGPT, Claude AI, etc to specific use cases.</p>
                         </figcaption>
                         <hr class="d-none">
                     </figure>
