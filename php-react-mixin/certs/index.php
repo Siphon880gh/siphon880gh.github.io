@@ -65,7 +65,7 @@
         <div class="certs-inner">
             <article class="tech col">
                 <header>
-                    <h3><i class="devicon-html5-plain"></i> Webdev</h3>
+                    <h3><i class="devicon-html5-plain"></i> Full-Stack Web Development</h3>
                     <div class="col-desc">
                     </div>
                 </header>
