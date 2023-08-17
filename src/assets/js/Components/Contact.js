@@ -102,9 +102,9 @@ export default class Contact extends React.Component {
         } // validateFormOnSubmit
         
         return (
-            <>
+            <div class="contact-page">
             <h2 className="page-title">Contact Weng. He offers consultation, teaching, and building. Here you can also provide feedback on apps or inquiry about business opportunities.</h2>
-            <div data-component="Resume" className="contact m-5">
+            <div data-component="Contact" className="contact m-5">
                 <form className="p-4" onSubmit={validateFormOnSubmit} action="" method="post">
                     <div className="input-group mb-2">
                         <label >Name</label>
@@ -150,7 +150,7 @@ export default class Contact extends React.Component {
                     </div>
                 </div>
             </div>
-            </>
+            </div>
         )
     }
 }

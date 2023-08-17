@@ -28,7 +28,7 @@ body.modal-open .body-fixed {
 }
 
 @media screen AND (max-width:768px) {
-    label {
+    .contact-page label {
         display:block;
         width: 100% !important;
         color: white !important;

@@ -128,9 +128,9 @@ export default class Work extends React.Component {
             },
             {
 
-                link: "https://wengindustry.com/demo/retype-notes/",
+                link: "https://wengindustry.com/tools/gamified-knowledge/",
                 screenshot: "dist/assets/img/websites/retype-notes.png",
-                title: "Retype and Rearrange Notes",
+                title: "Gamified Knowledge",
                 desc: "Made by Weng. Learn any programming language by retyping and rearranging lines of code.",
                 tech: "jQuery, PHP"
             }

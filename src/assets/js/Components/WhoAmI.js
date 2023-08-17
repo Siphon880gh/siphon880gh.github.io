@@ -2,8 +2,8 @@
 import React, { Component, useState, useRef } from "react";
 import ReactDOM from "react-dom";
 import { Link, NavLink } from "react-router-dom";
-import githubContributions2023 from "../../img/github-contributions-2022.png"
-import githubContributions2023march from "../../img/github-contributions-2023-03.png"
+import githubContributions2022 from "../../img/github-2022-01-to-2022-12.png"
+import githubContributions2023 from "../../img/github-2022-08-to-2023-08.png"
 import mePic from "../../img/me3.jpg"
 import ytHeaderCover from "../../img/yt-cover.png"
 import "./WhoAmI.css"
@@ -200,15 +200,15 @@ export default class WhoAmI extends Component {
                                 {/* <hr style={{margin:"30px auto"}}/> */}
 
                                 <div style={{textAlign:"center", marginTop:"20px"}}>
-                                    <b style={{fontSize:"120%"}}><u>2023-Jan to 2023-Dec</u></b><br/>
+                                    <b style={{fontSize:"120%"}}><u>2023</u></b><br/>
                                     <a href="//github.com/Siphon880gh" target="_blank">
-                                        <img className="gh-contributions" src={githubContributions2023march}/>
+                                        <img className="gh-contributions" src={githubContributions2023}/>
                                     </a>
 
                                     <p></p>
-                                    <b style={{fontSize:"120%"}}><u>2022-Jan to 2022-Dec</u></b><br/>
+                                    <b style={{fontSize:"120%"}}><u>2022</u></b><br/>
                                     <a href="//github.com/Siphon880gh" target="_blank">
-                                        <img className="gh-contributions" src={githubContributions2023}/>
+                                        <img className="gh-contributions" src={githubContributions2022}/>
                                     </a>
                                 </div>
 
