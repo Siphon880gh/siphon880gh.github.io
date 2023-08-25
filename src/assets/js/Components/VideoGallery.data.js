@@ -25,33 +25,38 @@ export default function videosPreimport(importedIcons) {
     return [
         {
             id: 1,
-            title: 'Ecommerce Backend - Overview Tutorial',
+            title: 'Ecommerce Backend - Overview Tutorial Ecommerce Backend - Overview TutorialEcommerce Backend - Overview TutorialEcommerce Backend',
             thumbnail: ytEcommerceBackend,
-            url: 'https://www.youtube.com/watch?v=s-0sNWgcSIQ'
+            url: 'https://www.youtube.com/watch?v=s-0sNWgcSIQ',
+            embedId: 's-0sNWgcSIQ'
         },
         {
             id: 2,
             title: 'Code Organization - Publisher/Subscriber, Service Layer, Data Access Layer - Overview Tutorial',
             thumbnail: ytCodeOrganization,
-            url: 'https://www.youtube.com/watch?v=eNh6t2_tuAI'
+            url: 'https://www.youtube.com/watch?v=eNh6t2_tuAI',
+            embedId: 'eNh6t2_tuAI'
         },
         {
             id: 3,
             title: 'React - Pass Prop from Parent to Child - Weng Teaches',
             thumbnail: ytReactProps,
-            url: 'https://www.youtube.com/watch?v=AQ2h7spCH3U'
+            url: 'https://www.youtube.com/watch?v=AQ2h7spCH3U',
+            embedId: 'AQ2h7spCH3U'
         },
         {
             id: 4,
             title: 'Feed stock trader information into ChatGPT with Javascript by Weng',
             thumbnail: ytTrading,
-            url: 'https://www.youtube.com/watch?v=c4C9QmbY-fY'
+            url: 'https://www.youtube.com/watch?v=c4C9QmbY-fY',
+            embedId: 'c4C9QmbY-fY'
         },
         {
             id: 100,
             title: '"Your Daily Portal" Homepage for Web Browser - Explaining Code in Team',
             thumbnail: ytDailyPortal,
-            url: 'https://www.youtube.com/watch?v=rbk3H45fToA'
+            url: 'https://www.youtube.com/watch?v=rbk3H45fToA',
+            embedId: 'rbk3H45fToA'
         },
         // more videos...
     ]

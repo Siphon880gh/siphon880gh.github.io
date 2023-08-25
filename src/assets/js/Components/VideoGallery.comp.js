@@ -1,7 +1,8 @@
 import React, { Component, useState } from "react";
 import { Carousel } from 'react-bootstrap';
+import "./VideoGallery.css"
 
-
+import YouTube from 'react-youtube';
 
 /**
  * VideoGallery
@@ -27,7 +28,15 @@ import { Carousel } from 'react-bootstrap';
 export default function VideoGallery({videos, ytHeaderCover}) {
     const [index, setIndex] = useState(0);
 
+    const [lastPlayed, setLastPlayed] = useState(null);
+
     const handleSelect = (selectedIndex) => {
+        // Pause any playing video
+        if(lastPlayed!==null) {
+            lastPlayed.pauseVideo();
+        }
+
+        // Change view
         setIndex(selectedIndex);
     }
 
@@ -48,18 +57,20 @@ export default function VideoGallery({videos, ytHeaderCover}) {
                 </h3>
             </header>
             <Carousel activeIndex={index} onSelect={handleSelect}>
-                {videos.map(video => (
+                {videos.map((video,id) => (
                     <Carousel.Item key={video.id}>
-                        <img
-                            className="d-block clickable"
-                            src={video.thumbnail}
-                            alt={video.title}
-                            style={{
-                                width: "50% !important",
-                                margin: "0 auto"
-                            }}
-                            onClick={()=>{ window.open(video.url) }}
-                        />
+
+                        <div className="video-responsive-wrapper">
+                            <div className="video-responsive">
+                                <YouTube
+                                    id={`video${id}`}
+                                    videoId={video.embedId}
+                                    onPlay={(event)=>{
+                                        setLastPlayed(event.target);
+                                    }}
+                                />
+                            </div>
+                        </div>
                         <Carousel.Caption>
                             <h3 className="clickable" onClick={()=>{ window.open(video.url) }}>{video.title}</h3>
                         </Carousel.Caption>
