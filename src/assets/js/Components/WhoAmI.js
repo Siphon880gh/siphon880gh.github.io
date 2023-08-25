@@ -3,7 +3,7 @@ import React, { Component, useState, useRef } from "react";
 import ReactDOM from "react-dom";
 import { Link, NavLink } from "react-router-dom";
 import githubContributions2022 from "../../img/github-2022-01-to-2022-12.png"
-import githubContributions2023 from "../../img/github-2022-08-to-2023-08.png"
+import githubContributions2023 from "../../img/github-2022-08-to-2023-08c.png"
 import mePic from "../../img/me3.jpg"
 import ytHeaderCover from "../../img/yt-cover.png"
 import "./WhoAmI.css"

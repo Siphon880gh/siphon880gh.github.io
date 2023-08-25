@@ -169,7 +169,10 @@ export default class Work extends React.Component {
                 </div>
             </div>
 
-            {/* <hr style={dividerStyle}/> */}
+            
+            <div id="link-other-work">
+                <p>See more work at: <a target="_blank" href="https://www.wengindustry.com/me2">my other website</a></p>
+            </div>
 
             <h2>Contributions / Group Work</h2>
             <Collab/>
