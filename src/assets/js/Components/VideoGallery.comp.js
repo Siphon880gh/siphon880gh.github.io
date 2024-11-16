@@ -63,6 +63,7 @@ export default function VideoGallery({videos, ytHeaderCover}) {
                         <div className="video-responsive-wrapper">
                             <div className="video-responsive">
                                 <YouTube
+                                    key={`video${id}`}
                                     id={`video${id}`}
                                     videoId={video.embedId}
                                     onPlay={(event)=>{

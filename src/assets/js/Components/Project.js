@@ -34,7 +34,7 @@ export default class Project extends React.Component {
             );
         }
         return (
-            <div className="card col-12 col-sm-4 col-md-3 project" data-component="Project">
+            <div key={this.props.uniqueKey} data-test-key={this.props.uniqueKey} className="card col-12 col-sm-4 col-md-3 project" data-component="Project">
                 <figure className="card-body">
                     <figcaption>
                         <a href={this.props.link} target="_blank">

@@ -53,17 +53,28 @@
     <!-- If visited directly in the web browser without a node process on the server, htaccess will reroute to ?subpath=tech -->
     <!-- Then React can be signaled to reroute on the frontend -->
     <script>
-        const queryString = window.location.search;
-        if (queryString.length) {
-            const urlParams = new URLSearchParams(queryString);
-            let pageName = urlParams.get("page");
-            let hash = window.location.hash;
-            if(hash) pageName+=hash;
-            window.rerouteReact = pageName;
-        }
-        if (window.rerouteReact) {
-            document.querySelector(`[data-php-rerouter="${window.rerouteReact}"]`).click();
-        }
+        document.addEventListener("DOMContentLoaded", function() {
+            const queryString = window.location.search;
+            if (queryString.length) {
+                const urlParams = new URLSearchParams(queryString);
+                let pageName = urlParams.get("page");
+                let hash = window.location.hash;
+                if(hash) pageName+=hash;
+                window.rerouteReact = pageName;
+            }
+            if (window.rerouteReact) {
+                function reattempt() {
+                    // console.log("Reattempt")
+                    if(!document.querySelector(`[data-php-rerouter]`)) {
+                        return;
+                    } else {
+                        clearInterval(poller)
+                        document.querySelector(`[data-php-rerouter="${window.rerouteReact}"]`).click()
+                    }
+                }
+                var poller = setInterval(reattempt, 200);
+            }
+        });
     </script>
 
 

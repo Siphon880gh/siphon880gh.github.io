@@ -150,10 +150,11 @@ export default class Work extends React.Component {
                 <h2>Work</h2>
                 <div className="row">
 
-                    {projects.map(project=>{
+                    {projects.map((project,i)=>{
                             let {link="",screenshot="",title="",desc="", tech="", repos="", bgColor=""} = project;
                             return (
                                 <Project
+                                    key={"work-"+i}
                                     link={link}
                                     screenshot={screenshot}
                                     title={title}
