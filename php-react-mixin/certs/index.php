@@ -49,7 +49,7 @@
     <div class="nav-wrapper">
         <nav>
             <a href="#"><h2 class="active">Certificates</h2></a>
-            <a href="../achievements"><h2>Achievements</h2></a>
+            <a href="../achievements/index.php"><h2>Achievements</h2></a>
         </nav>
         <nav>
             <!-- <button class="btn btn-full-screen" onclick="uiFullScreenRequest()" style="margin-left:30px;">Full screen</button> -->

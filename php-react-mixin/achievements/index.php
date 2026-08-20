@@ -30,7 +30,7 @@
 <body>
     <div class="nav-wrapper">
         <nav>
-            <a href="../certs"><h2>Certificates</h2></a>
+            <a href="../certs/index.php"><h2>Certificates</h2></a>
             <a href="#"><h2 class="active">Achievements</h2></a>
         </nav>
     </div>
