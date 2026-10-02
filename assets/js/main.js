@@ -762,7 +762,7 @@
         link.classList.add("is-blur-out");
         window.setTimeout(function () {
           window.location.href = href;
-        }, 550);
+        }, 300);
       });
     });
   })();

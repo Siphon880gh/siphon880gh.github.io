@@ -71,16 +71,14 @@ ul { margin: 0; padding: 0; list-style: none; }
   position: relative;
 }
 .brand img {
-  transition: filter 0.15s ease, transform 0.15s ease;
-  transform-origin: center center;
+  transition: filter 0.12s ease, transform 0.12s ease, opacity 0.12s ease;
 }
 .brand.is-blur-out img {
-  animation: brand-h-blur 0.55s ease-in forwards;
+  animation: brand-h-blur 0.3s ease-in forwards;
 }
 @keyframes brand-h-blur {
-  0%   { filter: blur(0) saturate(1); transform: scaleX(1); opacity: 1; }
-  45%  { filter: blur(7px) saturate(1.05); transform: scaleX(1.06); opacity: 0.92; }
-  100% { filter: blur(12px) saturate(1.1); transform: scaleX(1.12); opacity: 0.55; }
+  0%   { filter: blur(0); transform: translateX(0); opacity: 1; }
+  100% { filter: blur(10px); transform: translateX(6px); opacity: 0.65; }
 }
 @media (prefers-reduced-motion: reduce) {
   .brand.is-blur-out img {
@@ -718,6 +716,12 @@ ul { margin: 0; padding: 0; list-style: none; }
   }
   .hero { min-height: auto; padding: 3rem 0 4rem; }
   .portrait-ring { width: min(280px, 70vw); }
+}
+@media (max-width: 767px) {
+  /* Match scroll intro: portrait above kicker, centered (flex already centers) */
+  .hero-portrait {
+    order: -1;
+  }
 }
 @media (max-width: 600px) {
   .icon-grid { grid-template-columns: 1fr; }

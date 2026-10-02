@@ -796,6 +796,11 @@ html.is-depth .depth-progress span {
   .depth-paths {
     grid-template-columns: 1fr;
   }
+  /* Portrait first + centered above kicker; desktop/tablet unchanged */
+  .intro-portrait {
+    order: -1;
+    justify-self: center;
+  }
   .depth-page .intro-portrait .portrait-ring {
     width: min(220px, 70vw);
   }
