@@ -312,8 +312,9 @@
   if (form) {
     try {
       const path = new URLSearchParams(window.location.search).get("path");
-      if (path === "build" || path === "advise" || path === "unsure") {
-        const radio = form.querySelector('input[name="path"][value="' + path + '"]');
+      if (path === "build" || path === "advise" || path === "unsure" || path === "not-sure") {
+        const radioValue = path === "not-sure" ? "unsure" : path;
+        const radio = form.querySelector('input[name="path"][value="' + radioValue + '"]');
         if (radio) radio.checked = true;
       }
     } catch (e) {}
