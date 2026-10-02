@@ -835,4 +835,39 @@
     });
   })();
 
+  // Hero cert row: MERN certificate image uses the same dialog lightbox as credentials.
+  (function initHeroCertLightbox() {
+    const dialog = document.getElementById("hero-cert-lightbox");
+    const shot = document.getElementById("hero-cert-lightbox-img");
+    const caption = document.getElementById("hero-cert-lightbox-caption");
+    if (!dialog || !shot || !caption) return;
+    let lastTrigger = null;
+
+    document.addEventListener("click", function (e) {
+      const btn = e.target.closest("[data-cert-lightbox]");
+      if (!btn) return;
+      e.preventDefault();
+      const src = btn.getAttribute("data-cert-lightbox");
+      if (!src) return;
+      shot.src = src;
+      shot.alt = btn.getAttribute("data-cert-caption") || btn.getAttribute("aria-label") || "Certificate";
+      caption.textContent = btn.getAttribute("data-cert-caption") || "";
+      lastTrigger = btn;
+      if (typeof dialog.showModal === "function") dialog.showModal();
+      else window.open(src, "_blank", "noopener");
+    });
+
+    dialog.addEventListener("click", function (e) {
+      if (e.target === dialog || e.target.closest("[data-lightbox-close]")) {
+        dialog.close();
+      }
+    });
+    dialog.addEventListener("close", function () {
+      shot.removeAttribute("src");
+      shot.alt = "";
+      if (lastTrigger && typeof lastTrigger.focus === "function") lastTrigger.focus();
+    });
+  })();
+
+
 })();

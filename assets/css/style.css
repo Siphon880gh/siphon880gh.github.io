@@ -1912,3 +1912,55 @@ body:not(.depth-page).is-page-exit > main {
     transition: none;
   }
 }
+
+/* Hero certification highlights (classic + scroll intro) */
+.hero-certs {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 0.75rem 1rem;
+  margin: 1.15rem 0 0;
+  padding: 0;
+}
+.hero-certs li { margin: 0; padding: 0; }
+.hero-cert {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.28rem;
+  max-width: 8.5rem;
+  margin: 0;
+  padding: 0.15rem;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.hero-cert img {
+  height: 48px;
+  width: auto;
+  display: block;
+}
+.hero-cert span {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.82);
+  text-align: center;
+  line-height: 1.25;
+}
+.hero-cert:hover span,
+.hero-cert:focus-visible span { color: var(--c2); }
+.hero-cert:focus-visible {
+  outline: 2px solid var(--c3);
+  outline-offset: 3px;
+}
+@media (max-width: 600px) {
+  .hero-cert img { height: 42px; }
+  .hero-certs { gap: 0.55rem 0.7rem; }
+}
