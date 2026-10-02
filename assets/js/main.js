@@ -415,14 +415,14 @@
 
     document.querySelectorAll("[data-open-teaching]").forEach(function (el) {
       el.addEventListener("click", function (e) {
-        if (el.tagName === "BUTTON") {
+        if (el.tagName === "BUTTON" || el.tagName === "A") {
           e.preventDefault();
           e.stopPropagation();
           openPanel(el);
           return;
         }
         if (e.target.closest("a")) return;
-        if (e.target.closest("button[data-open-teaching]")) return;
+        if (e.target.closest("[data-open-teaching]")) return;
         e.preventDefault();
         openPanel(el);
       });

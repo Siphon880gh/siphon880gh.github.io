@@ -1410,7 +1410,8 @@ ul { margin: 0; padding: 0; list-style: none; }
 
 
 /* Teaching passion panel */
-.passion-expand-btn {
+.passion-expand-btn,
+a.passion-expand-btn {
   appearance: none;
   border: 0;
   background: transparent;
@@ -1423,7 +1424,8 @@ ul { margin: 0; padding: 0; list-style: none; }
   text-decoration: underline;
   text-underline-offset: 3px;
 }
-.passion-expand-btn:hover { color: var(--c3); }
+.passion-expand-btn:hover,
+a.passion-expand-btn:hover { color: var(--c3); }
 .passion-card--teaching { cursor: pointer; }
 .passion-card--teaching:focus-within {
   outline: 2px solid var(--c3);
