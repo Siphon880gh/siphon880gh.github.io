@@ -437,6 +437,40 @@
     const dialog = document.getElementById("teaching-panel");
     if (!dialog) return;
 
+    // Manager & company praises: click-to-enlarge (reuse credentials lightbox pattern)
+    (function initTeachingLightbox() {
+      const lb = document.getElementById("teaching-lightbox");
+      const shot = document.getElementById("teaching-lightbox-img");
+      const caption = document.getElementById("teaching-lightbox-caption");
+      if (!lb || !shot || !caption) return;
+      let lastTrigger = null;
+      dialog.addEventListener("click", function (e) {
+        const btn = e.target.closest(".teaching-enlarge");
+        if (!btn) return;
+        e.preventDefault();
+        e.stopPropagation();
+        const src = btn.getAttribute("data-full");
+        if (!src) return;
+        shot.src = src;
+        shot.alt = btn.getAttribute("aria-label") || "";
+        caption.textContent = btn.getAttribute("data-caption") || "";
+        lastTrigger = btn;
+        if (typeof lb.showModal === "function") lb.showModal();
+        else window.open(src, "_blank", "noopener");
+      });
+      lb.addEventListener("click", function (e) {
+        if (e.target === lb || e.target.closest("[data-lightbox-close]")) {
+          lb.close();
+        }
+      });
+      lb.addEventListener("close", function () {
+        shot.removeAttribute("src");
+        shot.alt = "";
+        if (lastTrigger && typeof lastTrigger.focus === "function") lastTrigger.focus();
+      });
+    })();
+
+
     let lastTrigger = null;
     let logRows = null;
     let logLoaded = false;

@@ -1532,6 +1532,37 @@ a.passion-expand-btn:hover { color: var(--c3); }
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 0.75rem;
 }
+
+.teaching-enlarge {
+  appearance: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  cursor: zoom-in;
+  display: block;
+  width: 100%;
+  text-align: left;
+  border-radius: 8px;
+}
+.teaching-enlarge:focus-visible {
+  outline: 2px solid var(--c3);
+  outline-offset: 3px;
+}
+.teaching-enlarge img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 17, 41, 0.08);
+  background: #fff;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+.teaching-enlarge:hover img {
+  box-shadow: 0 8px 24px rgba(0, 17, 41, 0.18);
+  transform: translateY(-1px);
+}
+
 .teaching-quotes { display: grid; gap: 0.85rem; margin-top: 1rem; }
 .teaching-quote {
   margin: 0;
