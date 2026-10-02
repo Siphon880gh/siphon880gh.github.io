@@ -703,18 +703,14 @@ html.is-depth .depth-progress span {
 }
 
 @media (max-width: 900px) {
-  .intro-layout,
+  /* Keep intro two-column through tablet; stack only below 768 */
   .flagship-layout,
   .hire-quotes,
   .work-fan {
     grid-template-columns: 1fr 1fr;
   }
-  .intro-layout,
   .flagship-layout {
     grid-template-columns: 1fr;
-  }
-  .intro-portrait {
-    justify-self: start;
   }
   .flagship-card {
     margin-left: 0;

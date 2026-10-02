@@ -98,18 +98,19 @@ $html = me_apply_animated_avatar($html, $animatedAvatar);
 
 // scroll/index.html paths are relative to /scroll/; rewrite so the same markup works at site root.
 // Order matters: rewrite scroll-local assets before the general ../ → ./ pass.
+// Match path prefix (not closing quote) so ?v= cache-bust stays intact.
 $html = str_replace(
     [
-        'href="./scroll.css"',
-        'src="./scroll.js"',
+        'href="./scroll.css',
+        'src="./scroll.js',
         'href="../',
         'src="../',
         'content="../',
         '="../', // data-avatar-* and any other relative attr values
     ],
     [
-        'href="./scroll/scroll.css"',
-        'src="./scroll/scroll.js"',
+        'href="./scroll/scroll.css',
+        'src="./scroll/scroll.js',
         'href="./',
         'src="./',
         'content="./',

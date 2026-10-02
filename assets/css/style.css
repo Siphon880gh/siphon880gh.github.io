@@ -683,7 +683,6 @@ ul { margin: 0; padding: 0; list-style: none; }
 
 /* Mobile menu */
 @media (max-width: 960px) {
-  .hero .container,
   .video-block,
   .testimonial-grid,
   .about-split,
@@ -718,7 +717,10 @@ ul { margin: 0; padding: 0; list-style: none; }
   .portrait-ring { width: min(280px, 70vw); }
 }
 @media (max-width: 767px) {
-  /* Match scroll intro: portrait above kicker, centered (flex already centers) */
+  /* Classic home: stack + portrait above kicker (matches scroll intro) */
+  .hero .container {
+    grid-template-columns: 1fr;
+  }
   .hero-portrait {
     order: -1;
   }
