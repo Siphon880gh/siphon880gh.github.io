@@ -989,12 +989,14 @@ ul { margin: 0; padding: 0; list-style: none; }
   color: var(--c3) !important;
 }
 
-/* Inline content links (certs, notes) on light bands */
+/* Inline content links (certs, notes) on light bands.
+   Exclude .btn so About hero-actions (LinkedIn etc.) keep Cool Style pill contrast:
+   yellow + navy default; cyan bg + navy text on hover — not cyan-on-cyan. */
 .band-head a,
 .path-card > p a,
 .advise-intro a,
 .about-advise-closer a,
-.about-copy a {
+.about-copy a:not(.btn) {
   color: #087a8f;
   text-decoration: underline;
   text-underline-offset: 2px;
@@ -1003,7 +1005,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .path-card > p a:hover,
 .advise-intro a:hover,
 .about-advise-closer a:hover,
-.about-copy a:hover {
+.about-copy a:not(.btn):hover {
   color: var(--c3);
 }
 
