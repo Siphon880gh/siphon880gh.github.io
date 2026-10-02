@@ -93,7 +93,7 @@ Additive side work — **not** a third hire path; developer-first still.
 
 | | |
 |--|--|
-| **Site (this portfolio)** | `/` Home · `/projects/` Work · `/services/` Services · `/passion/` Passion · `/about/` About · `/contact/` Contact (`?path=build\|advise\|unsure`) |
+| **Site (this portfolio)** | `/` Home · `/projects/` Work · `/services/` Services · `/passion/` Passion · `/about/` About · `/contact/` Contact (`?path=build\|advise\|unsure`) · `/scroll/` scroll story (desktop pin theater; stacked under 768px or reduced motion) |
 | **GitHub** | [github.com/Siphon880gh](https://github.com/Siphon880gh) |
 | **LinkedIn** | [linkedin.com/in/weng-fung](https://www.linkedin.com/in/weng-fung/) |
 | **YouTube** | [@WengTeachesCode](https://www.youtube.com/@WengTeachesCode) |
@@ -114,6 +114,7 @@ With **MAMP** (or any static server) at the `weng` docroot:
 | Passion | http://localhost:8888/weng/me/passion/ |
 | About | http://localhost:8888/weng/me/about/ |
 | Contact | http://localhost:8888/weng/me/contact/ (supports `?path=build\|advise\|unsure`) |
+| Scroll story | http://localhost:8888/weng/me/scroll/ |
 
 Or from this folder:
 
@@ -126,7 +127,7 @@ cd me && python3 -m http.server 8765
 
 ## Repo structure
 
-- `index.html`, `projects/` (nav: Work), `services/`, `passion/`, `about/`, `contact/` — pages
+- `index.html`, `projects/` (nav: Work), `services/`, `passion/`, `about/`, `contact/`, `scroll/` — pages. `/scroll/` is the GSAP ScrollTrigger depth story (Intro, Paths, Flagship, Work, Hire); Home links to it without replacing the Cool Style landing.
 - `assets/css/style.css`, `assets/js/main.js` — design system, path cards, Work Build|Advise tabs (+ Passion link), tag filters, contact path chooser
 - Header brand uses `logo-light.png` alone (full wordmark in image)
 - `assets/img/` — logos, headshot, icons, waves, project screenshots (`assets/img/projects/_shots/` is local scratch — not committed)

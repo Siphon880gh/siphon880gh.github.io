@@ -172,6 +172,22 @@ ul { margin: 0; padding: 0; list-style: none; }
   flex-wrap: wrap;
   gap: 0.9rem;
 }
+.hero-depth-link {
+  margin: 1.05rem 0 0;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+.hero-depth-link a {
+  color: rgba(0, 210, 252, 0.9);
+  border-bottom: 1px solid rgba(0, 210, 252, 0.4);
+  padding-bottom: 0.08rem;
+}
+.hero-depth-link a:hover {
+  color: var(--c2);
+  border-bottom-color: var(--c2);
+}
 .btn {
   display: inline-flex;
   align-items: center;
