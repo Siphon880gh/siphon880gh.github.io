@@ -1,6 +1,6 @@
 RewriteEngine On
 RewriteBase /weng/me/
-DirectoryIndex index.html
+DirectoryIndex index.php index.html
 
 # Legacy React SPA paths → new static IA
 RewriteRule ^whoami/?$ /weng/me/about/ [R=302,L]

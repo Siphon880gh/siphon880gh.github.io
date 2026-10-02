@@ -108,11 +108,13 @@ Quieter archive (not in the primary nav): [`/credentials/`](./credentials/) — 
 
 ## Browse locally
 
-With **MAMP** (or any static server) at the `weng` docroot:
+With **MAMP** (or any PHP-capable vhost) at the `weng` docroot — Apache should prefer `index.php` (see `.htaccess` `DirectoryIndex index.php index.html`):
 
 | Page | URL |
 |------|-----|
 | Home | http://localhost:8888/weng/me/ |
+| Home (classic escape hatch) | http://localhost:8888/weng/me/?classic=1 |
+| Scroll story (standalone) | http://localhost:8888/weng/me/scroll/ |
 | Work | http://localhost:8888/weng/me/projects/ |
 | Services | http://localhost:8888/weng/me/services/ |
 | Passion | http://localhost:8888/weng/me/passion/ |
@@ -120,18 +122,33 @@ With **MAMP** (or any static server) at the `weng` docroot:
 | Contact | http://localhost:8888/weng/me/contact/ (supports `?path=build\|advise\|unsure`) |
 | Credentials | http://localhost:8888/weng/me/credentials/ (`?tab=certificates\|achievements`) |
 
-Or from this folder:
+Or from this folder (static only — no PHP / no `homeScroll` switching):
 
 ```bash
 cd me && python3 -m http.server 8765
-# then open http://localhost:8765/
+# then open http://localhost:8765/ (classic home) or http://localhost:8765/scroll/
 ```
 
 ---
 
+## Home mode (`config.json` → `homeScroll`)
+
+| Host | Behavior |
+|------|----------|
+| **Vhost (PHP)** | `index.php` is the home front controller. Reads `config.json` → `homeScroll`. When `true`, Home (`/`) **includes** the 3D scroll markup/assets in place (same content/behavior as `/scroll/`) — **no redirect**. When `false`, or with `?classic=1`, serves classic Cool Style `index.html`. |
+| **GitHub Pages / pure static** | No PHP. `index.html` is classic-only (**no** client redirect to `/scroll/`). Open `/scroll/` for the story. Flip `homeScroll` only affects PHP hosts. |
+
+`DirectoryIndex` in `.htaccess` is `index.php index.html` so Apache prefers PHP when both exist. On nginx, use `index index.php index.html;`. If the vhost still serves `index.html` first, Home will stay classic until DirectoryIndex is fixed.
+
+`/scroll/` remains a standalone URL (static `scroll/index.html`) for deep links and static hosts.
+
 ## Repo structure
 
-- `index.html`, `projects/` (nav: Work), `services/`, `passion/`, `about/`, `contact/`, `credentials/` (secondary archive, not in primary nav) — pages
+- `index.php` — home front controller (PHP vhost); honors `config.json` `homeScroll` and `?classic=1`
+- `index.html` — classic Cool Style home (static / GitHub Pages fallback; no redirect)
+- `config.json` — `{ "homeScroll": true|false }` (no rebuild; PHP reads on each request)
+- `scroll/` — 3D scroll story (`index.html`, `scroll.css`, `scroll.js`); also embedded at `/` when `homeScroll` is true on PHP
+- `projects/` (nav: Work), `services/`, `passion/`, `about/`, `contact/`, `credentials/` (secondary archive, not in primary nav) — pages
 - `assets/css/style.css`, `assets/js/main.js` — design system, path cards, Work Build|Advise tabs (+ Passion link), tag filters, contact path chooser
 - Header brand uses `logo-light.png` alone (full wordmark in image)
 - `assets/img/` — logos, headshot, icons, waves, project screenshots (`assets/img/projects/_shots/` is local scratch — not committed)
