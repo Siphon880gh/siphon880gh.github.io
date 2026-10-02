@@ -190,11 +190,6 @@
   transform-style: preserve-3d;
 }
 
-/* Desktop depth: clip ExRx back-card peek during Y-scrub; mobile keeps overflow visible. */
-html.is-depth .flagship-stage {
-  overflow: hidden;
-}
-
 .flagship-card,
 .flagship-back {
   display: block;
@@ -252,8 +247,9 @@ html.is-depth .flagship-stage {
 }
 
 html.is-depth .flagship-back {
-  /* Stay fully behind VideoListings until GSAP fades/tucks it in. */
+  /* Hide ExRx without clipping the front card (no overflow:hidden on stage). */
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
 }
 
