@@ -73,9 +73,10 @@ Advise-side themes (no fake case-study theater): marketing/ops automation, sales
 Additive side work — **not** a third hire path; developer-first still.
 
 - **Games** — browser experiments ([games](https://wengindustries.com/games)); short Unreal / Blender stint; [3D Notes](https://3dnotes.wengindustries.com)
-- **Nursing** — clinical simulation, quizzes, bedside RN notes ([nursing](https://wengindustries.com/nursing))
 - **[@WengTeachesCode](https://www.youtube.com/@WengTeachesCode)** — coding tutorials remain online as a passion archive; focus shifted to testing emerging AI developments monthly
+- **Loving to teach** — senior tutor for EdX coding bootcamp students; diggable session feedback / teaching log / manager praises on Passion (not a hire path)
 - **Knowledge building** — **7,000+** notes since before ChatGPT: [CoderNotes](https://codernotes.wengindustries.com/) · [BizNotes](https://biznotes.wengindustries.com/) · [3D Notes](https://3dnotes.wengindustries.com/) · [HealthNotes](https://healthnotes.wengindustries.com/)
+- **Nursing** — clinical simulation, quizzes, bedside RN notes ([nursing](https://wengindustries.com/nursing))
 
 ---
 

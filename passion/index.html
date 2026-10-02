@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Passion — Weng Industry</title>
-  <meta name="description" content="Passion projects by Weng Fei Fung — games, nursing tools, YouTube archive, and 7,000+ knowledge notes. Additive, developer-first.">
+  <meta name="description" content="Passion projects by Weng Fei Fung — games, teaching, knowledge notes, YouTube archive, and nursing tools. Additive, developer-first.">
   <meta property="og:title" content="Passion — Weng Industry">
-  <meta property="og:description" content="Passion projects by Weng Fei Fung — games, nursing tools, YouTube archive, and 7,000+ knowledge notes. Additive, developer-first.">
+  <meta property="og:description" content="Passion projects by Weng Fei Fung — games, teaching, knowledge notes, YouTube archive, and nursing tools. Additive, developer-first.">
   <meta property="og:image" content="../assets/img/brand/promo.jpg">
   <link rel="icon" href="../assets/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,12 +42,12 @@
   <section class="page-hero">
     <div class="container">
       <h1>Passion projects</h1>
-      <p>Additive side work — games, nursing tools, knowledge vaults, and a YouTube archive. Not a third hire path; developer-first still.</p>
+      <p>Additive side work — games, teaching, knowledge vaults, a YouTube archive, and nursing tools. Not a third hire path; developer-first still.</p>
     </div>
   </section>
   <section class="section">
     <div class="container">
-      <p class="advise-intro passion-intro">Passion projects — additive, developer-first. Games, nursing tools, knowledge vaults, and a YouTube archive while I focus monthly on emerging AI.</p>
+      <p class="advise-intro passion-intro">Passion projects — additive, developer-first. Games, teaching students to code, knowledge vaults, a YouTube archive, and nursing tools while I focus monthly on emerging AI.</p>
       <div class="project-grid passion-grid">
         <article class="project-card passion-card" style="--shot:url('../img/projects/passion-games.png')">
           <div class="tags"><span class="tag">Games</span><span class="tag">Browser</span></div>
@@ -55,17 +55,19 @@
           <p>Short, curious browser experiments — play (Pokémon Pic, Spreadsheet Scavenger) and learn (RN Simulation practice). Built for curiosity, not a product pitch. I also studied Unreal Engine and Blender for a short stint.</p>
           <div class="links"><a href="https://wengindustries.com/games" target="_blank" rel="noopener noreferrer">Open games →</a> <a href="https://3dnotes.wengindustries.com" target="_blank" rel="noopener noreferrer">3D Notes</a> <a href="https://www.linkedin.com/in/weng-fung/details/certifications/" target="_blank" rel="noopener noreferrer">3D workshop certs</a></div>
         </article>
-        <article class="project-card passion-card" style="--shot:url('../img/projects/passion-nursing.png')">
-          <div class="tags"><span class="tag">Nursing</span><span class="tag">Clinical</span></div>
-          <h3>Nursing</h3>
-          <p>Clinical simulation (Telemetry / Med-Surg / ICU), topic quizzes, bedside RN notes, and a wound-clinic viewer demo — training and reference tools from a bedside RN background.</p>
-          <div class="links"><a href="https://wengindustries.com/nursing" target="_blank" rel="noopener">Open nursing →</a></div>
-        </article>
         <article class="project-card passion-card" style="--shot:url('../img/projects/passion-youtube.png')">
           <div class="tags"><span class="tag">YouTube</span><span class="tag">Archive</span></div>
           <h3>@WengTeachesCode</h3>
           <p>Coding tutorials remain online as a passion archive. I’ve moved away from YouTube to focus on testing emerging AI developments every month.</p>
           <div class="links"><a href="https://www.youtube.com/@WengTeachesCode" target="_blank" rel="noopener">YouTube channel →</a></div>
+        </article>
+        <article class="project-card passion-card passion-card--teaching featured" id="teaching" style="--shot:url('../img/projects/passion-teaching.png')" data-open-teaching>
+          <div class="tags"><span class="tag">Teaching</span><span class="tag">Tutoring</span></div>
+          <h3>Loving to teach</h3>
+          <p>I love helping people learn to code. As a senior tutor for EdX coding bootcamp students (universities nationwide and internationally), I covered React, GraphQL, Sequelize, Node, and more — 370+ logged sessions with student feedback.</p>
+          <div class="links">
+            <button type="button" class="passion-expand-btn" data-open-teaching aria-haspopup="dialog" aria-controls="teaching-panel">Open teaching detail →</button>
+          </div>
         </article>
         <article class="project-card passion-card featured" style="--shot:url('../img/projects/passion-knowledge.png')">
           <div class="tags"><span class="tag">Notes</span><span class="tag">7000+</span></div>
@@ -78,9 +80,122 @@
             <a href="https://healthnotes.wengindustries.com/" target="_blank" rel="noopener">HealthNotes</a>
           </div>
         </article>
+        <article class="project-card passion-card" style="--shot:url('../img/projects/passion-nursing.png')">
+          <div class="tags"><span class="tag">Nursing</span><span class="tag">Clinical</span></div>
+          <h3>Nursing</h3>
+          <p>Clinical simulation (Telemetry / Med-Surg / ICU), topic quizzes, bedside RN notes, and a wound-clinic viewer demo — training and reference tools from a bedside RN background.</p>
+          <div class="links"><a href="https://wengindustries.com/nursing" target="_blank" rel="noopener">Open nursing →</a></div>
+        </article>
       </div>
     </div>
   </section>
+
+  <dialog class="teaching-panel" id="teaching-panel" aria-labelledby="teaching-panel-title">
+    <div class="teaching-panel-frame">
+      <button type="button" class="lightbox-close" data-teaching-close aria-label="Close teaching detail">Close</button>
+      <header class="teaching-panel-head">
+        <p class="eyebrow">Passion · diggable detail</p>
+        <h2 id="teaching-panel-title">Teaching &amp; tutoring</h2>
+        <p>Senior tutor for EdX full-stack coding bootcamp students — not a hire path; folded here so Work stays client/product-first. Quotes and screenshots below are from the earlier portfolio’s Students / testimonials section (real names and wording only).</p>
+      </header>
+
+      <div class="teaching-accordions">
+        <details class="teaching-acc" open>
+          <summary>Student testimonials</summary>
+          <div class="teaching-acc-body">
+            <p class="teaching-caption">Coding students leaving session feedback. Topics covered show languages and stacks taught.</p>
+            <figure class="teaching-shot">
+              <img src="../assets/img/students/testimonials-tutor/a.png" alt="Screenshot collage of coding student tutoring testimonials" loading="lazy">
+            </figure>
+            <div class="teaching-quotes">
+              <figure class="teaching-quote">
+                <blockquote>“Weng is fantastic. From when he first helped me in the AskBCS chat, he has shown his depth of knowledge and genuine wish to help make me a better coder. He found analogies to explain complex topics that really stuck with me…”</blockquote>
+                <figcaption>— Arielle Schlickman-Elak · 8/30/22 · Javascript best practices / planning / debugger</figcaption>
+              </figure>
+              <figure class="teaching-quote">
+                <blockquote>“Really appreciate my tutor's support and patience with me. He is one of the best teachers I've ever had.”</blockquote>
+                <figcaption>— Tatiana Collins · 8/31/22 · JavaScript</figcaption>
+              </figure>
+              <figure class="teaching-quote">
+                <blockquote>“Weng was super helpful, very friendly, and very knowledgable! I would love to request Weng again as a tutor! He not only answered my question, but he reviewed concepts that he felt would benefit me further in my studies.”</blockquote>
+                <figcaption>— Sean Bristol-Lee · 9/5/22 · Pre-work</figcaption>
+              </figure>
+              <figure class="teaching-quote">
+                <blockquote>“Weng is the best tutor I've had during this whole 4 months doing the bootcamp. He is insanely good and efficient at reading all code… He explain step by step.”</blockquote>
+                <figcaption>— Blanca Hidalgo · 5/29/23 · Sequelize, Handlebars, JavaScript</figcaption>
+              </figure>
+              <figure class="teaching-quote">
+                <blockquote>“Weng is a fantastic teacher and a great mentor… His expertise, dedication, and passion for teaching, shape the next generation of professionals.”</blockquote>
+                <figcaption>— Jackilyn Tan · 5/28/23 · MVC Handlebars Regex</figcaption>
+              </figure>
+              <figure class="teaching-quote">
+                <blockquote>“Weng Fei never disappoints. He quizzes me through out the session… Hands down my favorite tutor and the one who has helped me the most since the beginning of the bootcamp.”</blockquote>
+                <figcaption>— Zainab Dabbagh · 3/12/23 · Server-side APIs</figcaption>
+              </figure>
+            </div>
+          </div>
+        </details>
+
+        <details class="teaching-acc">
+          <summary>Teaching log <span class="teaching-acc-meta">370+ sessions</span></summary>
+          <div class="teaching-acc-body">
+            <p class="teaching-caption">Session feedback export from tutoring (same log that sat at the bottom of the Old Portfolio testimonials / Students section). Search by name, topic, or comment.</p>
+            <div class="teaching-log-toolbar">
+              <label class="teaching-log-search">
+                <span class="visually-hidden">Search teaching log</span>
+                <input type="search" id="teaching-log-q" placeholder="Filter by student, topic, or comment…" autocomplete="off">
+              </label>
+              <p class="teaching-log-status" id="teaching-log-status" aria-live="polite">Loading log…</p>
+            </div>
+            <div class="teaching-log-scroll" tabindex="0">
+              <table class="teaching-log-table" id="teaching-log-table">
+                <thead>
+                  <tr>
+                    <th scope="col">Date</th>
+                    <th scope="col">Student</th>
+                    <th scope="col">Topics</th>
+                    <th scope="col">Comment</th>
+                  </tr>
+                </thead>
+                <tbody id="teaching-log-body">
+                  <tr><td colspan="4">Loading…</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </details>
+
+        <details class="teaching-acc">
+          <summary>Manager &amp; company praises</summary>
+          <div class="teaching-acc-body">
+            <p class="teaching-caption">Supervisors giving shout-outs on Slack (Full Stack Coding Bootcamp students reaching tutors), plus rating dashboards — all students who rated gave 5/5; consistently outperforming the team Goal Average and Team vs You metrics. Captions match the Old Portfolio Students rotations.</p>
+            <h3 class="teaching-subhead">Slack shout-outs from supervisors</h3>
+            <div class="teaching-gallery">
+              <img src="../assets/img/students/testimonials-la/a.png" alt="Supervisor Slack shout-out screenshot A" loading="lazy">
+              <img src="../assets/img/students/testimonials-la/d.png" alt="Supervisor Slack shout-out screenshot D" loading="lazy">
+              <img src="../assets/img/students/testimonials-la/c.png" alt="Supervisor Slack shout-out screenshot C" loading="lazy">
+              <img src="../assets/img/students/testimonials-la/b.png" alt="Supervisor Slack shout-out screenshot B" loading="lazy">
+            </div>
+            <h3 class="teaching-subhead">Ratings — max stars from every student who rated</h3>
+            <div class="teaching-gallery">
+              <img src="../assets/img/students/scores-la/a.png" alt="Tutoring rating dashboard screenshot A" loading="lazy">
+              <img src="../assets/img/students/scores-la/b.png" alt="Tutoring rating dashboard screenshot B" loading="lazy">
+              <img src="../assets/img/students/scores-la/c.png" alt="Tutoring rating dashboard screenshot C" loading="lazy">
+              <img src="../assets/img/students/scores-la/d.png" alt="Tutoring rating dashboard screenshot D" loading="lazy">
+            </div>
+            <h3 class="teaching-subhead">Team vs You — outperforming comparison metrics</h3>
+            <div class="teaching-gallery">
+              <img src="../assets/img/students/scores-la/a2.png" alt="Team vs You comparison screenshot A" loading="lazy">
+              <img src="../assets/img/students/scores-la/b2.png" alt="Team vs You comparison screenshot B" loading="lazy">
+              <img src="../assets/img/students/scores-la/c2.png" alt="Team vs You comparison screenshot C" loading="lazy">
+              <img src="../assets/img/students/scores-la/d2.png" alt="Team vs You comparison screenshot D" loading="lazy">
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+  </dialog>
+
   <section class="cta-band">
     <div class="container">
       <h2>Need something built — or a consult?</h2>

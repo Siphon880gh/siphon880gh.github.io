@@ -382,4 +382,206 @@
       if (lastTrigger && typeof lastTrigger.focus === "function") lastTrigger.focus();
     });
   })();
+
+  // Passion: teaching detail panel
+  (function initTeachingPanel() {
+    const dialog = document.getElementById("teaching-panel");
+    if (!dialog) return;
+
+    let lastTrigger = null;
+    let logRows = null;
+    let logLoaded = false;
+
+    function openPanel(trigger) {
+      lastTrigger = trigger || null;
+      if (typeof dialog.showModal === "function") dialog.showModal();
+      else dialog.setAttribute("open", "");
+      try {
+        if (window.location.hash !== "#teaching") {
+          history.replaceState({}, "", "#teaching");
+        }
+      } catch (e) {}
+      ensureLog();
+    }
+
+    function closePanel() {
+      if (typeof dialog.close === "function") dialog.close();
+      else dialog.removeAttribute("open");
+    }
+
+    document.querySelectorAll("[data-open-teaching]").forEach(function (el) {
+      el.addEventListener("click", function (e) {
+        if (el.tagName === "BUTTON") {
+          e.preventDefault();
+          e.stopPropagation();
+          openPanel(el);
+          return;
+        }
+        if (e.target.closest("a")) return;
+        if (e.target.closest("button[data-open-teaching]")) return;
+        e.preventDefault();
+        openPanel(el);
+      });
+      if (el.tagName === "ARTICLE") {
+        el.setAttribute("tabindex", "0");
+        el.setAttribute("role", "button");
+        el.setAttribute("aria-haspopup", "dialog");
+        el.setAttribute("aria-controls", "teaching-panel");
+        el.addEventListener("keydown", function (e) {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            openPanel(el);
+          }
+        });
+      }
+    });
+
+    dialog.addEventListener("click", function (e) {
+      if (e.target === dialog || e.target.closest("[data-teaching-close]")) {
+        closePanel();
+      }
+    });
+    dialog.addEventListener("close", function () {
+      try {
+        if (window.location.hash === "#teaching") {
+          history.replaceState({}, "", window.location.pathname + window.location.search);
+        }
+      } catch (e) {}
+      if (lastTrigger && typeof lastTrigger.focus === "function") lastTrigger.focus();
+    });
+
+    try {
+      if ((window.location.hash || "").replace("#", "") === "teaching") {
+        window.setTimeout(function () { openPanel(document.getElementById("teaching")); }, 0);
+      }
+    } catch (e) {}
+
+    function parseCsv(text) {
+      const rows = [];
+      let i = 0;
+      let field = "";
+      let row = [];
+      let inQuotes = false;
+      while (i < text.length) {
+        const c = text[i];
+        if (inQuotes) {
+          if (c === '"') {
+            if (text[i + 1] === '"') { field += '"'; i += 2; continue; }
+            inQuotes = false; i++; continue;
+          }
+          field += c; i++; continue;
+        }
+        if (c === '"') { inQuotes = true; i++; continue; }
+        if (c === ",") { row.push(field); field = ""; i++; continue; }
+        if (c === "\n" || c === "\r") {
+          if (c === "\r" && text[i + 1] === "\n") i++;
+          row.push(field); field = "";
+          if (row.length > 1 || (row[0] && row[0].trim())) rows.push(row);
+          row = []; i++; continue;
+        }
+        field += c; i++;
+      }
+      if (field.length || row.length) { row.push(field); rows.push(row); }
+      return rows;
+    }
+
+    function ensureLog() {
+      if (logLoaded) return;
+      logLoaded = true;
+      const status = document.getElementById("teaching-log-status");
+      const body = document.getElementById("teaching-log-body");
+      const q = document.getElementById("teaching-log-q");
+      if (!body) return;
+
+      const csvUrl = new URL("../assets/data/student-ratings.csv", window.location.href).href;
+      fetch(csvUrl)
+        .then(function (res) {
+          if (!res.ok) throw new Error("HTTP " + res.status);
+          return res.text();
+        })
+        .then(function (text) {
+          const grid = parseCsv(text);
+          if (!grid.length) throw new Error("empty");
+          const header = grid[0].map(function (h) { return String(h || "").trim(); });
+          const idx = {
+            name: header.indexOf("Student Full Name:"),
+            date: header.indexOf("Session Date:"),
+            topics: header.indexOf("Topic(s) Covered"),
+            comment: header.indexOf("Please share some comments in regards to the session and tutor. Thank you.")
+          };
+          logRows = grid.slice(1).map(function (r) {
+            return {
+              name: (r[idx.name] || "").trim(),
+              date: (r[idx.date] || "").trim(),
+              topics: (r[idx.topics] || "").trim(),
+              comment: (r[idx.comment] || "").trim()
+            };
+          }).filter(function (r) { return r.name || r.comment; });
+          if (status) status.textContent = logRows.length + " sessions in log";
+          renderLog("");
+          if (q) {
+            q.addEventListener("input", function () {
+              renderLog(q.value || "");
+            });
+          }
+        })
+        .catch(function () {
+          if (status) status.textContent = "Could not load teaching log.";
+          body.innerHTML = "<tr><td colspan=\"4\">Teaching log unavailable in this view.</td></tr>";
+        });
+    }
+
+    function renderLog(query) {
+      const body = document.getElementById("teaching-log-body");
+      const status = document.getElementById("teaching-log-status");
+      if (!body || !logRows) return;
+      const q = String(query || "").trim().toLowerCase();
+      const filtered = !q
+        ? logRows
+        : logRows.filter(function (r) {
+            return (
+              r.name.toLowerCase().indexOf(q) !== -1 ||
+              r.topics.toLowerCase().indexOf(q) !== -1 ||
+              r.comment.toLowerCase().indexOf(q) !== -1 ||
+              r.date.toLowerCase().indexOf(q) !== -1
+            );
+          });
+      if (status) {
+        status.textContent = filtered.length + " of " + logRows.length + " sessions" + (q ? " (filtered)" : "");
+      }
+      const max = 200;
+      const slice = filtered.slice(0, max);
+      body.innerHTML = slice
+        .map(function (r) {
+          function esc(s) {
+            return String(s)
+              .replace(/&/g, "&amp;")
+              .replace(/</g, "&lt;")
+              .replace(/>/g, "&gt;")
+              .replace(/"/g, "&quot;");
+          }
+          return (
+            "<tr><td>" +
+            esc(r.date) +
+            "</td><td>" +
+            esc(r.name) +
+            "</td><td>" +
+            esc(r.topics) +
+            "</td><td>" +
+            esc(r.comment) +
+            "</td></tr>"
+          );
+        })
+        .join("");
+      if (!slice.length) {
+        body.innerHTML = "<tr><td colspan=\"4\">No sessions match that filter.</td></tr>";
+      } else if (filtered.length > max) {
+        body.innerHTML +=
+          "<tr><td colspan=\"4\">Showing first " +
+          max +
+          " matches — refine the filter to narrow further.</td></tr>";
+      }
+    }
+  })();
+
 })();
