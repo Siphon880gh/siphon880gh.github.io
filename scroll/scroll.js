@@ -71,8 +71,14 @@
           y: i === 0 ? 0 : 70
         });
       });
-      gsap.set(".flagship-card", { rotationY: -32, transformPerspective: 1100, transformOrigin: "50% 50%" });
-      gsap.set(".flagship-back", { rotationY: 22, transformOrigin: "50% 50%" });
+      gsap.set(".flagship-card", { rotationY: -24, transformPerspective: 1100, transformOrigin: "50% 50%" });
+      gsap.set(".flagship-back", {
+        rotationY: 10,
+        z: -90,
+        autoAlpha: 0,
+        transformOrigin: "50% 50%",
+        pointerEvents: "none"
+      });
 
       timeline = gsap.timeline({
         defaults: { ease: "none" },
@@ -119,18 +125,25 @@
         }
       });
 
+      /* Tighter Y swing so ExRx never peeks past VideoListings; fade back in once tucked. */
       timeline.fromTo(".flagship-card", {
-        rotationY: -34
+        rotationY: -24
       }, {
-        rotationY: 28,
+        rotationY: 16,
         duration: SLOT,
         immediateRender: false
       }, 2 * SLOT - EXIT);
 
       timeline.fromTo(".flagship-back", {
-        rotationY: 26
+        rotationY: 10,
+        z: -90,
+        autoAlpha: 0,
+        pointerEvents: "none"
       }, {
-        rotationY: -14,
+        rotationY: -4,
+        z: -90,
+        autoAlpha: 1,
+        pointerEvents: "auto",
         duration: SLOT,
         immediateRender: false
       }, 2 * SLOT - EXIT);

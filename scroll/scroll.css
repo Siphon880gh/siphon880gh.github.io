@@ -190,6 +190,11 @@
   transform-style: preserve-3d;
 }
 
+/* Desktop depth: clip ExRx back-card peek during Y-scrub; mobile keeps overflow visible. */
+html.is-depth .flagship-stage {
+  overflow: hidden;
+}
+
 .flagship-card,
 .flagship-back {
   display: block;
@@ -242,7 +247,14 @@
   background: linear-gradient(160deg, rgba(8, 28, 52, 0.95), rgba(0, 17, 41, 0.92));
   border: 1px solid rgba(253, 215, 70, 0.35);
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
-  transform: translateZ(-40px);
+  transform: translateZ(-90px);
+  backface-visibility: hidden;
+}
+
+html.is-depth .flagship-back {
+  /* Stay fully behind VideoListings until GSAP fades/tucks it in. */
+  opacity: 0;
+  pointer-events: none;
 }
 
 .flagship-back-kicker,
@@ -274,6 +286,12 @@
 .flagship-card {
   position: relative;
   z-index: 1;
+  isolation: isolate;
+  backface-visibility: hidden;
+}
+
+html.is-depth .flagship-card {
+  z-index: 2;
 }
 
 .work-fan {
