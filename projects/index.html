@@ -63,7 +63,10 @@
             <div class="tag-filter-panel" id="tag-filter-panel">
               <div class="tag-filter-head">
                 <span class="tag-filter-title">Tags</span>
-                <button type="button" class="tag-filter-all is-active" data-filter-all>All</button>
+                <div class="tag-filter-actions">
+                  <button type="button" class="tag-filter-all is-active" data-filter-all>All</button>
+                  <button type="button" class="tag-filter-clear" data-filter-clear disabled>Clear</button>
+                </div>
               </div>
               <p class="tag-filter-hint">Multi-select · OR match</p>
               <div class="tag-filter-chips" role="group" aria-label="Project tags"></div>
@@ -144,11 +147,11 @@
                 <p>Multiple concurrent timers for workouts, cooking, and focus blocks.</p>
                 <div class="links"><a href="https://wengindustry.com/tools/multitimers/" target="_blank" rel="noopener">View project →</a></div>
               </article>
-              <article class="project-card" style="--shot:url('../img/projects/budget-tracker.png')" data-tags="PWA,IndexedDB,JS,Finance">
-                <div class="tags"><span class="tag">PWA</span><span class="tag">IndexedDB</span><span class="tag">JS</span><span class="tag">Finance</span></div>
+              <article class="project-card" style="--shot:url('../img/projects/budget-tracker.png')" data-tags="PWA,IndexedDB,Mongo,Node,Express,JS,Finance">
+                <div class="tags"><span class="tag">PWA</span><span class="tag">IndexedDB</span><span class="tag">Mongo</span><span class="tag">Node</span><span class="tag">Express</span><span class="tag">JS</span><span class="tag">Finance</span></div>
                 <h3>Budget Tracker</h3>
-                <p>Offline-capable PWA budget tracker with IndexedDB sync.</p>
-                <div class="links"><a href="https://wengindustries.com/app/budget-tracker/" target="_blank" rel="noopener">View project →</a></div>
+                <p>Offline-capable PWA budget tracker — IndexedDB offline queue plus Mongo/Express when online.</p>
+                <div class="links"><a href="https://wengindustries.com/app/budget-tracker/" target="_blank" rel="noopener">Live demo →</a> <a href="https://github.com/Siphon880gh/budget-tracker" target="_blank" rel="noopener">GitHub</a></div>
               </article>
               <article class="project-card" style="--shot:url('../img/projects/weather-dashboard.png')" data-tags="API,JS">
                 <div class="tags"><span class="tag">API</span><span class="tag">JS</span></div>
@@ -161,6 +164,31 @@
                 <h3>Work Day Scheduler</h3>
                 <p>Hourly day planner with localStorage persistence.</p>
                 <div class="links"><a href="https://siphon880gh.github.io/work-day-scheduler/" target="_blank" rel="noopener">View project →</a></div>
+              </article>
+
+              <article class="project-card" style="--shot:url('../img/projects/social-media-api.png')" data-tags="Mongo,Node,Express,REST,API">
+                <div class="tags"><span class="tag">Mongo</span><span class="tag">Node</span><span class="tag">Express</span><span class="tag">REST</span><span class="tag">API</span></div>
+                <h3>Social Media API</h3>
+                <p>MongoDB–Mongoose backend for users, thoughts, and reactions — REST routes ready for a MERN front end.</p>
+                <div class="links"><a href="https://github.com/Siphon880gh/social-media-api" target="_blank" rel="noopener">GitHub</a> <a href="https://www.youtube.com/watch?v=NpPc12I0C4M" target="_blank" rel="noopener">Walkthrough</a></div>
+              </article>
+              <article class="project-card" style="--shot:url('../img/projects/book-search.png')" data-tags="Mongo,Node,React,GraphQL,Express,MERN,API">
+                <div class="tags"><span class="tag">Mongo</span><span class="tag">Node</span><span class="tag">React</span><span class="tag">GraphQL</span><span class="tag">Express</span><span class="tag">MERN</span></div>
+                <h3>Book Search</h3>
+                <p>MERN app to search books, save favorites, and auth with JWT — GraphQL API over MongoDB.</p>
+                <div class="links"><a href="https://wengindustries.com/app/book-search" target="_blank" rel="noopener">Live demo →</a> <a href="https://github.com/Siphon880gh/book-search" target="_blank" rel="noopener">GitHub</a></div>
+              </article>
+              <article class="project-card" style="--shot:url('../img/projects/reprint.gif')" data-tags="Mongo,Node,React,GraphQL,Express,MERN">
+                <div class="tags"><span class="tag">Mongo</span><span class="tag">Node</span><span class="tag">React</span><span class="tag">GraphQL</span><span class="tag">Express</span><span class="tag">MERN</span></div>
+                <h3>Reprint (NoFT Gallery)</h3>
+                <p>MERN social gallery to share, favorite, and discuss NFT-style media — Mongo + GraphQL, no crypto wallet required.</p>
+                <div class="links"><a href="https://wengindustries.com/app/image-gallery-nft-collab/" target="_blank" rel="noopener">Live demo →</a> <a href="https://github.com/Siphon880gh/reprint" target="_blank" rel="noopener">GitHub</a></div>
+              </article>
+              <article class="project-card" style="--shot:url('../img/projects/goals-social.gif')" data-tags="Node,Express,MySQL,Handlebars,Social">
+                <div class="tags"><span class="tag">Node</span><span class="tag">Express</span><span class="tag">MySQL</span><span class="tag">Handlebars</span><span class="tag">Social</span></div>
+                <h3>Goals Social</h3>
+                <p>Full-stack social network around personal goals — milestones, comments, and chat with like-minded users.</p>
+                <div class="links"><a href="https://wengindustries.com/app/goals-social-network" target="_blank" rel="noopener">Live demo →</a> <a href="https://github.com/Siphon880gh/goals-social-network" target="_blank" rel="noopener">GitHub</a></div>
               </article>
             </div>
           </div>

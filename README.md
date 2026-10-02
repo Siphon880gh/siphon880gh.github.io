@@ -58,6 +58,10 @@ AI shows up as **assisted delivery** (ship faster, keep reviews/tests/structure)
 | **[ExRx.net Exercise API](https://exrx.net/Store/Other/Licensing)** | Lead Developer — API for the well-known ExRx exercise database |
 | **[Run App](https://therunner.app/)** | Progressive running trainer featured on ExRx |
 | **Developer Brain** | 1,500+ programming notes — learn by retyping code — [live](https://wengindustry.com/app/devbrain/) |
+| **[Book Search](https://wengindustries.com/app/book-search)** | MERN book finder with GraphQL + Mongo — [GitHub](https://github.com/Siphon880gh/book-search) |
+| **[Social Media API](https://github.com/Siphon880gh/social-media-api)** | Mongo/Mongoose/Node REST API (users, thoughts, reactions) |
+| **[Reprint (NoFT Gallery)](https://wengindustries.com/app/image-gallery-nft-collab/)** | MERN social gallery for NFT-style media — [GitHub](https://github.com/Siphon880gh/reprint) |
+| **[Goals Social](https://wengindustries.com/app/goals-social-network)** | Node/Express/MySQL social network around goals — [GitHub](https://github.com/Siphon880gh/goals-social-network) |
 | **Covid-19 Tracker**, **Meditation Studio**, **Multitimers**, **Budget Tracker**, and more | See **Work** on the site |
 
 Advise-side themes (no fake case-study theater): marketing/ops automation, sales process automation, SEO & content systems, accessibility audits & remediation plans, process + AI tooling, team mentoring.

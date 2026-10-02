@@ -67,6 +67,7 @@
 
     const chipsWrap = root.querySelector(".tag-filter-chips");
     const allBtn = root.querySelector("[data-filter-all]");
+    const clearBtn = root.querySelector("[data-filter-clear]");
     const emptyMsg = document.querySelector("#panel-build .tag-filter-empty");
     const toggleBtn = root.querySelector(".tag-filter-toggle");
     const countEl = root.querySelector(".tag-filter-count");
@@ -79,9 +80,16 @@
       "AI API",
       "JS",
       "Node",
+      "Express",
+      "Mongo",
+      "React",
+      "GraphQL",
+      "MERN",
       "PHP",
       "Python",
       "MySQL",
+      "Sequelize",
+      "Handlebars",
       "jQuery",
       "PWA",
       "IndexedDB",
@@ -102,7 +110,8 @@
       "Wellness",
       "Finance",
       "Education",
-      "Productivity"
+      "Productivity",
+      "Social"
     ];
 
     function parseTags(str) {
@@ -176,6 +185,10 @@
         chip.setAttribute("aria-pressed", on ? "true" : "false");
       });
       if (allBtn) allBtn.classList.toggle("is-active", selected.length === 0);
+      if (clearBtn) {
+        clearBtn.disabled = selected.length === 0;
+        clearBtn.classList.toggle("is-active", selected.length > 0);
+      }
 
       let visible = 0;
       cards.forEach(function (card) {
@@ -226,6 +239,12 @@
 
     if (allBtn) {
       allBtn.addEventListener("click", function () {
+        setSelected([]);
+      });
+    }
+
+    if (clearBtn) {
+      clearBtn.addEventListener("click", function () {
         setSelected([]);
       });
     }

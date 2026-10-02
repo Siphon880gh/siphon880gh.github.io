@@ -1045,7 +1045,14 @@ ul { margin: 0; padding: 0; list-style: none; }
   letter-spacing: 0.06em;
   color: var(--text-dark);
 }
-.tag-filter-all {
+.tag-filter-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex-shrink: 0;
+}
+.tag-filter-all,
+.tag-filter-clear {
   font-family: var(--font-mono);
   font-size: 0.75rem;
   padding: 0.25rem 0.65rem;
@@ -1056,11 +1063,21 @@ ul { margin: 0; padding: 0; list-style: none; }
   cursor: pointer;
   transition: 0.15s ease;
 }
-.tag-filter-all:hover { border-color: var(--c3); color: #087a8f; }
+.tag-filter-all:hover,
+.tag-filter-clear:hover:not(:disabled) { border-color: var(--c3); color: #087a8f; }
 .tag-filter-all.is-active {
   background: var(--c1);
   border-color: var(--c1);
   color: var(--c2);
+}
+.tag-filter-clear.is-active {
+  border-color: var(--c3);
+  color: #087a8f;
+  background: rgba(0, 210, 252, 0.12);
+}
+.tag-filter-clear:disabled {
+  opacity: 0.45;
+  cursor: default;
 }
 .tag-filter-hint {
   margin: 0 0 0.85rem;
