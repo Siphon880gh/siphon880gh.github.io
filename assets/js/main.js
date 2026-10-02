@@ -357,6 +357,84 @@
     });
   }
 
+
+  // Student name privacy: deterministic last-name scramble (mirrors assets/php/scramble-name.php)
+  function meCrc32(str) {
+    let crc = 0 ^ -1;
+    for (let i = 0; i < str.length; i++) {
+      crc = (crc >>> 8) ^ meCrc32.table[(crc ^ str.charCodeAt(i)) & 0xff];
+    }
+    return (crc ^ -1) >>> 0;
+  }
+  meCrc32.table = (function () {
+    const table = new Array(256);
+    for (let i = 0; i < 256; i++) {
+      let c = i;
+      for (let k = 0; k < 8; k++) c = c & 1 ? 0xedb88320 ^ (c >>> 1) : c >>> 1;
+      table[i] = c >>> 0;
+    }
+    return table;
+  })();
+
+  function meScrambleToken(token) {
+    token = String(token || "").trim();
+    if (!token) return token;
+    const chars = Array.from(token);
+    const letterIdx = [];
+    for (let i = 0; i < chars.length; i++) {
+      if (/\p{L}/u.test(chars[i])) letterIdx.push(i);
+    }
+    if (letterIdx.length <= 1) return token;
+    const letters = letterIdx.map(function (i) { return chars[i]; });
+    const first = letters.shift();
+    let seed = meCrc32(token.toLowerCase());
+    for (let i = letters.length - 1; i > 0; i--) {
+      seed = (Math.imul(seed, 1103515245) + 12345) & 0x7fffffff;
+      const j = seed % (i + 1);
+      const tmp = letters[i];
+      letters[i] = letters[j];
+      letters[j] = tmp;
+    }
+    const origRest = letterIdx.slice(1).map(function (i) { return chars[i]; });
+    let same = letters.length === origRest.length;
+    if (same) {
+      for (let i = 0; i < letters.length; i++) {
+        if (letters[i] !== origRest[i]) { same = false; break; }
+      }
+    }
+    if (same && letters.length >= 2) {
+      const tmp = letters[0];
+      letters[0] = letters[letters.length - 1];
+      letters[letters.length - 1] = tmp;
+    }
+    letters.unshift(first);
+    letterIdx.forEach(function (idx, k) { chars[idx] = letters[k]; });
+    return chars.join("");
+  }
+
+  function mePrivacyNameHtml(full) {
+    full = String(full || "").trim().replace(/\s+/g, " ");
+    function esc(s) {
+      return String(s)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }
+    const sp = full.indexOf(" ");
+    if (sp === -1) return esc(full);
+    const first = full.slice(0, sp);
+    const last = full.slice(sp + 1);
+    const scrambled = meScrambleToken(last);
+    return (
+      esc(first) +
+      ' <span class="student-lastname" title="Last name blurred for privacy" aria-label="last name hidden">' +
+      esc(scrambled) +
+      "</span>"
+    );
+  }
+
+
   // Credentials archive: hash deep links + image lightbox
   (function initCredentials() {
     const root = document.querySelector(".cred-page");
@@ -647,7 +725,7 @@
             "<tr><td>" +
             esc(r.date) +
             "</td><td>" +
-            esc(r.name) +
+            mePrivacyNameHtml(r.name) +
             "</td><td>" +
             esc(r.topics) +
             "</td><td>" +
@@ -666,5 +744,7 @@
       }
     }
   })();
+
+
 
 })();

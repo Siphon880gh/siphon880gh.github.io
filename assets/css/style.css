@@ -65,6 +65,8 @@ ul { margin: 0; padding: 0; list-style: none; }
   width: auto;
   display: block;
 }
+
+
 .nav-primary {
   display: flex;
   align-items: center;
@@ -1582,6 +1584,20 @@ a.passion-expand-btn:hover { color: var(--c3); }
   font-size: 0.78rem;
   color: #087a8f;
 }
+
+/* Student last-name privacy: scrambled text + visual blur */
+.student-lastname {
+  filter: blur(3.5px);
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: default;
+  display: inline;
+  letter-spacing: 0.02em;
+}
+@media (prefers-reduced-motion: reduce) {
+  .student-lastname { filter: blur(2.5px); }
+}
+
 
 .teaching-log-toolbar {
   display: flex;
