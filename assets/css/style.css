@@ -66,6 +66,30 @@ ul { margin: 0; padding: 0; list-style: none; }
   display: block;
 }
 
+/* Brand logo: brief horizontal blur on click before navigating home */
+.brand {
+  position: relative;
+}
+.brand img {
+  transition: filter 0.15s ease, transform 0.15s ease;
+  transform-origin: center center;
+}
+.brand.is-blur-out img {
+  animation: brand-h-blur 0.55s ease-in forwards;
+}
+@keyframes brand-h-blur {
+  0%   { filter: blur(0) saturate(1); transform: scaleX(1); opacity: 1; }
+  45%  { filter: blur(7px) saturate(1.05); transform: scaleX(1.06); opacity: 0.92; }
+  100% { filter: blur(12px) saturate(1.1); transform: scaleX(1.12); opacity: 0.55; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .brand.is-blur-out img {
+    animation: none;
+    filter: none;
+    opacity: 1;
+    transform: none;
+  }
+}
 
 .nav-primary {
   display: flex;

@@ -746,5 +746,25 @@
   })();
 
 
+  // Brand logo: brief horizontal blur, then navigate home (still a real link)
+  (function initBrandBlur() {
+    const links = document.querySelectorAll("a.brand");
+    if (!links.length) return;
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    links.forEach(function (link) {
+      link.addEventListener("click", function (e) {
+        if (reduce) return; // allow default navigation immediately
+        if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+        const href = link.getAttribute("href");
+        if (!href) return;
+        e.preventDefault();
+        if (link.classList.contains("is-blur-out")) return;
+        link.classList.add("is-blur-out");
+        window.setTimeout(function () {
+          window.location.href = href;
+        }, 550);
+      });
+    });
+  })();
 
 })();
