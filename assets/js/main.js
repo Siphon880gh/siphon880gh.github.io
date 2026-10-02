@@ -1,4 +1,48 @@
 (function () {
+  // Intro portrait: honor config.json animatedAvatar on static hosts (/scroll/, classic).
+  // PHP index.php already swaps src when serving /; this covers pure-static pages.
+  (function applyAnimatedAvatar() {
+    var img = document.querySelector(".portrait-ring img[data-avatar-animated]");
+    if (!img) return;
+    var animatedSrc = img.getAttribute("data-avatar-animated");
+    var staticSrc = img.getAttribute("data-avatar-static");
+    if (!animatedSrc) return;
+
+    function configUrls() {
+      var urls = [];
+      var marker = "assets/";
+      var probe = staticSrc || img.getAttribute("src") || "";
+      var i = probe.indexOf(marker);
+      if (i >= 0) urls.push(probe.slice(0, i) + "config.json");
+      urls.push("/config.json");
+      return urls;
+    }
+
+    function apply(cfg) {
+      if (!cfg || typeof cfg !== "object") return;
+      if (cfg.animatedAvatar) {
+        if (img.getAttribute("src") !== animatedSrc) img.setAttribute("src", animatedSrc);
+      } else if (staticSrc && img.getAttribute("src") !== staticSrc) {
+        img.setAttribute("src", staticSrc);
+      }
+    }
+
+    var urls = configUrls();
+    var idx = 0;
+    function tryNext() {
+      if (idx >= urls.length) return;
+      var url = urls[idx++];
+      fetch(url, { cache: "no-store" })
+        .then(function (r) {
+          if (!r.ok) throw new Error("config " + r.status);
+          return r.json();
+        })
+        .then(apply)
+        .catch(tryNext);
+    }
+    tryNext();
+  })();
+
   const header = document.querySelector(".site-header");
   const toggle = document.querySelector(".nav-toggle");
   if (toggle && header) {

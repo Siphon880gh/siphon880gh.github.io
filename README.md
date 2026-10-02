@@ -132,7 +132,7 @@ cd me && python3 -m http.server 8765
 
 ---
 
-## Home mode (`config.json` → `homeScroll`)
+## Home mode (`config.json` → `homeScroll`, `animatedAvatar`)
 
 | Host | Behavior |
 |------|----------|
@@ -147,7 +147,7 @@ cd me && python3 -m http.server 8765
 
 - `index.php` — home front controller (PHP vhost); honors `config.json` `homeScroll` and `?classic=1`
 - `index.html` — classic Cool Style home (static / GitHub Pages fallback; no redirect)
-- `config.json` — `{ "homeScroll": true|false }` (no rebuild; PHP reads on each request)
+- `config.json` — `{ "homeScroll": true|false, "animatedAvatar": true|false }` (no rebuild; PHP reads on each request; static pages fetch it via JS for the intro portrait)
 - `scroll/` — 3D scroll story (`index.html`, `scroll.css`, `scroll.js`); also embedded at `/` when `homeScroll` is true on PHP
 - `projects/` (nav: Work), `services/`, `passion/`, `about/`, `contact/`, `credentials/` (secondary archive, not in primary nav) — pages
 - `assets/css/style.css`, `assets/js/main.js` — design system, path cards, Work Build tab (+ Advise → Services, Passion → Passion), tag filters, contact path chooser
