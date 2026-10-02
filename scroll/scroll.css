@@ -440,11 +440,31 @@ html.is-depth .depth-chapter[data-depth="intro"] {
 }
 
 html.is-depth .depth-chapter[data-depth="intro"]::before {
+  /* Dim waves so headline/body stay readable; portrait side keeps a bit more swirl */
   background:
-    url("../assets/img/waves-background.svg") center bottom / cover no-repeat,
-    radial-gradient(ellipse at 75% 30%, rgba(0, 210, 252, 0.16), transparent 46%),
-    radial-gradient(ellipse at 20% 80%, rgba(253, 215, 70, 0.08), transparent 42%);
-  opacity: 0.9;
+    url("../assets/img/waves-background.svg") 70% bottom / cover no-repeat,
+    radial-gradient(ellipse at 78% 28%, rgba(0, 210, 252, 0.12), transparent 48%),
+    radial-gradient(ellipse at 22% 85%, rgba(253, 215, 70, 0.05), transparent 42%);
+  opacity: 0.22;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.3) 26%, rgba(0, 0, 0, 0.7) 52%, #000 100%);
+  mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.3) 26%, rgba(0, 0, 0, 0.7) 52%, #000 100%);
+  z-index: 0;
+}
+
+/* Stronger navy scrim behind left intro copy */
+html.is-depth .depth-chapter[data-depth="intro"]::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: linear-gradient(
+    105deg,
+    rgba(0, 17, 41, 0.88) 0%,
+    rgba(0, 17, 41, 0.62) 34%,
+    rgba(0, 17, 41, 0.22) 56%,
+    transparent 74%
+  );
 }
 
 html.is-depth .depth-chapter[data-depth="paths"]::before {
@@ -726,7 +746,8 @@ html.is-depth .depth-progress span {
     transform: none !important;
     overflow: visible;
   }
-  html.is-depth .depth-chapter::before {
+  html.is-depth .depth-chapter::before,
+  html.is-depth .depth-chapter[data-depth="intro"]::after {
     display: none;
   }
   .intro-copy,

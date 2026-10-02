@@ -2,6 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <script>
+    /* homeScroll: when config.json has homeScroll true, present /scroll/ as home (GitHub Pages static).
+       Fetch failure or ?classic=1 keeps this classic Cool Style home. Flip config.json without rebuild. */
+    (function () {
+      try {
+        var params = new URLSearchParams(location.search);
+        if (params.get("classic") === "1") return;
+      } catch (e) {}
+      fetch("./config.json", { cache: "no-cache" })
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (cfg) {
+          if (cfg && cfg.homeScroll === true) {
+            location.replace("./scroll/" + location.search + location.hash);
+          }
+        })
+        .catch(function () { /* keep classic home */ });
+    })();
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Weng Industry — Software that ships. Advice that compounds.</title>
   <meta name="description" content="Weng Fei Fung — full-stack developer (AI + engineering craft) in Los Angeles. Also available for automation & AI-transformation consulting.">
