@@ -46,17 +46,17 @@
   const header = document.querySelector(".site-header");
   const toggle = document.querySelector(".nav-toggle");
   if (toggle && header) {
-    toggle.addEventListener("click", function () {
-      header.classList.toggle("is-open");
-      const open = header.classList.contains("is-open");
+    function setNavOpen(open) {
+      header.classList.toggle("is-open", open);
       toggle.setAttribute("aria-expanded", open ? "true" : "false");
       toggle.innerHTML = open ? "✕" : "☰";
+    }
+    toggle.addEventListener("click", function () {
+      setNavOpen(!header.classList.contains("is-open"));
     });
-    header.querySelectorAll(".nav-primary a").forEach(function (a) {
+    header.querySelectorAll(".nav-primary a, .nav-socials a").forEach(function (a) {
       a.addEventListener("click", function () {
-        header.classList.remove("is-open");
-        toggle.setAttribute("aria-expanded", "false");
-        toggle.innerHTML = "☰";
+        setNavOpen(false);
       });
     });
   }
@@ -745,6 +745,74 @@
     }
   })();
 
+
+  // Soft Style page enter / leave + on-scroll reveals (skip GSAP depth theater)
+  (function initSoftMotion() {
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const isDepth = document.body.classList.contains("depth-page");
+    if (reduce || isDepth) return;
+
+    // Light page-enter on classic Soft Style pages
+    requestAnimationFrame(function () {
+      document.body.classList.add("is-page-ready");
+    });
+
+    // Intercept same-site Soft Style navigations for a brief fade/slide out
+    document.addEventListener("click", function (e) {
+      if (e.defaultPrevented) return;
+      if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+      const a = e.target.closest && e.target.closest("a[href]");
+      if (!a) return;
+      if (a.target === "_blank" || a.hasAttribute("download")) return;
+      if (a.classList.contains("brand")) return; // brand has its own blur transition
+      const href = a.getAttribute("href");
+      if (!href || href.charAt(0) === "#" || href.indexOf("mailto:") === 0 || href.indexOf("tel:") === 0) return;
+      let url;
+      try {
+        url = new URL(href, window.location.href);
+      } catch (err) {
+        return;
+      }
+      if (url.origin !== window.location.origin) return;
+      // Stay on Soft Style routes; skip hash-only and same-page
+      if (url.pathname === window.location.pathname && url.search === window.location.search) return;
+      // Avoid fighting scroll theater entry
+      if (/\/scroll\/?$/.test(url.pathname)) return;
+
+      e.preventDefault();
+      if (document.body.classList.contains("is-page-exit")) return;
+      document.body.classList.add("is-page-exit");
+      window.setTimeout(function () {
+        window.location.href = url.href;
+      }, 220);
+    });
+
+    // Subtle fade/rise for cards / primary blocks (sections already get page-enter)
+    const targets = document.querySelectorAll(
+      ".project-card, .icon-card, .path-card, .contact-card, .about-photo, .about-copy, .testimonial-quote, .testimonial-photo, .oss-pr-card, .cred-card, .video-block, .section-head"
+    );
+    if (!targets.length || !("IntersectionObserver" in window)) return;
+
+    targets.forEach(function (el, i) {
+      el.classList.add("soft-reveal");
+      el.style.setProperty("--reveal-delay", Math.min(i % 6, 4) * 0.04 + "s");
+    });
+
+    const io = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-inview");
+            io.unobserve(entry.target);
+          }
+        });
+      },
+      { root: null, rootMargin: "0px 0px -8% 0px", threshold: 0.12 }
+    );
+    targets.forEach(function (el) {
+      io.observe(el);
+    });
+  })();
 
   // Brand logo: brief horizontal blur, then navigate home (still a real link)
   (function initBrandBlur() {

@@ -122,6 +122,16 @@ ul { margin: 0; padding: 0; list-style: none; }
   cursor: pointer;
 }
 
+/* Desktop: panel is a flex row so brand | links+socials layout stays Soft Style */
+.nav-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex: 1;
+  min-width: 0;
+}
+
 /* Hero */
 .hero {
   position: relative;
@@ -681,7 +691,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .site-footer .socials a { color: var(--c3); font-size: 1.15rem; }
 .site-footer .socials a:hover { color: var(--c2); }
 
-/* Mobile menu */
+/* Mobile menu — full-width Soft Style panel with slide + bottom padding for socials */
 @media (max-width: 960px) {
   .video-block,
   .testimonial-grid,
@@ -691,30 +701,77 @@ ul { margin: 0; padding: 0; list-style: none; }
   }
   .icon-grid { grid-template-columns: repeat(2, 1fr); }
   .project-grid { grid-template-columns: 1fr; }
-  .nav-toggle { display: block; }
-  .nav-primary,
-  .nav-socials {
-    display: none;
-  }
-  .site-header.is-open .nav-primary {
+  .nav-toggle { display: block; position: relative; z-index: 2; }
+
+  .nav-panel {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.5rem;
     position: absolute;
     top: var(--header-h);
-    left: 0; right: 0;
-    background: rgba(18,21,25,0.98);
-    padding: 1.5rem;
-    gap: 1.25rem;
-    align-items: flex-start;
+    left: 0;
+    right: 0;
+    flex: none;
+    width: 100%;
+    background: rgba(18, 21, 25, 0.98);
+    padding: 1.75rem 1.5rem 4.25rem; /* ~68px below socials so icons stay inside panel */
+    transform: translateX(100%);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition:
+      transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+      opacity 0.32s ease,
+      visibility 0s linear 0.4s;
+    z-index: 900;
+    max-height: calc(100vh - var(--header-h));
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
-  .site-header.is-open .nav-socials {
+  .site-header.is-open .nav-panel {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition:
+      transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+      opacity 0.32s ease,
+      visibility 0s;
+  }
+
+  .nav-primary {
     display: flex;
-    position: absolute;
-    top: calc(var(--header-h) + 18rem);
-    left: 1.5rem;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.25rem;
+    width: 100%;
   }
+  .nav-socials {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
   .hero { min-height: auto; padding: 3rem 0 4rem; }
   .portrait-ring { width: min(280px, 70vw); }
+}
+
+@media (max-width: 960px) and (prefers-reduced-motion: reduce) {
+  .nav-panel {
+    transition: none;
+    transform: none;
+  }
+  .site-header:not(.is-open) .nav-panel {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .site-header.is-open .nav-panel {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 @media (max-width: 767px) {
   /* Classic home: stack + portrait above kicker (matches scroll intro) */
@@ -1790,3 +1847,68 @@ a.passion-expand-btn:hover { color: var(--c3); }
 }
 .page-hero .cred-kicker a:hover { color: var(--c2); }
 .project-more { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; }
+
+
+/* —— Soft Style motion: page enter, scroll reveal (skip .depth-page / reduced-motion) —— */
+@keyframes soft-page-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: none; }
+}
+body:not(.depth-page).is-page-ready > .page-hero,
+body:not(.depth-page).is-page-ready > .hero,
+body:not(.depth-page).is-page-ready > .section,
+body:not(.depth-page).is-page-ready > .cta-band,
+body:not(.depth-page).is-page-ready > .site-footer,
+body:not(.depth-page).is-page-ready > main {
+  animation: soft-page-in 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+body:not(.depth-page).is-page-exit > .page-hero,
+body:not(.depth-page).is-page-exit > .hero,
+body:not(.depth-page).is-page-exit > .section,
+body:not(.depth-page).is-page-exit > .cta-band,
+body:not(.depth-page).is-page-exit > .site-footer,
+body:not(.depth-page).is-page-exit > main {
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.22s ease, transform 0.22s ease;
+}
+
+.soft-reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0s);
+}
+.soft-reveal.is-inview {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body:not(.depth-page).is-page-ready > .page-hero,
+  body:not(.depth-page).is-page-ready > .hero,
+  body:not(.depth-page).is-page-ready > .section,
+  body:not(.depth-page).is-page-ready > .cta-band,
+  body:not(.depth-page).is-page-ready > .site-footer,
+  body:not(.depth-page).is-page-ready > main {
+    animation: none;
+  }
+  body:not(.depth-page).is-page-exit > .page-hero,
+  body:not(.depth-page).is-page-exit > .hero,
+  body:not(.depth-page).is-page-exit > .section,
+  body:not(.depth-page).is-page-exit > .cta-band,
+  body:not(.depth-page).is-page-exit > .site-footer,
+  body:not(.depth-page).is-page-exit > main {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .soft-reveal,
+  .soft-reveal.is-inview {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
