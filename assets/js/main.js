@@ -52,7 +52,7 @@
         window.location.replace("../passion/");
         return;
       }
-      if (tabParam === "advise" || tabParam === "build") {
+      if (tabParam === "advise" || tabParam === "build" || tabParam === "certificates" || tabParam === "achievements") {
         const el = document.querySelector('.work-tab[data-tab="' + tabParam + '"]');
         if (el) el.click();
       }
@@ -307,4 +307,79 @@
       window.location.href = "mailto:weng.f.fung@gmail.com?subject=" + subject + "&body=" + body;
     });
   }
+
+  // Credentials archive: hash deep links + image lightbox
+  (function initCredentials() {
+    const root = document.querySelector(".cred-page");
+    if (!root) return;
+
+    const achievementAnchors = ["achievements", "credited", "featured", "leaderboards", "top-marks"];
+
+    function showTab(name) {
+      const tab = document.querySelector('.work-tab[data-tab="' + name + '"]');
+      if (tab && tab.getAttribute("aria-selected") !== "true") tab.click();
+    }
+
+    function scrollToId(id) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      el.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
+    }
+
+    root.addEventListener("click", function (e) {
+      const link = e.target.closest("a[href^='#']");
+      if (!link) return;
+      const id = link.getAttribute("href").slice(1);
+      if (!id) return;
+      if (achievementAnchors.indexOf(id) !== -1) showTab("achievements");
+      else if (id === "certificates") showTab("certificates");
+      else return;
+      e.preventDefault();
+      if (id === "achievements" || id === "certificates") {
+        history.pushState(null, "", "#" + id);
+        return;
+      }
+      history.pushState(null, "", "#" + id);
+      scrollToId(id);
+    });
+
+    const hash = (window.location.hash || "").replace("#", "");
+    if (achievementAnchors.indexOf(hash) !== -1) showTab("achievements");
+    else if (hash === "certificates") showTab("certificates");
+    if (hash && hash !== "achievements" && hash !== "certificates") {
+      window.setTimeout(function () { scrollToId(hash); }, 0);
+    }
+
+    const dialog = document.getElementById("cred-lightbox");
+    const shot = document.getElementById("cred-lightbox-img");
+    const caption = document.getElementById("cred-lightbox-caption");
+    if (!dialog || !shot || !caption) return;
+
+    let lastTrigger = null;
+
+    root.addEventListener("click", function (e) {
+      const btn = e.target.closest(".cred-enlarge");
+      if (!btn) return;
+      const src = btn.getAttribute("data-full");
+      if (!src) return;
+      shot.src = src;
+      shot.alt = btn.getAttribute("aria-label") || "";
+      caption.textContent = btn.getAttribute("data-caption") || "";
+      lastTrigger = btn;
+      if (typeof dialog.showModal === "function") dialog.showModal();
+      else window.open(src, "_blank", "noopener");
+    });
+
+    dialog.addEventListener("click", function (e) {
+      if (e.target === dialog || e.target.closest("[data-lightbox-close]")) {
+        dialog.close();
+      }
+    });
+    dialog.addEventListener("close", function () {
+      shot.removeAttribute("src");
+      shot.alt = "";
+      if (lastTrigger && typeof lastTrigger.focus === "function") lastTrigger.focus();
+    });
+  })();
 })();
