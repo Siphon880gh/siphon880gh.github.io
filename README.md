@@ -152,8 +152,7 @@ cd me && python3 -m http.server 8765
 - `projects/` (nav: Work), `services/`, `passion/`, `about/`, `contact/`, `credentials/` (secondary archive, not in primary nav) — pages
 - `assets/css/style.css`, `assets/js/main.js` — design system, path cards, Work Build tab (+ Advise → Services, Passion → Passion), tag filters, contact path chooser
 - Header brand uses `logo-light.png` alone (full wordmark in image)
-- `assets/img/` — logos, headshot, icons, waves, project screenshots (`assets/img/projects/_shots/` is local scratch — not committed)
-- `index.react-legacy.html` + `src/` / `dist/` — previous React/webpack portfolio (not used by the new entrypoint)
+- `assets/img/` — logos, headshot, icons, waves, project screenshots used by the live pages
 
 **Design source:** visual/IA cues from Blocksy “Cool Style” (navy / yellow / cyan, Roboto Mono) recreated in static HTML/CSS/JS — without WordPress. Palette `#001129` / `#FDD746` / `#00d2fc`.
 
