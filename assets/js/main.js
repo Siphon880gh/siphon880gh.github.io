@@ -23,6 +23,7 @@
     tabs.forEach(function (tab) {
       tab.addEventListener("click", function () {
         const id = tab.getAttribute("data-tab");
+        if (!id) return;
         tabs.forEach(function (t) {
           const on = t === tab;
           t.classList.toggle("is-active", on);
@@ -34,6 +35,14 @@
           if (match) panel.removeAttribute("hidden");
           else panel.setAttribute("hidden", "");
         });
+        try {
+          const params = new URLSearchParams(window.location.search);
+          if (id === "build") params.delete("tab");
+          else params.set("tab", id);
+          const q = params.toString();
+          const next = window.location.pathname + (q ? "?" + q : "") + window.location.hash;
+          window.history.replaceState({}, "", next);
+        } catch (e) {}
       });
     });
     // Optional ?tab=advise|build deep link; ?tab=passion → dedicated Passion page
@@ -49,6 +58,187 @@
       }
     } catch (e) {}
   }
+
+  // Work Build: multi-select tag filter (OR). data-tags on cards. Optional ?tag=
+  (function initTagFilter() {
+    const root = document.querySelector("#panel-build .tag-filter");
+    const grid = document.querySelector("#panel-build .project-grid");
+    if (!root || !grid) return;
+
+    const chipsWrap = root.querySelector(".tag-filter-chips");
+    const allBtn = root.querySelector("[data-filter-all]");
+    const emptyMsg = document.querySelector("#panel-build .tag-filter-empty");
+    const toggleBtn = root.querySelector(".tag-filter-toggle");
+    const countEl = root.querySelector(".tag-filter-count");
+    const cards = Array.prototype.slice.call(grid.querySelectorAll(".project-card[data-tags]"));
+    if (!chipsWrap || !cards.length) return;
+
+    // Preferred display order; remaining tags append alphabetically
+    const preferred = [
+      "AI generation",
+      "AI API",
+      "JS",
+      "Node",
+      "PHP",
+      "Python",
+      "MySQL",
+      "jQuery",
+      "PWA",
+      "IndexedDB",
+      "Chart.js",
+      "REST",
+      "API",
+      "n8n",
+      "Automation",
+      "Health",
+      "Nutrition",
+      "Fitness",
+      "Clinical",
+      "Product",
+      "Walkthroughs",
+      "Real Estate",
+      "Video",
+      "Audio",
+      "Wellness",
+      "Finance",
+      "Education",
+      "Productivity"
+    ];
+
+    function parseTags(str) {
+      return String(str || "")
+        .split(",")
+        .map(function (t) { return t.trim(); })
+        .filter(Boolean);
+    }
+
+    const tagSet = {};
+    cards.forEach(function (card) {
+      parseTags(card.getAttribute("data-tags")).forEach(function (t) {
+        tagSet[t] = true;
+      });
+    });
+    const allTags = Object.keys(tagSet);
+    allTags.sort(function (a, b) {
+      const ia = preferred.indexOf(a);
+      const ib = preferred.indexOf(b);
+      if (ia === -1 && ib === -1) return a.localeCompare(b);
+      if (ia === -1) return 1;
+      if (ib === -1) return -1;
+      return ia - ib;
+    });
+
+    allTags.forEach(function (tag) {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "tag-chip";
+      btn.setAttribute("data-tag", tag);
+      btn.setAttribute("aria-pressed", "false");
+      btn.textContent = tag;
+      chipsWrap.appendChild(btn);
+    });
+
+    let selected = [];
+
+    function readUrlTags() {
+      try {
+        const params = new URLSearchParams(window.location.search);
+        const raw = params.getAll("tag");
+        const split = [];
+        raw.forEach(function (v) {
+          v.split(",").forEach(function (p) {
+            const t = p.trim();
+            if (t) split.push(t);
+          });
+        });
+        return split.filter(function (t) { return tagSet[t]; });
+      } catch (e) {
+        return [];
+      }
+    }
+
+    function writeUrlTags() {
+      try {
+        const params = new URLSearchParams(window.location.search);
+        params.delete("tag");
+        selected.forEach(function (t) { params.append("tag", t); });
+        const q = params.toString();
+        const next = window.location.pathname + (q ? "?" + q : "") + window.location.hash;
+        window.history.replaceState({}, "", next);
+      } catch (e) {}
+    }
+
+    function applyFilter() {
+      const chips = chipsWrap.querySelectorAll(".tag-chip");
+      chips.forEach(function (chip) {
+        const on = selected.indexOf(chip.getAttribute("data-tag")) !== -1;
+        chip.classList.toggle("is-active", on);
+        chip.setAttribute("aria-pressed", on ? "true" : "false");
+      });
+      if (allBtn) allBtn.classList.toggle("is-active", selected.length === 0);
+
+      let visible = 0;
+      cards.forEach(function (card) {
+        const tags = parseTags(card.getAttribute("data-tags"));
+        const show =
+          selected.length === 0 ||
+          selected.some(function (s) { return tags.indexOf(s) !== -1; });
+        card.classList.toggle("is-filtered-out", !show);
+        if (show) visible += 1;
+      });
+      if (emptyMsg) emptyMsg.hidden = visible !== 0;
+
+      if (countEl) {
+        if (selected.length) {
+          countEl.hidden = false;
+          countEl.textContent = String(selected.length);
+        } else {
+          countEl.hidden = true;
+          countEl.textContent = "";
+        }
+      }
+      if (toggleBtn) {
+        const label = toggleBtn.querySelector(".tag-filter-toggle-label");
+        if (label) {
+          label.textContent = selected.length
+            ? "Filters (" + selected.length + ")"
+            : "Filter by tag";
+        }
+      }
+    }
+
+    function setSelected(next, syncUrl) {
+      selected = next.slice();
+      applyFilter();
+      if (syncUrl !== false) writeUrlTags();
+    }
+
+    chipsWrap.addEventListener("click", function (e) {
+      const chip = e.target.closest(".tag-chip");
+      if (!chip) return;
+      const tag = chip.getAttribute("data-tag");
+      const idx = selected.indexOf(tag);
+      const next = selected.slice();
+      if (idx === -1) next.push(tag);
+      else next.splice(idx, 1);
+      setSelected(next);
+    });
+
+    if (allBtn) {
+      allBtn.addEventListener("click", function () {
+        setSelected([]);
+      });
+    }
+
+    if (toggleBtn) {
+      toggleBtn.addEventListener("click", function () {
+        const open = root.classList.toggle("is-open");
+        toggleBtn.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+    }
+
+    setSelected(readUrlTags(), false);
+  })();
 
   // Contact form: path chooser + mailto subject
   const form = document.querySelector("#contact-form");

@@ -327,6 +327,8 @@ ul { margin: 0; padding: 0; list-style: none; }
   content: "";
   position: absolute;
   inset: 0;
+  /* --shot urls resolve relative to THIS stylesheet (assets/css/), not the HTML page.
+     Use url('../img/projects/foo.png') from any page. */
   background-image: var(--shot);
   background-size: cover;
   background-position: top center;
@@ -969,4 +971,182 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 .passion-note-links a:hover {
   color: var(--c3) !important;
+}
+
+/* Inline content links (certs, notes) on light bands */
+.band-head a,
+.path-card > p a,
+.advise-intro a,
+.about-advise-closer a,
+.about-copy a {
+  color: #087a8f;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.band-head a:hover,
+.path-card > p a:hover,
+.advise-intro a:hover,
+.about-advise-closer a:hover,
+.about-copy a:hover {
+  color: var(--c3);
+}
+
+/* Work Build: tag filter sidebar + mobile chips */
+.work-build-layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+.tag-filter {
+  position: sticky;
+  top: calc(var(--header-h) + 1rem);
+  background: var(--c8);
+  border-radius: 20px;
+  padding: 1.15rem 1rem 1.25rem;
+  box-shadow: 0 12px 18px -6px rgba(34, 56, 101, 0.06);
+  border: 1px solid rgba(0, 17, 41, 0.08);
+}
+.tag-filter-toggle {
+  display: none;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  border: 2px solid rgba(0, 17, 41, 0.15);
+  background: var(--c8);
+  color: var(--text-dark);
+  cursor: pointer;
+}
+.tag-filter-toggle-label { flex: 1; text-align: left; }
+.tag-filter-count {
+  font-size: 0.75rem;
+  background: var(--c1);
+  color: var(--c2);
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+}
+.tag-filter-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.35rem;
+}
+.tag-filter-title {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-dark);
+}
+.tag-filter-all {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 17, 41, 0.15);
+  background: transparent;
+  color: var(--text-body);
+  cursor: pointer;
+  transition: 0.15s ease;
+}
+.tag-filter-all:hover { border-color: var(--c3); color: #087a8f; }
+.tag-filter-all.is-active {
+  background: var(--c1);
+  border-color: var(--c1);
+  color: var(--c2);
+}
+.tag-filter-hint {
+  margin: 0 0 0.85rem;
+  font-size: 0.72rem;
+  color: var(--text-body);
+  opacity: 0.85;
+}
+.tag-filter-chips {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  max-height: min(70vh, 560px);
+  overflow-y: auto;
+  padding-right: 0.15rem;
+}
+.tag-chip {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  text-align: left;
+  padding: 0.4rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 210, 252, 0.35);
+  background: rgba(0, 210, 252, 0.08);
+  color: #087a8f;
+  cursor: pointer;
+  transition: 0.15s ease;
+}
+.tag-chip:hover {
+  border-color: var(--c3);
+  background: rgba(0, 210, 252, 0.16);
+}
+.tag-chip.is-active {
+  background: var(--c1);
+  border-color: var(--c1);
+  color: var(--c3);
+}
+.tag-chip[data-tag="AI generation"].is-active,
+.tag-chip[data-tag="AI API"].is-active {
+  color: var(--c2);
+}
+.tag-filter-empty {
+  text-align: center;
+  color: var(--text-body);
+  margin: 0 0 1.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+}
+.project-card.is-filtered-out {
+  display: none !important;
+}
+
+@media (max-width: 960px) {
+  .work-build-layout {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .tag-filter {
+    position: static;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+    border: 0;
+  }
+  .tag-filter-toggle {
+    display: inline-flex;
+    margin-bottom: 0.65rem;
+  }
+  .tag-filter.is-open .tag-filter-toggle {
+    border-color: var(--c3);
+    color: #087a8f;
+  }
+  .tag-filter-panel {
+    display: none;
+    background: var(--c8);
+    border-radius: 20px;
+    padding: 1rem;
+    box-shadow: 0 12px 18px -6px rgba(34, 56, 101, 0.06);
+    border: 1px solid rgba(0, 17, 41, 0.08);
+  }
+  .tag-filter.is-open .tag-filter-panel {
+    display: block;
+  }
+  .tag-filter-chips {
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-height: none;
+    overflow: visible;
+  }
 }

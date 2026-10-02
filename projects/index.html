@@ -54,72 +54,121 @@
       </div>
 
       <div class="tab-panel is-active" id="panel-build" role="tabpanel" aria-labelledby="tab-build">
-        <div class="project-grid">
-          <article class="project-card featured" style="--shot:url('../assets/img/projects/videolistings.png')">
-            <div class="tags"><span class="tag">Node</span><span class="tag">PHP</span><span class="tag">Python</span><span class="tag">API</span></div>
-            <h3>VideoListings.AI</h3>
-            <p>Cofounder / Lead Developer — turn property listings into engaging social videos.</p>
-            <div class="links"><a href="https://app.videolistings.ai/" target="_blank" rel="noopener">View project →</a></div>
-          </article>
-          <article class="project-card" style="--shot:url('../assets/img/projects/exrx.png')">
-            <div class="tags"><span class="tag">MySQL</span><span class="tag">PHP</span><span class="tag">REST</span></div>
-            <h3>ExRx.net Exercise API</h3>
-            <p>Lead Developer — API of the well-known ExRx exercise database for workout apps.</p>
-            <div class="links"><a href="https://exrx.net/Store/Other/Licensing" target="_blank" rel="noopener">View project →</a></div>
-          </article>
-          <article class="project-card" style="--shot:url('../assets/img/projects/run.png')">
-            <div class="tags"><span class="tag">PWA</span><span class="tag">jQuery</span></div>
-            <h3>Run App</h3>
-            <p>Progressive running trainer featured on ExRx. Built fast, refined weekly.</p>
-            <div class="links"><a href="https://therunner.app/" target="_blank" rel="noopener">View project →</a></div>
-          </article>
-          <article class="project-card" style="--shot:url('../assets/img/projects/retype-notes.png')">
-            <div class="tags"><span class="tag">jQuery</span><span class="tag">PHP</span></div>
-            <h3>Developer Brain</h3>
-            <p>1,500+ programming notes — learn by retyping and rearranging code.</p>
-            <div class="links"><a href="https://wengindustry.com/app/devbrain/" target="_blank" rel="noopener">View project →</a></div>
-          </article>
-          <article class="project-card" style="--shot:url('../assets/img/projects/covid.png')">
-            <div class="tags"><span class="tag">Node</span><span class="tag">PHP</span><span class="tag">Chart.js</span></div>
-            <h3>Covid-19 Tracker</h3>
-            <p>LA metro and interest-area tracker with charts and scheduled scrapes.</p>
-            <div class="links"><a href="https://wengindustry.com/tools/covid19/" target="_blank" rel="noopener">View project →</a></div>
-          </article>
-          <article class="project-card" style="--shot:url('../assets/img/projects/medit.png')">
-            <div class="tags"><span class="tag">JS</span><span class="tag">Audio</span></div>
-            <h3>Meditation Studio</h3>
-            <p>Create your own meditation tracks in the browser.</p>
-            <div class="links"><a href="https://wengindustry.com/tools/sp/medit/" target="_blank" rel="noopener">View project →</a></div>
-          </article>
-          <article class="project-card" style="--shot:url('../assets/img/projects/multitimers.png')">
-            <div class="tags"><span class="tag">JS</span></div>
-            <h3>Multitimers</h3>
-            <p>Multiple concurrent timers for workouts, cooking, and focus blocks.</p>
-            <div class="links"><a href="https://wengindustry.com/tools/multitimers/" target="_blank" rel="noopener">View project →</a></div>
-          </article>
-          <article class="project-card" style="--shot:url('../assets/img/projects/budget-tracker.png')">
-            <div class="tags"><span class="tag">PWA</span><span class="tag">IndexedDB</span></div>
-            <h3>Budget Tracker</h3>
-            <p>Offline-capable PWA budget tracker with IndexedDB sync.</p>
-            <div class="links"><a href="https://wengindustries.com/app/budget-tracker/" target="_blank" rel="noopener">View project →</a></div>
-          </article>
-          <article class="project-card" style="--shot:url('../assets/img/projects/weather-dashboard.png')">
-            <div class="tags"><span class="tag">API</span><span class="tag">JS</span></div>
-            <h3>Weather Dashboard</h3>
-            <p>City search weather with OpenWeather and recent-search history.</p>
-            <div class="links"><a href="https://siphon880gh.github.io/weather-dashboard/" target="_blank" rel="noopener">View project →</a></div>
-          </article>
-          <article class="project-card" style="--shot:url('../assets/img/projects/work-day-scheduler.png')">
-            <div class="tags"><span class="tag">JS</span></div>
-            <h3>Work Day Scheduler</h3>
-            <p>Hourly day planner with localStorage persistence.</p>
-            <div class="links"><a href="https://siphon880gh.github.io/work-day-scheduler/" target="_blank" rel="noopener">View project →</a></div>
-          </article>
+        <div class="work-build-layout">
+          <aside class="tag-filter" aria-label="Filter projects by tag">
+            <button type="button" class="tag-filter-toggle" aria-expanded="false" aria-controls="tag-filter-panel">
+              <span class="tag-filter-toggle-label">Filter by tag</span>
+              <span class="tag-filter-count" hidden></span>
+            </button>
+            <div class="tag-filter-panel" id="tag-filter-panel">
+              <div class="tag-filter-head">
+                <span class="tag-filter-title">Tags</span>
+                <button type="button" class="tag-filter-all is-active" data-filter-all>All</button>
+              </div>
+              <p class="tag-filter-hint">Multi-select · OR match</p>
+              <div class="tag-filter-chips" role="group" aria-label="Project tags"></div>
+            </div>
+          </aside>
+          <div class="work-build-main">
+            <p class="tag-filter-empty" hidden>No projects match the selected tags.</p>
+            <div class="project-grid">
+              <article class="project-card featured" style="--shot:url('../img/projects/videolistings.png')" data-tags="Node,PHP,Python,API,AI generation,AI API,Real Estate,Video">
+                <div class="tags"><span class="tag">Node</span><span class="tag">PHP</span><span class="tag">Python</span><span class="tag">API</span><span class="tag">AI generation</span><span class="tag">AI API</span><span class="tag">Real Estate</span><span class="tag">Video</span></div>
+                <h3>VideoListings.AI</h3>
+                <p>Cofounder / Lead Developer — turn property listings into engaging social videos.</p>
+                <div class="links"><a href="https://videolistings.ai/" target="_blank" rel="noopener">View project →</a></div>
+              </article>
+              <article class="project-card featured" style="--shot:url('../img/projects/nutrients.png')" data-tags="JS,Health,Nutrition,PWA">
+                <div class="tags"><span class="tag">JS</span><span class="tag">Health</span><span class="tag">Nutrition</span><span class="tag">PWA</span></div>
+                <h3>Nutrients</h3>
+                <p>Free MyFitnessPal-like tracker with deeper micronutrient &amp; longevity insights — macros, %DV, and weekly dashboards.</p>
+                <div class="links"><a href="https://wengindustries.com/app/nutrients/" target="_blank" rel="noopener">Live demo →</a> <a href="https://github.com/Siphon880gh/nutrients" target="_blank" rel="noopener">GitHub</a></div>
+              </article>
+              <article class="project-card" style="--shot:url('../img/projects/n8n-templates.png')" data-tags="n8n,Automation,PHP,AI API">
+                <div class="tags"><span class="tag">n8n</span><span class="tag">Automation</span><span class="tag">PHP</span><span class="tag">AI API</span></div>
+                <h3>n8n Templates Portal</h3>
+                <p>Searchable portal for 2,500+ n8n workflow templates — browse, filter, and download automations.</p>
+                <div class="links"><a href="https://wengindustries.com/app/n8n-templates/" target="_blank" rel="noopener">Live demo →</a> <a href="https://github.com/Siphon880gh/n8n-automation-viewer" target="_blank" rel="noopener">GitHub</a></div>
+              </article>
+              <article class="project-card" style="--shot:url('../img/projects/fitness-deck.png')" data-tags="AI generation,AI API,Fitness,JS,Health">
+                <div class="tags"><span class="tag">AI generation</span><span class="tag">AI API</span><span class="tag">Fitness</span><span class="tag">JS</span><span class="tag">Health</span></div>
+                <h3>Fitness Deck</h3>
+                <p>AI-sourced exercise progressions for stretch, strength, mobility, rehab, and cardio — local session history.</p>
+                <div class="links"><a href="https://wengindustries.com/app/fitness-deck/" target="_blank" rel="noopener">Live demo →</a> <a href="https://github.com/Siphon880gh/fitness-deck" target="_blank" rel="noopener">GitHub</a></div>
+              </article>
+              <article class="project-card" style="--shot:url('../img/projects/storyflow.png')" data-tags="Product,JS,Walkthroughs,AI generation,AI API">
+                <div class="tags"><span class="tag">Product</span><span class="tag">JS</span><span class="tag">Walkthroughs</span><span class="tag">AI generation</span><span class="tag">AI API</span></div>
+                <h3>StoryFlow Studio</h3>
+                <p>Turn product screenshots into narrated interactive walkthroughs — annotate, sequence, play, and export.</p>
+                <div class="links"><a href="https://wengindustries.com/app/storyflow/" target="_blank" rel="noopener">Live demo →</a> <a href="https://github.com/Siphon880gh/app-walkthroughs" target="_blank" rel="noopener">GitHub</a></div>
+              </article>
+              <article class="project-card" style="--shot:url('../img/projects/postop.png')" data-tags="PHP,Health,Clinical,PWA">
+                <div class="tags"><span class="tag">PHP</span><span class="tag">Health</span><span class="tag">Clinical</span><span class="tag">PWA</span></div>
+                <h3>Postop Wound Viewer</h3>
+                <p>File-backed clinical viewer for post-op wounds, pressure injuries, and mole monitoring — photo timelines &amp; offline sync.</p>
+                <div class="links"><a href="https://wengindustries.com/app/postop/" target="_blank" rel="noopener">Live demo →</a> <a href="https://github.com/Siphon880gh/postop" target="_blank" rel="noopener">GitHub</a></div>
+              </article>
+              <article class="project-card" style="--shot:url('../img/projects/exrx.png')" data-tags="MySQL,PHP,REST,API,Fitness">
+                <div class="tags"><span class="tag">MySQL</span><span class="tag">PHP</span><span class="tag">REST</span><span class="tag">API</span><span class="tag">Fitness</span></div>
+                <h3>ExRx.net Exercise API</h3>
+                <p>Lead Developer — API of the well-known ExRx exercise database for workout apps.</p>
+                <div class="links"><a href="https://exrx.net/Store/Other/Licensing" target="_blank" rel="noopener">View project →</a></div>
+              </article>
+              <article class="project-card" style="--shot:url('../img/projects/run.png')" data-tags="PWA,jQuery,Fitness,JS">
+                <div class="tags"><span class="tag">PWA</span><span class="tag">jQuery</span><span class="tag">Fitness</span><span class="tag">JS</span></div>
+                <h3>Run App</h3>
+                <p>Progressive running trainer featured on ExRx. Built fast, refined weekly.</p>
+                <div class="links"><a href="https://therunner.app/" target="_blank" rel="noopener">View project →</a></div>
+              </article>
+              <article class="project-card" style="--shot:url('../img/projects/retype-notes.png')" data-tags="jQuery,PHP,Education,JS">
+                <div class="tags"><span class="tag">jQuery</span><span class="tag">PHP</span><span class="tag">Education</span><span class="tag">JS</span></div>
+                <h3>Developer Brain</h3>
+                <p>1,500+ programming notes — learn by retyping and rearranging code.</p>
+                <div class="links"><a href="https://wengindustry.com/app/devbrain/" target="_blank" rel="noopener">View project →</a></div>
+              </article>
+              <article class="project-card" style="--shot:url('../img/projects/covid.png')" data-tags="Node,PHP,Chart.js,Health,JS">
+                <div class="tags"><span class="tag">Node</span><span class="tag">PHP</span><span class="tag">Chart.js</span><span class="tag">Health</span><span class="tag">JS</span></div>
+                <h3>Covid-19 Tracker</h3>
+                <p>LA metro and interest-area tracker with charts and scheduled scrapes.</p>
+                <div class="links"><a href="https://wengindustry.com/tools/covid19/" target="_blank" rel="noopener">View project →</a></div>
+              </article>
+              <article class="project-card" style="--shot:url('../img/projects/medit.png')" data-tags="JS,Audio,Wellness">
+                <div class="tags"><span class="tag">JS</span><span class="tag">Audio</span><span class="tag">Wellness</span></div>
+                <h3>Meditation Studio</h3>
+                <p>Create your own meditation tracks in the browser.</p>
+                <div class="links"><a href="https://wengindustry.com/tools/sp/medit/" target="_blank" rel="noopener">View project →</a></div>
+              </article>
+              <article class="project-card" style="--shot:url('../img/projects/multitimers.png')" data-tags="JS,Productivity">
+                <div class="tags"><span class="tag">JS</span><span class="tag">Productivity</span></div>
+                <h3>Multitimers</h3>
+                <p>Multiple concurrent timers for workouts, cooking, and focus blocks.</p>
+                <div class="links"><a href="https://wengindustry.com/tools/multitimers/" target="_blank" rel="noopener">View project →</a></div>
+              </article>
+              <article class="project-card" style="--shot:url('../img/projects/budget-tracker.png')" data-tags="PWA,IndexedDB,JS,Finance">
+                <div class="tags"><span class="tag">PWA</span><span class="tag">IndexedDB</span><span class="tag">JS</span><span class="tag">Finance</span></div>
+                <h3>Budget Tracker</h3>
+                <p>Offline-capable PWA budget tracker with IndexedDB sync.</p>
+                <div class="links"><a href="https://wengindustries.com/app/budget-tracker/" target="_blank" rel="noopener">View project →</a></div>
+              </article>
+              <article class="project-card" style="--shot:url('../img/projects/weather-dashboard.png')" data-tags="API,JS">
+                <div class="tags"><span class="tag">API</span><span class="tag">JS</span></div>
+                <h3>Weather Dashboard</h3>
+                <p>City search weather with OpenWeather and recent-search history.</p>
+                <div class="links"><a href="https://siphon880gh.github.io/weather-dashboard/" target="_blank" rel="noopener">View project →</a></div>
+              </article>
+              <article class="project-card" style="--shot:url('../img/projects/work-day-scheduler.png')" data-tags="JS,Productivity">
+                <div class="tags"><span class="tag">JS</span><span class="tag">Productivity</span></div>
+                <h3>Work Day Scheduler</h3>
+                <p>Hourly day planner with localStorage persistence.</p>
+                <div class="links"><a href="https://siphon880gh.github.io/work-day-scheduler/" target="_blank" rel="noopener">View project →</a></div>
+              </article>
+            </div>
+          </div>
         </div>
       </div>
 
       <div class="tab-panel" id="panel-advise" role="tabpanel" aria-labelledby="tab-advise" hidden>
-        <p class="advise-intro">Advise-side work — automation and systems thinking, toned for clarity (no ROI promises, no pricing walls).</p>
+        <p class="advise-intro">Advise-side work — automation and systems thinking, toned for clarity (no ROI promises, no pricing walls). Related <a href="https://www.linkedin.com/in/weng-fung/details/certifications/" target="_blank" rel="noopener noreferrer">SEO, marketing &amp; accessibility certifications</a>.</p>
         <div class="advise-grid">
           <article class="advise-card">
             <div class="tags"><span class="tag">Automation</span><span class="tag">n8n</span><span class="tag">Integrations</span></div>
