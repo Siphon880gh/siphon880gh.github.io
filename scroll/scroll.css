@@ -297,9 +297,9 @@
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
 }
 
-.work-tile:nth-child(3n + 1) { transform: translateZ(18px); }
-.work-tile:nth-child(3n + 2) { transform: translateZ(46px); }
-.work-tile:nth-child(3n) { transform: translateZ(8px); }
+.work-tile:nth-child(3n + 1) { transform: translateZ(30px); }
+.work-tile:nth-child(3n + 2) { transform: translateZ(110px); }
+.work-tile:nth-child(3n) { transform: translateZ(0px); }
 
 .work-tile img {
   width: 74px;
@@ -399,17 +399,17 @@ html.is-depth .depth-camera {
 html.is-depth .depth-floor {
   display: block;
   position: absolute;
-  left: -40%;
-  right: -40%;
-  bottom: -18%;
-  height: 58%;
+  left: -35%;
+  right: -35%;
+  bottom: -6%;
+  height: 46%;
   background-image:
-    linear-gradient(rgba(0, 210, 252, 0.22) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(253, 215, 70, 0.16) 1px, transparent 1px);
-  background-size: 56px 56px;
-  transform: rotateX(68deg);
+    linear-gradient(rgba(0, 210, 252, 0.55) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(253, 215, 70, 0.4) 1px, transparent 1px);
+  background-size: 64px 64px;
+  transform: rotateX(63deg);
   transform-origin: center top;
-  opacity: 0.55;
+  opacity: 0.9;
   pointer-events: none;
   z-index: 0;
 }
@@ -475,7 +475,7 @@ html.is-depth .intro-copy {
 }
 
 html.is-depth .intro-portrait {
-  transform: translateZ(110px) rotateY(-12deg);
+  transform: translateZ(140px) rotateY(-20deg);
   transform-style: preserve-3d;
 }
 
@@ -517,11 +517,11 @@ html.is-depth .depth-chapter .path-label {
 }
 
 html.is-depth .path-plane[data-plane="build"] {
-  transform: translateZ(70px) rotateY(7deg);
+  transform: translateZ(80px) rotateY(14deg);
 }
 
 html.is-depth .path-plane[data-plane="advise"] {
-  transform: translateZ(10px) rotateY(-9deg);
+  transform: translateZ(-20px) rotateY(-16deg);
 }
 
 html.is-depth .depth-head {
@@ -702,29 +702,43 @@ html.is-depth .depth-progress span {
 }
 
 @media (max-width: 767px), (prefers-reduced-motion: reduce) {
+  .depth-stage,
   html.is-depth .depth-stage {
-    height: auto;
-    overflow: visible;
+    height: auto !important;
+    overflow: visible !important;
+    position: relative !important;
   }
+  .depth-camera,
   html.is-depth .depth-camera {
     perspective: none;
     height: auto;
-    transform: none;
+    transform: none !important;
   }
+  .depth-chapter,
   html.is-depth .depth-chapter,
   html.is-depth .depth-chapter[data-depth="intro"] {
-    position: relative;
-    inset: auto;
-    visibility: visible;
-    display: block;
+    position: relative !important;
+    inset: auto !important;
+    visibility: visible !important;
+    display: block !important;
     padding: 4.5rem 0 4rem;
-    opacity: 1;
-    transform: none;
+    opacity: 1 !important;
+    transform: none !important;
     overflow: visible;
   }
   html.is-depth .depth-chapter::before {
     display: none;
   }
+  .intro-copy,
+  .intro-portrait,
+  .path-plane,
+  .work-tile,
+  .hire-quote,
+  .flagship-back,
+  .flagship-card,
+  .chapter-inner,
+  .work-fan,
+  .hire-quotes,
   html.is-depth .intro-copy,
   html.is-depth .intro-portrait,
   html.is-depth .path-plane,
@@ -735,14 +749,19 @@ html.is-depth .depth-progress span {
   html.is-depth .chapter-inner,
   html.is-depth .work-fan,
   html.is-depth .hire-quotes {
-    transform: none;
+    transform: none !important;
   }
+  .depth-floor,
+  .depth-rail,
+  .depth-hint,
+  .depth-progress,
   html.is-depth .depth-floor,
   html.is-depth .depth-rail,
   html.is-depth .depth-hint,
   html.is-depth .depth-progress {
-    display: none;
+    display: none !important;
   }
+  .depth-paths,
   html.is-depth .depth-paths {
     grid-template-columns: 1fr;
   }

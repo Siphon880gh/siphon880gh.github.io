@@ -81,7 +81,7 @@
           pin: true,
           start: function () { return "top " + headerOffset() + "px"; },
           end: function () { return "+=" + Math.round(window.innerHeight * 5); },
-          scrub: 0.65,
+          scrub: 0.4,
           anticipatePin: 1,
           invalidateOnRefresh: true,
           onUpdate: function (self) { setActive(self.progress); },
@@ -194,6 +194,14 @@
       activeIndex = -1;
       root.classList.remove("is-depth");
       ctx.revert();
+      /* Revert can leave the initial hidden pose inline. Clear it after
+         matchMedia finishes so the stacked layout can show every chapter. */
+      requestAnimationFrame(function () {
+        if (root.classList.contains("is-depth")) return;
+        gsap.set(".depth-chapter, .flagship-card, .flagship-back, .work-fan, .depth-hint, .depth-progress span", {
+          clearProps: "all"
+        });
+      });
     };
   });
 })();
