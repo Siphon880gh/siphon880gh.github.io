@@ -440,7 +440,7 @@
     const root = document.querySelector(".cred-page");
     if (!root) return;
 
-    const achievementAnchors = ["achievements", "credited", "featured", "leaderboards", "top-marks"];
+    const achievementAnchors = ["achievements", "open-source", "credited", "featured", "leaderboards", "top-marks"];
 
     function showTab(name) {
       const tab = document.querySelector('.work-tab[data-tab="' + name + '"]');
