@@ -1,86 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>WengIndustry - Weng's Web Development Portfolio</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-
-    <!-- Meta tags for LinkedIn, etc -->
-    <meta property='og:title' content="Weng's Web Development Portfolio" />
-    <meta property='og:image' content='https://wengindustry.com/siphon880gh.github.io/docs/README/v2-screenshot-react-smaller.png' />
-    <meta property='og:description' content="Weng's Web Development Portfolio" />
-
-    <!-- Cache bust -->
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
-
-    <!-- CSS vendors: Bootstrap, Font-Awesome Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
-
-    <!-- CSS from my app -->
-    <link rel="stylesheet" href="./dist/assets/css/index.css">
-
-    <!-- Favicon -->
-    <link rel="icon" href="./dist/assets/favico/favicon.ico">
-
-    <!-- Devicon -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JQP9DHKPZG"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-JQP9DHKPZG');
-    </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weng Industry — Software that ships. Advice that compounds.</title>
+  <meta name="description" content="Weng Fei Fung — full-stack developer (AI + engineering craft) in Los Angeles. Also available for automation & AI-transformation consulting.">
+  <meta property="og:title" content="Weng Industry — Software that ships. Advice that compounds.">
+  <meta property="og:description" content="Weng Fei Fung — full-stack developer (AI + engineering craft) in Los Angeles. Also available for automation & AI-transformation consulting.">
+  <meta property="og:image" content="./assets/img/brand/promo.jpg">
+  <link rel="icon" href="./assets/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-
 <body>
+  <header class="site-header">
+    <div class="inner">
+      <a class="brand" href="./">
+        <img src="./assets/img/brand/logo-light.png" alt="Weng Industry — Realize your tech dreams">
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+      <nav class="nav-primary" aria-label="Primary">
+        <a href="./" class="active">Home</a>
+        <a href="./projects/">Work</a>
+        <a href="./services/">Services</a>
+        <a href="./passion/">Passion</a>
+        <a href="./about/">About</a>
+        <a href="./contact/">Contact</a>
+      </nav>
+      <div class="nav-socials">
+        <a href="https://github.com/Siphon880gh" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/weng-fung/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.youtube.com/@WengTeachesCode" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="mailto:weng.f.fung@gmail.com" aria-label="Email"><i class="fa fa-envelope"></i></a>
+      </div>
+    </div>
+  </header>
 
-    <div class="react-root"></div>
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="container">
+      <div>
+        <div class="hero-kicker">Weng Fei Fung · Los Angeles</div>
+        <h1>Software that <span class="accent">ships</span>. Advice that compounds.</h1>
+        <p class="hero-sub">Full-stack developer (AI + engineering craft) · Los Angeles — also available for automation &amp; AI-transformation consulting.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="./contact/?path=build">Hire me to build</a>
+          <a class="btn btn-ghost btn-advise" href="./contact/?path=advise">Book a consult</a>
+        </div>
+      </div>
+      <div class="hero-portrait">
+        <div class="portrait-ring">
+          <img src="./assets/img/people/headshot.png" alt="Weng Fei Fung">
+          <div class="portrait-badge">Available for hire · Build &amp; advise</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft" id="paths">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">What I do</div>
+        <h2>Two paths. One craft.</h2>
+        <p>~70% hands-on build. ~30% advise when automation, SEO, accessibility, or ops clarity helps the product ship better.</p>
+      </div>
+      <div class="path-cards">
+        <article class="path-card path-build">
+          <div class="path-label">Primary · Build</div>
+          <h3>Ship software</h3>
+          <p>Full-stack apps, APIs, and AI-assisted delivery with real software-engineering practices — React/Node, PHP/MySQL, integrations, mentoring clarity when your team needs it.</p>
+          <ul class="path-bullets">
+            <li>Web apps, SaaS, and product features</li>
+            <li>REST APIs &amp; third-party integrations</li>
+            <li>AI-assisted delivery without skipping SE craft</li>
+            <li>Teaching &amp; mentoring (bootcamp senior tutor)</li>
+          </ul>
+          <a class="btn btn-primary" href="./contact/?path=build">Hire me to build</a>
+        </article>
+        <article class="path-card path-advise">
+          <div class="path-label">Also · Advise</div>
+          <h3>Automation &amp; AI transformation</h3>
+          <p>Consult when marketing/ops workflows, SEO &amp; content systems, accessibility audits, or business-process + AI tooling need a clear plan — soft sell, no hard sell.</p>
+          <ul class="path-bullets">
+            <li>Marketing &amp; ops workflow design</li>
+            <li>SEO &amp; content systems</li>
+            <li>Accessibility audits &amp; remediation plans</li>
+            <li>Process + AI tooling guidance</li>
+          </ul>
+          <a class="btn btn-ghost-dark" href="./contact/?path=advise">Book a consult</a>
+        </article>
+      </div>
+      <p class="path-more"><a href="./services/">See services in detail →</a></p>
+    </div>
+  </section>
+
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Selected work</div>
+        <h2>Projects that shipped</h2>
+        <p>Mostly build — product apps, APIs, and tools with live demos where available.</p>
+      </div>
+      <div class="project-grid">
+        <article class="project-card featured" style="--shot:url('./assets/img/projects/videolistings.png')">
+          <div class="tags"><span class="tag">Node</span><span class="tag">PHP</span><span class="tag">Python</span><span class="tag">API</span></div>
+          <h3>VideoListings.AI</h3>
+          <p>Cofounder / Lead Developer — turn property listings into engaging social videos.</p>
+          <div class="links"><a href="https://app.videolistings.ai/" target="_blank" rel="noopener">View project →</a></div>
+        </article>
+        <article class="project-card" style="--shot:url('./assets/img/projects/exrx.png')">
+          <div class="tags"><span class="tag">MySQL</span><span class="tag">PHP</span><span class="tag">REST</span></div>
+          <h3>ExRx.net Exercise API</h3>
+          <p>Lead Developer — API of the well-known ExRx exercise database for workout apps.</p>
+          <div class="links"><a href="https://exrx.net/Store/Other/Licensing" target="_blank" rel="noopener">View project →</a></div>
+        </article>
+        <article class="project-card" style="--shot:url('./assets/img/projects/run.png')">
+          <div class="tags"><span class="tag">PWA</span><span class="tag">jQuery</span></div>
+          <h3>Run App</h3>
+          <p>Progressive running trainer featured on ExRx. Built fast, refined weekly.</p>
+          <div class="links"><a href="https://therunner.app/" target="_blank" rel="noopener">View project →</a></div>
+        </article>
+        <article class="project-card" style="--shot:url('./assets/img/projects/retype-notes.png')">
+          <div class="tags"><span class="tag">jQuery</span><span class="tag">PHP</span></div>
+          <h3>Developer Brain</h3>
+          <p>1,500+ programming notes — learn by retyping and rearranging code.</p>
+          <div class="links"><a href="https://wengindustry.com/app/devbrain/" target="_blank" rel="noopener">View project →</a></div>
+        </article>
+        <article class="project-card" style="--shot:url('./assets/img/projects/covid.png')">
+          <div class="tags"><span class="tag">Node</span><span class="tag">PHP</span><span class="tag">Chart.js</span></div>
+          <h3>Covid-19 Tracker</h3>
+          <p>LA metro and interest-area tracker with charts and scheduled scrapes.</p>
+          <div class="links"><a href="https://wengindustry.com/tools/covid19/" target="_blank" rel="noopener">View project →</a></div>
+        </article>
+        <article class="project-card" style="--shot:url('./assets/img/projects/medit.png')">
+          <div class="tags"><span class="tag">JS</span><span class="tag">Audio</span></div>
+          <h3>Meditation Studio</h3>
+          <p>Create your own meditation tracks in the browser.</p>
+          <div class="links"><a href="https://wengindustry.com/tools/sp/medit/" target="_blank" rel="noopener">View project →</a></div>
+        </article>
+      </div>
+      <div class="project-more">
+        <a class="btn btn-dark" href="./projects/">See all work</a>
+      </div>
+    </div>
+  </section>
 
 
-    <!-- Components -->
-    <script src="./dist/assets/js/bundle.min.js"></script>
+  <section class="section section-soft" id="passion">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Off the clock</div>
+        <h2>Passion projects</h2>
+        <p>Additive side work — games, nursing tools, knowledge vaults, and a YouTube archive. Not a third hire path; developer-first still.</p>
+      </div>
+      <div class="project-grid passion-grid">
+        <article class="project-card passion-card" style="--shot:url('./assets/img/projects/passion-games.png')">
+          <div class="tags"><span class="tag">Games</span><span class="tag">Browser</span></div>
+          <h3>Games</h3>
+          <p>Short, curious browser experiments — play (Pokémon Pic, Spreadsheet Scavenger) and learn (RN Simulation practice). Built for curiosity, not a product pitch.</p>
+          <div class="links"><a href="https://wengindustries.com/games" target="_blank" rel="noopener">Open games →</a></div>
+        </article>
+        <article class="project-card passion-card" style="--shot:url('./assets/img/projects/passion-nursing.png')">
+          <div class="tags"><span class="tag">Nursing</span><span class="tag">Clinical</span></div>
+          <h3>Nursing</h3>
+          <p>Clinical simulation (Telemetry / Med-Surg / ICU), topic quizzes, bedside RN notes, and a wound-clinic viewer demo — training and reference tools from a bedside RN background.</p>
+          <div class="links"><a href="https://wengindustries.com/nursing" target="_blank" rel="noopener">Open nursing →</a></div>
+        </article>
+        <article class="project-card passion-card" style="--shot:url('./assets/img/projects/passion-youtube.png')">
+          <div class="tags"><span class="tag">YouTube</span><span class="tag">Archive</span></div>
+          <h3>@WengTeachesCode</h3>
+          <p>Coding tutorials remain online as a passion archive. I’ve moved away from YouTube to focus on testing emerging AI developments every month.</p>
+          <div class="links"><a href="https://www.youtube.com/@WengTeachesCode" target="_blank" rel="noopener">YouTube channel →</a></div>
+        </article>
+        <article class="project-card passion-card featured" style="--shot:url('./assets/img/projects/passion-knowledge.png')">
+          <div class="tags"><span class="tag">Notes</span><span class="tag">7000+</span></div>
+          <h3>Knowledge building</h3>
+          <p>7,000+ notes since before ChatGPT — DevBrain / CoderNotes, BizNotes, 3D development notes, and HealthNotes. Personal knowledge systems, not client deliverables.</p>
+          <div class="links passion-note-links">
+            <a href="https://codernotes.wengindustries.com/" target="_blank" rel="noopener">CoderNotes</a>
+            <a href="https://biznotes.wengindustries.com/" target="_blank" rel="noopener">BizNotes</a>
+            <a href="https://3dnotes.wengindustries.com/" target="_blank" rel="noopener">3D Notes</a>
+            <a href="https://healthnotes.wengindustries.com/" target="_blank" rel="noopener">HealthNotes</a>
+          </div>
+        </article>
+      </div>
+      <div class="project-more">
+        <a class="btn btn-dark" href="./passion/">Explore passion projects →</a>
+      </div>
+    </div>
+  </section>
 
-    <!-- Make routing deployable to servers not supporting Node too! -->
-    <!-- By Weng Fei Fung -->
-    <!-- Example: URL subpath /tech can be dynamically changed from React frontend or visited directly -->
-    <!-- If visited directly in the web browser without a node process on the server, htaccess will reroute to ?subpath=tech -->
-    <!-- Then React can be signaled to reroute on the frontend -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const queryString = window.location.search;
-            if (queryString.length) {
-                const urlParams = new URLSearchParams(queryString);
-                let pageName = urlParams.get("page");
-                let hash = window.location.hash;
-                if(hash) pageName+=hash;
-                window.rerouteReact = pageName;
-            }
-            if (window.rerouteReact) {
-                function reattempt() {
-                    // console.log("Reattempt")
-                    if(!document.querySelector(`[data-php-rerouter]`)) {
-                        return;
-                    } else {
-                        clearInterval(poller)
-                        document.querySelector(`[data-php-rerouter="${window.rerouteReact}"]`).click()
-                    }
-                }
-                var poller = setInterval(reattempt, 200);
-            }
-        });
-    </script>
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Stack fluency</div>
+        <h2>Tools I reach for</h2>
+        <p>Comfortable across the modern web stack and classic LAMP/jQuery systems.</p>
+      </div>
+      <div class="logo-strip" aria-label="Technologies">
+        <img src="./assets/img/icons/figma-logo.svg" alt="Figma">
+        <img src="./assets/img/icons/ai-logo.svg" alt="Illustrator">
+        <img src="./assets/img/icons/ps-logo.svg" alt="Photoshop">
+        <img src="./assets/img/icons/xd-logo.svg" alt="XD">
+        <img src="./assets/img/icons/sketch-logo.svg" alt="Sketch">
+        <img src="./assets/img/icons/in-logo.svg" alt="InDesign">
+      </div>
+    </div>
+  </section>
 
+  <section class="section section-soft" id="video">
+    <div class="container">
+      <div class="video-block">
+        <a class="video-cover" href="https://www.youtube.com/@WengTeachesCode" target="_blank" rel="noopener">
+          <img src="./assets/img/yt-cover.png" alt="@WengTeachesCode on YouTube">
+          <div class="play"><span>▶</span></div>
+        </a>
+        <div class="video-copy">
+          <div class="eyebrow" style="font-family:var(--font-mono);color:var(--c3);letter-spacing:.08em;text-transform:uppercase;font-size:.9rem;margin-bottom:.6rem;">YouTube · archive</div>
+          <h3>Weng Teaches Code</h3>
+          <p>Past tutorials on React, Node, code organization, and more. I’ve moved away from YouTube publishing to focus on testing emerging AI developments every month — the channel stays up as a passion archive.</p>
+          <a class="btn btn-dark" href="https://www.youtube.com/@WengTeachesCode" target="_blank" rel="noopener">Visit @WengTeachesCode</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- JS Vendors: Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW " crossorigin="anonymous"></script>
+  <section class="section" id="testimonials">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Social proof</div>
+        <h2>Clients &amp; students</h2>
+        <p>Recommendations from client work and bootcamp tutoring.</p>
+      </div>
+      <div class="testimonial-grid">
+        <div class="testimonial-photo">
+          <a href="https://www.linkedin.com/in/weng-fung/" target="_blank" rel="noopener">
+            <img src="./assets/img/testimonials.png" alt="Client testimonials collage">
+          </a>
+        </div>
+        <div class="testimonial-quotes">
+          <div class="testimonial-quote">
+            <blockquote>“Weng is a ‘Master’ coder. It took him about 5 minutes to fix a problem that was taking days to figure out.”</blockquote>
+            <cite>— Jeff Cohen · eLearning Coordinator, Pennsylvania Institute of Technology · <a href="https://www.linkedin.com/in/weng-fung/" target="_blank" rel="noopener">LinkedIn</a></cite>
+          </div>
+          <div class="testimonial-quote" style="margin-top:1rem">
+            <blockquote>“Weng has been such a blessing on a number of projects… Highly recommend!”</blockquote>
+            <cite>— Sterling Williams · Lead Web and Graphic Designer · <a href="https://www.linkedin.com/in/weng-fung/" target="_blank" rel="noopener">LinkedIn</a></cite>
+          </div>
+          <div style="margin-top:1.5rem">
+            <a class="btn btn-dark" href="https://www.linkedin.com/in/weng-fung/" target="_blank" rel="noopener">Read on LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <section class="cta-band">
+    <div class="container">
+      <h2>Build or advise — tell me which path</h2>
+      <p>Freelance, contract, or consult — software that ships, or a clear plan for automation, SEO, a11y, or ops.</p>
+      <div class="hero-actions" style="justify-content:center">
+        <a class="btn btn-primary" href="./contact/?path=build">Hire me to build</a>
+        <a class="btn btn-ghost btn-advise" href="./contact/?path=advise">Book a consult</a>
+      </div>
+    </div>
+  </section>
+  <footer class="site-footer">
+    <div class="container inner">
+      <div class="copy">© Weng Fei Fung · Weng Industry · Los Angeles</div>
+      <nav aria-label="Footer">
+        <a href="./">Home</a>
+        <a href="./projects/">Work</a>
+        <a href="./services/">Services</a>
+        <a href="./passion/">Passion</a>
+        <a href="./about/">About</a>
+        <a href="./contact/">Contact</a>
+      </nav>
+      <div class="socials">
+        <a href="https://github.com/Siphon880gh" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/weng-fung/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.youtube.com/@WengTeachesCode" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </footer>
+  <script src="./assets/js/main.js"></script>
 </body>
-
 </html>

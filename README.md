@@ -1,24 +1,33 @@
-Weng Is Your Web Developer!
-===
-I am located in Los Angeles, California, available for hire full time or freelance. 
+# Weng Industry — Portfolio (`/me`)
 
-Received top marks in the UCLA Bootcamp 4/2021 where we focus on MERN (MongoDB/Mongoose/Express/React/Node), however before the bootcamp I've been programming with jQuery, MySQL, and PHP for many years as a freelancer - my portfolio includes testimonials from previous clients.
+Static HTML/CSS/JS recreation of the **Blocksy “Cool Style”** WordPress look (navy / yellow / cyan, Roboto Mono), without WordPress.
 
-You may be interested in my LinkedIn or Github. I also make videos on programming:
+**Positioning:** ~70% Build (software / web developer, AI + SE craft) · ~30% Advise (automation / AI-transformation consulting). Soft sell — no public pricing, ROI guarantees, lead magnets, or emoji walls.
 
-<a target="_blank" href="https://github.com/Siphon880gh" rel="nofollow"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="Github" data-canonical-src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" style="max-width:100%; height: 20px; border-radius:2.5px"></a>
-<a target="_blank" href="https://www.linkedin.com/in/weng-fung/" rel="nofollow"><img src="https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin&labelColor=blue" alt="Linked-In" data-canonical-src="https://img.shields.io/badge/LinkedIn-blue?style=flat&amp;logo=linkedin&amp;labelColor=blue" style="max-width:10ch;"></a>
-<a target="_blank" href="https://www.youtube.com/@WayneTeachesCode/" rel="nofollow"><img src="https://img.shields.io/badge/Youtube-red?style=flat&logo=youtube&labelColor=red" alt="Youtube" data-canonical-src="https://img.shields.io/badge/Youtube-red?style=flat&amp;logo=youtube&amp;labelColor=red" style="max-width:10ch;"></a>
+## Browse locally
 
+With MAMP (or any static server) at the `weng` docroot:
 
-View Portfolio
----
-[Check out my portfolio](//siphon880gh.github.io/).
+- Home: http://localhost:8888/weng/me/
+- Work: http://localhost:8888/weng/me/projects/
+- Services: http://localhost:8888/weng/me/services/
+- Passion: http://localhost:8888/weng/me/passion/
+- About: http://localhost:8888/weng/me/about/
+- Contact: http://localhost:8888/weng/me/contact/ (supports `?path=build|advise|unsure`)
 
-Screenshot
----
-![Latest Screenshot](docs/README/v2-screenshot-react.png)
+Or: `cd me && python3 -m http.server 8765`
 
-Older Versions
----
-[See older designs](docs/README-old-versions.md) of the portfolio.
+## Structure
+
+- `index.html`, `projects/` (nav: Work), `services/`, `passion/`, `about/`, `contact/` — pages
+- `assets/css/style.css`, `assets/js/main.js` — design system, path cards, Work Build|Advise tabs (+ Passion link), contact path chooser
+- Header brand uses `logo-light.png` alone (full wordmark in image; no duplicate HTML text)
+- Home `#passion` teaser + `/passion/` page — Games, Nursing, @WengTeachesCode archive, Knowledge notes (7000+); Work `?tab=passion` redirects to `/passion/`
+- `assets/img/` — logos, headshot, icons, waves, project screenshots
+- `index.react-legacy.html` + `src/` / `dist/` — previous React/webpack portfolio (not used by the new entrypoint)
+
+## Source of design
+
+Visual/IA cues from `me00WordpressCoolStyle` (Blocksy + Elementor): palette `#001129` / `#FDD746` / `#00d2fc`, Roboto Mono nav, hero portrait ring, rounded project cards, waves backgrounds. Copy ideas mined read-only from `me00PHPOldPorfolio` and `me00MarketingAgency` (toned down for soft sell). Contact uses `mailto:`.
+
+Do not modify `me00PHPOldPorfolio`, `me00WordpressCoolStyle`, or `me00MarketingAgency`.

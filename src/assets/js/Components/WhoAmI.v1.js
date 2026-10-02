@@ -74,7 +74,7 @@ export default class WhoAmI extends Component {
                                     </a>
 
 
-                                    <a className="badge-style-a" target="_blank" href="//www.youtube.com/@WayneTeachesCode/" rel="nofollow">
+                                    <a className="badge-style-a" target="_blank" href="//www.youtube.com/@WengTeachesCode/" rel="nofollow">
                                         <img src="https://img.shields.io/badge/Youtube-red?style=flat&logo=youtube&labelColor=red"
                                         className="github-style badge-style" alt="Youtube" data-canonical-src="https://img.shields.io/badge/Youtube-red?style=flat&amp;logo=youtube&amp;labelColor=red"/>
                                     </a>

@@ -89,7 +89,7 @@ export default function Navigation(props) {
                         <NavLink data-php-rerouter="students" to="./students" activeClassName="text-bold-colored" onClick={collapseMobileMenu}>Student Testimonials</NavLink>
                     </li>
                     <li>
-                        <a target="_blank" href="https://www.youtube.com/@WayneTeachesCode" activeClassName="text-bold-colored" onClick={collapseMobileMenu}>Tutorials</a>
+                        <a target="_blank" href="https://www.youtube.com/@WengTeachesCode" activeClassName="text-bold-colored" onClick={collapseMobileMenu}>Tutorials</a>
                     </li>
                     <li>
                         <NavLink data-php-rerouter="collab" to="./collab" activeClassName="text-bold-colored" onClick={collapseMobileMenu}>Collab</NavLink>
