@@ -64,7 +64,7 @@ AI shows up as **assisted delivery** (ship faster, keep reviews/tests/structure)
 | **[Goals Social](https://wengindustries.com/app/goals-social-network)** | Node/Express/MySQL social network around goals — [GitHub](https://github.com/Siphon880gh/goals-social-network) |
 | **Covid-19 Tracker**, **Meditation Studio**, **Multitimers**, **Budget Tracker**, and more | See **Work** on the site |
 
-Advise-side themes (no fake case-study theater): marketing/ops automation, sales process automation, SEO & content systems, accessibility audits & remediation plans, process + AI tooling, team mentoring.
+Advise-side themes live on **Services** (no fake case-study theater): marketing/ops automation, sales process automation, SEO & content systems, accessibility audits & remediation plans, process + AI tooling, team mentoring. Work stays builder/portfolio-forward.
 
 ---
 
@@ -150,7 +150,7 @@ cd me && python3 -m http.server 8765
 - `config.json` — `{ "homeScroll": true|false }` (no rebuild; PHP reads on each request)
 - `scroll/` — 3D scroll story (`index.html`, `scroll.css`, `scroll.js`); also embedded at `/` when `homeScroll` is true on PHP
 - `projects/` (nav: Work), `services/`, `passion/`, `about/`, `contact/`, `credentials/` (secondary archive, not in primary nav) — pages
-- `assets/css/style.css`, `assets/js/main.js` — design system, path cards, Work Build|Advise tabs (+ Passion link), tag filters, contact path chooser
+- `assets/css/style.css`, `assets/js/main.js` — design system, path cards, Work Build tab (+ Advise → Services, Passion → Passion), tag filters, contact path chooser
 - Header brand uses `logo-light.png` alone (full wordmark in image)
 - `assets/img/` — logos, headshot, icons, waves, project screenshots (`assets/img/projects/_shots/` is local scratch — not committed)
 - `index.react-legacy.html` + `src/` / `dist/` — previous React/webpack portfolio (not used by the new entrypoint)

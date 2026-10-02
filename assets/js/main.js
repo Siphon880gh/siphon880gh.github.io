@@ -17,7 +17,7 @@
     });
   }
 
-  // Work page: Build | Advise tabs
+  // Work page: Build tab (+ Advise/Passion links to Services/Passion)
   const tabs = document.querySelectorAll(".work-tab");
   if (tabs.length) {
     tabs.forEach(function (tab) {
@@ -45,14 +45,18 @@
         } catch (e) {}
       });
     });
-    // Optional ?tab=advise|build deep link; ?tab=passion → dedicated Passion page
+    // Optional ?tab=build deep link; ?tab=passion → Passion; ?tab=advise → Services (advise story lives there)
     try {
       const tabParam = new URLSearchParams(window.location.search).get("tab");
       if (tabParam === "passion") {
         window.location.replace("../passion/");
         return;
       }
-      if (tabParam === "advise" || tabParam === "build" || tabParam === "certificates" || tabParam === "achievements") {
+      if (tabParam === "advise") {
+        window.location.replace("../services/#advise-services");
+        return;
+      }
+      if (tabParam === "build" || tabParam === "certificates" || tabParam === "achievements") {
         const el = document.querySelector('.work-tab[data-tab="' + tabParam + '"]');
         if (el) el.click();
       }
