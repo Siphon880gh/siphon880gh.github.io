@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <link rel="stylesheet" href="../assets/css/style.css?v=a4f91d1">
+  <link rel="stylesheet" href="../assets/css/style.css?v=e2navdd">
 </head>
 <body>
   <header class="site-header">
@@ -26,9 +26,28 @@
         <nav class="nav-primary" aria-label="Primary">
           <a href="../">Home</a>
           <a href="../projects/" class="active">Work</a>
-          <a href="../services/">Services</a>
+          <div class="nav-item has-dropdown">
+            <div class="nav-item-head">
+              <a href="../services/" class="nav-parent">Services</a>
+              <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-controls="nav-menu-services" aria-label="Services submenu"><span aria-hidden="true">▾</span></button>
+            </div>
+            <ul class="nav-dropdown" id="nav-menu-services" inert>
+              <li><a href="../services/#build-services">Build</a></li>
+              <li><a href="../services/#advise-services">Advise</a></li>
+            </ul>
+          </div>
           <a href="../passion/">Passion</a>
-          <a href="../about/">About</a>
+          <div class="nav-item has-dropdown">
+            <div class="nav-item-head">
+              <a href="../about/" class="nav-parent">About</a>
+              <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-controls="nav-menu-about" aria-label="About submenu"><span aria-hidden="true">▾</span></button>
+            </div>
+            <ul class="nav-dropdown" id="nav-menu-about" inert>
+              <li><a href="../about/">Whoami</a></li>
+              <li><a href="../credentials/?tab=certificates">Certificates</a></li>
+              <li><a href="../credentials/?tab=achievements">Achievements</a></li>
+            </ul>
+          </div>
           <a href="../contact/?path=not-sure">Contact</a>
         </nav>
         <div class="nav-socials">
@@ -234,6 +253,6 @@
       </div>
     </div>
   </footer>
-  <script src="../assets/js/main.js?v=a4f91d1"></script>
+  <script src="../assets/js/main.js?v=e2navdd"></script>
 </body>
 </html>

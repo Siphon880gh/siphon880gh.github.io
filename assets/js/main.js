@@ -46,10 +46,30 @@
   const header = document.querySelector(".site-header");
   const toggle = document.querySelector(".nav-toggle");
   if (toggle && header) {
+    function setDropdownOpen(item, open) {
+      if (!item) return;
+      item.classList.toggle("is-open", open);
+      const btn = item.querySelector(".nav-dropdown-toggle");
+      const menu = item.querySelector(".nav-dropdown");
+      if (btn) btn.setAttribute("aria-expanded", open ? "true" : "false");
+      if (menu) {
+        if (open) menu.removeAttribute("inert");
+        else menu.setAttribute("inert", "");
+      }
+    }
+    function closeAllDropdowns() {
+      header.querySelectorAll(".nav-item.has-dropdown.is-open").forEach(function (item) {
+        setDropdownOpen(item, false);
+      });
+    }
     function setNavOpen(open) {
       header.classList.toggle("is-open", open);
       toggle.setAttribute("aria-expanded", open ? "true" : "false");
       toggle.innerHTML = open ? "✕" : "☰";
+      if (!open) closeAllDropdowns();
+    }
+    function isDesktopNav() {
+      return window.matchMedia("(min-width: 961px)").matches;
     }
     toggle.addEventListener("click", function () {
       setNavOpen(!header.classList.contains("is-open"));
@@ -58,6 +78,51 @@
       a.addEventListener("click", function () {
         setNavOpen(false);
       });
+    });
+    header.querySelectorAll(".nav-item.has-dropdown").forEach(function (item) {
+      const btn = item.querySelector(".nav-dropdown-toggle");
+      if (btn) {
+        btn.addEventListener("click", function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          const willOpen = !item.classList.contains("is-open");
+          header.querySelectorAll(".nav-item.has-dropdown").forEach(function (other) {
+            if (other !== item) setDropdownOpen(other, false);
+          });
+          setDropdownOpen(item, willOpen);
+        });
+      }
+      item.addEventListener("mouseenter", function () {
+        if (!isDesktopNav()) return;
+        header.querySelectorAll(".nav-item.has-dropdown").forEach(function (other) {
+          if (other !== item) setDropdownOpen(other, false);
+        });
+        setDropdownOpen(item, true);
+      });
+      item.addEventListener("mouseleave", function () {
+        if (!isDesktopNav()) return;
+        setDropdownOpen(item, false);
+      });
+      item.addEventListener("focusin", function () {
+        if (!isDesktopNav()) return;
+        setDropdownOpen(item, true);
+      });
+      item.addEventListener("focusout", function (e) {
+        if (!isDesktopNav()) return;
+        if (e.relatedTarget && item.contains(e.relatedTarget)) return;
+        setDropdownOpen(item, false);
+      });
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key !== "Escape") return;
+      const openItem = header.querySelector(".nav-item.has-dropdown.is-open");
+      if (openItem) {
+        setDropdownOpen(openItem, false);
+        const btn = openItem.querySelector(".nav-dropdown-toggle");
+        if (btn) btn.focus();
+        return;
+      }
+      if (header.classList.contains("is-open")) setNavOpen(false);
     });
   }
 
