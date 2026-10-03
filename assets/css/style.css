@@ -1336,6 +1336,10 @@ ul { margin: 0; padding: 0; list-style: none; }
   margin: 0 auto 1.75rem;
   color: var(--text-body);
 }
+.cred-linkedin {
+  text-align: center;
+  margin: -0.65rem auto 1.75rem;
+}
 .cred-group { margin: 0 0 2.5rem; }
 .cred-group h2,
 .cred-block h2 {
@@ -1914,13 +1918,24 @@ body:not(.depth-page).is-page-exit > main {
 }
 
 /* Hero certification highlights (classic + scroll intro) */
+.hero-certs-block {
+  margin: 1.15rem 0 0;
+}
+.hero-certs-label {
+  margin: 0 0 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--c3);
+}
 .hero-certs {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
   gap: 0.75rem 1rem;
-  margin: 1.15rem 0 0;
+  margin: 0;
   padding: 0;
 }
 .hero-certs li { margin: 0; padding: 0; }
