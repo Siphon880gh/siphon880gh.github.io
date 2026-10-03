@@ -66,28 +66,6 @@ ul { margin: 0; padding: 0; list-style: none; }
   display: block;
 }
 
-/* Brand logo: brief horizontal blur on click before navigating home */
-.brand {
-  position: relative;
-}
-.brand img {
-  transition: filter 0.12s ease, transform 0.12s ease, opacity 0.12s ease;
-}
-.brand.is-blur-out img {
-  animation: brand-h-blur 0.3s ease-in forwards;
-}
-@keyframes brand-h-blur {
-  0%   { filter: blur(0); transform: translateX(0); opacity: 1; }
-  100% { filter: blur(10px); transform: translateX(6px); opacity: 0.65; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .brand.is-blur-out img {
-    animation: none;
-    filter: none;
-    opacity: 1;
-    transform: none;
-  }
-}
 
 .nav-primary {
   display: flex;
