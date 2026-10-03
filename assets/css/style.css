@@ -246,6 +246,7 @@ ul { margin: 0; padding: 0; list-style: none; }
     radial-gradient(ellipse at 20% 80%, rgba(253,215,70,0.08), transparent 50%),
     linear-gradient(180deg, rgba(0,17,41,0.55), rgba(0,17,41,0.92));
   z-index: 1;
+  pointer-events: none;
 }
 .hero-bg {
   position: absolute;
@@ -255,6 +256,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   background-position: center bottom;
   opacity: 0.35;
   z-index: 0;
+  pointer-events: none;
 }
 .hero .container {
   position: relative;
@@ -2238,16 +2240,18 @@ body:not(.depth-page).is-page-exit > main {
 
 /* Certificate icons ride the bottom of the hero / scroll intro, not the headline. */
 .cert-ticker {
+  --cert-gap: 3.15rem;
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 4;
+  z-index: 5;
   display: flex;
   align-items: center;
   gap: 0.85rem;
   padding: 0.35rem 1.1rem 0.55rem;
   background: linear-gradient(180deg, rgba(0, 17, 41, 0) 0%, rgba(0, 17, 41, 0.55) 32%, rgba(0, 17, 41, 0.9) 100%);
+  pointer-events: auto;
 }
 .cert-ticker-label {
   flex: 0 0 auto;
@@ -2259,48 +2263,85 @@ body:not(.depth-page).is-page-exit > main {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--c3);
+  position: relative;
+  z-index: 1;
 }
 .cert-ticker-label a {
   color: rgba(0, 210, 252, 0.92);
   letter-spacing: 0.06em;
   border-bottom: 1px solid rgba(0, 210, 252, 0.4);
   width: fit-content;
+  pointer-events: auto;
 }
 .cert-ticker-label a:hover { color: var(--c2); border-bottom-color: var(--c2); }
 .cert-ticker-window {
   flex: 1;
   min-width: 0;
   overflow: hidden;
+  position: relative;
+  z-index: 1;
+  pointer-events: auto;
   -webkit-mask-image: linear-gradient(90deg, transparent, #000 16px, #000 calc(100% - 16px), transparent);
   mask-image: linear-gradient(90deg, transparent, #000 16px, #000 calc(100% - 16px), transparent);
 }
 .cert-ticker-track {
   display: flex;
   width: max-content;
+  pointer-events: auto;
   animation: cert-drift 36s linear infinite;
 }
 .cert-ticker:hover .cert-ticker-track,
-.cert-ticker:focus-within .cert-ticker-track { animation-play-state: paused; }
+.cert-ticker:focus-within .cert-ticker-track,
+.cert-ticker:active .cert-ticker-track { animation-play-state: paused; }
 .cert-ticker .hero-certs {
+  flex: 0 0 auto;
   flex-wrap: nowrap;
   align-items: flex-end;
-  gap: 1.15rem;
-  padding: 0.15rem 0.7rem 0;
+  gap: var(--cert-gap);
+  margin: 0;
+  /* Trailing space equals the icon gap so a duplicated sequence joins without a hole or a double gap. */
+  padding: 0.15rem var(--cert-gap) 0 0;
 }
-.cert-ticker .hero-cert img { height: 40px; }
+.cert-ticker .hero-cert,
+.cert-ticker .hero-cert.hero-stack {
+  position: relative;
+  max-width: none;
+  flex: 0 0 auto;
+  gap: 0;
+  padding: 0 0 1.05rem;
+  pointer-events: auto;
+}
+.cert-ticker .hero-cert img { height: 40px; pointer-events: none; }
 .cert-ticker .mern-stack,
-.cert-ticker .logo-stack { height: 40px; }
+.cert-ticker .logo-stack {
+  height: 40px;
+  gap: 3px;
+  pointer-events: none;
+}
 .cert-ticker .mern-mark,
-.cert-ticker .logo-stack-item { width: 36px; height: 36px; margin-left: -11px; }
+.cert-ticker .logo-stack-item {
+  width: 40px;
+  height: 40px;
+  margin-left: 0;
+  pointer-events: none;
+}
 .cert-ticker .hero-cert .mern-mark img,
 .cert-ticker .hero-cert .logo-stack img { width: 20px; height: 20px; }
 .cert-ticker .hero-cert .mern-mark-ucla img { width: 100%; height: 100%; }
+.cert-ticker .hero-cert > span:last-child {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  pointer-events: none;
+}
 .cert-ticker .hero-cert span {
   font-size: 0.62rem;
 }
 @keyframes cert-drift {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(calc(-1 * var(--cert-shift, 50%)), 0, 0); }
 }
 
 /* Shared short fades for panels that show and hide. No transform on dialogs (keeps centering). */

@@ -960,4 +960,166 @@
   })();
 
 
+  // Bottom cert ticker: even loop (no empty gap) and clicks that survive the animation.
+  (function initCertTicker() {
+    var reduceQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    var tickers = document.querySelectorAll(".cert-ticker");
+    if (!tickers.length) return;
+    var layouts = [];
+
+    function certControl(node) {
+      if (!node || !node.closest) return null;
+      return node.closest("a[href], button[data-cert-lightbox]");
+    }
+
+    tickers.forEach(function (ticker) {
+      var track = ticker.querySelector(".cert-ticker-track");
+      var windowEl = ticker.querySelector(".cert-ticker-window");
+      if (!track || !windowEl) return;
+      var swallowClick = false;
+      var down = null;
+
+      function seedOnly() {
+        var lists = track.querySelectorAll("ul.hero-certs");
+        var seed = lists[0];
+        for (var i = 1; i < lists.length; i++) lists[i].remove();
+        return seed;
+      }
+
+      function layout() {
+        var seed = seedOnly();
+        if (!seed) return;
+        track.style.removeProperty("--cert-shift");
+        track.style.animationDuration = "";
+        if (reduceQuery.matches) return;
+        var seq = seed.getBoundingClientRect().width;
+        if (seq < 2) return;
+        var view = Math.max(windowEl.clientWidth || 0, window.innerWidth || 0);
+        var copies = 1;
+        while (copies * seq < view + seq - 1 && copies < 12) {
+          var clone = seed.cloneNode(true);
+          clone.setAttribute("aria-hidden", "true");
+          clone.setAttribute("data-cert-clone", "");
+          clone.removeAttribute("aria-labelledby");
+          clone.querySelectorAll("a, button").forEach(function (el) {
+            el.tabIndex = -1;
+          });
+          track.appendChild(clone);
+          copies++;
+        }
+        var lists = track.querySelectorAll("ul.hero-certs");
+        var shift = seq;
+        if (lists[1]) {
+          // Layout pixels, not screen pixels — a 3D ancestor must not scale the loop offset.
+          shift = lists[1].offsetLeft - lists[0].offsetLeft;
+          if (shift < 2) shift = lists[1].getBoundingClientRect().left - lists[0].getBoundingClientRect().left;
+        }
+        if (shift < 2) return;
+        track.style.setProperty("--cert-shift", shift.toFixed(3) + "px");
+        track.style.animationDuration = Math.max(28, Math.round(shift / 32)) + "s";
+      }
+
+      function controlAt(x, y) {
+        var stack = document.elementsFromPoint(x, y);
+        for (var i = 0; i < stack.length; i++) {
+          var hit = certControl(stack[i]);
+          if (hit && ticker.contains(hit)) return hit;
+        }
+        var items = track.querySelectorAll(".hero-cert");
+        for (var j = 0; j < items.length; j++) {
+          var rect = items[j].getBoundingClientRect();
+          if (x >= rect.left && x <= rect.right && y >= rect.top && y <= rect.bottom) return items[j];
+        }
+        return null;
+      }
+
+      function openCert(ctrl) {
+        if (!ctrl) return;
+        if (ctrl.hasAttribute("data-cert-lightbox")) {
+          ctrl.dispatchEvent(new MouseEvent("click", { bubbles: true, cancelable: true, view: window }));
+          return;
+        }
+        var href = ctrl.getAttribute("href");
+        if (!href) return;
+        var url;
+        try { url = new URL(href, window.location.href); }
+        catch (err) { return; }
+        var blank = ctrl.getAttribute("target") === "_blank" || url.origin !== window.location.origin;
+        if (blank) {
+          window.open(url.href, "_blank", "noopener,noreferrer");
+          return;
+        }
+        var soften = !document.body.classList.contains("depth-page") && !reduceQuery.matches;
+        if (soften) {
+          if (!document.body.classList.contains("is-page-exit")) {
+            document.body.classList.add("is-page-exit");
+            window.setTimeout(function () { window.location.href = url.href; }, 220);
+          }
+          return;
+        }
+        window.location.href = url.href;
+      }
+
+      ticker.addEventListener("pointerdown", function (e) {
+        if (e.button !== 0) return;
+        track.style.animationPlayState = "paused";
+        down = { x: e.clientX, y: e.clientY, ctrl: controlAt(e.clientX, e.clientY) };
+      });
+
+      ticker.addEventListener("pointerup", function (e) {
+        if (!down || e.button !== 0) return;
+        var dx = e.clientX - down.x;
+        var dy = e.clientY - down.y;
+        var pressed = down.ctrl;
+        down = null;
+        track.style.animationPlayState = "";
+        if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+        if (dx * dx + dy * dy > 64) return;
+        var ctrl = controlAt(e.clientX, e.clientY) || pressed;
+        if (!ctrl || !ticker.contains(ctrl)) return;
+        var top = document.elementFromPoint(e.clientX, e.clientY);
+        if (top && pressed && pressed === ctrl && pressed.contains(top)) return;
+        swallowClick = true;
+        openCert(ctrl);
+      });
+
+      ticker.addEventListener("pointercancel", function () {
+        down = null;
+        track.style.animationPlayState = "";
+      });
+
+      ticker.addEventListener("click", function (e) {
+        if (!swallowClick || !e.isTrusted) return;
+        swallowClick = false;
+        e.preventDefault();
+        e.stopPropagation();
+      }, true);
+
+      layouts.push(layout);
+      layout();
+      window.addEventListener("load", layout);
+      if ("ResizeObserver" in window) {
+        var resizeTimer = 0;
+        var ro = new ResizeObserver(function () {
+          window.clearTimeout(resizeTimer);
+          resizeTimer = window.setTimeout(layout, 80);
+        });
+        ro.observe(windowEl);
+      } else {
+        window.addEventListener("resize", layout);
+      }
+      track.querySelectorAll("img").forEach(function (img) {
+        if (img.complete) return;
+        img.addEventListener("load", layout, { once: true });
+      });
+    });
+
+    if (reduceQuery.addEventListener) {
+      reduceQuery.addEventListener("change", function () {
+        layouts.forEach(function (fn) { fn(); });
+      });
+    }
+  })();
+
+
 })();

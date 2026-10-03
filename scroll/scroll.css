@@ -669,6 +669,7 @@ html.is-depth .depth-progress {
   bottom: 0;
   height: 3px;
   background: rgba(255, 255, 255, 0.08);
+  pointer-events: none;
 }
 
 html.is-depth .depth-progress span {
@@ -854,6 +855,8 @@ html.is-depth .depth-chapter[data-depth="intro"] {
 html.is-depth .depth-chapter[data-depth="intro"] .cert-ticker {
   bottom: 5.25rem;
   right: 8rem;
+  z-index: 6;
+  pointer-events: auto;
 }
 html.is-depth .depth-rail button {
   transition: color 200ms cubic-bezier(0.22, 1, 0.36, 1);
