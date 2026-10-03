@@ -1623,6 +1623,16 @@ ul { margin: 0; padding: 0; list-style: none; }
   margin: 0.75rem 0 0;
   text-align: center;
 }
+.lightbox-verify {
+  margin-top: 0.45rem;
+}
+.lightbox-verify[hidden] { display: none; }
+.lightbox-verify a {
+  color: var(--c3);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+.lightbox-verify a:hover { color: var(--c2); }
 .lightbox-close {
   position: absolute;
   top: 0.55rem;
@@ -2202,7 +2212,7 @@ body:not(.depth-page).is-page-exit > main {
 }
 
 
-/* MERN hero mark: Mongo, React, Node, UCLA — overlapping circles. Lightbox stays the UCLA cert. */
+/* MERN hero mark: Mongo, React, Node, UCLA — overlapping circles. Mark opens Parchment. */
 .mern-stack {
   display: flex;
   align-items: center;

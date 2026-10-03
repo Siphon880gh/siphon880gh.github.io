@@ -564,9 +564,28 @@
     const dialog = document.getElementById("cred-lightbox");
     const shot = document.getElementById("cred-lightbox-img");
     const caption = document.getElementById("cred-lightbox-caption");
+    const verify = document.getElementById("cred-lightbox-verify");
     if (!dialog || !shot || !caption) return;
 
     let lastTrigger = null;
+
+    function setVerifyLink(btn) {
+      if (!verify) return;
+      const href = btn && btn.getAttribute("data-verify-href");
+      const label = btn && btn.getAttribute("data-verify-label");
+      verify.replaceChildren();
+      if (!href || !label) {
+        verify.hidden = true;
+        return;
+      }
+      const a = document.createElement("a");
+      a.href = href;
+      a.target = "_blank";
+      a.rel = "noopener";
+      a.textContent = label;
+      verify.appendChild(a);
+      verify.hidden = false;
+    }
 
     root.addEventListener("click", function (e) {
       const btn = e.target.closest(".cred-enlarge");
@@ -576,6 +595,7 @@
       shot.src = src;
       shot.alt = btn.getAttribute("aria-label") || "";
       caption.textContent = btn.getAttribute("data-caption") || "";
+      setVerifyLink(btn);
       lastTrigger = btn;
       if (typeof dialog.showModal === "function") dialog.showModal();
       else window.open(src, "_blank", "noopener");
@@ -589,6 +609,7 @@
     dialog.addEventListener("close", function () {
       shot.removeAttribute("src");
       shot.alt = "";
+      setVerifyLink(null);
       if (lastTrigger && typeof lastTrigger.focus === "function") lastTrigger.focus();
     });
   })();
@@ -925,13 +946,32 @@
     });
   })();
 
-  // Hero cert row: MERN certificate image uses the same dialog lightbox as credentials.
+  // Hero cert row: optional image lightbox (external verify links use <a target=_blank>).
   (function initHeroCertLightbox() {
     const dialog = document.getElementById("hero-cert-lightbox");
     const shot = document.getElementById("hero-cert-lightbox-img");
     const caption = document.getElementById("hero-cert-lightbox-caption");
+    const verify = document.getElementById("hero-cert-lightbox-verify");
     if (!dialog || !shot || !caption) return;
     let lastTrigger = null;
+
+    function setVerifyLink(btn) {
+      if (!verify) return;
+      const href = btn && btn.getAttribute("data-verify-href");
+      const label = btn && btn.getAttribute("data-verify-label");
+      verify.replaceChildren();
+      if (!href || !label) {
+        verify.hidden = true;
+        return;
+      }
+      const a = document.createElement("a");
+      a.href = href;
+      a.target = "_blank";
+      a.rel = "noopener";
+      a.textContent = label;
+      verify.appendChild(a);
+      verify.hidden = false;
+    }
 
     document.addEventListener("click", function (e) {
       const btn = e.target.closest("[data-cert-lightbox]");
@@ -942,6 +982,7 @@
       shot.src = src;
       shot.alt = btn.getAttribute("data-cert-caption") || btn.getAttribute("aria-label") || "Certificate";
       caption.textContent = btn.getAttribute("data-cert-caption") || "";
+      setVerifyLink(btn);
       lastTrigger = btn;
       if (typeof dialog.showModal === "function") dialog.showModal();
       else window.open(src, "_blank", "noopener");
@@ -955,6 +996,7 @@
     dialog.addEventListener("close", function () {
       shot.removeAttribute("src");
       shot.alt = "";
+      setVerifyLink(null);
       if (lastTrigger && typeof lastTrigger.focus === "function") lastTrigger.focus();
     });
   })();
