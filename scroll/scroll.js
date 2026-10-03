@@ -148,7 +148,7 @@
         immediateRender: false
       }, 2 * SLOT - EXIT);
 
-      timeline.fromTo(".work-fan", {
+      timeline.fromTo(".work-stack", {
         rotationX: 16,
         z: -80,
         transformOrigin: "50% 80%"
@@ -211,7 +211,7 @@
          matchMedia finishes so the stacked layout can show every chapter. */
       requestAnimationFrame(function () {
         if (root.classList.contains("is-depth")) return;
-        gsap.set(".depth-chapter, .flagship-card, .flagship-back, .work-fan, .depth-hint, .depth-progress span", {
+        gsap.set(".depth-chapter, .flagship-card, .flagship-back, .work-stack, .work-fan, .depth-hint, .depth-progress span", {
           clearProps: "all"
         });
       });

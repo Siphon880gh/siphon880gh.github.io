@@ -914,6 +914,16 @@ ul { margin: 0; padding: 0; list-style: none; }
   }
 }
 @media (max-width: 767px) {
+  /* Breathing room below "View all certificates" so it is not flush with the next section */
+  .hero {
+    padding-bottom: 10.25rem;
+  }
+  .cert-ticker {
+    bottom: 2.65rem;
+  }
+  .cert-ticker-all {
+    bottom: 1.05rem;
+  }
   /* Classic home: stack + portrait above kicker (matches scroll intro) */
   .hero .container {
     grid-template-columns: 1fr;
