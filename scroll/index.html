@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <link rel="stylesheet" href="../assets/css/style.css?v=bf4a99d">
+  <link rel="stylesheet" href="../assets/css/style.css?v=hstack1">
   <link rel="stylesheet" href="./scroll.css?v=a4f91c2">
   <script>
     (function () {
@@ -66,12 +66,11 @@
               <p class="depth-kicker">01 — Intro · Los Angeles</p>
               <h1>Software that <span class="accent">ships</span>. Advice that compounds.</h1>
               <p class="depth-lead">Weng Fei Fung — full-stack developer (AI + engineering craft). Also available for automation and AI-transformation consulting.</p>
-              <div class="hero-actions">
-                <a class="btn btn-primary" href="../contact/?path=build">Hire me to build</a>
-                <a class="btn btn-ghost btn-advise" href="../contact/?path=advise">Book a consult</a>
-              </div>
               <div class="hero-certs-block">
-                <p class="hero-certs-label" id="hero-certs-label">Certificates</p>
+                <div class="hero-certs-head">
+                  <p class="hero-certs-label" id="hero-certs-label">Certificates</p>
+                  <a class="hero-certs-all" href="../credentials/?tab=certificates">View all</a>
+                </div>
                 <ul class="hero-certs" aria-labelledby="hero-certs-label">
                   <li>
                     <button type="button" class="hero-cert" data-cert-lightbox="../assets/img/certs/web-dev-2021-04.png" data-cert-caption="Full Stack Web Development (MERN+MySQL+GraphQL) — UCLA Extension, April 2021" aria-label="MERN, UCLA Extension. Open certificate image.">
@@ -103,7 +102,21 @@
                       <span>Marketing</span>
                     </a>
                   </li>
+                  <li>
+                    <a class="hero-cert hero-stack" href="../credentials/?tab=certificates" aria-label="MySQL, Python, and PHP certificates">
+                      <span class="logo-stack" aria-hidden="true">
+                        <span class="logo-stack-item logo-stack-mysql"><img src="../assets/img/certs/icons/stack-mysql.svg" alt="" width="24" height="24"></span>
+                        <span class="logo-stack-item logo-stack-python"><img src="../assets/img/certs/icons/stack-python.svg" alt="" width="24" height="24"></span>
+                        <span class="logo-stack-item logo-stack-php"><img src="../assets/img/certs/icons/stack-php.svg" alt="" width="24" height="24"></span>
+                      </span>
+                      <span>MySQL · Python · PHP</span>
+                    </a>
+                  </li>
                 </ul>
+                <div class="hero-actions hero-certs-actions">
+                  <a class="btn btn-primary" href="../contact/?path=build">Hire me to build</a>
+                  <a class="btn btn-ghost btn-advise" href="../contact/?path=advise">Book a consult</a>
+                </div>
               </div>
               <p class="depth-aside">Keep scrolling for the story — or browse <a href="../projects/">all work</a> anytime.</p>
             </div>
