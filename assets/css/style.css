@@ -2154,3 +2154,34 @@ body:not(.depth-page).is-page-exit > main {
   .logo-stack-item { width: 36px; height: 36px; margin-left: -10px; }
   .hero-cert .logo-stack img { width: 18px; height: 18px; }
 }
+
+.hero-cert.hero-cert-upcoming img {
+  filter: grayscale(1);
+  opacity: 0.72;
+}
+.hero-cert.hero-cert-upcoming span { color: rgba(255, 255, 255, 0.55); }
+.hero-cert.hero-cert-upcoming:hover span,
+.hero-cert.hero-cert-upcoming:focus-visible span { color: rgba(255, 255, 255, 0.82); }
+
+.cred-card.is-upcoming {
+  background: #e7ebe9;
+  border-top-color: #b7c0bc;
+  box-shadow: none;
+  filter: grayscale(1);
+}
+.cred-card.is-upcoming h3,
+.cred-card.is-upcoming figcaption,
+.cred-card.is-upcoming p { color: #6a756f; }
+.cred-upcoming-plate {
+  display: grid;
+  place-items: center;
+  min-height: 210px;
+  border-radius: 12px;
+  border: 1px dashed #9aa39f;
+  background: #dfe3e1;
+  color: #6a756f;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
