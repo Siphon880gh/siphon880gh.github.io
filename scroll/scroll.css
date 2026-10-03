@@ -976,3 +976,81 @@ html.is-depth .depth-chapter[data-depth="hire"] .depth-head {
 .depth-chapter[data-depth="hire"] .hire-actions .btn {
   padding: 0.98rem 1.7rem;
 }
+
+/* Day theme: color only. Do not change pin, perspective, transforms, or reduced-motion layout.
+   Night keeps the authored navy theater. is-depth chapters stay transparent so the floor still shows. */
+html[data-theme="day"] .depth-page,
+html[data-theme="day"] .depth-stage {
+  background: #e7f0ee;
+  color: var(--text-dark);
+}
+html[data-theme="day"] .depth-chapter {
+  color: var(--text-dark);
+}
+html[data-theme="day"]:not(.is-depth) .depth-chapter {
+  background:
+    radial-gradient(ellipse at 20% 20%, rgba(0, 210, 252, 0.16), transparent 46%),
+    linear-gradient(180deg, #f7fbfa, #e6f0ee);
+}
+html[data-theme="day"]:not(.is-depth) .depth-chapter[data-depth="paths"] {
+  background:
+    linear-gradient(90deg, rgba(253, 215, 70, 0.18), transparent 42%),
+    linear-gradient(270deg, rgba(0, 210, 252, 0.12), transparent 40%),
+    #f3f7f6;
+}
+html[data-theme="day"]:not(.is-depth) .depth-chapter[data-depth="flagship"] {
+  background:
+    radial-gradient(ellipse at 70% 45%, rgba(0, 210, 252, 0.14), transparent 42%),
+    radial-gradient(ellipse at 30% 80%, rgba(253, 215, 70, 0.12), transparent 40%),
+    #f7fbfa;
+}
+html[data-theme="day"]:not(.is-depth) .depth-chapter[data-depth="work"] {
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(0, 210, 252, 0.12), transparent 50%),
+    #eef4f3;
+}
+html[data-theme="day"]:not(.is-depth) .depth-chapter[data-depth="hire"] {
+  background:
+    radial-gradient(ellipse at 50% 100%, rgba(253, 215, 70, 0.2), transparent 46%),
+    #f7fbfa;
+}
+html[data-theme="day"] .depth-lead,
+html[data-theme="day"] .depth-head p,
+html[data-theme="day"] .depth-aside {
+  color: var(--text-body);
+}
+html[data-theme="day"] .depth-page .btn-ghost {
+  color: var(--c1);
+  border-color: rgba(0, 17, 41, 0.35);
+}
+html[data-theme="day"] .depth-page .btn-ghost:hover {
+  color: #8a6d10;
+  border-color: var(--c2);
+}
+html[data-theme="day"] .hire-quote {
+  background: rgba(255, 255, 255, 0.82);
+  color: var(--text-dark);
+}
+html[data-theme="day"] .hire-quote figcaption {
+  color: var(--text-body);
+}
+html[data-theme="day"].is-depth .depth-floor {
+  background-image:
+    linear-gradient(rgba(0, 90, 120, 0.45) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(150, 110, 10, 0.4) 1px, transparent 1px);
+}
+html[data-theme="day"].is-depth .depth-chapter[data-depth="intro"]::after {
+  background: linear-gradient(
+    105deg,
+    rgba(247, 251, 250, 0.92) 0%,
+    rgba(247, 251, 250, 0.72) 34%,
+    rgba(247, 251, 250, 0.28) 56%,
+    transparent 74%
+  );
+}
+html[data-theme="day"].is-depth .depth-hint {
+  color: rgba(0, 17, 41, 0.62);
+}
+html[data-theme="day"].is-depth .depth-progress {
+  background: rgba(0, 17, 41, 0.08);
+}

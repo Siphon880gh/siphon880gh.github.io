@@ -2,6 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem("weng-theme");
+        var theme = stored === "day" || stored === "night"
+          ? stored
+          : (window.matchMedia("(prefers-color-scheme: dark)").matches ? "night" : "day");
+        document.documentElement.setAttribute("data-theme", theme);
+        if (stored !== "day" && stored !== "night") {
+          document.documentElement.setAttribute("data-theme-source", "system");
+        }
+      } catch (e) {}
+    })();
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact — Weng Industry</title>
   <meta name="description" content="Contact Weng Fei Fung to build software or book an automation / SEO / a11y / marketing consult. Los Angeles.">
@@ -13,7 +27,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <link rel="stylesheet" href="../assets/css/style.css?v=ticker2">
+  <link rel="stylesheet" href="../assets/css/style.css?v=theme1">
 </head>
 <body>
   <header class="site-header">
@@ -21,7 +35,13 @@
       <a class="brand" href="../">
         <img src="../assets/img/brand/logo-light.png" alt="Weng Industry — Realize your tech dreams">
       </a>
-      <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+      <div class="header-tools">
+        <button type="button" class="theme-switch" aria-pressed="false" aria-label="Day theme. Switch to night.">
+          <span class="theme-switch-icon" aria-hidden="true"></span>
+          <span class="theme-switch-label"></span>
+        </button>
+        <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+      </div>
       <div class="nav-panel">
         <nav class="nav-primary" aria-label="Primary">
           <a href="../">Home</a>
@@ -131,6 +151,6 @@
       </div>
     </div>
   </footer>
-  <script src="../assets/js/main.js?v=build1"></script>
+  <script src="../assets/js/main.js?v=theme1"></script>
 </body>
 </html>
