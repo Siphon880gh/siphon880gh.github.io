@@ -930,6 +930,32 @@ html.is-depth .depth-rail button {
   }
 }
 
+/* Tablet theater (nav still one row down through the 768px pin).
+   The 8rem rail inset is wider than the centered cert band, so the mask
+   clips on the right and the row sits left of "View all certificates".
+   Span the chapter and center the band on the same axis as that link.
+   The portrait's translateZ/rotateY stays; only its box moves inward. */
+@media (min-width: 768px) and (max-width: 1180px) {
+  html.is-depth .depth-chapter[data-depth="intro"] .cert-ticker {
+    right: 0;
+    --ticker-rail: 0px;
+    --ticker-side: 3.5rem;
+    --ticker-max: 1040px;
+  }
+  html.is-depth .depth-chapter[data-depth="intro"] .intro-portrait {
+    justify-self: end;
+    margin-right: clamp(1.75rem, 6vw, 4.25rem);
+  }
+  html.is-depth .depth-chapter[data-depth="intro"] .portrait-badge {
+    right: 0.65rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1180px) and (min-height: 761px) {
+  html.is-depth .depth-chapter[data-depth="intro"] .portrait-ring {
+    width: min(200px, 28vw);
+  }
+}
+
 /* Hire is chapter 5. Extra air between the headline, quote cards, and actions.
    Internal only in the pinned theater (chapter stays inset:0). The same gaps
    apply when chapters stack, including prefers-reduced-motion. */
