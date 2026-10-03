@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" role="img">
-  <!-- Original AI spark for the upcoming certificate, sized to the hero cert badges -->
+  <!-- AI spark, full color, same weight as the other hero cert marks -->
   <circle cx="24" cy="24" r="24" fill="#ffffff"/>
-  <g fill="#5c6a66">
+  <g fill="#00C2F0">
     <path d="M24 10.5c.4 4.6 1.7 7.2 4.4 9.1 2.6 1.8 5.7 2.4 9.1 2.9-3.4.5-6.5 1.1-9.1 2.9-2.7 1.9-4 4.5-4.4 9.1-.4-4.6-1.7-7.2-4.4-9.1-2.6-1.8-5.7-2.4-9.1-2.9 3.4-.5 6.5-1.1 9.1-2.9 2.7-1.9 4-4.5 4.4-9.1z"/>
-    <circle cx="34.5" cy="15" r="2.1"/>
+    <circle cx="34.5" cy="15" r="2.1" fill="#FDD746"/>
   </g>
 </svg>

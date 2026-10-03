@@ -45,6 +45,13 @@
 
   const header = document.querySelector(".site-header");
   const toggle = document.querySelector(".nav-toggle");
+  if (header) {
+    function syncHeaderScroll() {
+      header.classList.toggle("is-scrolled", window.scrollY > 8);
+    }
+    syncHeaderScroll();
+    window.addEventListener("scroll", syncHeaderScroll, { passive: true });
+  }
   if (toggle && header) {
     function setDropdownOpen(item, open) {
       if (!item) return;
@@ -309,7 +316,13 @@
         const show =
           selected.length === 0 ||
           selected.some(function (s) { return tags.indexOf(s) !== -1; });
+        const wasOut = card.classList.contains("is-filtered-out");
         card.classList.toggle("is-filtered-out", !show);
+        if (wasOut && show) {
+          card.classList.remove("is-filter-in");
+          void card.offsetWidth;
+          card.classList.add("is-filter-in");
+        }
         if (show) visible += 1;
       });
       if (emptyMsg) emptyMsg.hidden = visible !== 0;
@@ -392,15 +405,20 @@
       const pathEl = form.querySelector('input[name="path"]:checked');
       const path = pathEl ? pathEl.value : "unsure";
       const err = form.querySelector(".form-error");
+      function showFormError(msg) {
+        if (!err) return;
+        err.textContent = msg;
+        err.classList.toggle("is-shown", !!msg);
+      }
       if (!name || !email || !message) {
-        if (err) err.textContent = "Please fill in all fields.";
+        showFormError("Please fill in all fields.");
         return;
       }
       if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
-        if (err) err.textContent = "Please enter a valid email (user@domain.ext).";
+        showFormError("Please enter a valid email (user@domain.ext).");
         return;
       }
-      if (err) err.textContent = "";
+      showFormError("");
 
       var subjectLabel = "General inquiry";
       if (path === "build") subjectLabel = "Build inquiry";
@@ -829,7 +847,8 @@
       const a = e.target.closest && e.target.closest("a[href]");
       if (!a) return;
       if (a.target === "_blank" || a.hasAttribute("download")) return;
-            const href = a.getAttribute("href");
+      if (a.classList.contains("brand")) return;
+      const href = a.getAttribute("href");
       if (!href || href.charAt(0) === "#" || href.indexOf("mailto:") === 0 || href.indexOf("tel:") === 0) return;
       let url;
       try {
@@ -853,13 +872,25 @@
 
     // Subtle fade/rise for cards / primary blocks (sections already get page-enter)
     const targets = document.querySelectorAll(
-      ".project-card, .icon-card, .path-card, .contact-card, .about-photo, .about-copy, .testimonial-quote, .testimonial-photo, .oss-pr-card, .cred-card, .video-block, .section-head"
+      ".project-card, .icon-card, .path-card, .advise-card, .contact-card, .about-photo, .about-copy, .testimonial-quote, .testimonial-photo, .oss-pr-card, .oss-stance-item, .cred-card, .video-block, .section-head"
     );
     if (!targets.length || !("IntersectionObserver" in window)) return;
 
-    targets.forEach(function (el, i) {
-      el.classList.add("soft-reveal");
-      el.style.setProperty("--reveal-delay", Math.min(i % 6, 4) * 0.04 + "s");
+    const groups = [];
+    targets.forEach(function (el) {
+      const parent = el.parentElement;
+      let g = null;
+      for (let i = 0; i < groups.length; i++) {
+        if (groups[i].parent === parent) { g = groups[i]; break; }
+      }
+      if (!g) { g = { parent: parent, els: [] }; groups.push(g); }
+      g.els.push(el);
+    });
+    groups.forEach(function (g) {
+      g.els.forEach(function (el, i) {
+        el.classList.add("soft-reveal");
+        el.style.setProperty("--reveal-delay", Math.min(i, 4) * 0.04 + "s");
+      });
     });
 
     const io = new IntersectionObserver(
@@ -875,6 +906,22 @@
     );
     targets.forEach(function (el) {
       io.observe(el);
+    });
+  })();
+
+  // Content images fade in once, if they are not already decoded. Cert marks stay put.
+  (function initSoftImages() {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const imgs = document.querySelectorAll(".portrait-ring img, .testimonial-photo img, .video-cover > img, .about-photo img, .cred-enlarge img");
+    imgs.forEach(function (img) {
+      function done() {
+        img.classList.remove("soft-pending");
+        img.classList.add("soft-loaded");
+      }
+      if (img.complete && img.naturalWidth) return;
+      img.classList.add("soft-pending");
+      img.addEventListener("load", done, { once: true });
+      img.addEventListener("error", done, { once: true });
     });
   })();
 

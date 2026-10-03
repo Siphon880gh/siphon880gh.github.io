@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <link rel="stylesheet" href="./assets/css/style.css?v=aicert1">
+  <link rel="stylesheet" href="./assets/css/style.css?v=ease4">
 </head>
 <body>
   <header class="site-header">
@@ -68,21 +68,41 @@
         <div class="hero-kicker">Weng Fei Fung · Los Angeles</div>
         <h1>Software that <span class="accent">ships</span>. Advice that compounds.</h1>
         <p class="hero-sub">Full-stack developer (AI + engineering craft) · Los Angeles — also available for automation &amp; AI-transformation consulting.</p>
-        <div class="hero-certs-block">
-          <div class="hero-certs-head">
-            <p class="hero-certs-label" id="hero-certs-label">Certificates</p>
-            <a class="hero-certs-all" href="./credentials/?tab=certificates">View all</a>
-          </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="./contact/?path=build">Hire me to build</a>
+          <a class="btn btn-ghost btn-advise" href="./contact/?path=advise">Book a consult</a>
+        </div>
+        <p class="hero-depth-link"><a href="./scroll/">Explore the scroll story</a></p>
+      </div>
+      <div class="hero-portrait">
+        <div class="portrait-ring">
+          <img src="./assets/img/people/headshot.png" alt="Weng Fei Fung" data-avatar-static="./assets/img/people/headshot.png" data-avatar-animated="./assets/img/avatar-animated.webp">
+          <div class="portrait-badge">Available for hire · Build &amp; advise</div>
+        </div>
+      </div>
+    </div>
+<div class="cert-ticker" role="region" aria-label="Certificates">
+      <div class="cert-ticker-label">
+        <span id="hero-certs-label">Certificates</span>
+        <a href="./credentials/?tab=certificates">View all</a>
+      </div>
+      <div class="cert-ticker-window">
+        <div class="cert-ticker-track">
           <ul class="hero-certs" aria-labelledby="hero-certs-label">
             <li>
-              <a class="hero-cert hero-cert-upcoming" href="./credentials/?tab=certificates#ai" aria-label="AI certificates ’24 and ’26. Opens the AI section on Certificates.">
+              <a class="hero-cert" href="./credentials/?tab=certificates#ai" aria-label="AI certificates ’24 and ’26. Opens the AI section on Certificates.">
                 <img src="./assets/img/certs/icons/hero-ai.svg" alt="" width="48" height="48">
                 <span>’24 ’26</span>
               </a>
             </li>
             <li>
               <button type="button" class="hero-cert" data-cert-lightbox="./assets/img/certs/web-dev-2021-04.png" data-cert-caption="Full Stack Web Development (MERN+MySQL+GraphQL) — UCLA Extension, April 2021" aria-label="MERN, UCLA Extension. Open certificate image.">
-                <img src="./assets/img/certs/icons/hero-mern.png" alt="" width="132" height="66">
+                <span class="mern-stack" aria-hidden="true">
+                  <span class="mern-mark"><img src="./assets/img/certs/icons/stack-mongo.svg" alt="" width="26" height="26"></span>
+                  <span class="mern-mark"><img src="./assets/img/certs/icons/stack-react.svg" alt="" width="26" height="26"></span>
+                  <span class="mern-mark"><img src="./assets/img/certs/icons/stack-node.svg" alt="" width="26" height="26"></span>
+                  <span class="mern-mark mern-mark-ucla"><img src="./assets/img/certs/icons/stack-ucla.png" alt="" width="46" height="46"></span>
+                </span>
                 <span>MERN</span>
               </button>
             </li>
@@ -121,17 +141,59 @@
               </a>
             </li>
           </ul>
-          <div class="hero-actions hero-certs-actions">
-            <a class="btn btn-primary" href="./contact/?path=build">Hire me to build</a>
-            <a class="btn btn-ghost btn-advise" href="./contact/?path=advise">Book a consult</a>
-          </div>
-        </div>
-        <p class="hero-depth-link"><a href="./scroll/">Explore the scroll story</a></p>
-      </div>
-      <div class="hero-portrait">
-        <div class="portrait-ring">
-          <img src="./assets/img/people/headshot.png" alt="Weng Fei Fung" data-avatar-static="./assets/img/people/headshot.png" data-avatar-animated="./assets/img/avatar-animated.webp">
-          <div class="portrait-badge">Available for hire · Build &amp; advise</div>
+          <ul class="hero-certs" aria-hidden="true" inert>
+            <li>
+              <a class="hero-cert" href="./credentials/?tab=certificates#ai" aria-label="AI certificates ’24 and ’26. Opens the AI section on Certificates.">
+                <img src="./assets/img/certs/icons/hero-ai.svg" alt="" width="48" height="48">
+                <span>’24 ’26</span>
+              </a>
+            </li>
+            <li>
+              <button type="button" class="hero-cert" data-cert-lightbox="./assets/img/certs/web-dev-2021-04.png" data-cert-caption="Full Stack Web Development (MERN+MySQL+GraphQL) — UCLA Extension, April 2021" aria-label="MERN, UCLA Extension. Open certificate image.">
+                <span class="mern-stack" aria-hidden="true">
+                  <span class="mern-mark"><img src="./assets/img/certs/icons/stack-mongo.svg" alt="" width="26" height="26"></span>
+                  <span class="mern-mark"><img src="./assets/img/certs/icons/stack-react.svg" alt="" width="26" height="26"></span>
+                  <span class="mern-mark"><img src="./assets/img/certs/icons/stack-node.svg" alt="" width="26" height="26"></span>
+                  <span class="mern-mark mern-mark-ucla"><img src="./assets/img/certs/icons/stack-ucla.png" alt="" width="46" height="46"></span>
+                </span>
+                <span>MERN</span>
+              </button>
+            </li>
+            <li>
+              <a class="hero-cert hero-stack" href="./credentials/?tab=certificates" aria-label="MySQL, Python, and PHP certificates">
+                <span class="logo-stack" aria-hidden="true">
+                  <span class="logo-stack-item logo-stack-mysql"><img src="./assets/img/certs/icons/stack-mysql.svg" alt="" width="24" height="24"></span>
+                  <span class="logo-stack-item logo-stack-python"><img src="./assets/img/certs/icons/stack-python.svg" alt="" width="24" height="24"></span>
+                  <span class="logo-stack-item logo-stack-php"><img src="./assets/img/certs/icons/stack-php.svg" alt="" width="24" height="24"></span>
+                </span>
+                <span>MySQL · Python · PHP</span>
+              </a>
+            </li>
+            <li>
+              <a class="hero-cert" href="https://www.linkedin.com/in/weng-fung/details/certifications/" target="_blank" rel="noopener noreferrer" aria-label="Accessibility certification on LinkedIn">
+                <img src="./assets/img/certs/icons/hero-a11y.png" alt="" width="48" height="48">
+                <span>Accessibility</span>
+              </a>
+            </li>
+            <li>
+              <a class="hero-cert" href="https://execedcertificates.berkeley.edu/7eb1670c-a8b4-4336-8184-0f155d0fbf77" target="_blank" rel="noopener noreferrer" aria-label="Project Manager, UC Berkeley Executive Education. Verify certificate.">
+                <img src="./assets/img/certs/icons/hero-pm.png" alt="" width="96" height="64">
+                <span>Project Manager</span>
+              </a>
+            </li>
+            <li>
+              <a class="hero-cert" href="https://www.linkedin.com/in/weng-fung/details/certifications/" target="_blank" rel="noopener noreferrer" aria-label="SEO certification on LinkedIn. Profile lists HubSpot SEO certifications.">
+                <img src="./assets/img/certs/icons/hero-seo.svg" alt="" width="48" height="48">
+                <span>SEO</span>
+              </a>
+            </li>
+            <li>
+              <a class="hero-cert" href="https://www.linkedin.com/in/weng-fung/details/certifications/" target="_blank" rel="noopener noreferrer" aria-label="Marketing certification on LinkedIn">
+                <img src="./assets/img/certs/icons/hero-marketing.svg" alt="" width="48" height="48">
+                <span>Marketing</span>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -435,6 +497,6 @@
     </div>
   </dialog>
 
-  <script src="./assets/js/main.js?v=logofade1"></script>
+  <script src="./assets/js/main.js?v=ease4"></script>
 </body>
 </html>

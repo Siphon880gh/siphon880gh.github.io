@@ -298,6 +298,7 @@ html.is-depth .flagship-card {
 }
 
 .work-tile {
+  transition: border-color 200ms cubic-bezier(0.22, 1, 0.36, 1);
   display: grid;
   grid-template-columns: 74px 1fr;
   gap: 0.65rem;
@@ -839,5 +840,30 @@ html.is-depth .depth-progress span {
 @media (max-width: 600px) {
   .work-fan {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Intro cert ticker sits above the Scroll hint and clear of the chapter rail. */
+.depth-chapter[data-depth="intro"] {
+  position: relative;
+  padding-bottom: 6.75rem;
+}
+html.is-depth .depth-chapter[data-depth="intro"] {
+  padding-bottom: 7.5rem;
+}
+html.is-depth .depth-chapter[data-depth="intro"] .cert-ticker {
+  bottom: 5.25rem;
+  right: 8rem;
+}
+html.is-depth .depth-rail button {
+  transition: color 200ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+@media (prefers-reduced-motion: reduce) {
+  .work-tile,
+  html.is-depth .depth-rail button { transition: none; }
+  html.is-depth .depth-chapter[data-depth="intro"] .cert-ticker,
+  .depth-chapter[data-depth="intro"] .cert-ticker {
+    bottom: 0;
+    right: 0;
   }
 }
