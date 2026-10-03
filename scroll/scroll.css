@@ -296,7 +296,14 @@ html.is-depth .flagship-card {
 
 .work-stack > .depth-aside {
   /* Keep the CTA in the same 3D group as the tiles so scrubbing cannot close the gap. */
-  margin-top: 1.1rem;
+  margin-top: 1.75rem;
+}
+
+html.is-depth .work-stack > .depth-aside {
+  /* Middle tiles are translateZ(110px) and the stack settles at z: 36px.
+     Perspective drops those bottoms onto the link; this margin stays clear
+     at full pop without leaving the pinned chapter. */
+  margin-top: 3.35rem;
 }
 
 .work-fan {
