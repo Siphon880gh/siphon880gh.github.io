@@ -4,16 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Services — Weng Industry</title>
-  <meta name="description" content="Build: apps, APIs, AI-assisted delivery. Advise: marketing/ops workflows, SEO, accessibility, business process + AI tooling.">
+  <meta name="description" content="Build: apps, APIs, AI-assisted delivery. Advise: accessibility, SEO, marketing, sales, business process, and physical-environment automation.">
   <meta property="og:title" content="Services — Weng Industry">
-  <meta property="og:description" content="Build: apps, APIs, AI-assisted delivery. Advise: marketing/ops workflows, SEO, accessibility, business process + AI tooling.">
+  <meta property="og:description" content="Build: apps, APIs, AI-assisted delivery. Advise: accessibility, SEO, marketing, sales, business process, and physical-environment automation.">
   <meta property="og:image" content="../assets/img/brand/promo.jpg">
   <link rel="icon" href="../assets/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <link rel="stylesheet" href="../assets/css/style.css?v=ticker2">
+  <link rel="stylesheet" href="../assets/css/style.css?v=advise1">
 </head>
 <body>
   <header class="site-header">
@@ -118,38 +118,69 @@
       <div class="band-head band-advise">
         <div class="eyebrow">Advise · ~30%</div>
         <h2>Automation &amp; AI transformation</h2>
-        <p>Consult when marketing/ops workflows, SEO &amp; content systems, accessibility, or business-process + AI tooling need a clear plan — clear guidance, no ROI promises or pricing walls. Related <a href="https://www.linkedin.com/in/weng-fung/details/certifications/" target="_blank" rel="noopener noreferrer">SEO, marketing &amp; accessibility certifications</a>.</p>
+        <p>Consult on accessibility, SEO and the inbound process (SEO articles are a separate service), marketing and the outbound process, sales, business process, and automation into the physical environment. Clear guidance — no ROI promises or pricing walls. Related <a href="https://www.linkedin.com/in/weng-fung/details/certifications/" target="_blank" rel="noopener noreferrer">SEO, marketing &amp; accessibility certifications</a>.</p>
       </div>
+      <p class="advise-pick">Choose a topic to open a short contact form in the bottom-right corner. It stays on this page.</p>
       <div class="advise-grid services-advise-grid">
         <article class="advise-card">
-          <div class="tags"><span class="tag">Automation</span><span class="tag">n8n</span><span class="tag">Integrations</span></div>
-          <h3>Marketing &amp; ops workflows</h3>
-          <p>Map lead capture, email sequences, CRM sync, and social scheduling into maintainable automation — so marketing stops living in spreadsheets.</p>
-        </article>
-        <article class="advise-card">
-          <div class="tags"><span class="tag">Sales ops</span><span class="tag">CRM</span></div>
-          <h3>Sales process automation</h3>
-          <p>Lead qualification, follow-up sequences, and lightweight reporting — designed with your actual tools, not a generic playbook.</p>
-        </article>
-        <article class="advise-card">
-          <div class="tags"><span class="tag">SEO</span><span class="tag">Content</span></div>
-          <h3>SEO &amp; content systems</h3>
-          <p>Technical SEO hygiene, content structure, and publishing workflows that developers and marketers can both own. Careful guidance — no fake ranking case studies.</p>
-        </article>
-        <article class="advise-card">
+          <div class="advise-icon-wrap">
+            <img class="advise-icon" src="../assets/img/certs/icons/hero-a11y.png" alt="" width="40" height="40">
+          </div>
           <div class="tags"><span class="tag">a11y</span><span class="tag">WCAG</span></div>
-          <h3>Accessibility audits &amp; remediation plans</h3>
-          <p>Practical audits and prioritized fix lists — keyboard, contrast, semantics, forms — without fake case-study theater.</p>
+          <h3 id="advise-accessibility-title">Accessibility</h3>
+          <p id="advise-accessibility-body">Practical audits and prioritized fix lists — keyboard, contrast, semantics, and forms — so more people can use the product, and to help limit legal liabilities. No fake case-study theater.</p>
+          <p class="advise-card-cue">Contact</p>
+          <button type="button" class="advise-card-open" data-advise-for="Accessibility" aria-labelledby="advise-accessibility-title" aria-describedby="advise-accessibility-body"></button>
         </article>
         <article class="advise-card">
-          <div class="tags"><span class="tag">AI</span><span class="tag">Process</span></div>
-          <h3>Business process + AI tooling</h3>
-          <p>Where AI actually helps ops (and where it doesn’t) — prompt patterns, guardrails, and tooling fit for your team.</p>
+          <div class="advise-icon-wrap">
+            <img class="advise-icon" src="../assets/img/certs/icons/hero-seo.svg" alt="" width="40" height="40">
+          </div>
+          <div class="tags"><span class="tag">SEO</span><span class="tag">Inbound</span></div>
+          <h3 id="advise-seo-title">SEO</h3>
+          <p id="advise-seo-body">Improve the inbound process: technical SEO hygiene, content structure, and publishing workflows that developers and marketers can both own. SEO articles are available as a separate service. Careful guidance — no fake ranking case studies.</p>
+          <p class="advise-card-cue">Contact</p>
+          <button type="button" class="advise-card-open" data-advise-for="SEO" aria-labelledby="advise-seo-title" aria-describedby="advise-seo-body"></button>
         </article>
         <article class="advise-card">
-          <div class="tags"><span class="tag">Education</span></div>
-          <h3>Team mentoring &amp; clarity</h3>
-          <p>Bootcamp senior tutor background — React, Node, GraphQL, Sequelize — applied as mentoring when your team needs a clearer path.</p>
+          <div class="advise-icon-wrap">
+            <img class="advise-icon" src="../assets/img/certs/icons/hero-marketing.svg" alt="" width="40" height="40">
+          </div>
+          <div class="tags"><span class="tag">Marketing</span><span class="tag">Outbound</span></div>
+          <h3 id="advise-marketing-title">Marketing</h3>
+          <p id="advise-marketing-body">Improve the outbound process: press releases, NAP listings (name, address, and phone), and maintainable workflows for lead capture, email, and scheduling — so marketing does not live only in spreadsheets.</p>
+          <p class="advise-card-cue">Contact</p>
+          <button type="button" class="advise-card-open" data-advise-for="Marketing" aria-labelledby="advise-marketing-title" aria-describedby="advise-marketing-body"></button>
+        </article>
+        <article class="advise-card">
+          <div class="advise-icon-wrap">
+            <img class="advise-icon" src="../assets/img/certs/icons/advise-sales.svg" alt="" width="40" height="40">
+          </div>
+          <div class="tags"><span class="tag">Sales</span><span class="tag">CRM</span></div>
+          <h3 id="advise-sales-title">Sales</h3>
+          <p id="advise-sales-body">Lead qualification, follow-up sequences, and lightweight reporting — designed with your actual tools, not a generic playbook.</p>
+          <p class="advise-card-cue">Contact</p>
+          <button type="button" class="advise-card-open" data-advise-for="Sales" aria-labelledby="advise-sales-title" aria-describedby="advise-sales-body"></button>
+        </article>
+        <article class="advise-card">
+          <div class="advise-icon-wrap">
+            <img class="advise-icon" src="../assets/img/certs/icons/advise-process.svg" alt="" width="40" height="40">
+          </div>
+          <div class="tags"><span class="tag">Process</span><span class="tag">AI</span></div>
+          <h3 id="advise-process-title">Business process</h3>
+          <p id="advise-process-body">Where AI actually helps operations, and where it does not — prompt patterns, guardrails, and tooling that fit your team.</p>
+          <p class="advise-card-cue">Contact</p>
+          <button type="button" class="advise-card-open" data-advise-for="Business process" aria-labelledby="advise-process-title" aria-describedby="advise-process-body"></button>
+        </article>
+        <article class="advise-card">
+          <div class="advise-icon-wrap">
+            <img class="advise-icon" src="../assets/img/certs/icons/advise-environment.svg" alt="" width="40" height="40">
+          </div>
+          <div class="tags"><span class="tag">Environment</span><span class="tag">Facilities</span></div>
+          <h3 id="advise-environment-title">Business automation to environment</h3>
+          <p id="advise-environment-body">Extend automation past the screen into the physical workplace — doors, security cameras, HVAC, and similar building systems — when you want those controls planned alongside the rest of the work. This is a consult, not a promised installation.</p>
+          <p class="advise-card-cue">Contact</p>
+          <button type="button" class="advise-card-open" data-advise-for="Business automation to environment" aria-labelledby="advise-environment-title" aria-describedby="advise-environment-body"></button>
         </article>
       </div>
       <div class="band-cta">
@@ -185,6 +216,43 @@
       </div>
     </div>
   </footer>
-  <script src="../assets/js/main.js?v=credited1"></script>
+
+  <div class="contact-drawer" id="contact-drawer" hidden>
+    <div class="contact-drawer-backdrop" data-contact-drawer-close></div>
+    <aside class="contact-drawer-panel" role="dialog" aria-modal="true" aria-labelledby="contact-drawer-title" tabindex="-1">
+      <button type="button" class="contact-drawer-close" data-contact-drawer-close aria-label="Close contact form"><span aria-hidden="true">&times;</span></button>
+      <h2 id="contact-drawer-title">Contact</h2>
+      <p class="contact-drawer-topic" id="contact-drawer-topic-line">This consult is for <strong id="contact-drawer-topic"></strong></p>
+      <form id="advise-drawer-form" class="contact-form" novalidate>
+        <input type="hidden" name="for" value="">
+        <fieldset class="path-chooser">
+          <legend>What do you need?</legend>
+          <label class="path-option">
+            <input type="radio" name="path" value="build">
+            <span><strong>I need something built</strong><br><small>Apps, APIs, AI-assisted delivery, mentoring</small></span>
+          </label>
+          <label class="path-option">
+            <input type="radio" name="path" value="advise" checked>
+            <span><strong>I want a consult</strong><br><small>Automation / SEO / a11y / marketing / business</small></span>
+          </label>
+          <label class="path-option">
+            <input type="radio" name="path" value="unsure">
+            <span><strong>Not sure</strong><br><small>We’ll figure out build vs advise together</small></span>
+          </label>
+        </fieldset>
+        <label for="drawer-name">Name</label>
+        <input id="drawer-name" name="name" type="text" required autocomplete="name">
+        <label for="drawer-email">Email</label>
+        <input id="drawer-email" name="email" type="email" class="email" required autocomplete="email">
+        <label for="drawer-message">Message</label>
+        <textarea id="drawer-message" name="message" required></textarea>
+        <button class="btn btn-dark" type="submit">Open email draft</button>
+        <p class="form-error" role="alert"></p>
+        <p class="form-note">Opens your email app with a pre-filled message so you can review and send when you’re ready. The subject notes the advise topic and whether you’re asking about build or consult. Same fields as <a href="../contact/?path=advise">contact/?path=advise</a>.</p>
+      </form>
+    </aside>
+  </div>
+
+  <script src="../assets/js/main.js?v=advise1"></script>
 </body>
 </html>

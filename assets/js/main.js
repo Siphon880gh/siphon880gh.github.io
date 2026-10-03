@@ -385,26 +385,52 @@
     setSelected(readUrlTags(), false);
   })();
 
-  // Contact form: path chooser + mailto subject
-  const form = document.querySelector("#contact-form");
-  if (form) {
-    try {
-      const path = new URLSearchParams(window.location.search).get("path");
-      if (path === "build" || path === "advise" || path === "unsure" || path === "not-sure") {
-        const radioValue = path === "not-sure" ? "unsure" : path;
-        const radio = form.querySelector('input[name="path"][value="' + radioValue + '"]');
-        if (radio) radio.checked = true;
-      }
-    } catch (e) {}
+  // Contact form: path chooser + mailto subject.
+  // Shared by /contact/ and the advise-card drawer. ?path=advise selects the consult
+  // radio; ?for= (or the drawer topic) names the card and prefills the message.
+  function advisePrefillMessage(topic) {
+    return "I'd like a consult about " + topic + ".";
+  }
+
+  function isAdvisePrefill(value) {
+    return /^I'd like a consult about [\s\S]+\.\s*$/.test(String(value || "").trim());
+  }
+
+  function bindContactForm(form, options) {
+    options = options || {};
+    if (options.readQuery) {
+      try {
+        var params = new URLSearchParams(window.location.search);
+        var path = params.get("path");
+        var topic = (params.get("for") || "").trim();
+        if (path === "build" || path === "advise" || path === "unsure" || path === "not-sure") {
+          var radioValue = path === "not-sure" ? "unsure" : path;
+          var radio = form.querySelector('input[name="path"][value="' + radioValue + '"]');
+          if (radio) radio.checked = true;
+        }
+        if (topic) {
+          var forInput = form.querySelector('[name="for"]');
+          if (forInput) forInput.value = topic;
+          if (!path || path === "advise") {
+            var adviseRadio = form.querySelector('input[name="path"][value="advise"]');
+            if (adviseRadio) adviseRadio.checked = true;
+          }
+          var seeded = form.querySelector("[name=message]");
+          if (seeded && !seeded.value.trim()) seeded.value = advisePrefillMessage(topic);
+        }
+      } catch (e) {}
+    }
 
     form.addEventListener("submit", function (e) {
       e.preventDefault();
-      const name = form.querySelector("[name=name]").value.trim();
-      const email = form.querySelector("[name=email]").value.trim();
-      const message = form.querySelector("[name=message]").value.trim();
-      const pathEl = form.querySelector('input[name="path"]:checked');
-      const path = pathEl ? pathEl.value : "unsure";
-      const err = form.querySelector(".form-error");
+      var name = form.querySelector("[name=name]").value.trim();
+      var email = form.querySelector("[name=email]").value.trim();
+      var message = form.querySelector("[name=message]").value.trim();
+      var pathEl = form.querySelector('input[name="path"]:checked');
+      var pathValue = pathEl ? pathEl.value : "unsure";
+      var forEl = form.querySelector('[name="for"]');
+      var topic = forEl ? forEl.value.trim() : "";
+      var err = form.querySelector(".form-error");
       function showFormError(msg) {
         if (!err) return;
         err.textContent = msg;
@@ -421,25 +447,151 @@
       showFormError("");
 
       var subjectLabel = "General inquiry";
-      if (path === "build") subjectLabel = "Build inquiry";
-      else if (path === "advise") subjectLabel = "Consult inquiry (automation / SEO / a11y / marketing)";
+      if (pathValue === "build") subjectLabel = "Build inquiry";
+      else if (pathValue === "advise") subjectLabel = "Consult inquiry (automation / SEO / a11y / marketing)";
       else subjectLabel = "Inquiry (path TBD)";
+      if (topic) subjectLabel = subjectLabel + " — " + topic;
 
-      const pathLine =
-        path === "build"
+      var pathLine =
+        pathValue === "build"
           ? "Path: Build — I need something built"
-          : path === "advise"
+          : pathValue === "advise"
           ? "Path: Advise — I want a consult (automation / SEO / a11y / marketing / business)"
           : "Path: Not sure — please help choose build vs advise";
+      if (topic) pathLine += "\nFor: " + topic;
 
-      const subject = encodeURIComponent(subjectLabel + " from " + name);
-      const body = encodeURIComponent(
+      var subject = encodeURIComponent(subjectLabel + " from " + name);
+      var body = encodeURIComponent(
         "Name: " + name + "\nEmail: " + email + "\n" + pathLine + "\n\n" + message
       );
       window.location.href = "mailto:weng.f.fung@gmail.com?subject=" + subject + "&body=" + body;
     });
   }
 
+  var contactPageForm = document.querySelector("#contact-form");
+  if (contactPageForm) bindContactForm(contactPageForm, { readQuery: true });
+  var adviseDrawerForm = document.querySelector("#advise-drawer-form");
+  if (adviseDrawerForm) bindContactForm(adviseDrawerForm, { readQuery: false });
+
+  // Advise cards open the contact form as a bottom-right sidebar (no page navigation).
+  (function initAdviseContactDrawer() {
+    var drawer = document.querySelector("#contact-drawer");
+    var form = document.querySelector("#advise-drawer-form");
+    if (!drawer || !form) return;
+    var panel = drawer.querySelector(".contact-drawer-panel");
+    var title = document.querySelector("#contact-drawer-title");
+    var topicEl = document.querySelector("#contact-drawer-topic");
+    var forInput = form.querySelector('[name="for"]');
+    var message = form.querySelector("[name=message]");
+    var closeBtn = drawer.querySelector(".contact-drawer-close");
+    var lastTrigger = null;
+    var reduceQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    function reduced() {
+      return !!(reduceQuery && reduceQuery.matches);
+    }
+
+    function applyTopic(topic) {
+      if (forInput) forInput.value = topic;
+      if (topicEl) topicEl.textContent = topic;
+      if (title) title.textContent = "Contact — " + topic;
+      var advise = form.querySelector('input[name="path"][value="advise"]');
+      if (advise) advise.checked = true;
+      if (message && (!message.value.trim() || isAdvisePrefill(message.value))) {
+        message.value = advisePrefillMessage(topic);
+      }
+    }
+
+    function focusables() {
+      return Array.prototype.filter.call(
+        panel.querySelectorAll('a[href], button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])'),
+        function (el) {
+          if (el.type === "hidden" || el.hidden) return false;
+          return el.offsetParent !== null || el === panel;
+        }
+      );
+    }
+
+    function openDrawer(trigger, topic) {
+      lastTrigger = trigger || null;
+      applyTopic(topic);
+      if (reduced()) drawer.classList.add("is-open");
+      drawer.hidden = false;
+      document.body.classList.add("contact-drawer-open");
+      if (reduced()) {
+        if (closeBtn) closeBtn.focus();
+        return;
+      }
+      window.requestAnimationFrame(function () {
+        window.requestAnimationFrame(function () {
+          drawer.classList.add("is-open");
+          if (closeBtn) closeBtn.focus();
+        });
+      });
+    }
+
+    function finishClose() {
+      drawer.classList.remove("is-open");
+      drawer.hidden = true;
+      document.body.classList.remove("contact-drawer-open");
+      if (lastTrigger && typeof lastTrigger.focus === "function") lastTrigger.focus();
+    }
+
+    function closeDrawer() {
+      if (drawer.hidden) return;
+      drawer.classList.remove("is-open");
+      if (reduced()) {
+        finishClose();
+        return;
+      }
+      var done = false;
+      function onEnd(e) {
+        if (done || e.target !== panel) return;
+        done = true;
+        panel.removeEventListener("transitionend", onEnd);
+        finishClose();
+      }
+      panel.addEventListener("transitionend", onEnd);
+      window.setTimeout(function () {
+        if (done) return;
+        done = true;
+        panel.removeEventListener("transitionend", onEnd);
+        finishClose();
+      }, 320);
+    }
+
+    document.querySelectorAll(".advise-card-open").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var topic = btn.getAttribute("data-advise-for") || "Advise";
+        openDrawer(btn, topic);
+      });
+    });
+
+    drawer.addEventListener("click", function (e) {
+      if (e.target.closest("[data-contact-drawer-close]")) closeDrawer();
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (drawer.hidden) return;
+      if (e.key === "Escape") {
+        e.preventDefault();
+        closeDrawer();
+        return;
+      }
+      if (e.key !== "Tab") return;
+      var items = focusables();
+      if (!items.length) return;
+      var first = items[0];
+      var last = items[items.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    });
+  })();
 
   // Student name privacy: deterministic last-name scramble (mirrors assets/php/scramble-name.php)
   function meCrc32(str) {
