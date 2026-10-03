@@ -235,7 +235,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   background: var(--c1);
   color: var(--c8);
   overflow: hidden;
-  padding: calc(var(--header-h) * 0.35) 0 7.25rem;
+  padding: calc(var(--header-h) * 0.35) 0 9rem;
 }
 .hero::before {
   content: "";
@@ -895,7 +895,7 @@ ul { margin: 0; padding: 0; list-style: none; }
     width: 100%;
   }
 
-  .hero { min-height: auto; padding: 3rem 0 7.25rem; }
+  .hero { min-height: auto; padding: 3rem 0 9rem; }
   .portrait-ring { width: min(280px, 70vw); }
 }
 
@@ -2248,42 +2248,64 @@ body:not(.depth-page).is-page-exit > main {
   object-fit: cover;
 }
 
-/* Certificate icons ride the bottom of the hero / scroll intro, not the headline. */
+/* Certificate icons ride the bottom of the hero / scroll intro, not the headline.
+   Clear band matches the centered hero column; side gutters fade to the hero. */
 .cert-ticker {
   --cert-gap: 3.15rem;
+  /* 100% is this bar. --ticker-rail is set when the bar is shorter than the hero (scroll rail). */
+  --ticker-rail: 0px;
+  --ticker-side: 2.5rem;
+  --ticker-max: var(--max);
+  --ticker-band: min(calc(100% + var(--ticker-rail) - var(--ticker-side)), var(--ticker-max));
+  --ticker-gutter: max(0px, calc((100% + var(--ticker-rail) - var(--ticker-band)) / 2));
+  --ticker-fade: min(4.75rem, var(--ticker-gutter));
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: 1.85rem;
   z-index: 5;
   display: flex;
   align-items: center;
   gap: 0.85rem;
-  padding: 0.35rem 1.1rem 0.55rem;
+  padding: 0.35rem 0 0.55rem;
   background: linear-gradient(180deg, rgba(0, 17, 41, 0) 0%, rgba(0, 17, 41, 0.55) 32%, rgba(0, 17, 41, 0.9) 100%);
   pointer-events: auto;
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent 0,
+    transparent calc(var(--ticker-gutter) - var(--ticker-fade)),
+    #000 var(--ticker-gutter),
+    #000 calc(var(--ticker-gutter) + var(--ticker-band)),
+    transparent calc(var(--ticker-gutter) + var(--ticker-band) + var(--ticker-fade))
+  );
+  mask-image: linear-gradient(
+    90deg,
+    transparent 0,
+    transparent calc(var(--ticker-gutter) - var(--ticker-fade)),
+    #000 var(--ticker-gutter),
+    #000 calc(var(--ticker-gutter) + var(--ticker-band)),
+    transparent calc(var(--ticker-gutter) + var(--ticker-band) + var(--ticker-fade))
+  );
 }
 .cert-ticker-label {
-  flex: 0 0 auto;
+  position: absolute;
+  left: calc(var(--ticker-gutter) + 0.2rem);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
   display: flex;
   flex-direction: column;
   gap: 0.12rem;
+  margin: 0;
+  padding: 0.15rem 1.15rem 0.15rem 0.15rem;
   font-family: var(--font-mono);
   font-size: 0.68rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--c3);
-  position: relative;
-  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(0, 17, 41, 0.94) 0%, rgba(0, 17, 41, 0.88) 68%, rgba(0, 17, 41, 0) 100%);
 }
-.cert-ticker-label a {
-  color: rgba(0, 210, 252, 0.92);
-  letter-spacing: 0.06em;
-  border-bottom: 1px solid rgba(0, 210, 252, 0.4);
-  width: fit-content;
-  pointer-events: auto;
-}
-.cert-ticker-label a:hover { color: var(--c2); border-bottom-color: var(--c2); }
 .cert-ticker-window {
   flex: 1;
   min-width: 0;
@@ -2291,9 +2313,28 @@ body:not(.depth-page).is-page-exit > main {
   position: relative;
   z-index: 1;
   pointer-events: auto;
-  -webkit-mask-image: linear-gradient(90deg, transparent, #000 16px, #000 calc(100% - 16px), transparent);
-  mask-image: linear-gradient(90deg, transparent, #000 16px, #000 calc(100% - 16px), transparent);
 }
+.cert-ticker-all {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0.28rem;
+  z-index: 6;
+  margin: 0;
+  text-align: center;
+  pointer-events: none;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.cert-ticker-all a {
+  pointer-events: auto;
+  color: rgba(0, 210, 252, 0.92);
+  border-bottom: 1px solid rgba(0, 210, 252, 0.4);
+  padding-bottom: 0.05rem;
+}
+.cert-ticker-all a:hover { color: var(--c2); border-bottom-color: var(--c2); }
 .cert-ticker-track {
   display: flex;
   width: max-content;
@@ -2430,6 +2471,18 @@ img.soft-loaded { opacity: 1; transition: opacity var(--dur) var(--ease); }
   html { scroll-behavior: auto; }
   .cert-ticker-track { animation: none; transform: none; }
   .cert-ticker-track ul[aria-hidden="true"] { display: none; }
+  .cert-ticker {
+    -webkit-mask-image: none;
+    mask-image: none;
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
+  }
+  .cert-ticker-label {
+    position: static;
+    transform: none;
+    background: none;
+    padding: 0;
+  }
   .cert-ticker-window {
     overflow-x: auto;
     -webkit-mask-image: none;
