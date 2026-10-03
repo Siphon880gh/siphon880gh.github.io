@@ -916,3 +916,56 @@ html.is-depth .depth-rail button {
     bottom: 1.05rem;
   }
 }
+
+/* Hire is chapter 5. Extra air between the headline, quote cards, and actions.
+   Internal only in the pinned theater (chapter stays inset:0). The same gaps
+   apply when chapters stack, including prefers-reduced-motion. */
+.depth-chapter[data-depth="hire"] {
+  padding-top: 6rem;
+  padding-bottom: 5.75rem;
+}
+
+.depth-chapter[data-depth="hire"] .depth-kicker {
+  margin-bottom: 0.95rem;
+}
+
+.depth-chapter[data-depth="hire"] h2 {
+  line-height: 1.22;
+  margin-bottom: 0.2rem;
+}
+
+.depth-chapter[data-depth="hire"] .depth-head p {
+  margin-top: 0.95rem;
+  line-height: 1.7;
+}
+
+.depth-chapter[data-depth="hire"] .depth-head,
+html.is-depth .depth-chapter[data-depth="hire"] .depth-head {
+  margin-bottom: 1.95rem;
+}
+
+.hire-quotes {
+  gap: 1.5rem;
+  margin-bottom: 2.05rem;
+}
+
+.hire-quote {
+  padding: 1.45rem 1.55rem 1.35rem;
+}
+
+.hire-quote blockquote {
+  margin-bottom: 1.1rem;
+  line-height: 1.68;
+}
+
+.hire-quote figcaption {
+  line-height: 1.62;
+}
+
+.hire-actions {
+  gap: 1.2rem;
+}
+
+.depth-chapter[data-depth="hire"] .hire-actions .btn {
+  padding: 0.98rem 1.7rem;
+}
