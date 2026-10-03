@@ -424,7 +424,9 @@ html.is-depth .depth-camera {
   height: 100%;
   perspective: 1400px;
   perspective-origin: 50% 42%;
-  transform-style: preserve-3d;
+  /* Flat group: the floor stays a tilted grid, but it is painted behind
+     chapter content instead of depth-testing through the path panels. */
+  transform-style: flat;
 }
 
 html.is-depth .depth-floor {
@@ -538,7 +540,11 @@ html.is-depth .depth-paths {
 html.is-depth .depth-chapter .path-card {
   padding: 1rem 1.05rem 1.05rem;
   border-radius: 22px;
-  transform-style: preserve-3d;
+  /* Flat so the card background and CTA paint as one opaque plane.
+     preserve-3d let the floor depth-test through the lower background. */
+  transform-style: flat;
+  background-color: #ffffff;
+  isolation: isolate;
 }
 
 html.is-depth .depth-chapter .path-card h3 {
@@ -1038,6 +1044,37 @@ html[data-theme="day"].is-depth .depth-floor {
   background-image:
     linear-gradient(rgba(0, 90, 120, 0.45) 1px, transparent 1px),
     linear-gradient(90deg, rgba(150, 110, 10, 0.4) 1px, transparent 1px);
+}
+/* Path panels and their CTAs stay opaque in both themes so the floor grid
+   cannot show through the card bottoms or the buttons. */
+html.is-depth .path-card.path-build {
+  background-color: #fffef8;
+  background-image: linear-gradient(165deg, #fffef8 0%, #ffffff 55%);
+}
+html.is-depth .path-card.path-advise {
+  background-color: #ffffff;
+  background-image: none;
+}
+html.is-depth .path-build .btn-primary {
+  background-color: #fdd746;
+  border-color: #fdd746;
+}
+html.is-depth .path-advise .btn-ghost-dark {
+  background-color: #ffffff;
+  border-color: rgba(0, 17, 41, 0.35);
+}
+html[data-theme="night"].is-depth .path-card.path-build,
+html[data-theme="night"].is-depth .path-card.path-advise,
+html[data-theme="night"].is-depth .depth-chapter .path-card {
+  background-color: #13283f;
+}
+html[data-theme="night"].is-depth .path-card.path-build {
+  background-image: linear-gradient(165deg, #243246 0%, #13283f 58%);
+}
+html[data-theme="night"].is-depth .path-advise .btn-ghost-dark {
+  background-color: #13283f;
+  color: #e7f1ee;
+  border-color: rgba(230, 240, 238, 0.22);
 }
 html[data-theme="day"].is-depth .depth-chapter[data-depth="intro"]::after {
   background: linear-gradient(
