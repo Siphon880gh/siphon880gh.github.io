@@ -386,14 +386,27 @@
   })();
 
   // Contact form: path chooser + mailto subject.
-  // Shared by /contact/ and the advise-card drawer. ?path=advise selects the consult
-  // radio; ?for= (or the drawer topic) names the card and prefills the message.
+  // Shared by /contact/ and the services contact drawer. ?path= selects build,
+  // advise, or not sure; ?for= (or the drawer topic) names the card and prefills
+  // the message.
   function advisePrefillMessage(topic) {
     return "I'd like a consult about " + topic + ".";
   }
 
+  function buildPrefillMessage(topic) {
+    return "I'd like help with " + topic + ".";
+  }
+
   function isAdvisePrefill(value) {
     return /^I'd like a consult about [\s\S]+\.\s*$/.test(String(value || "").trim());
+  }
+
+  function isBuildPrefill(value) {
+    return /^I'd like help with [\s\S]+\.\s*$/.test(String(value || "").trim());
+  }
+
+  function isDrawerPrefill(value) {
+    return isAdvisePrefill(value) || isBuildPrefill(value);
   }
 
   function bindContactForm(form, options) {
@@ -416,7 +429,9 @@
             if (adviseRadio) adviseRadio.checked = true;
           }
           var seeded = form.querySelector("[name=message]");
-          if (seeded && !seeded.value.trim()) seeded.value = advisePrefillMessage(topic);
+          if (seeded && !seeded.value.trim()) {
+            seeded.value = path === "build" ? buildPrefillMessage(topic) : advisePrefillMessage(topic);
+          }
         }
       } catch (e) {}
     }
@@ -473,7 +488,7 @@
   var adviseDrawerForm = document.querySelector("#advise-drawer-form");
   if (adviseDrawerForm) bindContactForm(adviseDrawerForm, { readQuery: false });
 
-  // Advise cards open the contact form as a bottom-right sidebar (no page navigation).
+  // Advise and build cards open the same contact form as a bottom-right sidebar (no page navigation).
   (function initAdviseContactDrawer() {
     var drawer = document.querySelector("#contact-drawer");
     var form = document.querySelector("#advise-drawer-form");
@@ -491,14 +506,25 @@
       return !!(reduceQuery && reduceQuery.matches);
     }
 
-    function applyTopic(topic) {
+    var topicLead = document.querySelector("#contact-drawer-topic-lead");
+    var sameLink = document.querySelector("#contact-drawer-same");
+
+    function applyTopic(topic, path) {
+      path = path === "build" ? "build" : "advise";
       if (forInput) forInput.value = topic;
       if (topicEl) topicEl.textContent = topic;
+      if (topicLead) {
+        topicLead.textContent = path === "build" ? "This build is for " : "This consult is for ";
+      }
       if (title) title.textContent = "Contact — " + topic;
-      var advise = form.querySelector('input[name="path"][value="advise"]');
-      if (advise) advise.checked = true;
-      if (message && (!message.value.trim() || isAdvisePrefill(message.value))) {
-        message.value = advisePrefillMessage(topic);
+      if (sameLink) {
+        sameLink.href = "../contact/?path=" + path;
+        sameLink.textContent = "contact/?path=" + path;
+      }
+      var radio = form.querySelector('input[name="path"][value="' + path + '"]');
+      if (radio) radio.checked = true;
+      if (message && (!message.value.trim() || isDrawerPrefill(message.value))) {
+        message.value = path === "build" ? buildPrefillMessage(topic) : advisePrefillMessage(topic);
       }
     }
 
@@ -512,9 +538,9 @@
       );
     }
 
-    function openDrawer(trigger, topic) {
+    function openDrawer(trigger, topic, path) {
       lastTrigger = trigger || null;
-      applyTopic(topic);
+      applyTopic(topic, path);
       if (reduced()) drawer.classList.add("is-open");
       drawer.hidden = false;
       document.body.classList.add("contact-drawer-open");
@@ -563,7 +589,14 @@
     document.querySelectorAll(".advise-card-open").forEach(function (btn) {
       btn.addEventListener("click", function () {
         var topic = btn.getAttribute("data-advise-for") || "Advise";
-        openDrawer(btn, topic);
+        openDrawer(btn, topic, "advise");
+      });
+    });
+
+    document.querySelectorAll(".build-card-open").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var topic = btn.getAttribute("data-build-for") || "Build";
+        openDrawer(btn, topic, "build");
       });
     });
 

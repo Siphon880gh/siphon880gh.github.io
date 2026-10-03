@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <link rel="stylesheet" href="../assets/css/style.css?v=advise1">
+  <link rel="stylesheet" href="../assets/css/style.css?v=build1">
 </head>
 <body>
   <header class="site-header">
@@ -75,36 +75,49 @@
         <h2>Software that ships</h2>
         <p>Hands-on delivery with AI-assisted speed and software-engineering discipline.</p>
       </div>
+      <p class="build-pick">Choose a service to open a short contact form in the bottom-right corner. It stays on this page.</p>
       <div class="icon-grid services-grid">
         <div class="icon-card">
           <img src="../assets/img/icons/icon-about-01.svg" alt="">
-          <h3>Web apps &amp; SaaS</h3>
-          <p>React, Node, PHP, databases — features clients and students actually use, scoped for real deadlines.</p>
+          <h3 id="build-web-apps-title">Web apps &amp; SaaS</h3>
+          <p id="build-web-apps-body">React, Node, PHP, databases — features clients and students actually use, scoped for real deadlines.</p>
+          <p class="build-card-cue">Contact</p>
+          <button type="button" class="build-card-open" data-build-for="Web apps &amp; SaaS" aria-labelledby="build-web-apps-title" aria-describedby="build-web-apps-body"></button>
         </div>
         <div class="icon-card">
           <img src="../assets/img/icons/icon-about-02.svg" alt="">
-          <h3>APIs &amp; integrations</h3>
-          <p>REST APIs, licensing platforms, data pipelines — including work like ExRx and VideoListings.AI.</p>
+          <h3 id="build-apis-title">APIs &amp; integrations</h3>
+          <p id="build-apis-body">REST APIs, licensing platforms, data pipelines — including work like ExRx and VideoListings.AI.</p>
+          <p class="build-card-cue">Contact</p>
+          <button type="button" class="build-card-open" data-build-for="APIs &amp; integrations" aria-labelledby="build-apis-title" aria-describedby="build-apis-body"></button>
         </div>
         <div class="icon-card">
           <img src="../assets/img/icons/icon-about-05.svg" alt="">
-          <h3>AI-assisted delivery</h3>
-          <p>Ship faster with AI tools while keeping reviews, tests, structure, and SE practices intact.</p>
+          <h3 id="build-ai-title">AI-assisted delivery</h3>
+          <p id="build-ai-body">Ship faster with AI tools while keeping reviews, tests, structure, and SE practices intact.</p>
+          <p class="build-card-cue">Contact</p>
+          <button type="button" class="build-card-open" data-build-for="AI-assisted delivery" aria-labelledby="build-ai-title" aria-describedby="build-ai-body"></button>
         </div>
         <div class="icon-card">
           <img src="../assets/img/icons/icon-about-03.svg" alt="">
-          <h3>Mentoring clarity</h3>
-          <p>Bootcamp senior tutor — help your team unstick on React, Node, APIs, and code organization.</p>
+          <h3 id="build-mentoring-title">Mentoring clarity</h3>
+          <p id="build-mentoring-body">Bootcamp senior tutor — help your team unstick on React, Node, APIs, and code organization.</p>
+          <p class="build-card-cue">Contact</p>
+          <button type="button" class="build-card-open" data-build-for="Mentoring clarity" aria-labelledby="build-mentoring-title" aria-describedby="build-mentoring-body"></button>
         </div>
         <div class="icon-card">
           <img src="../assets/img/icons/icon-about-04.svg" alt="">
-          <h3>Legacy modernization</h3>
-          <p>Upgrade jQuery/PHP/MySQL systems carefully — add APIs, improve UX, keep what still works.</p>
+          <h3 id="build-legacy-title">Legacy modernization</h3>
+          <p id="build-legacy-body">Upgrade jQuery/PHP/MySQL systems carefully — add APIs, improve UX, keep what still works.</p>
+          <p class="build-card-cue">Contact</p>
+          <button type="button" class="build-card-open" data-build-for="Legacy modernization" aria-labelledby="build-legacy-title" aria-describedby="build-legacy-body"></button>
         </div>
         <div class="icon-card">
           <img src="../assets/img/icons/icon-about-06.svg" alt="">
-          <h3>Product polish</h3>
-          <p>Responsive layouts, intentional UI, dark/light themes — craft that users notice.</p>
+          <h3 id="build-polish-title">Product polish</h3>
+          <p id="build-polish-body">Responsive layouts, intentional UI, dark/light themes — craft that users notice.</p>
+          <p class="build-card-cue">Contact</p>
+          <button type="button" class="build-card-open" data-build-for="Product polish" aria-labelledby="build-polish-title" aria-describedby="build-polish-body"></button>
         </div>
       </div>
       <div class="band-cta">
@@ -222,7 +235,7 @@
     <aside class="contact-drawer-panel" role="dialog" aria-modal="true" aria-labelledby="contact-drawer-title" tabindex="-1">
       <button type="button" class="contact-drawer-close" data-contact-drawer-close aria-label="Close contact form"><span aria-hidden="true">&times;</span></button>
       <h2 id="contact-drawer-title">Contact</h2>
-      <p class="contact-drawer-topic" id="contact-drawer-topic-line">This consult is for <strong id="contact-drawer-topic"></strong></p>
+      <p class="contact-drawer-topic" id="contact-drawer-topic-line"><span id="contact-drawer-topic-lead">This consult is for </span><strong id="contact-drawer-topic"></strong></p>
       <form id="advise-drawer-form" class="contact-form" novalidate>
         <input type="hidden" name="for" value="">
         <fieldset class="path-chooser">
@@ -248,11 +261,11 @@
         <textarea id="drawer-message" name="message" required></textarea>
         <button class="btn btn-dark" type="submit">Open email draft</button>
         <p class="form-error" role="alert"></p>
-        <p class="form-note">Opens your email app with a pre-filled message so you can review and send when you’re ready. The subject notes the advise topic and whether you’re asking about build or consult. Same fields as <a href="../contact/?path=advise">contact/?path=advise</a>.</p>
+        <p class="form-note">Opens your email app with a pre-filled message so you can review and send when you’re ready. The subject notes the service and whether you’re asking about build or consult. Same fields as <a id="contact-drawer-same" href="../contact/?path=advise">contact/?path=advise</a>.</p>
       </form>
     </aside>
   </div>
 
-  <script src="../assets/js/main.js?v=advise1"></script>
+  <script src="../assets/js/main.js?v=build1"></script>
 </body>
 </html>

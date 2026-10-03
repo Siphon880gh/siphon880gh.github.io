@@ -1121,7 +1121,8 @@ ul { margin: 0; padding: 0; list-style: none; }
   color: var(--text-body);
   font-size: 0.95rem;
 }
-.advise-pick {
+.advise-pick,
+.build-pick {
   margin: -1rem 0 1.25rem;
   color: var(--text-body);
   max-width: 42rem;
@@ -1157,7 +1158,8 @@ ul { margin: 0; padding: 0; list-style: none; }
   color: #087a8f;
 }
 .advise-card-cue::after { content: " →"; }
-.advise-card-open {
+.advise-card-open,
+.build-card-open {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -1169,11 +1171,27 @@ ul { margin: 0; padding: 0; list-style: none; }
   background: transparent;
   cursor: pointer;
 }
-.advise-card:has(.advise-card-open:focus-visible) {
+.advise-card:has(.advise-card-open:focus-visible),
+#build-services .icon-card:has(.build-card-open:focus-visible) {
   outline: 3px solid var(--c1);
   outline-offset: 3px;
 }
-.advise-card-open:focus-visible { outline: none; }
+.advise-card-open:focus-visible,
+.build-card-open:focus-visible { outline: none; }
+
+#build-services .icon-card {
+  position: relative;
+  cursor: pointer;
+}
+#build-services .icon-card p.build-card-cue {
+  margin-top: 0.85rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #b8920a;
+}
+.build-card-cue::after { content: " →"; }
 
 .contact-drawer {
   position: fixed;
