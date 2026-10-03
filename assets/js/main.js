@@ -172,7 +172,7 @@
         window.location.replace("../services/#advise-services");
         return;
       }
-      if (tabParam === "build" || tabParam === "certificates" || tabParam === "achievements") {
+      if (tabParam === "build" || tabParam === "certificates" || tabParam === "achievements" || tabParam === "credited") {
         const el = document.querySelector('.work-tab[data-tab="' + tabParam + '"]');
         if (el) el.click();
       }
@@ -523,7 +523,15 @@
     const root = document.querySelector(".cred-page");
     if (!root) return;
 
-    const achievementAnchors = ["achievements", "open-source", "credited", "featured", "leaderboards", "top-marks"];
+    const achievementAnchors = ["achievements", "open-source", "leaderboards", "top-marks"];
+    const creditedAnchors = ["credited", "featured"];
+
+    function tabForAnchor(id) {
+      if (achievementAnchors.indexOf(id) !== -1) return "achievements";
+      if (creditedAnchors.indexOf(id) !== -1) return "credited";
+      if (id === "certificates") return "certificates";
+      return "";
+    }
 
     function showTab(name) {
       const tab = document.querySelector('.work-tab[data-tab="' + name + '"]');
@@ -542,9 +550,9 @@
       if (!link) return;
       const id = link.getAttribute("href").slice(1);
       if (!id) return;
-      if (achievementAnchors.indexOf(id) !== -1) showTab("achievements");
-      else if (id === "certificates") showTab("certificates");
-      else return;
+      const tabName = tabForAnchor(id);
+      if (!tabName) return;
+      showTab(tabName);
       e.preventDefault();
       if (id === "achievements" || id === "certificates") {
         history.pushState(null, "", "#" + id);
@@ -555,8 +563,8 @@
     });
 
     const hash = (window.location.hash || "").replace("#", "");
-    if (achievementAnchors.indexOf(hash) !== -1) showTab("achievements");
-    else if (hash === "certificates") showTab("certificates");
+    const hashTab = tabForAnchor(hash);
+    if (hashTab) showTab(hashTab);
     if (hash && hash !== "achievements" && hash !== "certificates") {
       window.setTimeout(function () { scrollToId(hash); }, 0);
     }

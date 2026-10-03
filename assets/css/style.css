@@ -2312,6 +2312,15 @@ body:not(.depth-page).is-page-exit > main {
   /* Trailing space equals the icon gap so a duplicated sequence joins without a hole or a double gap. */
   padding: 0.15rem var(--cert-gap) 0 0;
 }
+.cert-ticker .hero-certs li.cert-divider {
+  flex: 0 0 auto;
+  align-self: stretch;
+  width: 1px;
+  margin: 0.2rem 0 1.2rem;
+  padding: 0;
+  background: rgba(253, 215, 70, 0.75);
+  pointer-events: none;
+}
 .cert-ticker .hero-cert,
 .cert-ticker .hero-cert.hero-stack {
   position: relative;
