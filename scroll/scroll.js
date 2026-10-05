@@ -72,6 +72,7 @@
         });
       });
       gsap.set(".flagship-card", { rotationY: -24, transformPerspective: 1100, transformOrigin: "50% 50%" });
+      gsap.set(".notes-visual", { rotationY: -18, transformPerspective: 900, transformOrigin: "50% 50%" });
       gsap.set(".flagship-back", {
         rotationY: 10,
         z: -90,
@@ -86,7 +87,7 @@
           trigger: stage,
           pin: true,
           start: function () { return "top " + headerOffset() + "px"; },
-          end: function () { return "+=" + Math.round(window.innerHeight * 5); },
+          end: function () { return "+=" + Math.round(window.innerHeight * chapters.length); },
           scrub: 0.4,
           anticipatePin: 1,
           invalidateOnRefresh: true,
@@ -125,39 +126,63 @@
         }
       });
 
+      function chapterSlot(name) {
+        for (var n = 0; n < chapters.length; n++) {
+          if (chapters[n].getAttribute("data-depth") === name) return n;
+        }
+        return -1;
+      }
+      var flagshipSlot = chapterSlot("flagship");
+      var notesSlot = chapterSlot("notes");
+      var workSlot = chapterSlot("work");
+
       /* Tighter Y swing so ExRx never peeks past VideoListings; fade back in once tucked. */
-      timeline.fromTo(".flagship-card", {
-        rotationY: -24
-      }, {
-        rotationY: 16,
-        duration: SLOT,
-        immediateRender: false
-      }, 2 * SLOT - EXIT);
+      if (flagshipSlot >= 0) {
+        timeline.fromTo(".flagship-card", {
+          rotationY: -24
+        }, {
+          rotationY: 16,
+          duration: SLOT,
+          immediateRender: false
+        }, flagshipSlot * SLOT - EXIT);
 
-      timeline.fromTo(".flagship-back", {
-        rotationY: 10,
-        z: -90,
-        autoAlpha: 0,
-        pointerEvents: "none"
-      }, {
-        rotationY: -4,
-        z: -90,
-        autoAlpha: 1,
-        pointerEvents: "auto",
-        duration: SLOT,
-        immediateRender: false
-      }, 2 * SLOT - EXIT);
+        timeline.fromTo(".flagship-back", {
+          rotationY: 10,
+          z: -90,
+          autoAlpha: 0,
+          pointerEvents: "none"
+        }, {
+          rotationY: -4,
+          z: -90,
+          autoAlpha: 1,
+          pointerEvents: "auto",
+          duration: SLOT,
+          immediateRender: false
+        }, flagshipSlot * SLOT - EXIT);
+      }
 
-      timeline.fromTo(".work-stack", {
-        rotationX: 16,
-        z: -80,
-        transformOrigin: "50% 80%"
-      }, {
-        rotationX: 0,
-        z: 36,
-        duration: 0.7,
-        immediateRender: false
-      }, 3 * SLOT - 0.05);
+      if (notesSlot >= 0) {
+        timeline.fromTo(".notes-visual", {
+          rotationY: -18
+        }, {
+          rotationY: 10,
+          duration: SLOT,
+          immediateRender: false
+        }, notesSlot * SLOT - EXIT);
+      }
+
+      if (workSlot >= 0) {
+        timeline.fromTo(".work-stack", {
+          rotationX: 16,
+          z: -80,
+          transformOrigin: "50% 80%"
+        }, {
+          rotationX: 0,
+          z: 36,
+          duration: 0.7,
+          immediateRender: false
+        }, workSlot * SLOT - 0.05);
+      }
 
       timeline.fromTo(".depth-progress span", {
         scaleX: 0
@@ -211,7 +236,7 @@
          matchMedia finishes so the stacked layout can show every chapter. */
       requestAnimationFrame(function () {
         if (root.classList.contains("is-depth")) return;
-        gsap.set(".depth-chapter, .flagship-card, .flagship-back, .work-stack, .work-fan, .depth-hint, .depth-progress span", {
+        gsap.set(".depth-chapter, .flagship-card, .flagship-back, .notes-visual, .work-stack, .work-fan, .depth-hint, .depth-progress span", {
           clearProps: "all"
         });
       });

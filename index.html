@@ -28,7 +28,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <link rel="stylesheet" href="./assets/css/style.css?v=theme1">
+  <link rel="stylesheet" href="./assets/css/style.css?v=notes4">
 </head>
 <body>
   <header class="site-header">
@@ -291,13 +291,67 @@
         <h2>Projects that shipped</h2>
         <p>Mostly build — product apps, APIs, and tools with live demos where available.</p>
       </div>
-      <div class="project-grid">
+      <div class="project-lead">
         <article class="project-card featured" style="--shot:url('../img/projects/videolistings.png')">
           <div class="tags"><span class="tag">Node</span><span class="tag">PHP</span><span class="tag">AI generation</span><span class="tag">AI API</span></div>
           <h3>VideoListings.AI</h3>
           <p>Cofounder / Lead Developer — turn property listings into engaging social videos.</p>
           <div class="links"><a href="https://videolistings.ai/" target="_blank" rel="noopener">View project →</a></div>
         </article>
+        <div class="notes-carousel" data-notes-carousel aria-roledescription="carousel" aria-label="Coder Notes and other notebooks">
+          <div class="notes-viewport">
+            <article class="notes-slide notes-slide--coder is-active" id="notes-coder" aria-hidden="false">
+              <a class="notes-visual" href="https://wengindustry.com/app/devbrain/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                <img src="./assets/img/projects/retype-notes.png" alt="">
+                <span class="notes-visual-caption">devbrain</span>
+              </a>
+              <div class="notes-copy">
+                <p class="notes-kicker depth-kicker">04 — Notes</p>
+                <div class="notes-tags"><span class="notes-tag">Notes</span><span class="notes-tag">Since 2023</span></div>
+                <h3>Coder Notes</h3>
+                <p class="notes-aka">Developer Brain</p>
+                <p class="notes-lead"><span class="notes-stat">4,000+</span> programming notes, posted consistently since 2023.</p>
+                <div class="notes-links">
+                  <a href="https://codernotes.wengindustries.com/" target="_blank" rel="noopener">Open Coder Notes →</a>
+                  <a href="https://wengindustry.com/app/devbrain/" target="_blank" rel="noopener">Developer Brain →</a>
+                  <a href="https://github.com/Siphon880gh/devbrain/commits/main/?after=802b02507f3b26f38d35058b2a61d0522265aace+1434" target="_blank" rel="noopener">Commit history since 2023 →</a>
+                </div>
+              </div>
+            </article>
+            <article class="notes-slide notes-slide--biz" id="notes-biz" aria-hidden="true" inert>
+              <a class="notes-copy notes-biz" href="https://biznotes.wengindustries.com/" target="_blank" rel="noopener">
+                <p class="notes-kicker depth-kicker">04 — Notes</p>
+                <div class="notes-tags"><span class="notes-tag">Startup</span><span class="notes-tag">Marketing</span></div>
+                <h3>Tech Business Notes</h3>
+                <p class="notes-lead">Notes on business fundamentals, startups, launching, SEO, marketing, and AI automation for business — the journey of trying to start my own startup.</p>
+                <span class="notes-biz-open">Open Tech Business Notes →</span>
+              </a>
+              <div class="notes-mini-column">
+                <p class="notes-more-label">More notes:</p>
+                <div class="notes-mini-grid">
+                  <a class="notes-mini" href="https://3dnotes.wengindustries.com/" target="_blank" rel="noopener">
+                    <span class="notes-mini-kicker">Notebook</span>
+                    <strong>3D Notes</strong>
+                  </a>
+                  <a class="notes-mini" href="https://healthnotes.wengindustries.com/" target="_blank" rel="noopener">
+                    <span class="notes-mini-kicker">Notebook</span>
+                    <strong>Health Notes</strong>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="notes-controls">
+            <button type="button" class="notes-arrow" data-notes-prev aria-label="Previous notebook">‹</button>
+            <div class="notes-tabs" role="tablist" aria-label="Notebooks">
+              <button type="button" role="tab" data-notes-tab="0" aria-selected="true" aria-controls="notes-coder">Coder Notes</button>
+              <button type="button" role="tab" data-notes-tab="1" aria-selected="false" aria-controls="notes-biz" tabindex="-1">Startup Notes and more</button>
+            </div>
+            <button type="button" class="notes-arrow" data-notes-next aria-label="Next notebook">›</button>
+          </div>
+        </div>
+      </div>
+      <div class="project-grid">
         <article class="project-card" style="--shot:url('../img/projects/learnyt.png')">
           <div class="tags"><span class="tag">PHP</span><span class="tag">JS</span><span class="tag">Education</span></div>
           <h3>Learnyt</h3>
@@ -345,12 +399,6 @@
           <h3>Run App</h3>
           <p>Progressive running trainer featured on ExRx. Built fast, refined weekly.</p>
           <div class="links"><a href="https://therunner.app/" target="_blank" rel="noopener">View project →</a></div>
-        </article>
-        <article class="project-card" style="--shot:url('../img/projects/retype-notes.png')">
-          <div class="tags"><span class="tag">jQuery</span><span class="tag">PHP</span></div>
-          <h3>Developer Brain</h3>
-          <p>1,500+ programming notes — learn by retyping and rearranging code.</p>
-          <div class="links"><a href="https://wengindustry.com/app/devbrain/" target="_blank" rel="noopener">View project →</a></div>
         </article>
         <article class="project-card" style="--shot:url('../img/projects/covid.png')">
           <div class="tags"><span class="tag">Node</span><span class="tag">PHP</span><span class="tag">Chart.js</span></div>
@@ -546,6 +594,6 @@
     </div>
   </dialog>
 
-  <script src="./assets/js/main.js?v=theme1"></script>
+  <script src="./assets/js/main.js?v=notes4"></script>
 </body>
 </html>

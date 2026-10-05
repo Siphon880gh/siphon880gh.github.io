@@ -1413,5 +1413,106 @@
     }
   })();
 
+  document.querySelectorAll("[data-notes-carousel]").forEach(function (root) {
+    var slides = Array.prototype.slice.call(root.querySelectorAll(".notes-slide"));
+    var tabs = Array.prototype.slice.call(root.querySelectorAll("[data-notes-tab]"));
+    var prev = root.querySelector("[data-notes-prev]");
+    var next = root.querySelector("[data-notes-next]");
+    if (!slides.length) return;
+    var index = 0;
+    var timer = 0;
+    var hovering = false;
+    var focused = false;
+    var visible = false;
+    var reduce = false;
+    try {
+      reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    } catch (e) {}
+
+    function show(nextIndex) {
+      index = (nextIndex + slides.length) % slides.length;
+      slides.forEach(function (slide, i) {
+        var on = i === index;
+        slide.classList.toggle("is-active", on);
+        slide.setAttribute("aria-hidden", on ? "false" : "true");
+        if (on) slide.removeAttribute("inert");
+        else slide.setAttribute("inert", "");
+      });
+      tabs.forEach(function (tab, i) {
+        var on = i === index;
+        tab.setAttribute("aria-selected", on ? "true" : "false");
+        tab.tabIndex = on ? 0 : -1;
+      });
+    }
+
+    function stop() {
+      window.clearInterval(timer);
+      timer = 0;
+    }
+
+    function arm() {
+      stop();
+      if (reduce || hovering || focused || !visible || slides.length < 2) return;
+      timer = window.setInterval(function () { show(index + 1); }, 7000);
+    }
+
+    if (prev) prev.addEventListener("click", function () { show(index - 1); arm(); });
+    if (next) next.addEventListener("click", function () { show(index + 1); arm(); });
+    tabs.forEach(function (tab, i) {
+      tab.addEventListener("click", function () { show(i); arm(); });
+      tab.addEventListener("keydown", function (event) {
+        if (event.key !== "ArrowRight" && event.key !== "ArrowLeft") return;
+        event.preventDefault();
+        var dir = event.key === "ArrowRight" ? 1 : -1;
+        var target = (i + dir + tabs.length) % tabs.length;
+        show(target);
+        if (tabs[target]) tabs[target].focus();
+        arm();
+      });
+    });
+
+    root.addEventListener("mouseenter", function () { hovering = true; stop(); });
+    root.addEventListener("mouseleave", function () { hovering = false; arm(); });
+    root.addEventListener("focusin", function () { focused = true; stop(); });
+    root.addEventListener("focusout", function (event) {
+      if (root.contains(event.relatedTarget)) return;
+      focused = false;
+      arm();
+    });
+
+    var startX = 0;
+    var tracking = false;
+    root.addEventListener("pointerdown", function (event) {
+      if (event.pointerType === "mouse" && event.button !== 0) return;
+      if (event.target.closest("a, button")) return;
+      tracking = true;
+      startX = event.clientX;
+    });
+    root.addEventListener("pointerup", function (event) {
+      if (!tracking) return;
+      tracking = false;
+      var dx = event.clientX - startX;
+      if (Math.abs(dx) < 48) return;
+      show(index + (dx < 0 ? 1 : -1));
+      arm();
+    });
+    root.addEventListener("pointercancel", function () { tracking = false; });
+
+    show(0);
+    if ("IntersectionObserver" in window) {
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          visible = entry.isIntersecting;
+          if (visible) arm();
+          else stop();
+        });
+      }, { threshold: 0.35 });
+      observer.observe(root);
+    } else {
+      visible = true;
+      arm();
+    }
+  });
+
 
 })();

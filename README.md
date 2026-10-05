@@ -57,7 +57,7 @@ AI shows up as **assisted delivery** (ship faster, keep reviews/tests/structure)
 | **[Postop Wound Viewer](https://wengindustries.com/app/postop/)** | File-backed clinical viewer for post-op wounds / pressure injuries / mole monitoring — [GitHub](https://github.com/Siphon880gh/postop) |
 | **[ExRx.net Exercise API](https://exrx.net/Store/Other/Licensing)** | Lead Developer — API for the well-known ExRx exercise database |
 | **[Run App](https://therunner.app/)** | Progressive running trainer featured on ExRx |
-| **Developer Brain** | 1,500+ programming notes — learn by retyping code — [live](https://wengindustry.com/app/devbrain/) |
+| **Developer Brain** (Coder Notes) | 4,000+ programming notes, posted consistently since 2023 — [live](https://wengindustry.com/app/devbrain/) · [Coder Notes](https://codernotes.wengindustries.com/) · [commits](https://github.com/Siphon880gh/devbrain/commits/main/?after=802b02507f3b26f38d35058b2a61d0522265aace+1434) |
 | **[Book Search](https://wengindustries.com/app/book-search)** | MERN book finder with GraphQL + Mongo — [GitHub](https://github.com/Siphon880gh/book-search) |
 | **[Social Media API](https://github.com/Siphon880gh/social-media-api)** | Mongo/Mongoose/Node REST API (users, thoughts, reactions) |
 | **[Reprint (NoFT Gallery)](https://wengindustries.com/app/image-gallery-nft-collab/)** | MERN social gallery for NFT-style media — [GitHub](https://github.com/Siphon880gh/reprint) |

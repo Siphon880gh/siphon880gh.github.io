@@ -28,8 +28,8 @@
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <link rel="stylesheet" href="../assets/css/style.css?v=theme1">
-  <link rel="stylesheet" href="./scroll.css?v=tablet1">
+  <link rel="stylesheet" href="../assets/css/style.css?v=notes4">
+  <link rel="stylesheet" href="./scroll.css?v=notes4">
   <script>
     (function () {
       try {
@@ -318,10 +318,67 @@
           </div>
         </article>
 
+        <article class="depth-chapter" data-depth="notes" id="notes">
+          <div class="chapter-inner">
+            <div class="notes-carousel" data-notes-carousel aria-roledescription="carousel" aria-label="Coder Notes and other notebooks">
+              <div class="notes-viewport">
+                <article class="notes-slide notes-slide--coder is-active" id="notes-coder" aria-hidden="false">
+                  <div class="notes-copy">
+                    <p class="notes-kicker depth-kicker">04 — Notes</p>
+                    <div class="notes-tags"><span class="notes-tag">Notes</span><span class="notes-tag">Since 2023</span></div>
+                    <h3>Coder Notes</h3>
+                    <p class="notes-aka">Developer Brain</p>
+                    <p class="notes-lead"><span class="notes-stat">4,000+</span> programming notes, posted consistently since 2023.</p>
+                    <div class="notes-links">
+                      <a href="https://codernotes.wengindustries.com/" target="_blank" rel="noopener">Open Coder Notes →</a>
+                      <a href="https://wengindustry.com/app/devbrain/" target="_blank" rel="noopener">Developer Brain →</a>
+                      <a href="https://github.com/Siphon880gh/devbrain/commits/main/?after=802b02507f3b26f38d35058b2a61d0522265aace+1434" target="_blank" rel="noopener">Commit history since 2023 →</a>
+                    </div>
+                  </div>
+                  <a class="notes-visual" href="https://wengindustry.com/app/devbrain/" target="_blank" rel="noopener" aria-label="Open Developer Brain">
+                    <img src="../assets/img/projects/retype-notes.png" alt="">
+                    <span class="notes-visual-caption">devbrain</span>
+                  </a>
+                </article>
+                <article class="notes-slide notes-slide--biz" id="notes-biz" aria-hidden="true" inert>
+                  <a class="notes-copy notes-biz" href="https://biznotes.wengindustries.com/" target="_blank" rel="noopener">
+                    <p class="notes-kicker depth-kicker">04 — Notes</p>
+                    <div class="notes-tags"><span class="notes-tag">Startup</span><span class="notes-tag">Marketing</span></div>
+                    <h3>Tech Business Notes</h3>
+                    <p class="notes-lead">Notes on business fundamentals, startups, launching, SEO, marketing, and AI automation for business — the journey of trying to start my own startup.</p>
+                    <span class="notes-biz-open">Open Tech Business Notes →</span>
+                  </a>
+                  <div class="notes-mini-column">
+                    <p class="notes-more-label">More notes:</p>
+                    <div class="notes-mini-grid">
+                      <a class="notes-mini" href="https://3dnotes.wengindustries.com/" target="_blank" rel="noopener">
+                        <span class="notes-mini-kicker">Notebook</span>
+                        <strong>3D Graphics and Game Development Notes</strong>
+                      </a>
+                      <a class="notes-mini" href="https://healthnotes.wengindustries.com/" target="_blank" rel="noopener">
+                        <span class="notes-mini-kicker">Notebook</span>
+                        <strong>Health and Fitness Notes</strong>
+                      </a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="notes-controls">
+                <button type="button" class="notes-arrow" data-notes-prev aria-label="Previous notebook">‹</button>
+                <div class="notes-tabs" role="tablist" aria-label="Notebooks">
+                  <button type="button" role="tab" data-notes-tab="0" aria-selected="true" aria-controls="notes-coder">Coder Notes</button>
+                  <button type="button" role="tab" data-notes-tab="1" aria-selected="false" aria-controls="notes-biz" tabindex="-1">Startup Notes and more</button>
+                </div>
+                <button type="button" class="notes-arrow" data-notes-next aria-label="Next notebook">›</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
         <article class="depth-chapter" data-depth="work" id="work">
           <div class="chapter-inner">
             <header class="depth-head">
-              <p class="depth-kicker">04 — Work</p>
+              <p class="depth-kicker">05 — Work</p>
               <h2>Projects that shipped</h2>
               <p>A taste of product work that shipped — apps, APIs, and tools. The full list is on Work; consulting lives on Services.</p>
             </header>
@@ -378,7 +435,7 @@
         <article class="depth-chapter" data-depth="hire" id="hire">
           <div class="chapter-inner">
             <header class="depth-head">
-              <p class="depth-kicker">05 — Hire · Los Angeles</p>
+              <p class="depth-kicker">06 — Hire · Los Angeles</p>
               <h2>Build or advise — tell me which path</h2>
               <p>Freelance, contract, or a shorter consult. Tell me whether you need something built, want advice, or you’re still figuring it out.</p>
             </header>
@@ -405,8 +462,9 @@
         <button type="button" data-step="0" data-target="intro">Intro</button>
         <button type="button" data-step="1" data-target="paths">Paths</button>
         <button type="button" data-step="2" data-target="flagship">Flagship</button>
-        <button type="button" data-step="3" data-target="work">Work</button>
-        <button type="button" data-step="4" data-target="hire">Hire</button>
+        <button type="button" data-step="3" data-target="notes">Notes</button>
+        <button type="button" data-step="4" data-target="work">Work</button>
+        <button type="button" data-step="5" data-target="hire">Hire</button>
       </nav>
       <p class="depth-hint"><span>Scroll</span></p>
       <div class="depth-progress" aria-hidden="true"><span></span></div>
@@ -443,7 +501,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
-  <script src="./scroll.js?v=a4f91c2"></script>
-  <script src="../assets/js/main.js?v=theme1"></script>
+  <script src="./scroll.js?v=notes3"></script>
+  <script src="../assets/js/main.js?v=notes4"></script>
 </body>
 </html>

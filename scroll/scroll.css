@@ -40,6 +40,13 @@
     #001129;
 }
 
+.depth-chapter[data-depth="notes"] {
+  background:
+    radial-gradient(ellipse at 72% 42%, rgba(253, 215, 70, 0.12), transparent 42%),
+    radial-gradient(ellipse at 24% 80%, rgba(0, 210, 252, 0.14), transparent 40%),
+    #001129;
+}
+
 .depth-chapter[data-depth="work"] {
   background:
     radial-gradient(ellipse at 50% 0%, rgba(0, 210, 252, 0.1), transparent 50%),
@@ -290,6 +297,121 @@ html.is-depth .flagship-card {
   z-index: 2;
 }
 
+/* Notes chapter reuses the classic carousel, laid out like the flagship spread. */
+.depth-chapter .notes-carousel {
+  background: transparent;
+  min-height: 0;
+  height: auto;
+  overflow: visible;
+  border-radius: 0;
+  color: inherit;
+}
+.depth-chapter .notes-viewport {
+  min-height: 390px;
+  height: auto;
+}
+.depth-chapter .notes-kicker { display: block; }
+.depth-chapter .notes-tags { display: none; }
+.depth-chapter .notes-slide {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 2rem;
+  align-items: center;
+  justify-content: initial;
+  padding: 0;
+}
+.depth-chapter .notes-slide--biz { background: transparent; }
+.depth-chapter .notes-slide--coder::after { display: none; }
+.depth-chapter .notes-copy h3 {
+  color: inherit;
+  font-size: clamp(1.55rem, 2.5vw, 2.15rem);
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+}
+.depth-chapter .notes-lead {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  max-width: 36rem;
+}
+.depth-chapter .notes-slide--coder .notes-visual {
+  position: relative;
+  inset: auto;
+  z-index: 1;
+  pointer-events: auto;
+  display: block;
+  height: min(280px, 36vh);
+  max-width: 460px;
+  margin-left: auto;
+  border-radius: 18px;
+  overflow: hidden;
+  color: var(--c8);
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow:
+    0 30px 50px rgba(0, 0, 0, 0.45),
+    0 0 0 1px rgba(0, 210, 252, 0.12);
+  background: #071525;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+.depth-chapter .notes-slide--coder .notes-visual img {
+  width: 100%;
+  height: 160%;
+  max-width: none;
+  object-fit: cover;
+  object-position: center top;
+  transform: translateY(-24%);
+}
+.depth-chapter .notes-slide--coder .notes-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 17, 41, 0.12), rgba(0, 17, 41, 0.38));
+  pointer-events: none;
+}
+.depth-chapter .notes-visual-caption {
+  display: block;
+  z-index: 1;
+  position: absolute;
+  left: 0.8rem;
+  bottom: 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: rgba(0, 17, 41, 0.82);
+  color: var(--c2);
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+}
+.depth-chapter .notes-mini-grid {
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+.depth-chapter .notes-mini {
+  min-height: 0;
+  padding: 0.95rem 1rem;
+  background: linear-gradient(160deg, rgba(8, 28, 52, 0.95), rgba(0, 17, 41, 0.92));
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+}
+.depth-chapter .notes-controls {
+  position: relative;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  margin-top: 1rem;
+  max-width: 28rem;
+}
+.depth-chapter .notes-tabs button,
+.depth-chapter .notes-arrow {
+  background: rgba(0, 17, 41, 0.55);
+}
+.depth-chapter .notes-tabs button[aria-selected="true"] {
+  background: var(--c2);
+  border-color: var(--c2);
+  color: #001129;
+}
+
 .work-stack {
   transform-style: preserve-3d;
 }
@@ -508,6 +630,10 @@ html.is-depth .depth-chapter[data-depth="paths"]::before {
 
 html.is-depth .depth-chapter[data-depth="flagship"]::before {
   background: radial-gradient(ellipse at 68% 48%, rgba(0, 210, 252, 0.18), transparent 46%);
+}
+
+html.is-depth .depth-chapter[data-depth="notes"]::before {
+  background: radial-gradient(ellipse at 70% 46%, rgba(253, 215, 70, 0.14), transparent 46%);
 }
 
 html.is-depth .depth-chapter[data-depth="work"]::before {
@@ -735,6 +861,15 @@ html.is-depth .depth-progress span {
   html.is-depth .flagship-card img {
     height: min(210px, 30vh);
   }
+  html.is-depth .depth-chapter .notes-slide--coder .notes-visual {
+    max-height: min(180px, 26vh);
+  }
+  html.is-depth .depth-chapter .notes-viewport {
+    min-height: 340px;
+  }
+  html.is-depth .depth-chapter .notes-stat {
+    font-size: 1.8rem;
+  }
   html.is-depth .work-tile em {
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -794,6 +929,7 @@ html.is-depth .depth-progress span {
   .hire-quote,
   .flagship-back,
   .flagship-card,
+  .notes-visual,
   .chapter-inner,
   .work-stack,
   .work-fan,
@@ -805,6 +941,7 @@ html.is-depth .depth-progress span {
   html.is-depth .hire-quote,
   html.is-depth .flagship-back,
   html.is-depth .flagship-card,
+  html.is-depth .notes-visual,
   html.is-depth .chapter-inner,
   html.is-depth .work-stack,
   html.is-depth .work-fan,
@@ -853,6 +990,31 @@ html.is-depth .depth-progress span {
   .hire-actions {
     flex-direction: column;
     align-items: stretch;
+  }
+  .depth-chapter .notes-viewport {
+    min-height: 0;
+    height: auto;
+  }
+  .depth-chapter .notes-slide {
+    position: relative;
+    inset: auto;
+    display: none;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .depth-chapter .notes-slide.is-active {
+    display: grid;
+  }
+  .depth-chapter .notes-slide--coder .notes-visual {
+    margin-left: 0;
+    max-width: none;
+    order: -1;
+  }
+  .depth-chapter .notes-mini-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .depth-chapter .notes-controls {
+    max-width: none;
   }
 }
 
@@ -1035,6 +1197,26 @@ html[data-theme="day"]:not(.is-depth) .depth-chapter[data-depth="flagship"] {
     radial-gradient(ellipse at 70% 45%, rgba(0, 210, 252, 0.14), transparent 42%),
     radial-gradient(ellipse at 30% 80%, rgba(253, 215, 70, 0.12), transparent 40%),
     #f7fbfa;
+}
+html[data-theme="day"]:not(.is-depth) .depth-chapter[data-depth="notes"] {
+  background:
+    radial-gradient(ellipse at 72% 42%, rgba(253, 215, 70, 0.16), transparent 42%),
+    radial-gradient(ellipse at 24% 80%, rgba(0, 210, 252, 0.12), transparent 40%),
+    #f7fbfa;
+}
+html[data-theme="day"] .depth-chapter .notes-lead,
+html[data-theme="day"] .depth-chapter .notes-links a,
+html[data-theme="day"] .depth-chapter .notes-biz-open {
+  color: var(--text-body);
+}
+html[data-theme="day"] .depth-chapter .notes-stat,
+html[data-theme="day"] .depth-chapter .notes-aka,
+html[data-theme="day"] .depth-chapter .notes-more-label {
+  color: #7a5b00;
+}
+html[data-theme="day"] .depth-chapter .notes-links a:hover,
+html[data-theme="day"] .depth-chapter .notes-biz:hover .notes-biz-open {
+  color: var(--c1);
 }
 html[data-theme="day"]:not(.is-depth) .depth-chapter[data-depth="work"] {
   background:
