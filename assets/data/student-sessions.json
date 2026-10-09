@@ -1,0 +1,2976 @@
+{
+  "privacy": "Last names are letter-scrambled. Originals stay in student-private-info/ and are not in this file.",
+  "studentCount": 159,
+  "sessionCount": 371,
+  "tutorInterestAllFive": true,
+  "sessions": [
+    {
+      "first": "Deleon",
+      "last": "Hlyae",
+      "date": "9/4/21",
+      "topics": "HTML, Javascript",
+      "comment": "He is super helpful and never just gives answers he actually helps and makes learning understandable.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Deleon",
+      "last": "hlyae",
+      "date": "9/15/21",
+      "topics": "Bootstrap, Javascript, API's",
+      "comment": "He really want to make sure you understand and learn properly",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Deleon",
+      "last": "Hlyae",
+      "date": "10/2/21",
+      "topics": "HTML, CSS, Bootstrap, Javascript",
+      "comment": "He really makes you think it really helps formulating code once you really sound it out.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Tatiana",
+      "last": "Colnsil",
+      "date": "8/29/22",
+      "topics": "HTML / CSS",
+      "comment": "I had a great experience! Very beneficial to be with such an expert one on one. Thank you for the help and support!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Dez",
+      "last": "Druna",
+      "date": "8/29/22",
+      "topics": "adding an extra branch to the tree! and updating my git with a pull request? ha",
+      "comment": "He was awesome - would love to work with him again!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Stephen",
+      "last": "Onu",
+      "date": "8/29/22",
+      "topics": "javascript, html, style.css",
+      "comment": "Great tutor explained everything in depth and well hope I have him again",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Arielle",
+      "last": "SmiakhElla-ckcn",
+      "date": "8/30/22",
+      "topics": "Javascript: Best practices for code structure, psuedo-code planning, debugger, future tools to be mindful of (eg. fiddler, matches, jsdoc)",
+      "comment": "Weng is fantastic. From when he first helped me in the AskBCS chat, he has shown his depth of knowledge and genuine wish to help make me a better coder. He found analogies to explain complex topics that really stuck with me, and I feel I can now dive back in to my problem Arase with a bit more confidence and heading.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "John",
+      "last": "Aailsn",
+      "date": "8/30/22",
+      "topics": "Express.js",
+      "comment": "Weng was very helpful to have a deeper understanding and answered my quesitons.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Jack",
+      "last": "Ecmooson",
+      "date": "8/31/22",
+      "topics": "Orientation, setup, study materials",
+      "comment": "Very friendly and very helpful instruction",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Bhavika",
+      "last": "Mvedaa",
+      "date": "8/31/22",
+      "topics": "parent child attributes, moment js and storage",
+      "comment": "Thank you very much for the clear guidance provided enabling me to correct the errors. It is unfortunate that my vscode crashed and we were unable to check if the storage is working correctly after making the amendments",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Dillon",
+      "last": "Pinato",
+      "date": "8/31/22",
+      "topics": "Node.js and npm troubleshooting",
+      "comment": "Thanks again, I would have never been able to figure out that vim text editor.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Matthew",
+      "last": "Disav",
+      "date": "8/31/22",
+      "topics": "Heroku Deployment",
+      "comment": "Was a lovely gentleman that spoke and explained problems clearly. He was actively trying to fix a rather complex issue while not just walking me through it, but explaining in detail why he was doing it.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Tatiana",
+      "last": "Colnsil",
+      "date": "8/31/22",
+      "topics": "Java Script",
+      "comment": "Really appreciate my tutor's support and patience with me. He is one of the best teachers I've ever had.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Christopher",
+      "last": "MlucnhgLai",
+      "date": "9/1/22",
+      "topics": "git hub fix, and tips for using vs code",
+      "comment": "Weng was great! great listener and very helpful in helping me solve my problems! Would work with him again!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Jessica",
+      "last": "Ohob",
+      "date": "9/5/22",
+      "topics": "pre-work, ssh keys, github",
+      "comment": "He was very helpful and explained things in a way that was easy to understand.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Sean",
+      "last": "Besilre-otL",
+      "date": "9/5/22",
+      "topics": "Pre-work",
+      "comment": "Weng was super helpful, very friendly, and very knowledgable! I would love to request Weng again as a tutor! He not only answered my question, but he reviewed concepts that he felt would benefit me further in my studies. Weng did an amazing job as a tutor!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Andrew",
+      "last": "Dpleip",
+      "date": "9/6/22",
+      "topics": "local storage, variables",
+      "comment": "was very helpful and found a way to explain things i understand and even if i wasn't 100% on it would do a quick recap to make sure i understand",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Tatiana",
+      "last": "Colnsil",
+      "date": "9/6/22",
+      "topics": "Java Script",
+      "comment": "Thank you for the great support!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Ryan",
+      "last": "Dgno",
+      "date": "9/6/22",
+      "topics": "JavaScript",
+      "comment": "Weng Fei Fung was very helpful and clearly explained everything and all questions I had.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Abigail",
+      "last": "Qneeu",
+      "date": "9/7/22",
+      "topics": "Coding Quiz assignment; js, css, html",
+      "comment": "This tutor spent a lot of time helping me understand concepts in addition to helping me fix my code.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Erick",
+      "last": "Ilsas",
+      "date": "9/7/22",
+      "topics": "Git Hub and Command Line and SSH Key",
+      "comment": "He was different, the way he expalined made sense and giving me type of scenarios was also helpful to understand how coding worked",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Dillon",
+      "last": "Pinato",
+      "date": "9/7/22",
+      "topics": "NPM inquirer",
+      "comment": "He helped me through the problem which was outside of the scope of the classwork, inquirer had updated on its own and we figured out how to fix it together, then he went on to explain and make sure I knew how inquirer worked and gave me more confidence in it.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Rickelle",
+      "last": "Gihfftir",
+      "date": "9/8/22",
+      "topics": "Went over a couple CSS features.",
+      "comment": "Tutor was great, just needed more time with him as it was a lot to fit in to such a short session.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Tatiana",
+      "last": "Colnsil",
+      "date": "9/8/22",
+      "topics": "Moment, JS, APIs",
+      "comment": "Thank you for the great session!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Beth",
+      "last": "Aeyn neHick",
+      "date": "9/8/22",
+      "topics": "SSH key issues and Git hub",
+      "comment": "He was absolutely helpful, I hope to work with him again.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Santana",
+      "last": "Fnenaerdz",
+      "date": "9/8/22",
+      "topics": "react",
+      "comment": "Weng was awesome! Genuinely cared about my understanding of the topic and was extremely invested and patient with me.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Bryson",
+      "last": "NBnn hoeaso",
+      "date": "9/10/22",
+      "topics": "Module 20",
+      "comment": "Fung is extremely personable I feel like he is very interested in helping me at all times. He is also great at explaining the topics and better ways to learn said topics, instead of just taking my screen and doing it for me! (Great Tutor)",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Tatiana",
+      "last": "Colnsil",
+      "date": "9/10/22",
+      "topics": "APIs",
+      "comment": "It was great!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Valeria",
+      "last": "Gzelzoan",
+      "date": "9/11/22",
+      "topics": "Node.js",
+      "comment": "First time being tutored by Weng Fei Fung and he is amazing! Super knowledgeable and explains concepts/ideas very well. I'd recommend him to anyone anytime!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Tatiana",
+      "last": "Cilsllno",
+      "date": "9/12/22",
+      "topics": "APIs",
+      "comment": "Great session!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Jeremiah",
+      "last": "Swgenarien",
+      "date": "9/12/22",
+      "topics": "Api and how to find what they cover",
+      "comment": "Weng Fei Fung took the time to explain each step but also had me explore options as well was very diligent in explanation and seemed to really care about progress that we made in just an hour.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "William",
+      "last": "Faormto",
+      "date": "9/14/22",
+      "topics": "flex box, css, html",
+      "comment": "Absolute legend, very helpful and was willing to go over time to achieve a solution",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Athanasia",
+      "last": "Soaitomn hslakaS",
+      "date": "9/15/22",
+      "topics": "Javascript functions",
+      "comment": "Weng was extremely helpful in demonstrating and describing JS functionality and syntax.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Ryan",
+      "last": "Dgno",
+      "date": "9/15/22",
+      "topics": "JavaScript, BootStrap, and JQuery DOM",
+      "comment": "Weng Fei Fung was great again! Super helpful in the way he approaches problems and clearly explains on how and what to do on all the issues/problems.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Jose",
+      "last": "Aretlor fauHed",
+      "date": "9/15/22",
+      "topics": "Weather App, Fetch",
+      "comment": "Great attitude",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Christian",
+      "last": "Arase",
+      "date": "9/15/22",
+      "topics": "Challenge 1 (code refactor)",
+      "comment": "Great. Would be nice if there were the option to have two 30-minute sessions.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Lara",
+      "last": "Georkc",
+      "date": "9/16/22",
+      "topics": "Second Challenge of Full Stack Web Dev",
+      "comment": "Genuinely wanted to help, explained concepts in-depth, didn't give the answer straight away and instead guided me towards the correct answer",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Jorge",
+      "last": "Zmarao",
+      "date": "9/18/22",
+      "topics": "JavaScript, HTML, CSS, VSCODE",
+      "comment": "My tutor was amazing. Helped me fix various bugs in my terminal and helped me with my incomplete HTML file. We looked over my css files and went over a bug in with my javascript code. Definitely asking for him again.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Tatiana",
+      "last": "Colnsil",
+      "date": "9/19/22",
+      "topics": "Node.js",
+      "comment": "Very useful!!!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Gladimar",
+      "last": "Vlaimill",
+      "date": "9/19/22",
+      "topics": "CSS, NODE.JS, FOUNDATION",
+      "comment": "Excellent tutor!! Thank you so much!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Beth",
+      "last": "Aeyn neHick",
+      "date": "9/19/22",
+      "topics": "SSH Key, VS Code, HTML",
+      "comment": "Weng is very helpful and clearly explains the whys and what to do",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Valeria",
+      "last": "Gzelzoan",
+      "date": "9/20/22",
+      "topics": "OOP",
+      "comment": "N/A",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Erick",
+      "last": "Ilsas",
+      "date": "9/21/22",
+      "topics": "HTML Challegne 1 homework",
+      "comment": "Tutor was very nice and fantastic, I actually learned more from his explanation of the subject he was giving tips and such for the homework and it made sense",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "khanh",
+      "last": "tnra",
+      "date": "9/21/22",
+      "topics": "HW19 Text Editor",
+      "comment": "It's all good",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Connie",
+      "last": "Lua",
+      "date": "9/22/22",
+      "topics": "Gitlab SSH key",
+      "comment": "The tutor was helpful and we solved the problem quickly:)",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Tatiana",
+      "last": "Colnsil",
+      "date": "9/22/22",
+      "topics": "Node.js",
+      "comment": "Very helpful, much appreciated!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Omer",
+      "last": "Wisse",
+      "date": "9/22/22",
+      "topics": "Github Html Css",
+      "comment": "Excellent tutor!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Sean",
+      "last": "Besilre-otL",
+      "date": "9/25/22",
+      "topics": "Flexbox, Googel dev tools, media queries, css element positioning and alignment",
+      "comment": "Weng was fantastic again! Very polite and extremely helpful. Weng is patient, and very good at explaining things carefully. He is clearly very knowledgable about coding and demonstrates a passion for teaching. Weng is a phenomenal tutor. I will not hesitate to request weng for another tutoring session!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Cobi",
+      "last": "",
+      "date": "9/25/22",
+      "topics": "CSS, HTML, Semantics, etc.",
+      "comment": "Very helpful and knowledgeable!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Ruihan",
+      "last": "Goa",
+      "date": "9/25/22",
+      "topics": "module 2 challenge",
+      "comment": "very helpful",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Samantha",
+      "last": "Soioslk",
+      "date": "9/26/22",
+      "topics": "JavaScript and APIs",
+      "comment": "Weng is extremely helpful an explains things really clearly, and I get clarification on all my questions.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Ryan",
+      "last": "Dgno",
+      "date": "9/26/22",
+      "topics": "Apis and fetch",
+      "comment": "Awesome tutor, always explains everything in great detail!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Kimberli",
+      "last": "R aeMznitr",
+      "date": "9/26/22",
+      "topics": "Review of homework feedback",
+      "comment": "Thanks for the tips, very helpful!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Tatiana",
+      "last": "Colnsil",
+      "date": "9/27/22",
+      "topics": "OOP",
+      "comment": "Great assistance!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Prateek",
+      "last": "Vrhsgeee",
+      "date": "9/27/22",
+      "topics": "API and calls",
+      "comment": "Helped me visualize the concepts and how I can break down logic, for Java script",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Raphael",
+      "last": "Mderan",
+      "date": "9/27/22",
+      "topics": "Html",
+      "comment": "Great tutor",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "raphael",
+      "last": "Mderan",
+      "date": "9/28/22",
+      "topics": "semantics",
+      "comment": "tutor was very informative and new what he was talking about, and as a new coder i was able to understand what he was teaching me.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Ethan",
+      "last": "D'oellM",
+      "date": "9/28/22",
+      "topics": "Running a server with node.js",
+      "comment": "Very helpful session where everything was explained to me in a way I can understand it.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Bryson",
+      "last": "Besnon",
+      "date": "9/28/22",
+      "topics": "Module 18 SN API",
+      "comment": "Great tutor, I recommend him frequently to other classmates when they are struggling with concepts!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Dez",
+      "last": "Druna",
+      "date": "9/28/22",
+      "topics": "semantic htm!",
+      "comment": "Weng is great! I hope to have him as a tutor the entirety of this course! thanks weng!!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Tatiana",
+      "last": "Colnsil",
+      "date": "9/30/22",
+      "topics": "Express",
+      "comment": "Very helpful!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Jean",
+      "last": "Ctlliosa",
+      "date": "9/30/22",
+      "topics": "ssh key",
+      "comment": "Mr. Weng was extremely helpful in helping me understand ssh keys and furthering my knowledge on GitHub.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Sylvia",
+      "last": "Eyl",
+      "date": "10/2/22",
+      "topics": "CSS/Flexbox",
+      "comment": "Very helpful!",
+      "course": "Skills Boot Camp - Front-end Webdev"
+    },
+    {
+      "first": "Cobi",
+      "last": "Gtkahtlcos",
+      "date": "10/2/22",
+      "topics": "html, css, flexbox, media queries",
+      "comment": "Very helpful!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Sean",
+      "last": "Besilre-otL",
+      "date": "10/2/22",
+      "topics": "Random number generator, while loops, sort array",
+      "comment": "Weng is an amazing tutor! He always does a fantastic job making sure the material is not too advanced for my level, and he always checks where my level of understanding is. Weng is very good at mixing in answer with question to test my understanding. He is incredibly supportive and joy to work with. He demonstrates extremely good knowledge of coding and any topics we cover during the session. Please promote this tutor. He is an excellent teacher and we need more teachers like Weng! :)",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Ryan",
+      "last": "Tarlyo",
+      "date": "10/2/22",
+      "topics": "HTML and CSS",
+      "comment": "Tutor was very helpful!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Ryan",
+      "last": "Dgno",
+      "date": "10/3/22",
+      "topics": "JAva JQuery moment.JS",
+      "comment": "Awesome Tutor, always teaches and furthers my knowledge!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Alexander",
+      "last": "Tcniesrh",
+      "date": "10/3/22",
+      "topics": "Javascript html css",
+      "comment": "He was awesome! Great job explaining concepts",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Erick",
+      "last": "Ilsas",
+      "date": "10/4/22",
+      "topics": "Homework",
+      "comment": "He was very helpful as always",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Beth",
+      "last": "Aeyn neHick",
+      "date": "10/5/22",
+      "topics": "vscode",
+      "comment": "Always helpful!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Samantha",
+      "last": "Soioslk",
+      "date": "10/6/22",
+      "topics": "Javascript syntax and order of functions",
+      "comment": "Weng is great at explaining JS to me, as I am new to JS, and he makes sure I understand the concepts by asking specific questions and ensuring I can demonstrate my understanding before moving on.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Cobi",
+      "last": "Gtkahtlcos",
+      "date": "10/9/22",
+      "topics": "Javascript",
+      "comment": "Very helpful and explains solutions to questions clearly.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Sylvia",
+      "last": "Eyl",
+      "date": "10/9/22",
+      "topics": "JavaScript",
+      "comment": "Session was very helpful. Had finished my basic hw and had some questions on how to improve it. And Weng really helped.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Tatiana",
+      "last": "Colnsil",
+      "date": "10/10/22",
+      "topics": "JavaScript",
+      "comment": "It was a great session",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Jean",
+      "last": "Pierlr steaolCi",
+      "date": "10/10/22",
+      "topics": "2.4.4",
+      "comment": "Gave me a better visual on the workflow of full stack web developing",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Jeremiah",
+      "last": "Swgenarien",
+      "date": "10/11/22",
+      "topics": "classes",
+      "comment": "Weng always makes it feel they are genuinely trying to help me understand instead of just providing answers.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Cobi",
+      "last": "Gtkahtlcos",
+      "date": "10/12/22",
+      "topics": "JavaScript",
+      "comment": "Very helpful! Explains complex ideas clearly and always has multiple suggestions of how to solve a problem.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Jenna",
+      "last": "Rgsig",
+      "date": "10/12/22",
+      "topics": "Visual Studio Code",
+      "comment": "He was very helpful",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Beth",
+      "last": "Hckeyi",
+      "date": "10/12/22",
+      "topics": "Git issues",
+      "comment": "Always helpful!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Ryan",
+      "last": "Dgno",
+      "date": "10/12/22",
+      "topics": "JQuery JavaScript",
+      "comment": "Great tutoring session as always, great tutor I learn more new tips every time! Weng explains any coding topic very thoroughly.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Jenna",
+      "last": "Rgsig",
+      "date": "10/17/22",
+      "topics": "VS Code/ Git Lab",
+      "comment": "He was very helpful",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Anthony",
+      "last": "Frsira",
+      "date": "10/18/22",
+      "topics": "Homework #4 Code Quiz, HTML, CSS, Javascript",
+      "comment": "Weng is incredibly helpful and provides shortcuts, tips, and general knowledge outside of the topics directly addressed in the tutoring session. Very ease to work with and learn from.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Jose",
+      "last": "Agartea",
+      "date": "10/18/22",
+      "topics": "CSS: Flex Box, Media Queries",
+      "comment": "Weng is awesome!!! He was very patient with me, very thorough in his explanations, and had a great vibe.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Kyle",
+      "last": "Lraens",
+      "date": "10/19/22",
+      "topics": "ORM",
+      "comment": "Weng explained concepts well and was friendly!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Ryan",
+      "last": "Dgno",
+      "date": "10/19/22",
+      "topics": "JavaScript Manipulating Dom and using Fetch for APIS",
+      "comment": "Weng is a great tutor/teacher, further explains all of the coding very well!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Cobi",
+      "last": "Gtkahtlcos",
+      "date": "10/25/22",
+      "topics": "JavaScript",
+      "comment": "Explained topics in great detail and provided commentary on why certain parts of code react in certain ways.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Erick",
+      "last": "Ilsas",
+      "date": "10/25/22",
+      "topics": "Javascript",
+      "comment": "Tutor was awesome he always helps me and guides me giving me tips and tricks",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Samantha",
+      "last": "Soioslk",
+      "date": "10/27/22",
+      "topics": "Node JS, Javascript",
+      "comment": "Weng explains everything really clearly and helps me understand concepts thoroughly through notes and instructions.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Cobi",
+      "last": "Gtkahtlcos",
+      "date": "11/1/22",
+      "topics": "HTML, CSS, Javascript",
+      "comment": "Always very helpful and explains the material in great detail.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Ryan",
+      "last": "Dgno",
+      "date": "11/2/22",
+      "topics": "JavaScript, Node, NPM Inquirer",
+      "comment": "Weng is a great tutor/teacher! He throughly explained Node and Inquirer, I will definitely be able to practice more of what I learned to further my knowledge and complete this week's challenge! I keep learning more and more useful tools from Weng!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Tatiana",
+      "last": "Lsaiin",
+      "date": "11/2/22",
+      "topics": "React",
+      "comment": "It was a great help!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Marie",
+      "last": "Lsewi",
+      "date": "11/6/22",
+      "topics": "Homework 6, Server Side API's",
+      "comment": "Weng was very easy to understand!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Muhammet",
+      "last": "Ruoznal Taakm",
+      "date": "11/6/22",
+      "topics": "Homework challenge 4",
+      "comment": "he was very helpful thanks again!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Valeria",
+      "last": "Gzelzoan",
+      "date": "11/9/22",
+      "topics": "React",
+      "comment": "Awesome as always!!!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Jessica",
+      "last": "Ohob",
+      "date": "11/13/22",
+      "topics": ".promises writeFile node switch cases",
+      "comment": "Very helpful!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Sean",
+      "last": "Besilre-otL",
+      "date": "11/13/22",
+      "topics": "Object Oriented Programming",
+      "comment": "Weng Fei is one of the best tutors from the UCB Bootcamp course. He always demonstrates excellent knowledge of the material, and has a knack for teaching difficult concepts! He is an excellent tutor!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Cobi",
+      "last": "Gtkahtlcos",
+      "date": "11/13/22",
+      "topics": "JavaScript",
+      "comment": "Very helpful. Explains in detail what each line of code does and makes it easier to understand.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Ryan",
+      "last": "Dgno",
+      "date": "11/13/22",
+      "topics": "Java, Node, Classes, Methods, Jest Tests",
+      "comment": "I learn so much more from these tutoring sessions by Weng, wish we had more time but will continue on from where we left off Thanks!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Jonah",
+      "last": "Lsewi",
+      "date": "11/20/22",
+      "topics": "HTML, CSS, JavaScript",
+      "comment": "Great teacher. I am new and didn't know exactly what to ask or what direction to take the session, but he was very helpful and informative.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Cobi",
+      "last": "",
+      "date": "11/20/22",
+      "topics": "JavaScript, Node.js",
+      "comment": "Explains material very thoroughly !",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Ryan",
+      "last": "Dgno",
+      "date": "11/20/22",
+      "topics": "Express.JS",
+      "comment": "Expanded my knowledge again on Express.JS, very in-depth. I will continue from here!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Ngandala",
+      "last": "Loesp",
+      "date": "12/3/22",
+      "topics": "JS, React, API",
+      "comment": "Very Good",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Nathan",
+      "last": "Unwoderdo",
+      "date": "12/3/22",
+      "topics": "ORM, PWA, spread operators",
+      "comment": "Weng was great! Really took the time and went into detail with everything we talked about. Would recommend him for anyone.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "John",
+      "last": "Loezp",
+      "date": "12/3/22",
+      "topics": "Week 13 challenge ORM , SQL basics",
+      "comment": "Weng was great in asking questions to understand where I was in my learning. He made great recommendations for moving forward on my current subject of study and took the time to create a spreadsheet that details my current subject.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Mike",
+      "last": "Gezt",
+      "date": "12/4/22",
+      "topics": "node, mysql",
+      "comment": "Great session thank you!!!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Marie",
+      "last": "Lsewi",
+      "date": "12/4/22",
+      "topics": "classes",
+      "comment": "Weng did a great balance of helping me understand the topics as well as helping me progress in the homework!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Cobi",
+      "last": "Gtkahtlcos",
+      "date": "12/4/22",
+      "topics": "Node.js",
+      "comment": "Very helpful. Explains complicated topics in detail and simplifies it to make it easier to understand.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Sean",
+      "last": "Besilre-otL",
+      "date": "12/4/22",
+      "topics": "Challenge 12 material",
+      "comment": "Weng Fei Fung continues to be an outstanding tutor. My sessions with him are always incredibly helpful.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Haley",
+      "last": "",
+      "date": "12/8/22",
+      "topics": "session, sequelize",
+      "comment": "this tutor spoke alot about the concepts of each topic to help me grasp exactly what was needed for the challenege. while we didnt do much of the challenge together, he gave me alot of tools to work through it myself",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Conner",
+      "last": "Laruesn",
+      "date": "12/10/22",
+      "topics": "Server side api debugging and implementation",
+      "comment": "You are a magician, thank you so much for the help!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Ariana",
+      "last": "Cioa",
+      "date": "12/10/22",
+      "topics": "Pre work",
+      "comment": "The session was very helpful",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Lauren",
+      "last": "Sielzzwaick",
+      "date": "12/11/22",
+      "topics": "Homework assignment 3, functions, for loops, while loops, do while loops",
+      "comment": "The session was really helpful and my tutor walked me through the topics of the homework I was confused about step by step. He made sure I understood the code we worked on until I felt more clear. Unfortunately we ran out of the allotted time so I will definitely be scheduling with him again.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Frederick",
+      "last": "Dregii",
+      "date": "12/11/22",
+      "topics": "02- Challenge",
+      "comment": "Great tutor. He explained semantic elements well.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Ryan",
+      "last": "Dgno",
+      "date": "12/11/22",
+      "topics": "Routes",
+      "comment": "Great again to further my knowledge in routes, making it clear and understandable!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Bryan",
+      "last": "Slsio",
+      "date": "12/17/22",
+      "topics": "React, Apollo, GraphQL",
+      "comment": "Best tutor I've had this whole course, helped me perfectly understand everything I needed to know! I feel like I understand important concepts of React a lot better now __",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Allen",
+      "last": "Vlinac",
+      "date": "12/17/22",
+      "topics": "HTML and CSS",
+      "comment": "The tutor was very helpful.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Shujaa",
+      "last": "TiegrGn-ntero",
+      "date": "12/17/22",
+      "topics": "html, css",
+      "comment": "great!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Alejandro",
+      "last": "Aeoincs",
+      "date": "12/17/22",
+      "topics": "Express session log in & log out",
+      "comment": "Weng Fei Fung has been one of the best tutor that I've so far. He was able to explain to me the big picture in understanding express session and to implement the log in and log out function by putting everything together from creating the database, seeding it, then connect the database and listen to it to then connect to the other documents. I will definitely try to schedule more sessions with him in the future since he was very very helpful and make me understand in the way how he explained the topics to me.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Ryan",
+      "last": "Tarlyo",
+      "date": "12/17/22",
+      "topics": "node",
+      "comment": "Thanks!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Maria",
+      "last": "Jeuazr",
+      "date": "12/18/22",
+      "topics": "Module 3 challenge",
+      "comment": "Weng was super helpful and didn't just give me the answers, but forced me to think of solutions on my own. He kindly took the time to explain to me and showed me why the code works the way that it does. I'm confident that I'll be able to pick this back up on my own.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Ryan",
+      "last": "Dgno",
+      "date": "12/18/22",
+      "topics": "Sequalize, Routes, SQL, ORM",
+      "comment": "Great tutor session again! Cover's a lot and further's my studies. Thanks!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Jamie",
+      "last": "Zkoo",
+      "date": "12/18/22",
+      "topics": "General HTML and CSS",
+      "comment": "Overall, very helpful.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Prateek",
+      "last": "",
+      "date": "12/19/22",
+      "topics": "Yes best tutor!!",
+      "comment": "Best Tutor ever",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Cobi",
+      "last": "Gtkahtlcos",
+      "date": "12/31/22",
+      "topics": "MySQL, JavaScript, Express, Insomnia",
+      "comment": "Very good session. Helped me debug code that was preventing me from running the server.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Alexia",
+      "last": "Fsta",
+      "date": "12/31/22",
+      "topics": "JavaScript",
+      "comment": "Great at explaining concepts so that I can do better on my next assignment.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Shayna",
+      "last": "Mhyrpu",
+      "date": "1/1/23",
+      "topics": "handlebars, jquery, javascript",
+      "comment": "This was a very helpful tutoring session",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Rebecca",
+      "last": "Wdoo",
+      "date": "1/8/23",
+      "topics": "Javascript and functions etc",
+      "comment": "Weng was fantastic at explaining things, making sure I understood and was very generous with his time. Would recommend. Thanks!",
+      "course": "Skills Boot Camp - Front-end Webdev"
+    },
+    {
+      "first": "Danielle",
+      "last": "Oika",
+      "date": "1/8/23",
+      "topics": "my SQL, routing, local storage",
+      "comment": "this session really helped me clarify the concepts that I'd struggled with before",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Kristen",
+      "last": "",
+      "date": "1/8/23",
+      "topics": "Node.js and CSV",
+      "comment": "Weng Fei Fung is amazing! I wish I could of found him as a tutor earlier, yet I'm glad I did now! He is genuinely interested in helping, teaching, and learning! He is also very quick and at the same time explains thoroughly! I really appreciated today's session the most! Thank you, Weng Fei Fung!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Cobi",
+      "last": "Gtkahtlcos",
+      "date": "1/8/23",
+      "topics": "MVC",
+      "comment": "Very helpful and explains information in detail!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Ryan",
+      "last": "Dgno",
+      "date": "1/8/23",
+      "topics": "React",
+      "comment": "Great tutoring session! Learning REACT and trying to grasp the new concepts I learned the week prior. Learned alot again!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Prateek",
+      "last": "",
+      "date": "1/8/23",
+      "topics": "Express .js",
+      "comment": "The best tutor",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Erich",
+      "last": "Zigrlee",
+      "date": "1/14/23",
+      "topics": "JavaScript - Random Password Generator",
+      "comment": "Super helpful. Gave great guidance to help me work past the issues I was having.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Alexia",
+      "last": "Fsta",
+      "date": "1/14/23",
+      "topics": "jQuery JavaScript",
+      "comment": "Helped me understand who to de-bug",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Jazmine",
+      "last": "Gaciar",
+      "date": "1/14/23",
+      "topics": "SSH Key",
+      "comment": "You were very helpful! Thank you so much!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Joana",
+      "last": "Vaujlnila",
+      "date": "1/15/23",
+      "topics": "Fetching data",
+      "comment": "It was helpful",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "golnaz",
+      "last": "zgaohrilaf",
+      "date": "1/15/23",
+      "topics": "html and css",
+      "comment": "Weng Fei Fung is very knowledgeable and explain everything by detail :)",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Cobi",
+      "last": "",
+      "date": "1/15/23",
+      "topics": "Handlebars, Express, Routes",
+      "comment": "Very helpful! Takes the time to explain difficult concepts in a way that's easier for me to understand. Knowledgeable about why certain lines of code are causing my app to crash and knows how to set me in the right direction to fix it.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Ryan",
+      "last": "Dgno",
+      "date": "1/15/23",
+      "topics": "REACT",
+      "comment": "Great session as always, learned more about REACT specifically the fundamentals, how to get the react-router-dom working.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Jessica",
+      "last": "Ohob",
+      "date": "1/21/23",
+      "topics": "fs .map classes and more",
+      "comment": "So helpful!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Erich",
+      "last": "Zigrlee",
+      "date": "1/21/23",
+      "topics": "JavaScript - Challenge 04",
+      "comment": "Great tutoring session. Helped me to get off on the right foot with the challenge and wrap my head around how to proceed.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Alexia",
+      "last": "Fsta",
+      "date": "1/22/23",
+      "topics": "JavaScript",
+      "comment": "Great at walking through concepts",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Kristen",
+      "last": "Soeg",
+      "date": "1/22/23",
+      "topics": "React useState",
+      "comment": "Weng always tries to do his best to teach concept in a easiest possible way for students to understand! Much appreciated! Wished there was more time as always:)",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Cobi",
+      "last": "Gtkahtlcos",
+      "date": "1/22/23",
+      "topics": "JavaScript, CSS, Industry Insights",
+      "comment": "Very helpful. Gave insights to the tech industry hiring process and what recruiters may be looking for. Provided some resources for Css grid and potential projects to make on my own.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Ryan",
+      "last": "Dgno",
+      "date": "1/22/23",
+      "topics": "REACT",
+      "comment": "Learned more REACT fixed all my current Bugs and problems in my code, and learned even more!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Sean",
+      "last": "Besilre-otL",
+      "date": "1/22/23",
+      "topics": "JWT, debugging, node, express, handlebars,",
+      "comment": "I have tried a number of tutors through this program, and Weng Fei Fung is the best tutor I've had so far. He's is extremely knowledgable, very good at explaining things, and has a perfect balance of demonstrating while allowing me the opportunity to work through problems without simply giving me the answer. Weng Fei is a stellar tutor and should be promoted.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Yuri",
+      "last": "knwo",
+      "date": "1/22/23",
+      "topics": "node.js create a team profile generator",
+      "comment": "He is so GREAT!!!!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Tyler",
+      "last": "Lmengei",
+      "date": "1/23/23",
+      "topics": "Javascript",
+      "comment": "This was my third tutor. I had nearly given up on them as a resource for assistance. This session cleared up all the issues I was having and helped to consolidate my knowledge. My confidence has also been improved.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Kiseri",
+      "last": "Hteab",
+      "date": "1/28/23",
+      "topics": "react",
+      "comment": "great!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Jessica",
+      "last": "Ohob",
+      "date": "1/28/23",
+      "topics": "routes, controllers, insomnia",
+      "comment": "Great help!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Yuri",
+      "last": "Knwo",
+      "date": "1/28/23",
+      "topics": "Express.js",
+      "comment": "He is the BEST!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Zainab",
+      "last": "Dahbgba",
+      "date": "1/29/23",
+      "topics": "First week challenge, pseudo elements and styling classes",
+      "comment": "This was great. Weng Fei walked me through my code, was encouraging with what I've done right and walked me through what I've done wrong, most importantly, explaining WHY it is wrong and what I can do to fix it. This was extremely helpful.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Ryan",
+      "last": "Dgno",
+      "date": "1/29/23",
+      "topics": "REACT",
+      "comment": "Went over REACT, group project on how to return an array, went over some useful tools to utilize. Very great tutor and learn alot!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "ashley",
+      "last": "cunant errai",
+      "date": "1/29/23",
+      "topics": "node.js",
+      "comment": "very helpful",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Danielle",
+      "last": "Oika",
+      "date": "1/30/23",
+      "topics": "algoriths, CS binary search, sequelize",
+      "comment": "Mr Feng was very concise and helped me understand the topics I struggled with",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Jessica",
+      "last": "Ohob",
+      "date": "2/4/23",
+      "topics": "pwa",
+      "comment": "Great help!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Ryan",
+      "last": "Dgno",
+      "date": "2/4/23",
+      "topics": "REACT, Apollo, Heroku",
+      "comment": "Weng was great again! I learned so much and enjoy further learning by his teachings. Fixed and debugged the issues in REACT and learned how to use Apollo.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Jessica",
+      "last": "Ohob",
+      "date": "2/11/23",
+      "topics": "various",
+      "comment": "Great tutor!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Melissa",
+      "last": "Pnea",
+      "date": "2/11/23",
+      "topics": "Media queries, flex box, dev tools, css background images, w3schools",
+      "comment": "He was super helpful and knowledgeable with CSS, answered and addressed all of my questions/concerns. He also gave me alot of helpful tips that will help me code more efficiently!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Jeffrey",
+      "last": "Acrnkeam",
+      "date": "2/11/23",
+      "topics": "CSS Flexbox Styling",
+      "comment": "I greatly appreciate these tutoring sessions with Weng Fei Fung. He is very knowledgeable and the one-on-one sessions are very beneficial for me. I'd schedule one every day of the week if I was able.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Cobi",
+      "last": "Gtkahtlcos",
+      "date": "2/11/23",
+      "topics": "Mongodb",
+      "comment": "Very helpful! Explains difficult concepts in detail and in a way that's easier to comprehend.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Hayden",
+      "last": "DllilL-dnyoo",
+      "date": "2/11/23",
+      "topics": "handlebars.js",
+      "comment": "did a fantastic job, we had to spend a great deal of the session debugging which ended up being the newer version of handlebars.js was restricting objects be displayed on the page.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "ashley",
+      "last": "e aateir-runnc",
+      "date": "2/11/23",
+      "topics": "mysql",
+      "comment": "He is very helpful and knowledgable",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Sean",
+      "last": "Besilre-otL",
+      "date": "2/11/23",
+      "topics": "Mongoose",
+      "comment": "Weng Fei Fung did an amazing job again. He is incredibly talend at what he does as a tutor. He demonstrates very good knoweledge of programming and has a knack for teaching it.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Caoimhe",
+      "last": "Yugno",
+      "date": "2/12/23",
+      "topics": "mysql",
+      "comment": "Thank you so much! Resolved my initial issue and answered so many other questions. Feel very ready to get stuck into my challenge now!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Jeffrey",
+      "last": "Acrnkeam",
+      "date": "2/12/23",
+      "topics": "HTML + CSS, and Javascript",
+      "comment": "As always, this was a great session. Thanks!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Logan",
+      "last": "Einlotlghrw",
+      "date": "2/12/23",
+      "topics": "nodejs",
+      "comment": "Weng is a great tutor. I can tell he cares and knows a lot about web development. He shares his knowledge and explains concepts in ways that are easy to understand.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Yuri",
+      "last": "Knwo",
+      "date": "2/12/23",
+      "topics": "sequelize node.js",
+      "comment": "He is the best TUTOR!! explains well. I feel he really does his best!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Kristen",
+      "last": "",
+      "date": "2/12/23",
+      "topics": "javascript",
+      "comment": "Weng tries his best to teach programming concepts in a easiest possible way, which is always much appreciated!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Lawrence",
+      "last": "Stprwao",
+      "date": "2/13/23",
+      "topics": "Bootstrap & Style.css",
+      "comment": "Very knowledgeable and clear with instructions",
+      "course": "Skills Boot Camp - Front-end Webdev"
+    },
+    {
+      "first": "Jessica",
+      "last": "Ohob",
+      "date": "2/18/23",
+      "topics": "MERN GraphQL",
+      "comment": "Great explanations for how the code works",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Rolando",
+      "last": "Hrrerea",
+      "date": "2/18/23",
+      "topics": "fetch api & oop",
+      "comment": "Weng is worth his weight in gold, has a strong knowledge & great breakdown methods. I wouldn't recommend any other tutor",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "yuri",
+      "last": "knwo",
+      "date": "2/18/23",
+      "topics": "make a Tech blog with js",
+      "comment": "He is amazing tutor ever! he teaching me A LOT!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Tyler",
+      "last": "Lmengei",
+      "date": "2/19/23",
+      "topics": "Node.js",
+      "comment": "This session was great. The way that my tutor was able to break down larger concepts into small manageable concepts was very helpful. From discussing small parts of larger overall concepts I have a much better understanding and feel more confident moving forward. I will use this tutor again in the future for sure.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Tien",
+      "last": "DnlD nmaug hyPa",
+      "date": "2/19/23",
+      "topics": "Node.js",
+      "comment": "He really went above and beyond, really felt like he understood the problem and content and gave me a good explanations on aspects I did not understand and what each element did. Helped me grasp concepts and guided me to the answer instead of telling me it.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Lemseh",
+      "last": "Ceuabrsdl-ratlAhoh",
+      "date": "2/19/23",
+      "topics": "Basic HTML and CSS",
+      "comment": "Great session, I was able to understand the material better and great resources",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Cobi",
+      "last": "Gtkahtlcos",
+      "date": "2/19/23",
+      "topics": "PWA, Heroku deployments",
+      "comment": "Very helpful! Explained in detail how to go about debugging an issue I was having in the code and helped me deploy the application to Heroku.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Zainab",
+      "last": "Dahbgba",
+      "date": "2/19/23",
+      "topics": "Password generator",
+      "comment": "Weng Fei is awesome!!!! He doesn't just show me the correct way to do things, he guides me and quizzes me to make sure I understand all the way until we get to the right solution. He really helps make the code and assignments less overwhelming.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Megan",
+      "last": "Goisorlo",
+      "date": "2/19/23",
+      "topics": "Javascript event listeners, functions, arrays",
+      "comment": "He was very good at explaining the material and challenged me instead of giving me the answers. I learned a lot in this one session. He is a great tutor!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Jacob",
+      "last": "Mrnyaad",
+      "date": "2/19/23",
+      "topics": "help with challenge 5",
+      "comment": "he was very helpful and also asked if i wanted to learn to do it in jquery or vanilla js. He was informational about the differences in writing the code for each and I now have a better understanding of both",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Sean",
+      "last": "Besilre-otL",
+      "date": "2/19/23",
+      "topics": "React",
+      "comment": "Weng Fei Fung did an amazing job helping understand React! Not only did he help me to the point where I can continue to work on my challenge assignment, but he helped guide me through the process of looking through the documentation. This is very helpful in the future, so that I don't have to rely too heavily on asking help from others. I will be able to find the answers on my own. Weng Fei always does an amazing job as a tutor, please do everything you can to keep him on as a tutor or promote him to higher positions. He is a very knowledgable, hard working and has a very pleasant disposition.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Myeong",
+      "last": "Jngoe",
+      "date": "2/25/23",
+      "topics": "NoSQL",
+      "comment": "Thanks again",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Conner",
+      "last": "Laruesn",
+      "date": "2/25/23",
+      "topics": "regex",
+      "comment": "Thank you!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Donglan",
+      "last": "Cehn",
+      "date": "2/26/23",
+      "topics": "CSS responsive design & flexbox",
+      "comment": "Weng is professional and helpful! Thank you so much!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Zainab",
+      "last": "Ag bhaalDb",
+      "date": "2/26/23",
+      "topics": "Challenge 4",
+      "comment": "As usual, Weng Fei was able to walk me through what I got wrong and work with me until I got the correct answer. I love that he doesn't just take over and do it, he literally walks me through every single step until I get it. He's the best.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Cobi",
+      "last": "Gtkahtlcos",
+      "date": "2/26/23",
+      "topics": "Reactjs, Regex",
+      "comment": "Very helpful! Takes the time to explain every step in addressing code errors and implementing desired functionality to the application.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "yuriKwon",
+      "last": "",
+      "date": "2/26/23",
+      "topics": "MVC",
+      "comment": "He is the BEST TUtor!!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Sean",
+      "last": "Besilre-otL",
+      "date": "2/26/23",
+      "topics": "React",
+      "comment": "Weng Fei did an amazing job helping me to understand React. He has an incredible talent for explaining things and making sure I understand what he taught. He always shows great understanding of the material. Weng Fei always performs above and beyond as a tutor compared to some of the other tutors I have experienced from 2U.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Erich",
+      "last": "Zigrlee",
+      "date": "2/26/23",
+      "topics": "JavaScript / Node JS",
+      "comment": "Very helpful. Set me off on the right foot and now have a better idea of where to continue after.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Lemseh",
+      "last": "Ceuabrsdl-ratlAhoh",
+      "date": "2/26/23",
+      "topics": "Advanced CSS Flexbox",
+      "comment": "Very helpful with the visuals so I can understand the material better",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Kristen",
+      "last": "Soeg",
+      "date": "3/4/23",
+      "topics": "Js fundamentals es6",
+      "comment": "Weng is knowledgeable!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Jeffrey",
+      "last": "Acrnkeam",
+      "date": "3/4/23",
+      "topics": "React, routers, browserRouter, components, some css",
+      "comment": "As always, these sessions are extremely helpful. Weng is one of the more knowledgeable and helpful tutors I've had the opportunity to work with. I just wish I could get more time with him.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "ashley",
+      "last": "e inrean crtua",
+      "date": "3/4/23",
+      "topics": "challenge 10",
+      "comment": "Always helpful! very nice and kind",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Sean",
+      "last": "Besilre-otL",
+      "date": "3/4/23",
+      "topics": "GraphQL",
+      "comment": "Weng Fei did an amazing job! I had a very difficult problem to solve, and Weng Fei made sure that he finished the lesson knowing that I was unstuck and could continue with the group project! Weng Fei maybe the best tutor among the list of tutors to choose from. Please do what it takes to keep him as a tutor or promote him to hire positions. He is very good at what he does and clearly takes pride in his work.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Jake",
+      "last": "Rnbooins",
+      "date": "3/5/23",
+      "topics": "Flexbox, JS",
+      "comment": "Extremely helpful and reassuring",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Tyler",
+      "last": "Lmengei",
+      "date": "3/5/23",
+      "topics": "express",
+      "comment": "This tutor is the only one that I use. He is able to simplify things really well and understands quickly where I am missing something. With his help I can solidify my knowledge of a number of concepts in the short tutoring session that help me continue my work independantly.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Zainab",
+      "last": "Dahbgba",
+      "date": "3/5/23",
+      "topics": "Challenge 5 and challenge 6 - roadmap for building projects",
+      "comment": "Weng Fei is FANTASTIC -- not only did he look at my code (which was functioning fine) he taught me how to make better, cleaner and more responsive to different browsers. He helped me think about roadmaps and strategies for tackling big projects and 'from scratch' challenges, which have been very overwhelming. He is amazing!!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Jacob",
+      "last": "Mrnyaad",
+      "date": "3/5/23",
+      "topics": "challenge 18",
+      "comment": "He showed me through errors I had and step by step ways to setup a nosql database",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "tania",
+      "last": "vsliololab",
+      "date": "3/5/23",
+      "topics": "html css",
+      "comment": "the audio in zoom wasnt working",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "angel",
+      "last": "zalaaetv",
+      "date": "3/5/23",
+      "topics": "javascript",
+      "comment": "very helpful",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "yuri",
+      "last": "cnoi kwoh",
+      "date": "3/5/23",
+      "topics": "MVC",
+      "comment": "he is the best tutor!!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Jeffrey",
+      "last": "Acrnkeam",
+      "date": "3/11/23",
+      "topics": "JS API Calls",
+      "comment": "This session was very helpful. We were able to touch on most of the points I was uncertain about and I think I should be able to complete the assignment with the information provided. Weng is by far one of the best tutors I've worked with. He's extremely knowledgeable and really seems to care about my success.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Cobi",
+      "last": "Gtkahtlcos",
+      "date": "3/11/23",
+      "topics": "MERN, CSS, React, JavaScript",
+      "comment": "Very helpful! Explains every step that is taken in detail so I can understand how the code is working together as a whole. Really satisfied with my tutoring sessions with Weng.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "angel",
+      "last": "zalaaetv",
+      "date": "3/11/23",
+      "topics": "display api",
+      "comment": "very informative",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Erich",
+      "last": "Zigrlee",
+      "date": "3/11/23",
+      "topics": "Jest, Express.JS",
+      "comment": "Had a review session to go over topics that I needed a little more help understanding and working with. Was helpful!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Tyler",
+      "last": "Lmengei",
+      "date": "3/12/23",
+      "topics": "Mysql",
+      "comment": "This session was once again extremely helpful. Every time I have a session with this tutor I feel more confident about my coding ability. I have had other tutors that have made me feel the opposite. I highly recommend this tutor.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Donglan",
+      "last": "Cehn",
+      "date": "3/12/23",
+      "topics": "JavaScript",
+      "comment": "Fung is awesome, patient and professtional!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Zainab",
+      "last": "Dahbgba",
+      "date": "3/12/23",
+      "topics": "Server side APIs",
+      "comment": "Weng Fei never disappoints. He quizzes me through out the session to make sure that I understood the concepts and code he helped me with, he refers me to fantastic resources and he always walks me through the code from beginning to end to make sure I understand how it works. Hands down my favorite tutor and the one who has helped me the most since the beginning of the bootcamp. I actually used a method he taught me in one of our earlier sessions on the project!! I was so happy!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Jackilyn",
+      "last": "Tna",
+      "date": "3/12/23",
+      "topics": "HTML JS CSS",
+      "comment": "Thank you for helping put together logic on the code and making it make sense at our level",
+      "course": "Skills Boot Camp - Front-end Webdev"
+    },
+    {
+      "first": "Jonathan",
+      "last": "Cehn",
+      "date": "3/12/23",
+      "topics": "SQL",
+      "comment": "Session was very efficient and helpful, tutor was easy to understand and did a good job",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Tyler",
+      "last": "Lmengei",
+      "date": "3/13/23",
+      "topics": "Mysql",
+      "comment": "This was another great session with this tutor.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Kristen",
+      "last": "Soeg",
+      "date": "3/18/23",
+      "topics": "logic, fundamentals, etc",
+      "comment": "Weng is super helpful. He is very knowledgeable!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Young",
+      "last": "Jgan",
+      "date": "3/18/23",
+      "topics": "homework, css, javascript",
+      "comment": "Weng did an awesome job addressing my questions. Thank you.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "yuri",
+      "last": "Knwo",
+      "date": "3/18/23",
+      "topics": "regex",
+      "comment": "He is the best",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Erich",
+      "last": "Zigrlee",
+      "date": "3/18/23",
+      "topics": "Challenge 12",
+      "comment": "Great, as always! Helpful and sets me off on the right foot.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Tyler",
+      "last": "Lmengei",
+      "date": "3/19/23",
+      "topics": "sequelize",
+      "comment": "This tutor is able to clarify anything I am struggling with and often identifies why it is or what it is that is confusing me. Highly reccomend.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Anthony",
+      "last": "Dadnino",
+      "date": "3/19/23",
+      "topics": "SQL, Insomnia, ORM, MySQL2",
+      "comment": "Great job! Helped me with blockers and ensured that I understood everything as well. Would definitely use him again!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Cobi",
+      "last": "",
+      "date": "3/19/23",
+      "topics": "MERN",
+      "comment": "Weng is a great tutor. As someone who has never written a line of code before this bootcamp, he has been an instrumental part of me learning how to code these past 6 months. He is incredibly knowledgeable about his craft and breaks down complicated information in a way that's easier for me to understand. I'm very satisfied with all of the tutoring sessions I've had with Weng.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Ian",
+      "last": "Daasn",
+      "date": "3/19/23",
+      "topics": "Git commands",
+      "comment": "The session was great! They got aa good understanding of what I already knew and learned in the prework and helped me to move beyond that material by working through some new examples that I hadn't worked with yet to make sure that I could apply the concepts correctly",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "angel",
+      "last": "zalaaetv",
+      "date": "3/19/23",
+      "topics": "Homework ReadMe project",
+      "comment": "Super helpful, breaks down material makes it easier to understand.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "CJ",
+      "last": "Nwlele",
+      "date": "3/19/23",
+      "topics": "Handlebars, MySQL JavaScript",
+      "comment": "Really helpful and Mvo d me past where I was stuck",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Gene",
+      "last": "Kmi",
+      "date": "3/25/23",
+      "topics": "Week 18 challenge",
+      "comment": "Weng was great. He helped me get a better understanding of how the challenge is supposed to work and gave me better direction on how to go about completing it.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Michelle",
+      "last": "Coirrea",
+      "date": "3/25/23",
+      "topics": "JavaScript",
+      "comment": "The tutor was really interested in helping me and did not get impatient",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Erich",
+      "last": "Zigrlee",
+      "date": "3/25/23",
+      "topics": "MySQL",
+      "comment": "Always very helpful",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Tyler",
+      "last": "Lmengei",
+      "date": "3/26/23",
+      "topics": "Mysql",
+      "comment": "This was another super helpful session. I always feel more confident after working with this tutor.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Donglan",
+      "last": "Cehn",
+      "date": "3/26/23",
+      "topics": "javascript dayjs dates",
+      "comment": "The tutor is awesome!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Ben",
+      "last": "Cantecut",
+      "date": "3/26/23",
+      "topics": "CSS Flex boxes and basic HTML structure",
+      "comment": "Tutor was extremely helpful during the session. Showed genuine interest in helping me fix my code and showed me some new tricks to improve for next time. Seriously can't thank him enough for the extra time and effort he put into helping today. THANK YOU",
+      "course": "Skills Boot Camp - Front-end Webdev"
+    },
+    {
+      "first": "Zainab",
+      "last": "Ag bhaalDb",
+      "date": "3/26/23",
+      "topics": "Node Js, OOP",
+      "comment": "This session was a little different for me and Weng, I don't have a challenge next week so I used this time to ask him to explain concepts that I didn't understand in class. After he explained them, AND got me to try them a light bulb went off in my head. I honestly think Weng Fei is my savior for this bootcamp. He is always patient, he is great at not only explaining by example, but also by training. When he explains something to me it sticks and I can use it for modules and lessons to come. He is the absolute best.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Kristen",
+      "last": "Soeg",
+      "date": "3/26/23",
+      "topics": "multiple topics",
+      "comment": "THANK YOU, WENG!!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Angel",
+      "last": "",
+      "date": "3/26/23",
+      "topics": "MySQL",
+      "comment": "one of the best tutors explains and helps guide what im supposed to do in clarity.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Will",
+      "last": "Wdoo",
+      "date": "3/26/23",
+      "topics": "GitHub Pages issue",
+      "comment": "Weng was super positive and helpful! Got me fixed up and all set with plenty of time to spare.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "yuri",
+      "last": "Knwo",
+      "date": "3/26/23",
+      "topics": "NoSQL",
+      "comment": "He is always the best!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "yuri",
+      "last": "knwo",
+      "date": "4/1/23",
+      "topics": "PWA",
+      "comment": "He explains things well in great detail and with kindness, and his passion overflows. I would like to praise him for that",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Tyler",
+      "last": "Lmengei",
+      "date": "4/2/23",
+      "topics": "sequelize",
+      "comment": "Another great session with this great tutor.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Zainab",
+      "last": "Dahbgba",
+      "date": "4/2/23",
+      "topics": "Module 9 challenge",
+      "comment": "As usual, Weng looked at my (working) code and suggested a few methods to make it better, more readable and more professional. I honestly could not be happier with the support he provides. I always go to Weng when things don't make sense in class and his teaching method is spectacular. He gives me resources and teaches me how to code things in a way that sticks in my brain. Idk what I would do without Weng honestly.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Stephen",
+      "last": "Mvo",
+      "date": "4/2/23",
+      "topics": "Function Declaration/Expression and Weekly Challenge #3",
+      "comment": "Everything explained was easily understandable",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Jackilyn",
+      "last": "Tna",
+      "date": "4/2/23",
+      "topics": "Node js JavaScript",
+      "comment": "I hope your path in the future leads you back to teaching. Thank you so much for helping me understand things in my skill level.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "yuri",
+      "last": "knwo",
+      "date": "4/8/23",
+      "topics": "React",
+      "comment": "HE is the best tutor!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Kristen",
+      "last": "Soeg",
+      "date": "4/8/23",
+      "topics": "Git and much more!",
+      "comment": "As always, weng is awesome!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Donglan",
+      "last": "Cehn",
+      "date": "4/9/23",
+      "topics": "JQuery & API",
+      "comment": "Nice & Helpful!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Zainab",
+      "last": "Dahbgba",
+      "date": "4/9/23",
+      "topics": "OOP, technical issues with node and npm installation",
+      "comment": "I have been struggling with some technical issues that forced me to switch computers, which meant migrating everything to the new computer. This slowed me down and it was so Dagn hard. I was stuck on git and node they weren't working and Weng set it up for me and now everything works JUST FINE!!!! In addition he helped me figure out why my tests were failing for challenge 10 and helped me understand why that was happening, and structure my code. Weng is always amazing, he always helps me understand things I didn't understand in class. I'm so glad I'm able to connect with him weekly to see where my progress is at.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Tyler",
+      "last": "Lmengei",
+      "date": "4/9/23",
+      "topics": "mod 14",
+      "comment": "This tutor is fantastic. Always helps to build my confidence.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Conner",
+      "last": "Laruesn",
+      "date": "4/9/23",
+      "topics": "project",
+      "comment": "thank you!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "yuri",
+      "last": "knwo",
+      "date": "4/9/23",
+      "topics": "React",
+      "comment": "HE IS THE BEST!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Angel",
+      "last": "",
+      "date": "4/9/23",
+      "topics": "SQL and Debugging",
+      "comment": "Very helpful i'm always learning new tricks when he teaches me.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Erich",
+      "last": "Zigrlee",
+      "date": "4/9/23",
+      "topics": "Node JS, Sequelize, Express, Handlebars",
+      "comment": "Helped me to better understand how the different JS pages interact with each other and how routes work",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Tyler",
+      "last": "Lmengei",
+      "date": "4/10/23",
+      "topics": "mod 14",
+      "comment": "Another great session with this great tutor.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Kristen",
+      "last": "Soeg",
+      "date": "4/15/23",
+      "topics": "css, etc",
+      "comment": "Always great!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Tyler",
+      "last": "Leg,ein",
+      "date": "4/16/23",
+      "topics": "mod 14",
+      "comment": "Another great tutor session with a great tutor",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Jake",
+      "last": "Myboel",
+      "date": "4/16/23",
+      "topics": "JavaScript API",
+      "comment": "He was really Helpful",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Majid",
+      "last": "Puoazeikrm",
+      "date": "4/17/23",
+      "topics": "React",
+      "comment": "Great work explaining React components",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Angel",
+      "last": "",
+      "date": "4/22/23",
+      "topics": "JATE homework",
+      "comment": "Very helpful and understood everything and showed me cool shortcuts and things that help great tutor.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Gene",
+      "last": "Kmi",
+      "date": "4/22/23",
+      "topics": "ReactJS",
+      "comment": "Weng is great at explaining topics very clearly and has helped a lot",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Tyler",
+      "last": "Lmengei",
+      "date": "4/23/23",
+      "topics": "mod 14",
+      "comment": "This tutor is the best. I wish he was my instructor.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Donglan",
+      "last": "Cehn",
+      "date": "4/23/23",
+      "topics": "OOP & Node js& jest",
+      "comment": "Professional & Helpful! really enjoy the tutorial session with him",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Blanca",
+      "last": "Higdlao",
+      "date": "4/23/23",
+      "topics": "Index.js + OOP",
+      "comment": "Weng was awesome. Understood what I needed to work on very quickly and helped me debug the assignment I was working on while also explaining what had gone wrong - and explaining concepts along the way. He also made sure to add value towards the end of the session when we had 10 minutes to spare after looking at my assignment and debugging. Thank you!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Zainab",
+      "last": "Dahbgba",
+      "date": "4/23/23",
+      "topics": "mysql challenge",
+      "comment": "As usual, Weng Fei helped me immensely. We approached this session a bit differently since I haven't started working on the challenge, we mapped the workload in a way that makes sense and he explained to me how to go about multi-layered projects from the bottom up. I honestly don't think I can get through this Bootcamp without Weng Fei!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Thanh",
+      "last": "Dano",
+      "date": "4/23/23",
+      "topics": "OOP, Classes, Constructor functions, prototype functions, README-Generator assignment, SVG assignment",
+      "comment": "Mr. Fung was very polite and courteous, he went above and beyond to help me solve my confusions and problems. He is very helpful and knowledgable.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "yuri",
+      "last": "c wnok",
+      "date": "4/23/23",
+      "topics": "MERN",
+      "comment": "I can feel his energy for teaching me. HE is the best tutor ever!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Jonathan",
+      "last": "Senlgrti",
+      "date": "4/29/23",
+      "topics": "HTML, Git, CSS",
+      "comment": "Nice guy, very accommodating. Knew his stuff!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "yuri",
+      "last": "cnoi kwoh",
+      "date": "4/29/23",
+      "topics": "MERN",
+      "comment": "he is the best Tutor ever!!!!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Erich",
+      "last": "Zigrlee",
+      "date": "4/29/23",
+      "topics": "Mongoose / MongoDB /",
+      "comment": "Helped me figure out and problem solve some bugs I was having and then I was able to move forward working on routing my app",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Tyler",
+      "last": "Lmengei",
+      "date": "4/30/23",
+      "topics": "Full stack navigation",
+      "comment": "This tutor is fantastic",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Donglan",
+      "last": "Cehn",
+      "date": "4/30/23",
+      "topics": "Express.js",
+      "comment": "Helpful and knowledgable! learn new things!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Blanca",
+      "last": "Higdlao",
+      "date": "4/30/23",
+      "topics": "Express.js, Node.js",
+      "comment": "Weng Fei is always very helpful and explains very well. Thank you",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Jackilyn",
+      "last": "Tna",
+      "date": "4/30/23",
+      "topics": "OOP ORM",
+      "comment": "Weng has been my go-to tutor. His knowledge, enthusiasm, and passion for teaching have been consistent. I do not bother trying it with other people, which has failed hence me going back. I hope he becomes an instructor. The course could benefit from his teaching skills.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Dawn",
+      "last": "Kinel",
+      "date": "4/30/23",
+      "topics": "Challenge 10, SVG Logo Maker",
+      "comment": "Weng Fei Fung was great!! Very knowledgeable and helpful.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Lemseh",
+      "last": "Ceuabrsdl-ratlAhoh",
+      "date": "4/30/23",
+      "topics": "Media Query Screen",
+      "comment": "Very helpful explaining dimensions visually",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Thanh",
+      "last": "Dano",
+      "date": "4/30/23",
+      "topics": "OOP, Tests",
+      "comment": "Mr. Fung was very helpful and friendly as usual. He is going to be my go-to tutor from now on.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Tyler",
+      "last": "Lmengei",
+      "date": "5/1/23",
+      "topics": "full stack",
+      "comment": "This was another great session from this tutor.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "yuri",
+      "last": "knwo",
+      "date": "5/6/23",
+      "topics": "React bootstrap",
+      "comment": "He is the best tutor.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Tyler",
+      "last": "Lmengei",
+      "date": "5/7/23",
+      "topics": "React",
+      "comment": "This tutor is always able to clarify any grey Arase for me and helps build my confidence with coding!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Donglan",
+      "last": "Cehn",
+      "date": "5/7/23",
+      "topics": "MySQL",
+      "comment": "Very helpful and Fung made content easy to understand! Thanks a lot!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Zainab",
+      "last": "Dahbgba",
+      "date": "5/7/23",
+      "topics": "Project 2 handlebars and database relationships",
+      "comment": "Ok, Weng is the best!! He not only helps me with my code but he makes sure I understand what the heck is going on so I can do it by myself next time. He always shows me new tools to use and websites to test things on. I love working with him. Give him a raise!!!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Dawn",
+      "last": "Kinel",
+      "date": "5/7/23",
+      "topics": "homework challenge",
+      "comment": "Weng Fei Fung is very knowledgeable and a great teacher. I appreciate his patience and ability to explain topics thoroughly.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Tyler",
+      "last": "Lmengei",
+      "date": "5/8/23",
+      "topics": "React",
+      "comment": "This tutor is really great at explaining things. He is also good at quickly identifying what I am confused about, or what pieces of the puzzle I am missing.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Blanca",
+      "last": "",
+      "date": "5/11/23",
+      "topics": "REACT",
+      "comment": "Weng is awesome. We covered the very basics of REACT, and I now know what to focus on to continue learning today - and what to prioritise! He is always generous with his time - and always get's to the point while explaining well.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Eric",
+      "last": "Dernzer",
+      "date": "5/13/23",
+      "topics": "MySQL/Homework 12",
+      "comment": "Weng was awesome! Super knowledgeable and helped me work out a bunch of bugs in my app. Highly recommend!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Thanh",
+      "last": "Dano",
+      "date": "5/13/23",
+      "topics": "mysql, Employee-Tracker assignment",
+      "comment": "My tutor was very helpful and knowledgeable as usual.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Tyler",
+      "last": "Lmengei",
+      "date": "5/14/23",
+      "topics": "NoSql",
+      "comment": "This tutor is amazing. I always feel more confident about my ability after working with him.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Donglan",
+      "last": "Cehn",
+      "date": "5/14/23",
+      "topics": "Sequelize",
+      "comment": "helpful as usual!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Dominic",
+      "last": "Jnsakco",
+      "date": "5/14/23",
+      "topics": "Use Mutations, mongoose, graphql",
+      "comment": "Very patient and worked very hard to talk me through their thought process. Would use again.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Jackilyn",
+      "last": "Tna",
+      "date": "5/14/23",
+      "topics": "Web Design",
+      "comment": "He is extremely effective and I hope he switches to full-time teaching",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Kristen",
+      "last": "Soeg",
+      "date": "5/14/23",
+      "topics": "Post Delete",
+      "comment": "progress is always fun!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Lemseh",
+      "last": "Ceuabrsdl-ratlAhoh",
+      "date": "5/14/23",
+      "topics": "Flexbox, Git Add, Git Commit Commands",
+      "comment": "These resources that I received are very useful for my understanding of front-end development.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "richard",
+      "last": "Apinllsa",
+      "date": "5/14/23",
+      "topics": "express, fetch, get, post, methods",
+      "comment": "Weng Fei does a very good job of explaining concepts in a way that makes it easier to grasp. Breaks down complicated topics/concepts (the subjects I'm having difficulty understanding) into smaller, digestible parts and uses real world examples and metaphors that allows me to understand better the how and why of it. You can tell he is doing his best to move through the session being mindful of the level of understanding I have and he is genuinely trying to help me. Good person. Very happy I was able to schedule with him!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Blanca",
+      "last": "Higdlao",
+      "date": "5/15/23",
+      "topics": "Sequelize, Insomnia",
+      "comment": "Weng is always great. Great guidance and efficient in the limited time we have! Thanks Weng!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Eric",
+      "last": "",
+      "date": "5/20/23",
+      "topics": "MySQL, Homework 12",
+      "comment": "Weng is amazing. Incredibly knowledgeable; answers all questions and showed great interest in helping out. Thanks!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Eric",
+      "last": "Dernzer",
+      "date": "5/20/23",
+      "topics": "ORM/Homework 13",
+      "comment": "I had scheduled this session after my first and Weng was still attentive and helpful. Great breadth of knowledge and engaged. Highly recommend.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Zainab",
+      "last": "Dahbgba",
+      "date": "5/20/23",
+      "topics": "Computer Science for JS",
+      "comment": "This session was a little different, I didn't have a project or challenge due, so Weng and I went through the activities that I didn't fully understand in class. He was fantastic, as usual. When he didn't know the answer to something he taught me the methodology of how to go about looking for answers. He helped me go beyond understanding the activity to understanding the concept and how to apply it. I love working with Weng, he is always the best.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Thanh",
+      "last": "Dano",
+      "date": "5/20/23",
+      "topics": "mysql, module 12 assignment",
+      "comment": "Mr. Wei was super enthusiastic and helpful.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Cristal",
+      "last": "Rariev",
+      "date": "5/20/23",
+      "topics": "Handlebars, Homework, Project2, Javascript,Mysql2,Database,Package.json",
+      "comment": "Weng's exceptional assistance enabled me to overcome a challenge that had troubled me for two weeks, a feat he effortlessly accomplished in just 12 minutes.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Donglan",
+      "last": "Cehn",
+      "date": "5/21/23",
+      "topics": "handlebars",
+      "comment": "very clear and helpful!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Saniyya",
+      "last": "MoCnnldce",
+      "date": "5/21/23",
+      "topics": "noSQL routing/ models",
+      "comment": "Helpful! Thank you!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Maridon",
+      "last": "KtneolmR eehayn",
+      "date": "5/21/23",
+      "topics": "JavaScript, JSON, JQuery",
+      "comment": "Explained concepts well and in an easy to understand way, explained how/why we were doing what we were doing.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Brandon",
+      "last": "Cnhin",
+      "date": "5/21/23",
+      "topics": "heroku, fetch and get request using express",
+      "comment": "Very nice showed extra tips to help facilitate new learning/faster coding",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Michell",
+      "last": "Rmanah",
+      "date": "5/21/23",
+      "topics": "OOP",
+      "comment": "Rare quality of being genuinely interested in teaching you and making sure you understand, fantastic educator",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Erich",
+      "last": "Zigrlee",
+      "date": "5/21/23",
+      "topics": "PWA / Javascript / Webpack",
+      "comment": "Helped me debug and get through some complex/confusing errors",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Kristen",
+      "last": "Soeg",
+      "date": "5/27/23",
+      "topics": "programming logic",
+      "comment": "Thanks so much, Weng!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Eric",
+      "last": "Dernzer",
+      "date": "5/27/23",
+      "topics": "ORM/Sequelize",
+      "comment": "Excellent tutor, very knowledgeable and able to explain concepts comprehensively. Thank you!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "richard",
+      "last": "apinllsa",
+      "date": "5/27/23",
+      "topics": "mysql, sequelize",
+      "comment": "Really look forward to my sessions with Weng Fei Fung as I know that he is going to help me to gain a better, deeper understanding of whatever topic we cover. He uses examples to illustrate purpose, meaning, and usage that make it easier to comprehend and gives me more confidence to take another step forward. Great technical expertise together with an awesome teaching style and friendly, patient, thorough approach- awesome teacher.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Lemseh",
+      "last": "Ceuabrsdl-ratlAhoh",
+      "date": "5/27/23",
+      "topics": "README.md set up and MongoDB set up",
+      "comment": "Very helpful sending me resources and helping me how to create each category visually in README.md file",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Tyler",
+      "last": "Lmengei",
+      "date": "5/28/23",
+      "topics": "nosql",
+      "comment": "This tutor is amazing. He has helped me so much throughout the course. I always feel like he cares about my success. I wish he could have been my instructor as his explanation of things is always so much clearer than in my classes.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Donglan",
+      "last": "Cehn",
+      "date": "5/28/23",
+      "topics": "Handlebars",
+      "comment": "Helpful!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Adorah",
+      "last": "Toh",
+      "date": "5/28/23",
+      "topics": "employee tracker assignment",
+      "comment": "Weng went above and beyond with making sure I understand the assignment and provided notes to help guide me on what to do next. That is much appreciated!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Jackilyn",
+      "last": "Tna",
+      "date": "5/28/23",
+      "topics": "MVC Handlebars Regex",
+      "comment": "Weng is a fantastic teacher and a great mentor, facilitator, and source of inspiration. They empower students to unlock their potential, instilling them with the confidence and skills needed to embark on future success. His expertise, dedication, and passion for teaching, shape the next generation of professionals. I really do hope he becomes a boot camp teacher! Future students could benefit from his communication skills and ability to translate complicated concepts into simpler, brain-parseable terms.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "saniyya",
+      "last": "mocnnldce",
+      "date": "5/28/23",
+      "topics": "express.js and started PWA assignment",
+      "comment": "very helpful",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "brandon",
+      "last": "cnhin",
+      "date": "5/28/23",
+      "topics": "orm",
+      "comment": "great guidance",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Erich",
+      "last": "Zigrlee",
+      "date": "5/28/23",
+      "topics": "React",
+      "comment": "Taught me some new things and helped me get through the parts that I was stuck on.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Tyler",
+      "last": "Lmengei",
+      "date": "5/29/23",
+      "topics": "nosql",
+      "comment": "This tutor is awesome. This is my last tutor session as I complete the course this week. I am very grateful for all the help this tutor has given me. It has often helped with my overall confidence in learning so many new skills.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Blanca",
+      "last": "Higdlao",
+      "date": "5/29/23",
+      "topics": "Sequelize, handlebars, javascript",
+      "comment": "Weng is the best tutor I've had during this whole 4 months doing the bootcamp. He is insanely good and efficient at reading all code - in the limited time we have together, to prioritise and help with what's needed to cover. He explain step by step. He almost things out loud while explaining greatly. He is also extremely generous. Today, had a student cancellation during my session so he was generous enough to spend extra time with me. It's not the first time he does this. He is so good at debugging as always, and also providing feedback on what I need to focus on, learn more and better.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Eric",
+      "last": "Dernzer",
+      "date": "6/3/23",
+      "topics": "Mongoose/MongoDB/HW 18",
+      "comment": "Weng is awesome as always. Extremely knowledgeable and breaks down all the concepts so that I can digest them easily. Super helpful.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Nawal",
+      "last": "Jmaa",
+      "date": "6/3/23",
+      "topics": "Password generator",
+      "comment": "Explained things very well, helped me understand important concepts",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Thanh",
+      "last": "Dano",
+      "date": "6/3/23",
+      "topics": "Project 2",
+      "comment": "Best tutor ever.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Dahn",
+      "last": "Bye",
+      "date": "6/3/23",
+      "topics": "Express.js",
+      "comment": "Tutor was very helpful and very knowledgeable Thank you!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Brandon",
+      "last": "Cnhin",
+      "date": "6/3/23",
+      "topics": "group project",
+      "comment": "thanks",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Donglan",
+      "last": "Cehn",
+      "date": "6/4/23",
+      "topics": "react",
+      "comment": "great!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Blanca",
+      "last": "Higdlao",
+      "date": "6/4/23",
+      "topics": "REACT, Final Project",
+      "comment": "Weng, as always, is great. Gave me great guidance on how to approach this project and where to focus on as of right now.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Joel",
+      "last": "Gtkeez",
+      "date": "6/4/23",
+      "topics": "javascript, challenge5",
+      "comment": "Not only did Weng help me out with my current project problems. He also helped prepare me for coding interviews in the future and a great resource. super helpful!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Saniyya",
+      "last": "MoCnnldce",
+      "date": "6/4/23",
+      "topics": "webpack / mod 19 HW",
+      "comment": "Very helpful and walks through every detail step by step checking for understanding along the way. I wouldn't have been able to finish my last few assignments without his help!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Jackilyn",
+      "last": "Tna",
+      "date": "6/4/23",
+      "topics": "MVC OOP",
+      "comment": "Please do not tire in doing what you do. You are one of the most helpful educators around.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Eric",
+      "last": "Dernzer",
+      "date": "6/10/23",
+      "topics": "NoSQL and PWAs",
+      "comment": "Weng is awesome as always. Incredibly knowledgeable and helped me immensely through the two sessions I booked. Thanks!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Connor",
+      "last": "Nses",
+      "date": "6/10/23",
+      "topics": "Coding Resources, Class Preparedness",
+      "comment": "Super friendly and eager to get me set up with all kinds of things that are going to be helpful going forward! I'm confident I have my workspace set up correctly, understand some ways to make using VSCode and command line more streamlined, and have access to every kind of resource for troubleshooting and studying than I could have imagined.",
+      "course": "Skills Boot Camp - Front-end Webdev"
+    },
+    {
+      "first": "Joshua",
+      "last": "Cotxaln",
+      "date": "6/10/23",
+      "topics": "React",
+      "comment": "Weng is awesome. My bootcamp is wrapping up, and out of all of the tutors I've worked with he exhibits to best balance of teaching and demonstrating. He both makes sure that I better learn the material while assisting me with the implementation. 10/10",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Donglan",
+      "last": "Cehn",
+      "date": "6/11/23",
+      "topics": "blog homework",
+      "comment": "Very helpful and full of knowledge",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Zainab",
+      "last": "Dahbgba",
+      "date": "6/11/23",
+      "topics": "NOSql challenge",
+      "comment": "Weng has been my lifeline through this bootcamp. He is always patient, incredibly smart and so very helpful. He never just gives me the answers, he always explains why the answer is what it is, which in turn helps me understand the concepts and assignments better.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Jackilyn",
+      "last": "Tna",
+      "date": "6/11/23",
+      "topics": "Regex",
+      "comment": "The Bootcamp live classes can highly benefit from Weng. Please move him. He is extremely knowledgeable and excels at teaching and explaining even the most difficult technical concepts. He is an excellent educator who actually cares about his students' learning.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Doug",
+      "last": "Gohotur",
+      "date": "6/11/23",
+      "topics": "HTML and CSS",
+      "comment": "The session was good",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Hung",
+      "last": "Qgnu ocDa",
+      "date": "6/11/23",
+      "topics": "Assigment on server API",
+      "comment": "Good tutor",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Eric",
+      "last": "",
+      "date": "6/17/23",
+      "topics": "PWAs, React",
+      "comment": "Weng is awesome as always; he is always ready to go and interested in helping. He breaks concepts down very clearly. Much appreciated!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Thanh",
+      "last": "Togan uDrn",
+      "date": "6/17/23",
+      "topics": "Assignment 14",
+      "comment": "My tutor was super helpful and friendly. I recommend him to everyone",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Donglan",
+      "last": "Cehn",
+      "date": "6/18/23",
+      "topics": "Mongoose",
+      "comment": "very helpful!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Blanca",
+      "last": "Higdlao",
+      "date": "6/18/23",
+      "topics": "Node, Express",
+      "comment": "Weng is awesome. Managed to debug with me while explaining, in the limited time we have together. He is again, as always, generous with this time. Thank you Weng!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Zainab",
+      "last": "Dahbgba",
+      "date": "6/18/23",
+      "topics": "Challenge 18 and Challenge 10",
+      "comment": "Weng is the best. He explained to me why my code wasn't working by debugging it with. He was amazing. I can't thank him enough.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Jackilyn",
+      "last": "Tna",
+      "date": "6/18/23",
+      "topics": "PWA",
+      "comment": "I greatly appreciated your approachability and willingness to address the most difficult questions or concerns and your commitment to our success. Your patience and willingness to go the extra mile seal the understanding of the subject in question. Your guidance on assignments and projects is truly invaluable in helping me improve my skills. Again, please transfer to the full boot camp teaching.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Avani",
+      "last": "Jajead",
+      "date": "6/18/23",
+      "topics": "MERN",
+      "comment": "Thank you",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "brandon",
+      "last": "Cnhin",
+      "date": "6/18/23",
+      "topics": "javascript",
+      "comment": "answered questions and taught shortcuts for faster coding",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Thanh",
+      "last": "Dano",
+      "date": "6/24/23",
+      "topics": "Assignment 14",
+      "comment": "My tutor never failed to be super helpful and engaging. Would recommend him to everyone",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Eric",
+      "last": "Dernzer",
+      "date": "6/24/23",
+      "topics": "React/HW 20",
+      "comment": "Weng is always a pleasure to learn from. He is extremely knowledgeable and breaks down all concepts in simple terms. He is truly invested in helping and instructing. I cannot recommend him enough. Thank you!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Thanh",
+      "last": "Dano",
+      "date": "6/24/23",
+      "topics": "Assignment 14",
+      "comment": "Mr. Weng was extra engaging and helpful as usual. He continued to show how knowledgeable he is.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Blanca",
+      "last": "Higdlao",
+      "date": "6/24/23",
+      "topics": "API Routes, Insomnia",
+      "comment": "Weng managed to cover everything I needed to cover - and right on time! Awesome session, he is very clear and very efficient when having to debug and explain at the same time. Thanks again Weng!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Donglan",
+      "last": "Cehn",
+      "date": "6/25/23",
+      "topics": "PWA",
+      "comment": "The tutor helped me understand the concept a lot! very clear and professional!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Samuel",
+      "last": "Bkmenae",
+      "date": "6/25/23",
+      "topics": "jQuery, week 5 challenge, career services",
+      "comment": "Session was great, Weng Fei was very clear and friendly!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Zainab",
+      "last": "Dahbgba",
+      "date": "6/25/23",
+      "topics": "MVC, React, Mern, GraphQL",
+      "comment": "As usual, Weng Fei helped me. I was on the verge of breakdown because no matter what I tried with the code it would not work! He went through each one of my problems with me, one at a time, patiently explaining and debugging and explaining. He made me pseudo code to understand a concept and helped me off the ledge of what seemed like an inevitable cry session. I wouldn't have gotten through this bootcamp without him.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Jose",
+      "last": "Gllinue",
+      "date": "6/25/23",
+      "topics": "CSS, width properties, mobile first, @media queries",
+      "comment": "He genuinely wanted to help and did so. It's up to me to put in the practice!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Diana",
+      "last": "Falabe",
+      "date": "6/25/23",
+      "topics": "CSS html",
+      "comment": "Thank you for your help!",
+      "course": "Skills Boot Camp - Front-end Webdev"
+    },
+    {
+      "first": "Eric",
+      "last": "Dernzer",
+      "date": "7/1/23",
+      "topics": "React/HW 20",
+      "comment": "Weng is incredibly thorough and always completely engaged. He genuinely wants to help and explains all concepts covered in great detail. He is an amazing tutor; 10/10!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Donglan",
+      "last": "Cehn",
+      "date": "7/2/23",
+      "topics": "React",
+      "comment": "Big help and clear explanation!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Blanca",
+      "last": "Higdlao",
+      "date": "7/2/23",
+      "topics": "REACT, CSS",
+      "comment": "Weng helped me super proactively with my React App structure and styling. He gave me awesome structure, advise and guidance to continue working on my app. Thanks as always Weng!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Zainab",
+      "last": "Dahbgba",
+      "date": "7/2/23",
+      "topics": "MVC, REACT, Project 3",
+      "comment": "Like, the worst bug was in my code. I had no idea how to go about finding it and Weng Fei gave me a masterclass in debugging.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Eric",
+      "last": "Dernzer",
+      "date": "7/8/23",
+      "topics": "MERN Stack Final Project",
+      "comment": "Weng is amazing has always; it's been a pleasure working with him. He's always interested in helping and extremely knowledgeable. Thank you!!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Donglan",
+      "last": "Cehn",
+      "date": "7/9/23",
+      "topics": "Project 3",
+      "comment": "great! learn a lot from the tutor!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Blanca",
+      "last": "Higdlao",
+      "date": "7/9/23",
+      "topics": "REACT, Routing, Proxy, CSS",
+      "comment": "Weng was super helpful. He understood what I needed to get out of the session and went above and beyond to help me as much as possible in the time together. See you next Sunday again Weng!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Zainab",
+      "last": "Dahbgba",
+      "date": "7/9/23",
+      "topics": "Project 3",
+      "comment": "We had the weirdest most obscure react bugs in our code and weng expertly figured them out with me, walked me through different solutions, tried with me. He is just the best. I honestly cannot thank him enough.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Pablo",
+      "last": "Vlnaolil",
+      "date": "7/9/23",
+      "topics": "React",
+      "comment": "Great session, very little time",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Yega",
+      "last": "Coh",
+      "date": "7/9/23",
+      "topics": "Module 1 Challenge",
+      "comment": "Great tutor.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Albi",
+      "last": "KaniqsiR",
+      "date": "7/15/23",
+      "topics": "project 3",
+      "comment": "was good really good at5 explain his thought process and how the code works",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Thanh",
+      "last": "Dano",
+      "date": "7/15/23",
+      "topics": "React, Assignment 20",
+      "comment": "My tutor was super helpful as usual. Would recommend him to everyone",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Joshua",
+      "last": "Hlli",
+      "date": "7/15/23",
+      "topics": "JavaScript",
+      "comment": "I like how the tutor was able to understand my code, teach me new approaches on how to complete a problem, and was able to point me in the right direction after our session was nearly up so that I can continue solving solutions to my problems.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Blanca",
+      "last": "Higdlao",
+      "date": "7/16/23",
+      "topics": "REACT, Axios",
+      "comment": "Weng was able to navigate my app and gave me a bit of feedback - even with the complexity of it, we managed to solve a couple of problems - he is again generous with his time, thank you Weng",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Donglan",
+      "last": "Cehn",
+      "date": "7/16/23",
+      "topics": "Project3",
+      "comment": "Great help! Thanks a lot!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Ross",
+      "last": "Fhana",
+      "date": "7/16/23",
+      "topics": "???",
+      "comment": "Very helpful in terms on design ideas I can use in my project.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Thanh",
+      "last": "Dano",
+      "date": "7/22/23",
+      "topics": "React Challenge",
+      "comment": "Mr. Weng is a great tutor and is super helpful.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Samuel",
+      "last": "Tlee",
+      "date": "7/22/23",
+      "topics": "SQL queries and inquirer prompt functionality.",
+      "comment": "Session went well, lots learned and time flew",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Tyler",
+      "last": "Mlnoea",
+      "date": "7/22/23",
+      "topics": "git, github, gitlab",
+      "comment": "Weng was super friendly, helpful and knowledgable. I am very new to coding an he was patient enough to walk me through the processes.",
+      "course": "Skills Boot Camp - Front-end Webdev"
+    },
+    {
+      "first": "Joel",
+      "last": "Gtkeez",
+      "date": "7/22/23",
+      "topics": "Challenge 11",
+      "comment": "Weng was absolutely amazing. He broke down all the questions I had into really small bits of explanation that made it very easy to process. He also used similarities from real world to explain how the code works which made it easier to learn. I would definitely recommend Weng to anyone who is stuck on a challenge or for a coding refresher. Excellent.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Donglan",
+      "last": "Cehn",
+      "date": "7/23/23",
+      "topics": "Project 3 React file upload",
+      "comment": "Professional and helpful! clear explanation",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Blanca",
+      "last": "Higdlao",
+      "date": "7/23/23",
+      "topics": "REACT, MERN, MONGO, JWT",
+      "comment": "Wend was amazing. He was able to solve one of the most important features of my app, by rendering my whole database into a specific component. He picked up all the random packages I had added super quickly. Thank you Weng, you are amazing!",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Joel",
+      "last": "Gtkeez",
+      "date": "7/23/23",
+      "topics": "Challenge 11",
+      "comment": "Did a really great job helping me finish challenge and answered all other questions",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Jackilyn",
+      "last": "Tna",
+      "date": "7/23/23",
+      "topics": "Full Stack",
+      "comment": "I am incredibly grateful for the opportunity to write this review for my coding tutor, who has undoubtedly been the linchpin in my successful journey throughout my coding bootcamp. Without any exaggeration, I firmly believe that I would not have been able to graduate and achieve the level of proficiency I now possess without his exceptional guidance and mentoring.",
+      "course": "FSF - Full Stack Flex"
+    },
+    {
+      "first": "Donglan",
+      "last": "Cehn",
+      "date": "7/24/23",
+      "topics": "Project3 Heroku",
+      "comment": "Thanks a lot for helping me figure out a lot of issues! really appreciate! Very patient and professional!",
+      "course": "FSF - Full Stack Flex"
+    }
+  ]
+}

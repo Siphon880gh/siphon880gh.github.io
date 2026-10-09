@@ -2408,6 +2408,7 @@ a.passion-expand-btn:hover { color: var(--c3); }
   font-weight: 500;
   z-index: 1;
 }
+.teaching-log-scroll--page { max-height: min(70vh, 760px); }
 .teaching-log-table td:nth-child(1) { white-space: nowrap; width: 5.5rem; }
 .teaching-log-table td:nth-child(2) { width: 9rem; }
 .visually-hidden {

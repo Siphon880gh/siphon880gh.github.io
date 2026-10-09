@@ -2,3 +2,7 @@
 node_modules/
 .DS_Store
 backups/
+
+# Original tutoring export. npm run build scrambles last names into assets/data/student-sessions.json.
+student-private-info/
+student-private-info.zip

@@ -1,0 +1,7 @@
+{
+  "name": "weng-industry",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build-students.mjs"
+  }
+}

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem("weng-theme");
+        var theme = stored === "day" || stored === "night"
+          ? stored
+          : (window.matchMedia("(prefers-color-scheme: dark)").matches ? "night" : "day");
+        document.documentElement.setAttribute("data-theme", theme);
+        if (stored !== "day" && stored !== "night") {
+          document.documentElement.setAttribute("data-theme-source", "system");
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tutoring students — Weng Industry</title>
+  <meta name="description" content="Weng tutored coding bootcamp students across Trilogy, 2U, and edX. Session feedback, with last names blurred.">
+  <meta property="og:title" content="Tutoring students — Weng Industry">
+  <meta property="og:description" content="Senior tutor for coding bootcamps across Trilogy, 2U, and edX. Session feedback with last names blurred.">
+  <meta property="og:image" content="../../assets/img/brand/promo.jpg">
+  <link rel="icon" href="../../assets/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="../../assets/css/style.css?v=students1">
+</head>
+<body>
+  <header class="site-header">
+    <div class="inner">
+      <a class="brand" href="../../">
+        <img src="../../assets/img/brand/logo-light.png" alt="Weng Industry — Realize your tech dreams">
+      </a>
+      <div class="header-tools">
+        <button type="button" class="theme-switch" aria-pressed="false" aria-label="Day theme. Switch to night.">
+          <span class="theme-switch-icon" aria-hidden="true"></span>
+          <span class="theme-switch-label"></span>
+        </button>
+        <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+      </div>
+      <div class="nav-panel">
+        <nav class="nav-primary" aria-label="Primary">
+          <a href="../../">Home</a>
+          <a href="../../projects/">Work</a>
+          <div class="nav-item has-dropdown">
+            <div class="nav-item-head">
+              <a href="../../services/" class="nav-parent">Services</a>
+              <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-controls="nav-menu-services" aria-label="Services submenu"><span aria-hidden="true">▾</span></button>
+            </div>
+            <ul class="nav-dropdown" id="nav-menu-services" inert>
+              <li><a href="../../services/#build-services">Build</a></li>
+              <li><a href="../../services/#advise-services">Advise</a></li>
+            </ul>
+          </div>
+          <a href="../../passion/">Passion</a>
+          <div class="nav-item has-dropdown">
+            <div class="nav-item-head">
+              <a href="../" class="nav-parent active">About</a>
+              <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-controls="nav-menu-about" aria-label="About submenu"><span aria-hidden="true">▾</span></button>
+            </div>
+            <ul class="nav-dropdown" id="nav-menu-about" inert>
+              <li><a href="../">Whoami</a></li>
+              <li><a href="./">Tutoring students</a></li>
+              <li><a href="../../credentials/?tab=certificates">Certificates</a></li>
+              <li><a href="../../credentials/?tab=achievements#tutoring">Achievements</a></li>
+              <li><a href="../../credentials/?tab=credited">Credited / Mentioned</a></li>
+            </ul>
+          </div>
+          <a href="../../contact/?path=not-sure">Contact</a>
+        </nav>
+        <div class="nav-socials">
+          <a href="https://github.com/Siphon880gh" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/weng-fung/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.youtube.com/@WengTeachesCode" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="mailto:weng.f.fung@gmail.com" aria-label="Email"><i class="fa fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="cred-kicker">About</p>
+      <h1>Tutoring students</h1>
+      <p>Senior tutor for coding bootcamps across Trilogy, 2U, and edX. Taught <strong data-student-count>159</strong> students over <span data-session-count>371</span> logged sessions. Every student rated the tutor 5/5 for genuine interest in helping. Last names are blurred.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Student feedback</div>
+        <h2>What students wrote</h2>
+        <p>Session comments from the tutoring log. Topics show the languages and stacks covered.</p>
+      </div>
+      <figure class="teaching-shot">
+        <img src="../../assets/img/students/testimonials-tutor/a.png" alt="Screenshot collage of coding student tutoring testimonials" loading="lazy">
+      </figure>
+      <div class="teaching-quotes">
+        <figure class="teaching-quote">
+          <blockquote>“Weng is fantastic. From when he first helped me in the AskBCS chat, he has shown his depth of knowledge and genuine wish to help make me a better coder. He found analogies to explain complex topics that really stuck with me…”</blockquote>
+          <figcaption>— Arielle <span class="student-lastname" title="Last name blurred for privacy" aria-label="last name hidden">SmiakhElla-ckcn</span> · 8/30/22 · Javascript best practices / planning / debugger</figcaption>
+        </figure>
+        <figure class="teaching-quote">
+          <blockquote>“Really appreciate my tutor's support and patience with me. He is one of the best teachers I've ever had.”</blockquote>
+          <figcaption>— Tatiana <span class="student-lastname" title="Last name blurred for privacy" aria-label="last name hidden">Colnsil</span> · 8/31/22 · JavaScript</figcaption>
+        </figure>
+        <figure class="teaching-quote">
+          <blockquote>“Weng was super helpful, very friendly, and very knowledgable! I would love to request Weng again as a tutor! He not only answered my question, but he reviewed concepts that he felt would benefit me further in my studies.”</blockquote>
+          <figcaption>— Sean <span class="student-lastname" title="Last name blurred for privacy" aria-label="last name hidden">Besilre-otL</span> · 9/5/22 · Pre-work</figcaption>
+        </figure>
+        <figure class="teaching-quote">
+          <blockquote>“Weng is the best tutor I've had during this whole 4 months doing the bootcamp. He is insanely good and efficient at reading all code… He explain step by step.”</blockquote>
+          <figcaption>— Blanca <span class="student-lastname" title="Last name blurred for privacy" aria-label="last name hidden">Higdlao</span> · 5/29/23 · Sequelize, Handlebars, JavaScript</figcaption>
+        </figure>
+        <figure class="teaching-quote">
+          <blockquote>“Weng is a fantastic teacher and a great mentor… His expertise, dedication, and passion for teaching, shape the next generation of professionals.”</blockquote>
+          <figcaption>— Jackilyn <span class="student-lastname" title="Last name blurred for privacy" aria-label="last name hidden">Tna</span> · 5/28/23 · MVC Handlebars Regex</figcaption>
+        </figure>
+        <figure class="teaching-quote">
+          <blockquote>“Weng Fei never disappoints. He quizzes me through out the session… Hands down my favorite tutor and the one who has helped me the most since the beginning of the bootcamp.”</blockquote>
+          <figcaption>— Zainab <span class="student-lastname" title="Last name blurred for privacy" aria-label="last name hidden">Dahbgba</span> · 3/12/23 · Server-side APIs</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft" id="log">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Teaching log</div>
+        <h2><span data-session-count>371</span> sessions</h2>
+        <p>Same export that sat at the bottom of the old portfolio Students section. Search by first name, topic, or comment. Last names in this table are scrambled, then blurred.</p>
+      </div>
+      <div class="teaching-log-toolbar">
+        <label class="teaching-log-search">
+          <span class="visually-hidden">Search teaching log</span>
+          <input type="search" id="teaching-log-q" placeholder="Filter by student, topic, or comment…" autocomplete="off">
+        </label>
+        <p class="teaching-log-status" id="teaching-log-status" aria-live="polite">Loading log…</p>
+      </div>
+      <div class="teaching-log-scroll teaching-log-scroll--page" tabindex="0">
+        <table class="teaching-log-table">
+          <thead>
+            <tr>
+              <th scope="col">Date</th>
+              <th scope="col">Student</th>
+              <th scope="col">Topics</th>
+              <th scope="col">Comment</th>
+            </tr>
+          </thead>
+          <tbody id="teaching-log-body" data-sessions-url="../../assets/data/student-sessions.json">
+            <tr><td colspan="4">Loading…</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Rated as a tutor</div>
+        <h2>Supervisor shout-outs and 5/5 ratings</h2>
+        <p>Supervisors giving shout-outs on Slack, plus rating dashboards. Every student who rated the tutor marked genuine interest as 5 out of 5, ahead of the team goal.</p>
+      </div>
+      <h3 class="teaching-subhead">Slack shout-outs from supervisors</h3>
+      <div class="teaching-gallery">
+        <button type="button" class="teaching-enlarge" data-full="../../assets/img/students/testimonials-la/a.png" data-caption="Supervisor Slack shout-out screenshot A" aria-label="Enlarge: Supervisor Slack shout-out screenshot A"><img src="../../assets/img/students/testimonials-la/a.png" alt="Supervisor Slack shout-out screenshot A" loading="lazy"></button>
+        <button type="button" class="teaching-enlarge" data-full="../../assets/img/students/testimonials-la/d.png" data-caption="Supervisor Slack shout-out screenshot D" aria-label="Enlarge: Supervisor Slack shout-out screenshot D"><img src="../../assets/img/students/testimonials-la/d.png" alt="Supervisor Slack shout-out screenshot D" loading="lazy"></button>
+        <button type="button" class="teaching-enlarge" data-full="../../assets/img/students/testimonials-la/c.png" data-caption="Supervisor Slack shout-out screenshot C" aria-label="Enlarge: Supervisor Slack shout-out screenshot C"><img src="../../assets/img/students/testimonials-la/c.png" alt="Supervisor Slack shout-out screenshot C" loading="lazy"></button>
+        <button type="button" class="teaching-enlarge" data-full="../../assets/img/students/testimonials-la/b.png" data-caption="Supervisor Slack shout-out screenshot B" aria-label="Enlarge: Supervisor Slack shout-out screenshot B"><img src="../../assets/img/students/testimonials-la/b.png" alt="Supervisor Slack shout-out screenshot B" loading="lazy"></button>
+      </div>
+      <h3 class="teaching-subhead">Ratings — max stars from every student who rated</h3>
+      <div class="teaching-gallery">
+        <button type="button" class="teaching-enlarge" data-full="../../assets/img/students/scores-la/a.png" data-caption="Tutoring rating dashboard screenshot A" aria-label="Enlarge: Tutoring rating dashboard screenshot A"><img src="../../assets/img/students/scores-la/a.png" alt="Tutoring rating dashboard screenshot A" loading="lazy"></button>
+        <button type="button" class="teaching-enlarge" data-full="../../assets/img/students/scores-la/b.png" data-caption="Tutoring rating dashboard screenshot B" aria-label="Enlarge: Tutoring rating dashboard screenshot B"><img src="../../assets/img/students/scores-la/b.png" alt="Tutoring rating dashboard screenshot B" loading="lazy"></button>
+        <button type="button" class="teaching-enlarge" data-full="../../assets/img/students/scores-la/c.png" data-caption="Tutoring rating dashboard screenshot C" aria-label="Enlarge: Tutoring rating dashboard screenshot C"><img src="../../assets/img/students/scores-la/c.png" alt="Tutoring rating dashboard screenshot C" loading="lazy"></button>
+        <button type="button" class="teaching-enlarge" data-full="../../assets/img/students/scores-la/d.png" data-caption="Tutoring rating dashboard screenshot D" aria-label="Enlarge: Tutoring rating dashboard screenshot D"><img src="../../assets/img/students/scores-la/d.png" alt="Tutoring rating dashboard screenshot D" loading="lazy"></button>
+      </div>
+      <h3 class="teaching-subhead">Team vs You — outperforming comparison metrics</h3>
+      <div class="teaching-gallery">
+        <button type="button" class="teaching-enlarge" data-full="../../assets/img/students/scores-la/a2.png" data-caption="Team vs You comparison screenshot A" aria-label="Enlarge: Team vs You comparison screenshot A"><img src="../../assets/img/students/scores-la/a2.png" alt="Team vs You comparison screenshot A" loading="lazy"></button>
+        <button type="button" class="teaching-enlarge" data-full="../../assets/img/students/scores-la/b2.png" data-caption="Team vs You comparison screenshot B" aria-label="Enlarge: Team vs You comparison screenshot B"><img src="../../assets/img/students/scores-la/b2.png" alt="Team vs You comparison screenshot B" loading="lazy"></button>
+        <button type="button" class="teaching-enlarge" data-full="../../assets/img/students/scores-la/c2.png" data-caption="Team vs You comparison screenshot C" aria-label="Enlarge: Team vs You comparison screenshot C"><img src="../../assets/img/students/scores-la/c2.png" alt="Team vs You comparison screenshot C" loading="lazy"></button>
+        <button type="button" class="teaching-enlarge" data-full="../../assets/img/students/scores-la/d2.png" data-caption="Team vs You comparison screenshot D" aria-label="Enlarge: Team vs You comparison screenshot D"><img src="../../assets/img/students/scores-la/d2.png" alt="Team vs You comparison screenshot D" loading="lazy"></button>
+      </div>
+    </div>
+  </section>
+
+  <dialog class="lightbox" id="teaching-lightbox" aria-labelledby="teaching-lightbox-caption">
+    <div class="lightbox-frame">
+      <button type="button" class="lightbox-close" data-lightbox-close aria-label="Close enlarged image">Close</button>
+      <img id="teaching-lightbox-img" alt="">
+      <p id="teaching-lightbox-caption"></p>
+    </div>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="container inner">
+      <div class="copy">© Weng Fei Fung · Weng Industry · Los Angeles</div>
+      <nav aria-label="Footer">
+        <a href="../../">Home</a>
+        <a href="../../projects/">Work</a>
+        <a href="../../services/">Services</a>
+        <a href="../../passion/">Passion</a>
+        <a href="../">About</a>
+        <a href="../../contact/?path=not-sure">Contact</a>
+        <a class="footer-credentials" href="../../credentials/">Credentials</a>
+      </nav>
+      <div class="socials">
+        <a href="https://github.com/Siphon880gh" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/weng-fung/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.youtube.com/@WengTeachesCode" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </footer>
+  <script src="../../assets/js/main.js?v=students1"></script>
+</body>
+</html>

@@ -765,7 +765,7 @@
     const root = document.querySelector(".cred-page");
     if (!root) return;
 
-    const achievementAnchors = ["achievements", "open-source", "leaderboards", "top-marks"];
+    const achievementAnchors = ["achievements", "tutoring", "open-source", "leaderboards", "top-marks"];
     const creditedAnchors = ["credited", "featured"];
 
     function tabForAnchor(id) {
@@ -867,7 +867,6 @@
   // Passion: teaching detail panel
   (function initTeachingPanel() {
     const dialog = document.getElementById("teaching-panel");
-    if (!dialog) return;
 
     // Manager & company praises: click-to-enlarge (reuse credentials lightbox pattern)
     (function initTeachingLightbox() {
@@ -876,7 +875,7 @@
       const caption = document.getElementById("teaching-lightbox-caption");
       if (!lb || !shot || !caption) return;
       let lastTrigger = null;
-      dialog.addEventListener("click", function (e) {
+      (dialog || document).addEventListener("click", function (e) {
         const btn = e.target.closest(".teaching-enlarge");
         if (!btn) return;
         e.preventDefault();
@@ -905,6 +904,7 @@
 
     let lastTrigger = null;
     let logRows = null;
+    let logMeta = null;
     let logLoaded = false;
 
     function openPanel(trigger) {
@@ -924,7 +924,7 @@
       else dialog.removeAttribute("open");
     }
 
-    document.querySelectorAll("[data-open-teaching]").forEach(function (el) {
+    if (dialog) document.querySelectorAll("[data-open-teaching]").forEach(function (el) {
       el.addEventListener("click", function (e) {
         if (el.tagName === "BUTTON" || el.tagName === "A") {
           e.preventDefault();
@@ -951,53 +951,43 @@
       }
     });
 
-    dialog.addEventListener("click", function (e) {
-      if (e.target === dialog || e.target.closest("[data-teaching-close]")) {
-        closePanel();
-      }
-    });
-    dialog.addEventListener("close", function () {
-      try {
-        if (window.location.hash === "#teaching") {
-          history.replaceState({}, "", window.location.pathname + window.location.search);
+    if (dialog) {
+      dialog.addEventListener("click", function (e) {
+        if (e.target === dialog || e.target.closest("[data-teaching-close]")) {
+          closePanel();
         }
-      } catch (e) {}
-      if (lastTrigger && typeof lastTrigger.focus === "function") lastTrigger.focus();
-    });
+      });
+      dialog.addEventListener("close", function () {
+        try {
+          if (window.location.hash === "#teaching") {
+            history.replaceState({}, "", window.location.pathname + window.location.search);
+          }
+        } catch (e) {}
+        if (lastTrigger && typeof lastTrigger.focus === "function") lastTrigger.focus();
+      });
+    }
 
     try {
-      if ((window.location.hash || "").replace("#", "") === "teaching") {
+      if (dialog && (window.location.hash || "").replace("#", "") === "teaching") {
         window.setTimeout(function () { openPanel(document.getElementById("teaching")); }, 0);
       }
     } catch (e) {}
 
-    function parseCsv(text) {
-      const rows = [];
-      let i = 0;
-      let field = "";
-      let row = [];
-      let inQuotes = false;
-      while (i < text.length) {
-        const c = text[i];
-        if (inQuotes) {
-          if (c === '"') {
-            if (text[i + 1] === '"') { field += '"'; i += 2; continue; }
-            inQuotes = false; i++; continue;
-          }
-          field += c; i++; continue;
-        }
-        if (c === '"') { inQuotes = true; i++; continue; }
-        if (c === ",") { row.push(field); field = ""; i++; continue; }
-        if (c === "\n" || c === "\r") {
-          if (c === "\r" && text[i + 1] === "\n") i++;
-          row.push(field); field = "";
-          if (row.length > 1 || (row[0] && row[0].trim())) rows.push(row);
-          row = []; i++; continue;
-        }
-        field += c; i++;
+    function studentCell(row) {
+      function esc(s) {
+        return String(s || "")
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;");
       }
-      if (field.length || row.length) { row.push(field); rows.push(row); }
-      return rows;
+      if (!row.last) return esc(row.first);
+      return (
+        esc(row.first) +
+        ' <span class="student-lastname" title="Last name blurred for privacy" aria-label="last name hidden">' +
+        esc(row.last) +
+        "</span>"
+      );
     }
 
     function ensureLog() {
@@ -1008,31 +998,21 @@
       const q = document.getElementById("teaching-log-q");
       if (!body) return;
 
-      const csvUrl = new URL("../assets/data/student-ratings.csv", window.location.href).href;
-      fetch(csvUrl)
+      const sessionsUrl = body.getAttribute("data-sessions-url")
+        || new URL("../assets/data/student-sessions.json", window.location.href).href;
+      fetch(sessionsUrl)
         .then(function (res) {
           if (!res.ok) throw new Error("HTTP " + res.status);
-          return res.text();
+          return res.json();
         })
-        .then(function (text) {
-          const grid = parseCsv(text);
-          if (!grid.length) throw new Error("empty");
-          const header = grid[0].map(function (h) { return String(h || "").trim(); });
-          const idx = {
-            name: header.indexOf("Student Full Name:"),
-            date: header.indexOf("Session Date:"),
-            topics: header.indexOf("Topic(s) Covered"),
-            comment: header.indexOf("Please share some comments in regards to the session and tutor. Thank you.")
-          };
-          logRows = grid.slice(1).map(function (r) {
-            return {
-              name: (r[idx.name] || "").trim(),
-              date: (r[idx.date] || "").trim(),
-              topics: (r[idx.topics] || "").trim(),
-              comment: (r[idx.comment] || "").trim()
-            };
-          }).filter(function (r) { return r.name || r.comment; });
-          if (status) status.textContent = logRows.length + " sessions in log";
+        .then(function (data) {
+          logRows = (data.sessions || []).filter(function (r) {
+            return (r.first || r.last || r.comment);
+          });
+          logMeta = data;
+          if (status) {
+            status.textContent = (data.studentCount || 0) + " students · " + logRows.length + " sessions";
+          }
           renderLog("");
           if (q) {
             q.addEventListener("input", function () {
@@ -1055,31 +1035,34 @@
         ? logRows
         : logRows.filter(function (r) {
             return (
-              r.name.toLowerCase().indexOf(q) !== -1 ||
-              r.topics.toLowerCase().indexOf(q) !== -1 ||
-              r.comment.toLowerCase().indexOf(q) !== -1 ||
-              r.date.toLowerCase().indexOf(q) !== -1
+              String(r.first || "").toLowerCase().indexOf(q) !== -1 ||
+              String(r.last || "").toLowerCase().indexOf(q) !== -1 ||
+              String(r.topics || "").toLowerCase().indexOf(q) !== -1 ||
+              String(r.comment || "").toLowerCase().indexOf(q) !== -1 ||
+              String(r.date || "").toLowerCase().indexOf(q) !== -1 ||
+              String(r.course || "").toLowerCase().indexOf(q) !== -1
             );
           });
       if (status) {
-        status.textContent = filtered.length + " of " + logRows.length + " sessions" + (q ? " (filtered)" : "");
+        const students = (logMeta && logMeta.studentCount) || 0;
+        status.textContent = students + " students · " + filtered.length + " of " + logRows.length + " sessions" + (q ? " (filtered)" : "");
       }
       const max = 200;
       const slice = filtered.slice(0, max);
+      function esc(s) {
+        return String(s || "")
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;");
+      }
       body.innerHTML = slice
         .map(function (r) {
-          function esc(s) {
-            return String(s)
-              .replace(/&/g, "&amp;")
-              .replace(/</g, "&lt;")
-              .replace(/>/g, "&gt;")
-              .replace(/"/g, "&quot;");
-          }
           return (
             "<tr><td>" +
             esc(r.date) +
             "</td><td>" +
-            mePrivacyNameHtml(r.name) +
+            studentCell(r) +
             "</td><td>" +
             esc(r.topics) +
             "</td><td>" +
@@ -1097,6 +1080,8 @@
           " matches — refine the filter to narrow further.</td></tr>";
       }
     }
+
+    if (!dialog && document.getElementById("teaching-log-body")) ensureLog();
   })();
 
 
