@@ -413,6 +413,18 @@ html.is-depth .flagship-card {
   border-color: var(--c2);
   color: #001129;
 }
+.depth-chapter .notes-other {
+  margin: 1.35rem 0 0;
+  max-width: 52rem;
+}
+.depth-chapter .notes-other-label,
+.depth-chapter .notes-other li:not(:last-child)::after {
+  color: var(--text-muted);
+}
+.depth-chapter .notes-other a {
+  color: var(--c2);
+}
+.depth-chapter .notes-other a:hover { color: var(--c3); }
 
 .work-stack {
   transform-style: preserve-3d;
@@ -1217,8 +1229,16 @@ html[data-theme="day"] .depth-chapter .notes-more-label {
   color: #7a5b00;
 }
 html[data-theme="day"] .depth-chapter .notes-links a:hover,
-html[data-theme="day"] .depth-chapter .notes-biz:hover .notes-biz-open {
+html[data-theme="day"] .depth-chapter .notes-biz:hover .notes-biz-open,
+html[data-theme="day"] .depth-chapter .notes-other a:hover {
   color: var(--c1);
+}
+html[data-theme="day"] .depth-chapter .notes-other-label,
+html[data-theme="day"] .depth-chapter .notes-other li:not(:last-child)::after {
+  color: var(--text-body);
+}
+html[data-theme="day"] .depth-chapter .notes-other a {
+  color: #7a5b00;
 }
 html[data-theme="day"]:not(.is-depth) .depth-chapter[data-depth="work"] {
   background:

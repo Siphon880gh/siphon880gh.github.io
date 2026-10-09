@@ -840,10 +840,44 @@ html[data-theme="night"] .theme-switch-label::before { content: "Night"; }
 .notes-links a:focus-visible,
 .notes-mini:focus-visible,
 .notes-biz:focus-visible,
-.notes-visual:focus-visible {
+.notes-visual:focus-visible,
+.notes-other a:focus-visible {
   outline: 2px solid var(--c3);
   outline-offset: 3px;
 }
+.notes-other {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35rem 0.85rem;
+  margin: 0 0 1.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.84rem;
+  line-height: 1.55;
+}
+.notes-other-label {
+  margin: 0;
+  color: var(--text-body);
+}
+.notes-other ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.notes-other li:not(:last-child)::after {
+  content: "·";
+  margin: 0 0.55rem;
+  color: var(--text-body);
+}
+.notes-other a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+.notes-other a:hover { color: var(--c1); }
 @media (max-width: 960px) {
   .project-lead { grid-template-columns: 1fr; }
 }
