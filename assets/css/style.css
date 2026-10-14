@@ -1697,6 +1697,14 @@ body.contact-drawer-open { overflow: hidden; }
 }
 .path-option strong { font-size: 0.95rem; }
 .path-option small { color: var(--text-body); font-size: 0.82rem; }
+.path-option > i {
+  flex: 0 0 1.25rem;
+  width: 1.25rem;
+  margin-top: 0.15rem;
+  color: var(--c3);
+  font-size: 1.05rem;
+  text-align: center;
+}
 
 @media (max-width: 960px) {
   .path-cards,
