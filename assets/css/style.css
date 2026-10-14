@@ -2375,6 +2375,9 @@ a.passion-expand-btn:hover { color: var(--c3); }
   scrollbar-width: thin;
 }
 .teaching-lang-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
   flex: 0 0 auto;
   font-family: var(--font-mono);
   font-size: 0.78rem;
@@ -2395,10 +2398,24 @@ a.passion-expand-btn:hover { color: var(--c3); }
   outline: 2px solid var(--c3);
   outline-offset: 2px;
 }
+.teaching-lang-chip i {
+  font-size: 1.05rem;
+  line-height: 1;
+}
+.teaching-lang-chip .devicon-javascript-plain,
+.teaching-lang-chip .devicon-react-original {
+  background: #323330;
+  border-radius: 4px;
+  padding: 0.12rem 0.16rem;
+}
 .teaching-lang-chip.is-active {
   background: var(--c1);
   border-color: var(--c1);
   color: var(--c3);
+}
+.teaching-lang-chip.is-active i {
+  color: var(--c3);
+  background: transparent;
 }
 
 /* Student last-name privacy: scrambled text + visual blur */
@@ -3117,4 +3134,26 @@ html[data-theme="night"] .contact-form input,
 html[data-theme="night"] .contact-form textarea,
 html[data-theme="night"] .teaching-log-search input {
   border-color: rgba(230, 240, 238, 0.28);
+}
+html[data-theme="night"] .teaching-lang-chip:not(.is-active) {
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(231, 241, 238, 0.78);
+  border-color: rgba(230, 240, 238, 0.16);
+}
+html[data-theme="night"] .teaching-lang-chip:not(.is-active):hover {
+  background: rgba(0, 210, 252, 0.1);
+  color: #e7f1ee;
+  border-color: rgba(0, 210, 252, 0.45);
+}
+html[data-theme="night"] .teaching-lang-chip:not(.is-active) .devicon-express-original,
+html[data-theme="night"] .teaching-lang-chip:not(.is-active) .devicon-handlebars-original {
+  color: #d5e0dc;
+}
+html[data-theme="night"] .teaching-lang-chip.is-active {
+  background: var(--c3);
+  border-color: var(--c3);
+  color: var(--c1);
+}
+html[data-theme="night"] .teaching-lang-chip.is-active i {
+  color: var(--c1);
 }

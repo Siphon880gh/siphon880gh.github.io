@@ -27,7 +27,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <link rel="stylesheet" href="../../assets/css/style.css?v=students5">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
+  <link rel="stylesheet" href="../../assets/css/style.css?v=students7">
 </head>
 <body>
   <header class="site-header">
@@ -133,20 +134,6 @@
     <div class="container">
       <div class="section-head">
         <div class="eyebrow">Teaching log</div>
-        <div class="teaching-lang" id="teaching-lang">
-          <p class="teaching-lang-label" id="teaching-lang-label">Filter by one language</p>
-          <div class="teaching-lang-scroll" role="group" aria-labelledby="teaching-lang-label">
-            <button type="button" class="teaching-lang-chip" data-lang="Express" aria-pressed="false">Express</button>
-            <button type="button" class="teaching-lang-chip" data-lang="GraphQL" aria-pressed="false">GraphQL</button>
-            <button type="button" class="teaching-lang-chip" data-lang="Handlebars" aria-pressed="false">Handlebars</button>
-            <button type="button" class="teaching-lang-chip" data-lang="JavaScript" aria-pressed="false">JavaScript</button>
-            <button type="button" class="teaching-lang-chip" data-lang="jQuery" aria-pressed="false">jQuery</button>
-            <button type="button" class="teaching-lang-chip" data-lang="Mongo" aria-pressed="false">Mongo</button>
-            <button type="button" class="teaching-lang-chip" data-lang="MySQL" aria-pressed="false">MySQL</button>
-            <button type="button" class="teaching-lang-chip" data-lang="Node" aria-pressed="false">Node</button>
-            <button type="button" class="teaching-lang-chip" data-lang="React" aria-pressed="false">React</button>
-          </div>
-        </div>
         <h2><span data-session-count>371</span> sessions</h2>
         <p>Search by first name, topic, or comment. Last names in this table are scrambled, then blurred.</p>
       </div>
@@ -156,6 +143,20 @@
           <input type="search" id="teaching-log-q" placeholder="Filter by student, topic, or comment…" autocomplete="off">
         </label>
         <p class="teaching-log-status" id="teaching-log-status" aria-live="polite">Loading log…</p>
+      </div>
+      <div class="teaching-lang" id="teaching-lang">
+        <p class="teaching-lang-label" id="teaching-lang-label">Filter by one language</p>
+        <div class="teaching-lang-scroll" role="group" aria-labelledby="teaching-lang-label">
+          <button type="button" class="teaching-lang-chip" data-lang="Express" aria-pressed="false"><i class="devicon-express-original colored" aria-hidden="true"></i>Express</button>
+          <button type="button" class="teaching-lang-chip" data-lang="GraphQL" aria-pressed="false"><i class="devicon-graphql-plain colored" aria-hidden="true"></i>GraphQL</button>
+          <button type="button" class="teaching-lang-chip" data-lang="Handlebars" aria-pressed="false"><i class="devicon-handlebars-original colored" aria-hidden="true"></i>Handlebars</button>
+          <button type="button" class="teaching-lang-chip" data-lang="JavaScript" aria-pressed="false"><i class="devicon-javascript-plain colored" aria-hidden="true"></i>JavaScript</button>
+          <button type="button" class="teaching-lang-chip" data-lang="jQuery" aria-pressed="false"><i class="devicon-jquery-plain colored" aria-hidden="true"></i>jQuery</button>
+          <button type="button" class="teaching-lang-chip" data-lang="Mongo" aria-pressed="false"><i class="devicon-mongodb-plain colored" aria-hidden="true"></i>Mongo</button>
+          <button type="button" class="teaching-lang-chip" data-lang="MySQL" aria-pressed="false"><i class="devicon-mysql-original colored" aria-hidden="true"></i>MySQL</button>
+          <button type="button" class="teaching-lang-chip" data-lang="Node" aria-pressed="false"><i class="devicon-nodejs-plain colored" aria-hidden="true"></i>Node</button>
+          <button type="button" class="teaching-lang-chip" data-lang="React" aria-pressed="false"><i class="devicon-react-original colored" aria-hidden="true"></i>React</button>
+        </div>
       </div>
       <div class="teaching-log-scroll teaching-log-scroll--page" tabindex="0">
         <table class="teaching-log-table">
@@ -233,6 +234,6 @@
       </div>
     </div>
   </footer>
-  <script src="../../assets/js/main.js?v=students5"></script>
+  <script src="../../assets/js/main.js?v=students7"></script>
 </body>
 </html>
