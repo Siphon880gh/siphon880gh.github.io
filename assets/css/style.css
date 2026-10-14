@@ -2341,6 +2341,57 @@ a.passion-expand-btn:hover { color: var(--c3); }
   font-size: 0.78rem;
   color: var(--link-quiet);
 }
+.teaching-lang {
+  margin: 0 0 0.85rem;
+  text-align: center;
+}
+.teaching-lang-label {
+  margin: 0 0 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--link-quiet);
+}
+.teaching-lang-scroll {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 0.4rem;
+  width: max-content;
+  max-width: 100%;
+  margin-inline: auto;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  padding: 0.1rem 0.15rem 0.55rem;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+.teaching-lang-chip {
+  flex: 0 0 auto;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 210, 252, 0.35);
+  background: rgba(0, 210, 252, 0.08);
+  color: var(--ink);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease), border-color var(--dur-fast) var(--ease);
+}
+.teaching-lang-chip:hover {
+  border-color: var(--c3);
+  background: rgba(0, 210, 252, 0.16);
+}
+.teaching-lang-chip:focus-visible {
+  outline: 2px solid var(--c3);
+  outline-offset: 2px;
+}
+.teaching-lang-chip.is-active {
+  background: var(--c1);
+  border-color: var(--c1);
+  color: var(--c3);
+}
 
 /* Student last-name privacy: scrambled text + visual blur */
 .student-lastname {

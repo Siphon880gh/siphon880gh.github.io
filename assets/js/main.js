@@ -906,6 +906,44 @@
     let logRows = null;
     let logMeta = null;
     let logLoaded = false;
+    let logLang = "";
+    const LANG_MATCH = {
+      Express: /express/i,
+      GraphQL: /graphql/i,
+      Handlebars: /handlebars/i,
+      JavaScript: /javascript|(?<![.\w])js\b/i,
+      jQuery: /jquery/i,
+      Mongo: /mongo/i,
+      MySQL: /mysql/i,
+      Node: /node/i,
+      React: /react/i
+    };
+
+    function topicsMatchLang(topics, lang) {
+      if (!lang) return true;
+      const re = LANG_MATCH[lang];
+      const text = String(topics || "");
+      return re ? re.test(text) : text.toLowerCase().indexOf(lang.toLowerCase()) !== -1;
+    }
+
+    function initLangFilter() {
+      const root = document.getElementById("teaching-lang");
+      if (!root || root.getAttribute("data-bound") === "1") return;
+      root.setAttribute("data-bound", "1");
+      root.addEventListener("click", function (e) {
+        const btn = e.target.closest("[data-lang]");
+        if (!btn || !root.contains(btn)) return;
+        const lang = btn.getAttribute("data-lang") || "";
+        logLang = logLang === lang ? "" : lang;
+        root.querySelectorAll("[data-lang]").forEach(function (chip) {
+          const on = chip.getAttribute("data-lang") === logLang && logLang !== "";
+          chip.classList.toggle("is-active", on);
+          chip.setAttribute("aria-pressed", on ? "true" : "false");
+        });
+        const q = document.getElementById("teaching-log-q");
+        if (logRows) renderLog(q ? q.value || "" : "");
+      });
+    }
 
     function openPanel(trigger) {
       lastTrigger = trigger || null;
@@ -1031,21 +1069,22 @@
       const status = document.getElementById("teaching-log-status");
       if (!body || !logRows) return;
       const q = String(query || "").trim().toLowerCase();
-      const filtered = !q
-        ? logRows
-        : logRows.filter(function (r) {
-            return (
-              String(r.first || "").toLowerCase().indexOf(q) !== -1 ||
-              String(r.last || "").toLowerCase().indexOf(q) !== -1 ||
-              String(r.topics || "").toLowerCase().indexOf(q) !== -1 ||
-              String(r.comment || "").toLowerCase().indexOf(q) !== -1 ||
-              String(r.date || "").toLowerCase().indexOf(q) !== -1 ||
-              String(r.course || "").toLowerCase().indexOf(q) !== -1
-            );
-          });
+      const filtered = logRows.filter(function (r) {
+        if (!topicsMatchLang(r.topics, logLang)) return false;
+        if (!q) return true;
+        return (
+          String(r.first || "").toLowerCase().indexOf(q) !== -1 ||
+          String(r.last || "").toLowerCase().indexOf(q) !== -1 ||
+          String(r.topics || "").toLowerCase().indexOf(q) !== -1 ||
+          String(r.comment || "").toLowerCase().indexOf(q) !== -1 ||
+          String(r.date || "").toLowerCase().indexOf(q) !== -1 ||
+          String(r.course || "").toLowerCase().indexOf(q) !== -1
+        );
+      });
       if (status) {
         const students = (logMeta && logMeta.studentCount) || 0;
-        status.textContent = students + " students · " + filtered.length + " of " + logRows.length + " sessions" + (q ? " (filtered)" : "");
+        const narrowed = q || logLang;
+        status.textContent = students + " students · " + filtered.length + " of " + logRows.length + " sessions" + (logLang ? " · " + logLang : "") + (narrowed ? " (filtered)" : "");
       }
       const max = 200;
       const slice = filtered.slice(0, max);
@@ -1081,6 +1120,7 @@
       }
     }
 
+    initLangFilter();
     if (!dialog && document.getElementById("teaching-log-body")) ensureLog();
   })();
 
