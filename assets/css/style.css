@@ -118,6 +118,11 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 .nav-parent:hover,
 .nav-parent.active { color: var(--c3); }
+.nav-label-short { display: none; }
+@media (max-width: 1180px) {
+  .nav-label-long { display: none; }
+  .nav-label-short { display: inline; }
+}
 .nav-dropdown-toggle {
   display: inline-flex;
   align-items: center;

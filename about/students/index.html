@@ -28,7 +28,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
-  <link rel="stylesheet" href="../../assets/css/style.css?v=certs4">
+  <link rel="stylesheet" href="../../assets/css/style.css?v=certs5">
 </head>
 <body>
   <header class="site-header">
@@ -58,7 +58,20 @@
             </ul>
           </div>
           <a href="../../passion/">Passion</a>
-          <a href="../../credentials/?tab=certificates">Certificates</a>
+          <div class="nav-item has-dropdown">
+            <div class="nav-item-head">
+              <a href="../../credentials/?tab=certificates" class="nav-parent">
+                <span class="nav-label-long">Certificates</span>
+                <span class="nav-label-short">Certs</span>
+              </a>
+              <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-controls="nav-menu-certs" aria-label="Certificates submenu"><span aria-hidden="true">▾</span></button>
+            </div>
+            <ul class="nav-dropdown" id="nav-menu-certs" inert>
+              <li><a href="../../credentials/?tab=certificates#ai"><i class="fa-solid fa-robot" aria-hidden="true"></i> AI Certificates</a></li>
+              <li><a href="../../credentials/?tab=certificates#web-dev"><i class="fa-solid fa-terminal" aria-hidden="true"></i> Developer Certificates</a></li>
+              <li><a href="../../credentials/?tab=certificates#project-management"><i class="fa-solid fa-briefcase" aria-hidden="true"></i> Business/Marketing Certificates</a></li>
+            </ul>
+          </div>
           <div class="nav-item has-dropdown">
             <div class="nav-item-head">
               <a href="../" class="nav-parent active">About</a>
