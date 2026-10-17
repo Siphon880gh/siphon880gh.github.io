@@ -767,11 +767,12 @@
 
     const achievementAnchors = ["achievements", "tutoring", "open-source", "leaderboards", "top-marks"];
     const creditedAnchors = ["credited", "featured"];
+    const certificateAnchors = ["web-dev", "css", "mysql", "python", "ai", "project-management", "access-seo-marketing"];
 
     function tabForAnchor(id) {
       if (achievementAnchors.indexOf(id) !== -1) return "achievements";
       if (creditedAnchors.indexOf(id) !== -1) return "credited";
-      if (id === "certificates") return "certificates";
+      if (id === "certificates" || certificateAnchors.indexOf(id) !== -1) return "certificates";
       return "";
     }
 
@@ -810,6 +811,100 @@
     if (hash && hash !== "achievements" && hash !== "certificates") {
       window.setTimeout(function () { scrollToId(hash); }, 0);
     }
+
+    (function initCertSectionNav() {
+      const nav = root.querySelector(".cred-section-nav");
+      const panel = document.getElementById("panel-certificates");
+      if (!nav || !panel) return;
+      const links = Array.prototype.slice.call(nav.querySelectorAll("a[href^='#']"));
+      const sections = links.map(function (a) {
+        return document.getElementById(a.getAttribute("href").slice(1));
+      }).filter(Boolean);
+      if (!sections.length) return;
+
+      let pinned = "";
+      let pinTimer = 0;
+
+      function revealLink(link) {
+        const max = nav.scrollWidth - nav.clientWidth;
+        if (max <= 0) return;
+        const pad = 16;
+        const linkLeft = link.offsetLeft;
+        const linkRight = linkLeft + link.offsetWidth;
+        const viewLeft = nav.scrollLeft;
+        const viewRight = viewLeft + nav.clientWidth;
+        if (linkLeft < viewLeft + pad) nav.scrollLeft = Math.max(0, linkLeft - pad);
+        else if (linkRight > viewRight - pad) nav.scrollLeft = Math.min(max, linkRight - nav.clientWidth + pad);
+      }
+
+      function setActive(id) {
+        let changed = false;
+        links.forEach(function (a) {
+          const on = a.getAttribute("href") === "#" + id;
+          if (on !== a.classList.contains("is-active")) changed = true;
+          a.classList.toggle("is-active", on);
+          if (on) a.setAttribute("aria-current", "location");
+          else a.removeAttribute("aria-current");
+        });
+        if (!changed) return;
+        const active = nav.querySelector("a.is-active");
+        if (active) revealLink(active);
+      }
+
+      function update() {
+        if (panel.hidden || pinned) return;
+        const header = document.querySelector(".site-header");
+        const headerH = header ? header.getBoundingClientRect().height : 0;
+        const line = headerH + nav.getBoundingClientRect().height + 36;
+        let current = sections[0];
+        sections.forEach(function (section) {
+          if (section.getBoundingClientRect().top <= line) current = section;
+        });
+        const nearBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 32;
+        if (nearBottom) current = sections[sections.length - 1];
+        if (current) setActive(current.id);
+      }
+
+      function pin(id) {
+        pinned = id;
+        setActive(id);
+        window.clearTimeout(pinTimer);
+        pinTimer = window.setTimeout(function () {
+          pinned = "";
+          update();
+        }, 900);
+      }
+
+      nav.addEventListener("click", function (e) {
+        const link = e.target.closest("a[href^='#']");
+        if (!link) return;
+        pin(link.getAttribute("href").slice(1));
+      });
+
+      window.addEventListener("scrollend", function () {
+        if (!pinned) return;
+        window.clearTimeout(pinTimer);
+        pinned = "";
+        update();
+      });
+
+      let ticking = false;
+      window.addEventListener("scroll", function () {
+        if (pinned || ticking) return;
+        ticking = true;
+        window.requestAnimationFrame(function () {
+          ticking = false;
+          update();
+        });
+      }, { passive: true });
+      window.addEventListener("resize", update);
+      document.querySelectorAll(".work-tab").forEach(function (tab) {
+        tab.addEventListener("click", function () {
+          window.requestAnimationFrame(update);
+        });
+      });
+      window.setTimeout(update, 0);
+    })();
 
     const dialog = document.getElementById("cred-lightbox");
     const shot = document.getElementById("cred-lightbox-img");

@@ -2010,6 +2010,65 @@ body.contact-drawer-open { overflow: hidden; }
   color: var(--text-body);
   font-size: 1.02rem;
 }
+.cred-section-nav {
+  position: sticky;
+  top: var(--header-h);
+  z-index: 30;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.45rem;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  margin: 0 0 1.75rem;
+  padding: 0.65rem 0 0.8rem;
+  background: var(--c7);
+  scroll-padding-inline: 0.35rem;
+  scrollbar-width: thin;
+}
+.cred-section-nav::-webkit-scrollbar { height: 6px; }
+.cred-section-nav::-webkit-scrollbar-thumb {
+  background: rgba(0, 17, 41, 0.22);
+  border-radius: 999px;
+}
+.cred-section-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex: 0 0 auto;
+  white-space: nowrap;
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  line-height: 1.2;
+  color: var(--text-dark);
+  border: 2px solid rgba(0, 17, 41, 0.15);
+  background: var(--surface-card);
+  border-radius: 999px;
+  padding: 0.45rem 0.8rem;
+  transition: background-color var(--dur) var(--ease), color var(--dur) var(--ease), border-color var(--dur) var(--ease);
+}
+.cred-section-nav a i {
+  color: var(--c3);
+  font-size: 0.95rem;
+  width: 1rem;
+  text-align: center;
+}
+.cred-section-nav a img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+.cred-section-nav a:hover {
+  border-color: var(--c3);
+  color: var(--link-quiet);
+}
+.cred-section-nav a.is-active {
+  background: var(--c1);
+  color: var(--c2);
+  border-color: var(--c1);
+}
+.cred-section-nav a.is-active i { color: var(--c2); }
+.cred-page .cred-group { scroll-margin-top: calc(var(--header-h) + 4.6rem); }
 .cred-group { margin: 0 0 2.5rem; }
 .cred-group h2,
 .cred-block h2 {
@@ -3121,6 +3180,7 @@ html[data-theme="night"] .icon-card img {
 html[data-theme="night"] .logo-strip img {
   filter: brightness(0) invert(1) opacity(0.75);
 }
+html[data-theme="night"] .cred-section-nav a:not(.is-active),
 html[data-theme="night"] .work-tab:not(.is-active),
 html[data-theme="night"] .tag-filter-toggle,
 html[data-theme="night"] .tag-filter-all:not(.is-active),
