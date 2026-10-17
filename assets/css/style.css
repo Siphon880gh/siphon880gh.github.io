@@ -2004,6 +2004,12 @@ body.contact-drawer-open { overflow: hidden; }
   text-align: center;
   margin: -0.65rem auto 1.75rem;
 }
+.cred-product {
+  max-width: 40rem;
+  margin: 0 0 1.35rem;
+  color: var(--text-body);
+  font-size: 1.02rem;
+}
 .cred-group { margin: 0 0 2.5rem; }
 .cred-group h2,
 .cred-block h2 {
