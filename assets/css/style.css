@@ -2170,6 +2170,15 @@ body.contact-drawer-open { overflow: hidden; }
 .cred-list a:hover,
 .cred-back a:hover,
 .cred-jump a:hover { color: var(--ink); }
+/* Secondary "See Weng's Notes" link: sits tight under the verify link, smaller and softer. */
+.cred-card figcaption p.cred-notes { margin-top: -0.45rem; }
+.cred-notes a {
+  font-size: 0.76rem;
+  opacity: 0.78;
+  transition: opacity var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease);
+}
+.cred-notes a:hover,
+.cred-notes a:focus-visible { opacity: 1; }
 .cred-details { margin: 0 0 0.75rem; }
 .cred-details summary {
   cursor: pointer;
@@ -2245,6 +2254,17 @@ body.contact-drawer-open { overflow: hidden; }
   text-underline-offset: 0.15em;
 }
 .lightbox-verify a:hover { color: var(--c2); }
+.lightbox-frame p.lightbox-notes {
+  margin-top: 0.3rem;
+  font-size: 0.78rem;
+}
+.lightbox-notes[hidden] { display: none; }
+.lightbox-notes a {
+  color: var(--text-muted);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+.lightbox-notes a:hover { color: var(--c3); }
 .lightbox-close {
   position: absolute;
   top: 0.55rem;

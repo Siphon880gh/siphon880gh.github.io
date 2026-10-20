@@ -910,6 +910,7 @@
     const shot = document.getElementById("cred-lightbox-img");
     const caption = document.getElementById("cred-lightbox-caption");
     const verify = document.getElementById("cred-lightbox-verify");
+    const notes = document.getElementById("cred-lightbox-notes");
     if (!dialog || !shot || !caption) return;
 
     let lastTrigger = null;
@@ -932,6 +933,23 @@
       verify.hidden = false;
     }
 
+    function setNotesLink(btn) {
+      if (!notes) return;
+      const href = btn && btn.getAttribute("data-notes-href");
+      notes.replaceChildren();
+      if (!href) {
+        notes.hidden = true;
+        return;
+      }
+      const a = document.createElement("a");
+      a.href = href;
+      a.target = "_blank";
+      a.rel = "noopener";
+      a.textContent = "See Weng's Notes";
+      notes.appendChild(a);
+      notes.hidden = false;
+    }
+
     root.addEventListener("click", function (e) {
       const btn = e.target.closest(".cred-enlarge");
       if (!btn) return;
@@ -941,6 +959,7 @@
       shot.alt = btn.getAttribute("aria-label") || "";
       caption.textContent = btn.getAttribute("data-caption") || "";
       setVerifyLink(btn);
+      setNotesLink(btn);
       lastTrigger = btn;
       if (typeof dialog.showModal === "function") dialog.showModal();
       else window.open(src, "_blank", "noopener");
@@ -955,6 +974,7 @@
       shot.removeAttribute("src");
       shot.alt = "";
       setVerifyLink(null);
+      setNotesLink(null);
       if (lastTrigger && typeof lastTrigger.focus === "function") lastTrigger.focus();
     });
   })();
