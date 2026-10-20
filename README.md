@@ -85,7 +85,7 @@ Additive side work — **not** a third hire path; developer-first still.
 Quieter archive (not in the primary nav): [`/credentials/`](./credentials/) — certificates and achievements carried over from the earlier portfolio. Footer has a small Credentials link; About has “Certificates & achievements”.
 
 - UCLA Coding Bootcamp — **MERN** (top marks) — [Parchment](https://www.parchment.com/u/award/36e58e5db94b8d9554ab873daeb04550)
-- W3Schools CSS and MySQL, Mimo Web Development / SQL / Python, edX AI applications and prompt engineering
+- W3Schools CSS, PHP, and MySQL, Mimo Web Development / SQL / Python, edX AI applications and prompt engineering
 - UC Berkeley — Project Management
 - Achievements — site credits, [ExRx apps feature](https://exrx.net/Notes/Links/Miscellaneous#Apps), Mimo leaderboards, UCLA top-marks report
 - SEO, marketing & accessibility certifications — [LinkedIn certifications](https://www.linkedin.com/in/weng-fung/details/certifications/)
