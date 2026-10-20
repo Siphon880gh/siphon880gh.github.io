@@ -767,7 +767,7 @@
 
     const achievementAnchors = ["achievements", "tutoring", "open-source", "leaderboards", "top-marks"];
     const creditedAnchors = ["credited", "featured"];
-    const certificateAnchors = ["web-dev", "css", "mysql", "python", "ai", "project-management", "access-seo-marketing"];
+    const certificateAnchors = ["web-dev", "css", "mysql", "python", "ai", "project-management", "access-seo-marketing", "cert-web-dev-mimo"];
 
     function tabForAnchor(id) {
       if (achievementAnchors.indexOf(id) !== -1) return "achievements";

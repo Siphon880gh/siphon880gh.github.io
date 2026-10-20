@@ -2090,7 +2090,8 @@ body.contact-drawer-open { overflow: hidden; }
   border-color: var(--c1);
 }
 .cred-section-nav a.is-active i { color: var(--c2); }
-.cred-page .cred-group { scroll-margin-top: calc(var(--header-h) + 4.6rem); }
+.cred-page .cred-group,
+.cred-page .cred-card[id] { scroll-margin-top: calc(var(--header-h) + 4.6rem); }
 .cred-group { margin: 0 0 2.5rem; }
 .cred-group h2,
 .cred-block h2 {
@@ -3047,6 +3048,15 @@ body:not(.depth-page).is-page-exit > main {
   height: 40px;
   margin-left: 0;
   pointer-events: none;
+}
+.cert-ticker a.logo-stack-item,
+.cert-ticker .hero-stack-label a {
+  pointer-events: auto;
+}
+a.logo-stack-item:focus-visible {
+  outline: 2px solid var(--c3);
+  outline-offset: 2px;
+  z-index: 5;
 }
 .cert-ticker .hero-cert .mern-mark img,
 .cert-ticker .hero-cert .logo-stack img { width: 20px; height: 20px; }
