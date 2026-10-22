@@ -1192,6 +1192,15 @@ html[data-theme="day"] .depth-stage {
   background: #e7f0ee;
   color: var(--text-dark);
 }
+/* Day stage depth: a sky-to-floor wash with soft cyan and yellow light, the
+   light-palette counterpart of night's navy theater. */
+html[data-theme="day"].is-depth .depth-stage {
+  background:
+    radial-gradient(ellipse 60% 48% at 14% 16%, rgba(0, 210, 252, 0.2), transparent 70%),
+    radial-gradient(ellipse 52% 44% at 88% 30%, rgba(253, 215, 70, 0.26), transparent 70%),
+    radial-gradient(ellipse 90% 30% at 50% 58%, rgba(255, 255, 255, 0.85), transparent 72%),
+    linear-gradient(180deg, #f8fcfb 0%, #eaf3f1 46%, #d9e9e6 74%, #cfe3e0 100%);
+}
 html[data-theme="day"] .depth-chapter {
   color: var(--text-dark);
 }
@@ -1271,9 +1280,17 @@ html[data-theme="day"] .hire-quote figcaption {
   color: var(--text-body);
 }
 html[data-theme="day"].is-depth .depth-floor {
+  /* Same 64px tilted grid as night: teal rows, amber columns, plus a faint
+     tinted surface so the floor reads as a plane instead of loose lines. */
   background-image:
-    linear-gradient(rgba(0, 90, 120, 0.45) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(150, 110, 10, 0.4) 1px, transparent 1px);
+    linear-gradient(rgba(0, 128, 160, 0.5) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(196, 146, 0, 0.5) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(0, 210, 252, 0.02), rgba(0, 210, 252, 0.1) 22%, rgba(0, 120, 150, 0.08) 60%, rgba(253, 215, 70, 0.1));
+  background-size: 64px 64px, 64px 64px, 100% 100%;
+  opacity: 1;
+  /* The far edge of the tilted plane would show as a hard band on a light stage. */
+  -webkit-mask-image: linear-gradient(180deg, #000 62%, transparent 100%);
+  mask-image: linear-gradient(180deg, #000 62%, transparent 100%);
 }
 /* Path panels and their CTAs stay opaque in both themes so the floor grid
    cannot show through the card bottoms or the buttons. */
@@ -1309,9 +1326,9 @@ html[data-theme="night"].is-depth .path-advise .btn-ghost-dark {
 html[data-theme="day"].is-depth .depth-chapter[data-depth="intro"]::after {
   background: linear-gradient(
     105deg,
-    rgba(247, 251, 250, 0.92) 0%,
-    rgba(247, 251, 250, 0.72) 34%,
-    rgba(247, 251, 250, 0.28) 56%,
+    rgba(247, 251, 250, 0.86) 0%,
+    rgba(247, 251, 250, 0.6) 34%,
+    rgba(247, 251, 250, 0.2) 56%,
     transparent 74%
   );
 }
@@ -1320,4 +1337,144 @@ html[data-theme="day"].is-depth .depth-hint {
 }
 html[data-theme="day"].is-depth .depth-progress {
   background: rgba(0, 17, 41, 0.08);
+}
+
+/* Day background richness. Each night layer gets a light-palette counterpart
+   instead of being hidden: chapter glows, the intro wave contours, and a faint
+   contour sheet on the stage. Static pseudo-elements only; no motion. */
+html[data-theme="day"].is-depth .depth-stage::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(200deg, #0a6a84 0%, #2aa9c4 50%, #b58a06 100%);
+  opacity: 0.09;
+  -webkit-mask-image: url("../assets/img/waves-background.svg");
+  mask-image: url("../assets/img/waves-background.svg");
+  -webkit-mask-position: 20% 0;
+  mask-position: 20% 0;
+  -webkit-mask-size: 150% auto;
+  mask-size: 150% auto;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+html[data-theme="day"].is-depth .depth-chapter::before {
+  background:
+    radial-gradient(ellipse at 18% 24%, rgba(0, 210, 252, 0.2), transparent 42%),
+    linear-gradient(180deg, transparent 40%, rgba(0, 70, 90, 0.06) 100%);
+}
+html[data-theme="day"].is-depth .depth-chapter[data-depth="intro"]::before {
+  /* Night paints white waves at 22%. Day tints the same contours teal-to-amber
+     through a mask, keeping night's left-to-right fade off the headline. */
+  background: linear-gradient(115deg, #0b5f78 0%, #0796b6 52%, #b8900a 100%);
+  opacity: 0.26;
+  -webkit-mask-image:
+    url("../assets/img/waves-background.svg"),
+    linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.3) 26%, rgba(0, 0, 0, 0.7) 52%, #000 100%);
+  mask-image:
+    url("../assets/img/waves-background.svg"),
+    linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.3) 26%, rgba(0, 0, 0, 0.7) 52%, #000 100%);
+  -webkit-mask-position: 70% bottom, 0 0;
+  mask-position: 70% bottom, 0 0;
+  -webkit-mask-size: cover, 100% 100%;
+  mask-size: cover, 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+}
+html[data-theme="day"].is-depth .depth-chapter[data-depth="paths"]::before {
+  background:
+    linear-gradient(100deg, rgba(253, 215, 70, 0.24), transparent 36%),
+    linear-gradient(260deg, rgba(0, 210, 252, 0.2), transparent 34%);
+}
+html[data-theme="day"].is-depth .depth-chapter[data-depth="flagship"]::before {
+  background:
+    radial-gradient(ellipse at 68% 48%, rgba(0, 210, 252, 0.26), transparent 46%),
+    radial-gradient(ellipse at 26% 78%, rgba(253, 215, 70, 0.2), transparent 40%);
+}
+html[data-theme="day"].is-depth .depth-chapter[data-depth="notes"]::before {
+  background:
+    radial-gradient(ellipse at 70% 46%, rgba(253, 215, 70, 0.3), transparent 46%),
+    radial-gradient(ellipse at 22% 78%, rgba(0, 210, 252, 0.18), transparent 40%);
+}
+html[data-theme="day"].is-depth .depth-chapter[data-depth="work"]::before {
+  background:
+    radial-gradient(ellipse at 50% 18%, rgba(0, 210, 252, 0.22), transparent 50%),
+    radial-gradient(ellipse at 86% 86%, rgba(253, 215, 70, 0.18), transparent 40%);
+}
+html[data-theme="day"].is-depth .depth-chapter[data-depth="hire"]::before {
+  background:
+    radial-gradient(ellipse at 50% 88%, rgba(253, 215, 70, 0.32), transparent 48%),
+    radial-gradient(ellipse at 16% 20%, rgba(0, 210, 252, 0.16), transparent 42%);
+}
+/* Stacked day layout (phones, reduced motion): the same contours, static. */
+html[data-theme="day"]:not(.is-depth) .depth-chapter[data-depth="intro"] {
+  background:
+    radial-gradient(ellipse at 82% 22%, rgba(253, 215, 70, 0.22), transparent 46%),
+    radial-gradient(ellipse at 16% 18%, rgba(0, 210, 252, 0.18), transparent 46%),
+    linear-gradient(180deg, #f7fbfa, #e2eeeb);
+}
+
+/* Day type accents: cyan on mint fails AA, so day uses a deep teal. */
+html[data-theme="day"] .depth-kicker,
+html[data-theme="day"] .depth-aside a {
+  color: #00677f;
+}
+html[data-theme="day"] .depth-aside a {
+  border-bottom-color: rgba(0, 103, 127, 0.4);
+}
+html[data-theme="day"] .depth-aside a:hover {
+  color: #7a5b00;
+  border-bottom-color: #c49200;
+}
+html[data-theme="day"] .depth-tags span {
+  color: #00566b;
+  background: rgba(0, 210, 252, 0.16);
+}
+html[data-theme="day"].is-depth .depth-hint {
+  color: rgba(0, 17, 41, 0.66);
+}
+html[data-theme="day"].is-depth .depth-hint::after {
+  background: linear-gradient(180deg, #c49200, transparent);
+}
+
+/* Day cert ticker. It was built for navy: a navy band, white labels, and
+   bright yellow dividers. Day gives it a frosted light band that the existing
+   alpha mask fades into the stage, soft-shadowed chips, and dark labels. */
+html[data-theme="day"] .depth-page .cert-ticker {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.5) 30%,
+    rgba(250, 253, 252, 0.78) 100%
+  );
+  border-top: 1px solid rgba(0, 17, 41, 0.06);
+}
+html[data-theme="day"] .depth-page .cert-ticker .hero-cert span {
+  color: rgba(0, 17, 41, 0.78);
+}
+html[data-theme="day"] .depth-page .cert-ticker .hero-cert:hover span,
+html[data-theme="day"] .depth-page .cert-ticker .hero-cert:focus-visible span {
+  color: #00677f;
+}
+html[data-theme="day"] .depth-page .cert-ticker .hero-certs li.cert-divider {
+  background: linear-gradient(180deg, rgba(196, 146, 0, 0.15), rgba(196, 146, 0, 0.7), rgba(196, 146, 0, 0.15));
+}
+html[data-theme="day"] .depth-page .cert-ticker .hero-cert > img {
+  filter: drop-shadow(0 2px 4px rgba(0, 17, 41, 0.16));
+}
+html[data-theme="day"] .depth-page .cert-ticker .mern-mark,
+html[data-theme="day"] .depth-page .cert-ticker .logo-stack-item {
+  border-color: #ffffff;
+  box-shadow: 0 0 0 1px rgba(0, 17, 41, 0.08), 0 2px 6px rgba(0, 17, 41, 0.14);
+}
+html[data-theme="day"] .depth-page .cert-ticker-all a {
+  color: #00677f;
+  border-bottom-color: rgba(0, 103, 127, 0.4);
+}
+html[data-theme="day"] .depth-page .cert-ticker-all a:hover {
+  color: #7a5b00;
+  border-bottom-color: #c49200;
 }
