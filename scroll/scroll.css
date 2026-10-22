@@ -1516,3 +1516,32 @@ html[data-theme="day"].is-depth .depth-rail button[aria-current="true"]::before 
 html.is-depth .depth-chapter .notes-slide.is-active {
   visibility: inherit;
 }
+
+/* Day Notes tabs and arrows. Night's dark pills read as a grey slab on the
+   light stage. Day uses frosted light pills with teal ink (about 7:1) and
+   keeps the yellow active tab with navy text and an amber edge. */
+html[data-theme="day"] .depth-chapter .notes-tabs button,
+html[data-theme="day"] .depth-chapter .notes-arrow {
+  background: rgba(250, 253, 252, 0.82);
+  border-color: rgba(0, 86, 107, 0.35);
+  color: #00566b;
+  box-shadow: 0 2px 8px rgba(0, 17, 41, 0.08);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+html[data-theme="day"] .depth-chapter .notes-tabs button:hover,
+html[data-theme="day"] .depth-chapter .notes-arrow:hover {
+  background: #ffffff;
+  border-color: #00677f;
+  color: #003f4f;
+}
+html[data-theme="day"] .depth-chapter .notes-tabs button[aria-selected="true"],
+html[data-theme="day"] .depth-chapter .notes-tabs button[aria-selected="true"]:hover {
+  background: var(--c2);
+  border-color: #c49200;
+  color: var(--c1);
+}
+html[data-theme="day"] .depth-chapter .notes-tabs button:focus-visible,
+html[data-theme="day"] .depth-chapter .notes-arrow:focus-visible {
+  outline-color: #00566b;
+}
