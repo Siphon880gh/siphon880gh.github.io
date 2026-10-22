@@ -1478,3 +1478,34 @@ html[data-theme="day"] .depth-page .cert-ticker-all a:hover {
   color: #7a5b00;
   border-bottom-color: #c49200;
 }
+
+/* Day chapter rail. Night's 62% yellow labels vanish on the light stage.
+   A frosted backing keeps labels and dots readable over glows and the floor
+   grid; solid inks clear WCAG AA (labels about 7:1, active teal about 7:1). */
+html[data-theme="day"].is-depth .depth-rail {
+  right: 0.55rem;
+  padding: 0.6rem 0.65rem;
+  border-radius: 14px;
+  background: rgba(250, 253, 252, 0.72);
+  box-shadow: 0 0 0 1px rgba(0, 17, 41, 0.08), 0 6px 18px rgba(0, 17, 41, 0.08);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+html[data-theme="day"].is-depth .depth-rail button {
+  color: #3b4d58;
+}
+html[data-theme="day"].is-depth .depth-rail button:hover {
+  color: #7a5b00;
+}
+html[data-theme="day"].is-depth .depth-rail button:focus-visible {
+  outline: 2px solid #00566b;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+html[data-theme="day"].is-depth .depth-rail button[aria-current="true"] {
+  color: #00566b;
+  font-weight: 700;
+}
+html[data-theme="day"].is-depth .depth-rail button[aria-current="true"]::before {
+  box-shadow: 0 0 0 4px rgba(0, 150, 190, 0.2);
+}
