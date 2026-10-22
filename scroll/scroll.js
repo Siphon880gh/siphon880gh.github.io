@@ -71,6 +71,10 @@
           y: i === 0 ? 0 : 70
         });
       });
+      /* Intro starts at its CSS depth pose so the first frame is unchanged. */
+      gsap.set("#intro .chapter-inner", { rotationX: 0, transformOrigin: "50% 100%" });
+      gsap.set("#intro .intro-copy", { z: 50, rotationY: 0, transformOrigin: "0% 50%" });
+      gsap.set("#intro .intro-portrait", { z: 140, rotationY: -20, transformOrigin: "50% 50%" });
       gsap.set(".flagship-card", { rotationY: -24, transformPerspective: 1100, transformOrigin: "50% 50%" });
       gsap.set(".notes-visual", { rotationY: -18, transformPerspective: 900, transformOrigin: "50% 50%" });
       gsap.set(".flagship-back", {
@@ -132,9 +136,35 @@
         }
         return -1;
       }
+      var introSlot = chapterSlot("intro");
       var flagshipSlot = chapterSlot("flagship");
       var notesSlot = chapterSlot("notes");
       var workSlot = chapterSlot("work");
+
+      /* Intro picks up depth as soon as scrolling starts, in the same
+         language as later chapters: the spread tips back on X while the copy
+         and portrait swing on Y and pull forward on Z, then the chapter exit
+         takes over. Scrubbed, so it reverses on scroll up. */
+      if (introSlot === 0) {
+        /* Angles stay small and Z stays forward so no part of the copy
+           sinks behind the chapter's glow and scrim planes. */
+        timeline.to("#intro .chapter-inner", {
+          rotationX: 6,
+          duration: SLOT
+        }, 0);
+        timeline.to("#intro .intro-copy", {
+          z: 150,
+          rotationY: 8,
+          x: -24,
+          duration: SLOT
+        }, 0);
+        timeline.to("#intro .intro-portrait", {
+          z: 230,
+          rotationY: -34,
+          y: -16,
+          duration: SLOT
+        }, 0);
+      }
 
       /* Tighter Y swing so ExRx never peeks past VideoListings; fade back in once tucked. */
       if (flagshipSlot >= 0) {
@@ -236,7 +266,7 @@
          matchMedia finishes so the stacked layout can show every chapter. */
       requestAnimationFrame(function () {
         if (root.classList.contains("is-depth")) return;
-        gsap.set(".depth-chapter, .flagship-card, .flagship-back, .notes-visual, .work-stack, .work-fan, .depth-hint, .depth-progress span", {
+        gsap.set(".depth-chapter, #intro .chapter-inner, .intro-copy, .intro-portrait, .flagship-card, .flagship-back, .notes-visual, .work-stack, .work-fan, .depth-hint, .depth-progress span", {
           clearProps: "all"
         });
       });

@@ -1509,3 +1509,10 @@ html[data-theme="day"].is-depth .depth-rail button[aria-current="true"] {
 html[data-theme="day"].is-depth .depth-rail button[aria-current="true"]::before {
   box-shadow: 0 0 0 4px rgba(0, 150, 190, 0.2);
 }
+
+/* The active notes slide sets visibility: visible, which overrode the hidden
+   Notes chapter and blocked clicks on the intro's "Book a consult". In the
+   theater it follows its chapter instead. */
+html.is-depth .depth-chapter .notes-slide.is-active {
+  visibility: inherit;
+}
