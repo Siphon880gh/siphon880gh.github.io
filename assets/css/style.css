@@ -3439,3 +3439,19 @@ html[data-theme="night"] .cred-stack-panel {
   background: rgba(0, 210, 252, 0.05);
   border-color: rgba(0, 210, 252, 0.45);
 }
+
+/* Credentials: small icons on Verify / LinkedIn / Notes links. Inline-flex keeps the icon and gap out of the underline. */
+.cred-links a:has(> i),
+.lightbox-verify a,
+.lightbox-notes a {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35em;
+}
+.cred-links a i,
+.lightbox-verify a i,
+.lightbox-notes a i {
+  font-size: 0.92em;
+  color: currentColor;
+}
+.cred-notes a i { font-size: 0.9em; }

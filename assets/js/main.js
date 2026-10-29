@@ -976,6 +976,13 @@
 
     let lastTrigger = null;
 
+    function linkIcon(classes) {
+      const i = document.createElement("i");
+      i.className = classes;
+      i.setAttribute("aria-hidden", "true");
+      return i;
+    }
+
     function setVerifyLink(btn) {
       if (!verify) return;
       const href = btn && btn.getAttribute("data-verify-href");
@@ -989,7 +996,8 @@
       a.href = href;
       a.target = "_blank";
       a.rel = "noopener";
-      a.textContent = label;
+      a.appendChild(linkIcon("fa-solid fa-circle-check"));
+      a.appendChild(document.createTextNode(label));
       verify.appendChild(a);
       verify.hidden = false;
     }
@@ -1006,7 +1014,8 @@
       a.href = href;
       a.target = "_blank";
       a.rel = "noopener";
-      a.textContent = "See Weng's Notes";
+      a.appendChild(linkIcon("fa-solid fa-book-open"));
+      a.appendChild(document.createTextNode("See Weng's Notes"));
       notes.appendChild(a);
       notes.hidden = false;
     }
