@@ -767,7 +767,7 @@
 
     const achievementAnchors = ["achievements", "tutoring", "open-source", "leaderboards", "top-marks"];
     const creditedAnchors = ["credited", "featured"];
-    const certificateAnchors = ["web-dev", "css", "mysql", "python", "php", "ai", "project-management", "access-seo-marketing", "cert-web-dev-mimo"];
+    const certificateAnchors = ["web-dev", "css", "mysql", "python", "php", "ai", "project-management", "access-seo-marketing", "cert-web-dev-mimo", "google-ai-professional", "google-ai-courses"];
 
     function tabForAnchor(id) {
       if (achievementAnchors.indexOf(id) !== -1) return "achievements";
@@ -904,6 +904,67 @@
         });
       });
       window.setTimeout(update, 0);
+    })();
+
+    // Stacked certificate (Google AI Professional): the card opens its course certificates in place.
+    (function initCertStacks() {
+      const cards = root.querySelectorAll(".cred-stack-card");
+      cards.forEach(function (card) {
+        const badge = card.querySelector(".cred-stack-badge");
+        const tip = card.querySelector(".cred-stack-tip");
+        const panel = badge && document.getElementById(badge.getAttribute("aria-controls"));
+        if (!badge || !panel) return;
+        const collapseBtn = panel.querySelector(".cred-stack-collapse");
+        const openLabel = badge.getAttribute("aria-label") || "";
+        const closeLabel = "Collapse the course certificates.";
+
+        function isOpen() {
+          return !panel.hidden;
+        }
+
+        function setOpen(open, focusTarget) {
+          panel.hidden = !open;
+          card.classList.toggle("is-expanded", open);
+          badge.setAttribute("aria-expanded", open ? "true" : "false");
+          badge.setAttribute("aria-label", open ? closeLabel : openLabel);
+          if (tip) tip.textContent = tip.getAttribute(open ? "data-close-text" : "data-open-text") || tip.textContent;
+          const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+          const target = open ? panel : card;
+          window.requestAnimationFrame(function () {
+            target.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "nearest" });
+          });
+          if (focusTarget) focusTarget.focus({ preventScroll: true });
+        }
+
+        badge.addEventListener("click", function (e) {
+          e.stopPropagation();
+          setOpen(!isOpen());
+        });
+
+        // While collapsed, a click anywhere on the card (image included) opens the stack.
+        // Links keep working; once open, the image enlarges like every other certificate.
+        card.addEventListener("click", function (e) {
+          if (isOpen() || e.target.closest("a")) return;
+          e.preventDefault();
+          e.stopPropagation();
+          setOpen(true);
+        });
+
+        if (collapseBtn) {
+          collapseBtn.addEventListener("click", function () {
+            setOpen(false, badge);
+          });
+        }
+
+        panel.addEventListener("keydown", function (e) {
+          if (e.key !== "Escape") return;
+          const lightbox = document.getElementById("cred-lightbox");
+          if (lightbox && lightbox.open) return;
+          setOpen(false, badge);
+        });
+
+        if ((window.location.hash || "") === "#" + panel.id) setOpen(true);
+      });
     })();
 
     const dialog = document.getElementById("cred-lightbox");
